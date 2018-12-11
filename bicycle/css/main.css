@@ -100,7 +100,18 @@ a {
   -webkit-background-size: cover;
           background-size: cover;
   grid-column: span 4;
-  grid-row: span 2; }
+  grid-row: span 2;
+  position: relative; }
+  .about-1 div:first-child::before {
+    content: '';
+    background-image: url("../img/Logo-1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
 
 .about-1 div:last-child {
   -webkit-background-size: cover;
@@ -125,7 +136,18 @@ a {
           background-size: cover;
   background-position: center;
   grid-column: span 4;
-  grid-row: span 2; }
+  grid-row: span 2;
+  position: relative; }
+  .about-2 div:last-child::before {
+    content: '';
+    background-image: url("../img/Logo-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
 
 .about-2 div:first-child {
   -webkit-background-size: cover;
@@ -149,7 +171,18 @@ a {
   -webkit-background-size: cover;
           background-size: cover;
   grid-column: span 2;
-  grid-row: span 2; }
+  grid-row: span 2;
+  position: relative; }
+  .about-3 div:first-child::before {
+    content: '';
+    background-image: url("../img/Logo-3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
 
 .about-3 div:last-child {
   -webkit-background-size: cover;
