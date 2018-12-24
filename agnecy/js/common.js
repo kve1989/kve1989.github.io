@@ -6,10 +6,12 @@ $(document).ready(function() {
     
   });
 
-  $('.popup').magnificPopup();
+  // $('.popup').magnificPopup();
 
 
 })
+
+new WOW().init();
 
 window.onscroll = function() {scrollFunction()};
 
