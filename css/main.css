@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  color: 4a4a4a;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2em;
+}
+
+.text-center {
+  text-align: center;
+}
+.portfolio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em
+}
+.portfolio-item {
+  height: 400px;
+  display: block;
+  background-position: center;
+  background-size: cover;
+  border-top: 15px solid lightgrey;
+  border-left: 15px solid lightgrey;
+  border-right: 15px solid lightgrey;
+  border-bottom: 50px solid lightgrey;
+}
+
+figure {
+}
+
+
+figure img{
+  height: 400px;
+  width: 40%;
+}
