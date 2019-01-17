@@ -7,38 +7,22 @@
 body {
   font-size: 1em;
   font-family: Arial, Helvetica, sans-serif;
-  color: 4a4a4a;
 }
+
 .container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
-  padding-top: 2em;
+
 }
 
-.text-center {
-  text-align: center;
-}
-.portfolio {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1em
-}
-.portfolio-item {
-  height: 400px;
-  display: block;
-  background-position: center;
-  background-size: cover;
-  border-top: 15px solid lightgrey;
-  border-left: 15px solid lightgrey;
-  border-right: 15px solid lightgrey;
-  border-bottom: 50px solid lightgrey;
+a, a:visited {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+  padding: 20px;
 }
 
-figure {
-}
-
-
-figure img{
-  height: 400px;
-  width: 40%;
+a:hover {
+  border-bottom: 1px dashed blue;
 }
