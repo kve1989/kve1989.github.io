@@ -1,0 +1,30 @@
+.creator
+  &-title
+    font-size: 20px
+  &-block
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    @media (max-width: 992px)
+      justify-content: center
+    @media (max-width: 768px)
+      justify-content: center
+    &__image
+      &:first-child
+        margin-bottom: 80px
+    &__text
+      flex-basis: 50% 
+      font-size: 14px
+      line-height: 1.9
+      @media (max-width: 992px)
+        order: -1
+        flex-basis: 100% 
+      @media (max-width: 768px)
+        order: -1
+        flex-basis: 100% 
+      @media (max-width: 586px)
+        order: -1
+        flex-basis: 100% 
+      li
+        list-style-image: url(../img/creator/check.png)
+        padding: 10px 0
