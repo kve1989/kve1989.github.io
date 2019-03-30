@@ -1,0 +1,26 @@
+.why
+  background: url('../img/why/why-bg.png') no-repeat
+  width: 100%
+  line-height: 1.5
+  color: #fff
+  background-position: center
+  background-size: cover
+  padding-bottom: 80px
+  &-block
+    display: flex
+    justify-content: space-around
+    @media (max-width: 576px)
+      justify-content: center
+      flex-wrap: wrap
+    &__item
+      flex-basis: 20%
+      @media (max-width: 576px)
+        flex-basis: 100%
+        text-align: center
+      p
+        font-size: 62px
+        margin: 0
+      span
+        display: block
+        font-size: 14px
+        margin-top: 20px
