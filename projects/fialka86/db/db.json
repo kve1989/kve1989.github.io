@@ -1,39 +1,35 @@
 {
-  "flowers": [{
-    "title": "Фиалка розовая",
-    "price": 300,
-    "imgs": ["img/fialka.jpg"]
-  }, {
-    "title": "Фиалка голубая",
-    "price": 230,
-    "imgs": ["img/fialka.jpg"]
-  }, {
-    "title": "Фиалка фиолетовая",
-    "price": 150,
-    "imgs": ["img/fialka.jpg"]
-  }, {
-    "title": "Фиалка пестрая",
-    "price": 100,
-    "imgs": ["img/fialka.jpg"]
-  }, {
-    "title": "Фиалка Виолла",
-    "price": 150,
-    "imgs": ["img/fialka.jpg"]
-  }, {
-    "title": "Фиалка",
-    "price": 1100,
-    "imgs": ["img/fialka.jpg"]
-  }, {
-    "title": "Фиалка нежная",
-    "price": 1300,
-    "imgs": ["img/fialka.jpg"]
-  }, {
-    "title": "Фиалка зеленая",
-    "price": 800,
-    "imgs": ["img/fialka.jpg"]
-  }, {
-    "title": "Фиалка бурая",
-    "price": 450,
-    "imgs": ["img/fialka.jpg"]
-  }]
+	"flowers": [{
+		"title": "Фиалка розовая",
+		"price": 300,
+		"imgs": ["img/fialka.jpg"]
+	}, {
+		"title": "Фиалка голубая",
+		"price": 230,
+		"imgs": ["img/fialka.jpg"]
+	}, {
+		"title": "Фиалка фиолетовая",
+		"price": 150,
+		"imgs": ["img/fialka.jpg"]
+	}, {
+		"title": "Фиалка пестрая",
+		"price": 100,
+		"imgs": ["img/fialka.jpg"]
+	}, {
+		"title": "Фиалка Виолла",
+		"price": 150,
+		"imgs": ["img/fialka.jpg"]
+	}, {
+		"title": "Фиалка",
+		"price": 1100,
+		"imgs": ["img/fialka.jpg"]
+	}, {
+		"title": "Фиалка нежная",
+		"price": 1300,
+		"imgs": ["img/fialka.jpg"]
+	}, {
+		"title": "Фиалка зеленая",
+		"price": 800,
+		"imgs": ["img/fialka.jpg"]
+	}]
 }

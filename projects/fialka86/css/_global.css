@@ -1,0 +1,38 @@
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+:focus,
+:active {
+  outline: none; }
+
+a {
+  text-decoration: none; }
+
+body,
+html {
+  height: 100%; }
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  overflow-x: hidden; }
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px; }
+
+.section {
+  padding: 60px 0; }
+  .section__title {
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    line-height: 1.2;
+    margin: 0;
+    margin-bottom: 60px; }
