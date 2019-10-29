@@ -3004,28 +3004,6 @@ template {
     -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important; } }
 
-/* exo-2-200 - latin_cyrillic */
-@font-face {
-  font-family: 'Exo 2';
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: url("../fonts/exo2/exo-2-v6-latin_cyrillic-200.eot");
-  /* IE9 Compat Modes */
-  src: local("Exo 2 Extra Light"), local("Exo2-ExtraLight"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-200.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-200.woff2") format("woff2"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-200.woff") format("woff"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-200.ttf") format("truetype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-200.svg#Exo2") format("svg");
-  /* Legacy iOS */ }
-
-/* exo-2-300 - latin_cyrillic */
-@font-face {
-  font-family: 'Exo 2';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url("../fonts/exo2/exo-2-v6-latin_cyrillic-300.eot");
-  /* IE9 Compat Modes */
-  src: local("Exo 2 Light"), local("Exo2-Light"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-300.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-300.woff2") format("woff2"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-300.woff") format("woff"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-300.ttf") format("truetype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-300.svg#Exo2") format("svg");
-  /* Legacy iOS */ }
-
 /* exo-2-regular - latin_cyrillic */
 @font-face {
   font-family: 'Exo 2';
@@ -3035,28 +3013,6 @@ template {
   src: url("../fonts/exo2/exo-2-v6-latin_cyrillic-regular.eot");
   /* IE9 Compat Modes */
   src: local("Exo 2"), local("Exo2-Regular"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-regular.woff") format("woff"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-regular.svg#Exo2") format("svg");
-  /* Legacy iOS */ }
-
-/* exo-2-500 - latin_cyrillic */
-@font-face {
-  font-family: 'Exo 2';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("../fonts/exo2/exo-2-v6-latin_cyrillic-500.eot");
-  /* IE9 Compat Modes */
-  src: local("Exo 2 Medium"), local("Exo2-Medium"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-500.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-500.woff2") format("woff2"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-500.woff") format("woff"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-500.ttf") format("truetype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-500.svg#Exo2") format("svg");
-  /* Legacy iOS */ }
-
-/* exo-2-600 - latin_cyrillic */
-@font-face {
-  font-family: 'Exo 2';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("../fonts/exo2/exo-2-v6-latin_cyrillic-600.eot");
-  /* IE9 Compat Modes */
-  src: local("Exo 2 Semi Bold"), local("Exo2-SemiBold"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-600.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-600.woff2") format("woff2"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-600.woff") format("woff"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-600.ttf") format("truetype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-600.svg#Exo2") format("svg");
   /* Legacy iOS */ }
 
 /* exo-2-700 - latin_cyrillic */
@@ -3070,28 +3026,6 @@ template {
   src: local("Exo 2 Bold"), local("Exo2-Bold"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-700.woff") format("woff"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-700.svg#Exo2") format("svg");
   /* Legacy iOS */ }
 
-/* exo-2-800 - latin_cyrillic */
-@font-face {
-  font-family: 'Exo 2';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("../fonts/exo2/exo-2-v6-latin_cyrillic-800.eot");
-  /* IE9 Compat Modes */
-  src: local("Exo 2 Extra Bold"), local("Exo2-ExtraBold"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-800.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-800.woff2") format("woff2"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-800.woff") format("woff"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-800.ttf") format("truetype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-800.svg#Exo2") format("svg");
-  /* Legacy iOS */ }
-
-/* exo-2-900 - latin_cyrillic */
-@font-face {
-  font-family: 'Exo 2';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("../fonts/exo2/exo-2-v6-latin_cyrillic-900.eot");
-  /* IE9 Compat Modes */
-  src: local("Exo 2 Black"), local("Exo2-Black"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-900.eot?#iefix") format("embedded-opentype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-900.woff2") format("woff2"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-900.woff") format("woff"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-900.ttf") format("truetype"), url("../fonts/exo2/exo-2-v6-latin_cyrillic-900.svg#Exo2") format("svg");
-  /* Legacy iOS */ }
-
 /* caveat-regular - latin_cyrillic */
 @font-face {
   font-family: 'Caveat';
@@ -3101,17 +3035,6 @@ template {
   src: url("../fonts/caveat/caveat-v7-latin_cyrillic-regular.eot");
   /* IE9 Compat Modes */
   src: local("Caveat Regular"), local("Caveat-Regular"), url("../fonts/caveat/caveat-v7-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/caveat/caveat-v7-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/caveat/caveat-v7-latin_cyrillic-regular.woff") format("woff"), url("../fonts/caveat/caveat-v7-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/caveat/caveat-v7-latin_cyrillic-regular.svg#Caveat") format("svg");
-  /* Legacy iOS */ }
-
-/* caveat-700 - latin_cyrillic */
-@font-face {
-  font-family: 'Caveat';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../fonts/caveat/caveat-v7-latin_cyrillic-700.eot");
-  /* IE9 Compat Modes */
-  src: local("Caveat Bold"), local("Caveat-Bold"), url("../fonts/caveat/caveat-v7-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/caveat/caveat-v7-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/caveat/caveat-v7-latin_cyrillic-700.woff") format("woff"), url("../fonts/caveat/caveat-v7-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/caveat/caveat-v7-latin_cyrillic-700.svg#Caveat") format("svg");
   /* Legacy iOS */ }
 
 *,
@@ -3221,6 +3144,52 @@ body {
     z-index: -1;
     -o-object-fit: cover;
     object-fit: cover; }
+
+.middle {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.mouse {
+  border: 2px solid #fff;
+  height: 50px;
+  width: 30px;
+  position: relative;
+  border-radius: 50px; }
+  .mouse:after {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 15%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-animation: mouse 1.5s infinite;
+    animation: mouse 1.5s infinite;
+    opacity: 1; }
+
+@-webkit-keyframes mouse {
+  from {
+    opacity: 1;
+    top: 15%; }
+  to {
+    opacity: 0;
+    top: 50%; } }
+
+@keyframes mouse {
+  from {
+    opacity: 1;
+    top: 15%; }
+  to {
+    opacity: 0;
+    top: 50%; } }
 
 .navbar {
   padding: 15px 0;
@@ -3399,7 +3368,7 @@ body {
   background: #dcdcdc;
   position: relative; }
   .facts__slider {
-    font-family: 'caveat';
+    font-family: 'Caveat';
     font-size: 32px;
     margin: 0 auto;
     width: 60%;
@@ -3693,6 +3662,12 @@ body {
       width: 100%;
       margin-bottom: 15px;
       font-weight: 700; }
+    .modal .form input[type="submit"] {
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      background-color: #778beb;
+      color: #fff; }
     .modal .form input[type="text"],
     .modal .form textarea {
       display: block;
@@ -3708,103 +3683,3 @@ body {
       background-color: rgba(0, 0, 0, 0.1);
       border: none;
       border-radius: 5px; }
-
-.card-modal {
-  position: fixed;
-  height: 733px;
-  max-width: 500px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  padding: 50px 70px 40px;
-  z-index: 10;
-  background-color: #fff;
-  border-radius: 10px;
-  display: none; }
-  .card-modal-active {
-    display: block; }
-  .card-modal__title {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 12px; }
-  .card-modal__price {
-    font-size: 36px;
-    margin-bottom: 10px; }
-  .card-modal__img {
-    width: 360px;
-    height: 370px;
-    border-radius: 10px;
-    margin: 0 auto;
-    margin-top: 12px; }
-    .card-modal__img img {
-      width: inherit;
-      height: inherit;
-      -o-object-fit: cover;
-      object-fit: cover;
-      border-radius: 10px; }
-  .card-modal__imgs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin: 12px 0; }
-    .card-modal__imgs img {
-      width: 110px;
-      height: 90px;
-      margin-right: 15px;
-      border-radius: 10px;
-      cursor: pointer; }
-      .card-modal__imgs img:last-child {
-        margin-right: 0; }
-  .card-modal__order {
-    -webkit-box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
-    width: 100%;
-    background-color: #9319CC;
-    border: none;
-    color: #fff;
-    height: 50px;
-    font-size: 24px;
-    cursor: pointer;
-    outline: none;
-    position: relative; }
-    .card-modal__order:before {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 4px;
-      background-color: #72139f; }
-    .card-modal__order:active {
-      background-color: #8316b5; }
-  .card-modal__close {
-    position: absolute;
-    top: -12px;
-    right: -12px;
-    border: none;
-    background-color: #fff;
-    -webkit-box-shadow: 0 0 10px black;
-    box-shadow: 0 0 10px black;
-    border-radius: 50%;
-    height: 24px;
-    width: 24px;
-    outline: none;
-    cursor: pointer; }
-    .card-modal__close:hover {
-      background-color: #e6e6e6; }
-
-.popup {
-  position: absolute;
-  padding: 15px 30px;
-  margin: 10px;
-  border: 3px solid rgba(255, 0, 0, 0.6);
-  border-radius: 10px;
-  background-color: #fff;
-  z-index: 10;
-  right: 0; }

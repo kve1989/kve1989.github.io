@@ -49,8 +49,12 @@
 			<h1 class="header__title animated fadeInLeft delay-1s">Купить фиалки в Ханты-Мансийске <span class="header__subtitle">от 200 руб./шт.</span></h1>
 			<p class="header__description animated fadeInLeft delay-1s">Наши фиалки станут настоящим украшением любого интерьера и подарят вам только положительные эмоции!</p>
 			<picture class="header__img">
-				<img class="animated fadeInRight delay-1s" src="img/BigFlower.png" alt="Купить фиалку в Ханты-Мансийске" />
+				<source srcset="img/BigFlower.webp" type="image/webp">
+				<img class="animated fadeInRight delay-1s" src="img/BigFlower.png" loading="lazy" alt="Купить фиалку в Ханты-Мансийске" />
 			</picture>
+			<div class="middle animated fadeInUp delay-1s">
+				<div class="mouse"></div>
+			</div>
 		</div>
 		<!-- /.container -->
 	</header>
@@ -98,12 +102,19 @@
 			<div class="container">
 				<h2 class="section__title">Интересные факты</h2>
 				<div class="facts__slider">
-					<div class="facts__item">Фиалка была любимым цветком таких великих людей как Жозефина Богарне, Сара Бернар, Шекспир, Гете, Шелли, Тургенев.</div>
-					<div class="facts__item">Сенполия получила свое название по фамилии барона Сен Поля, который впервые обнаружил ее в Узамбарских горах в 1892 году.</div>
-					<div class="facts__item">Древние римляне и греки плели гирлянды и венки, из фиалок украшая статуи богов, свои дома еще более 2000 лет назад. Греки, детей достигших трехлетнего возраста украшали фиалками.</div>
-					<div class="facts__item">Фиалка помогла открыть крупное цинковое месторождение в Европе, нужно просто знать, что на землях богатых цинком, растут самые крупные цветы фиалок.</div>
-					<div class="facts__item">В некоторых областях Франции до сих пор существует обычай вывешивать букетик из фиалок под окном девушки,жених который ушёл на войну или уехал на долгое время.Этот букетик должен ей постоянно напоминать об любимом.</div>
-					<div class="facts__item">В Ки­тае выпускали даже платья, пахнущие фиал­ками, причем запах не пропадал и после семикратной стирки.</div>
+					<div class="facts__item">Фиалка была любимым цветком таких великих людей как Жозефина Богарне, Сара Бернар,
+						Шекспир, Гете, Шелли, Тургенев.</div>
+					<div class="facts__item">Сенполия получила свое название по фамилии барона Сен Поля, который впервые обнаружил
+						ее в Узамбарских горах в 1892 году.</div>
+					<div class="facts__item">Древние римляне и греки плели гирлянды и венки, из фиалок украшая статуи богов, свои
+						дома еще более 2000 лет назад. Греки, детей достигших трехлетнего возраста украшали фиалками.</div>
+					<div class="facts__item">Фиалка помогла открыть крупное цинковое месторождение в Европе, нужно просто знать,
+						что на землях богатых цинком, растут самые крупные цветы фиалок.</div>
+					<div class="facts__item">В некоторых областях Франции до сих пор существует обычай вывешивать букетик из
+						фиалок под окном девушки,жених который ушёл на войну или уехал на долгое время.Этот букетик должен ей
+						постоянно напоминать об любимом.</div>
+					<div class="facts__item">В Ки­тае выпускали даже платья, пахнущие фиал­ками, причем запах не пропадал и после
+						семикратной стирки.</div>
 				</div>
 				<button class="arrow arrow-prev">
 					<img src="img/arrow-back.png" alt="" />
@@ -204,7 +215,7 @@
 						</div>
 					</div>
 					<!-- /.care-block__item -->
-					<div class="care-block__item wow fadeInRight" data-wow-delay="2s">
+					<div class="care-block__item wow fadeInRight" data-wow-delay="1s">
 						<div class="care-block__item-img">
 							<img src="img/care-2.svg" alt="Температура" />
 						</div>
@@ -218,7 +229,7 @@
 						</div>
 					</div>
 					<!-- /.care-block__item -->
-					<div class="care-block__item wow fadeInLeft" data-wow-delay="3s">
+					<div class="care-block__item wow fadeInLeft" data-wow-delay="2s">
 						<div class="care-block__item-img">
 							<img src="img/care-3.svg" alt="Полив" />
 						</div>
@@ -232,7 +243,7 @@
 						</div>
 					</div>
 					<!-- /.care-block__item -->
-					<div class="care-block__item wow fadeInRight" data-wow-delay="4s">
+					<div class="care-block__item wow fadeInRight" data-wow-delay="2s">
 						<div class="care-block__item-img">
 							<img src="img/care-4.svg" alt="Влажность" />
 						</div>
@@ -247,7 +258,7 @@
 						</div>
 					</div>
 					<!-- /.care-block__item -->
-					<div class="care-block__item wow fadeInLeft" data-wow-delay="5s">
+					<div class="care-block__item wow fadeInLeft" data-wow-delay="3s">
 						<div class="care-block__item-img">
 							<img src="img/care-5.svg" alt="Земляная смесь" />
 						</div>
@@ -261,23 +272,23 @@
 						</div>
 					</div>
 					<!-- /.care-block__item -->
-					<div class="care-block__item wow fadeInRight" data-wow-delay="6s"">
-						<div class="care-block__item-img">
-							<img src="img/care-6.svg" alt="Размер горшка" />
-						</div>
-						<div class="care-block__item-info">
-							<h3>Размер горшка</h3>
-							<p>
-								Диаметр горшка постепенно увеличивают с каждой пересадкой по
-								мере роста растения. Считается, что диаметр растения должен в
-								три раза превышать диаметр горшка. Не следует использовать
-								горшки диаметром более 10 см, это будет препятствовать
-								обильному цветению фиалки.
-							</p>
-						</div>
+					<div class="care-block__item wow fadeInRight" data-wow-delay="3s"">
+						<div class=" care-block__item-img">
+						<img src="img/care-6.svg" alt="Размер горшка" />
 					</div>
-					<!-- /.care-block__item -->
+					<div class="care-block__item-info">
+						<h3>Размер горшка</h3>
+						<p>
+							Диаметр горшка постепенно увеличивают с каждой пересадкой по
+							мере роста растения. Считается, что диаметр растения должен в
+							три раза превышать диаметр горшка. Не следует использовать
+							горшки диаметром более 10 см, это будет препятствовать
+							обильному цветению фиалки.
+						</p>
+					</div>
 				</div>
+				<!-- /.care-block__item -->
+			</div>
 			</div>
 		</article>
 	</main>
@@ -286,7 +297,7 @@
 	<footer class="footer">
 		<div class="container">
 			<p>
-				Сайт разработал
+				Разработка
 				<a href="mailto:kve1989@ya.ru" class="author">V.Kavetskiy</a>
 			</p>
 			<div class="social">
