@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<div class="wrapper">
 	<header class="header">
 		<div class="container">
 			<div class="header__content">
@@ -28,14 +29,14 @@
 					<div class="gamburger__line"></div>
 					<div class="gamburger__line"></div>
 				</div>
-				<div class="header__menu-wrapper">
-					<a href="#" class="header__link">О нас</a>
-					<a href="#" class="header__link">Услуги</a>
-					<a href="#" class="header__link">Результаты</a>
-					<a href="#" class="header__link">Акции</a>
-					<a href="#" class="header__link">Отзывы</a>
-					<a href="#" class="header__link">Салоны</a>
-				</div>
+				<ul class="header__menu-wrapper">
+					<li><a class="header__link" href="#">О нас</a></li>
+					<li><a class="header__link" href="#">Услуги</a></li>
+					<li><a class="header__link" href="#">Результаты</a></li>
+					<li><a class="header__link" href="#">Акции</a></li>
+					<li><a class="header__link" href="#">Отзывы</a></li>
+					<li><a class="header__link" href="#">Салоны</a></li>
+				</ul>
 			</div>
 		</nav>
 		<!-- /.container -->
@@ -106,33 +107,37 @@
 <div class="block3 section">
 	<div class="block3__wrapper">
 		<div class="block3__column-1">
-			<div class="block3__item">
-				<div class="block3__img">
-					<img src="./img/block3/features-1.png" alt="Команда профессионалов">
+			<div class="block3__row">
+				<div class="block3__item">
+					<div class="block3__img">
+						<img src="./img/block3/features-1.png" alt="Команда профессионалов">
+					</div>
+					<div class="block3__title">Команда профессионалов </div>
+					<div class="block3__cnt">Специалисты проведут диагностику Вашей кожи и разработают индивидуальную программу процедур</div>
 				</div>
-				<div class="block3__title">Команда профессионалов </div>
-				<div class="block3__cnt">Специалисты проведут диагностику Вашей кожи и разработают индивидуальную программу процедур</div>
+				<div class="block3__item">
+					<div class="block3__img">
+						<img src="./img/block3/features-2.png" alt="гарантируем результат">
+					</div>
+					<div class="block3__title">гарантируем результат</div>
+					<div class="block3__cnt">Благодаря проверенным временем методикам, Вы получите результат уже после первых процедур!Гарантии - результаты и отзывы наших клиентов</div>
+				</div>
 			</div>
-			<div class="block3__item">
-				<div class="block3__img">
-					<img src="./img/block3/features-2.png" alt="гарантируем результат">
+			<div class="block3__row">
+				<div class="block3__item">
+					<div class="block3__img">
+						<img src="./img/block3/features-3.png" alt="наличие сертификатов">
+					</div>
+					<div class="block3__title">наличие сертификатов</div>
+					<div class="block3__cnt">Мы имеем все необходимые документы, подтверждающие безопасность наших аппаратов и эффективность процедур!</div>
 				</div>
-				<div class="block3__title">гарантируем результат</div>
-				<div class="block3__cnt">Благодаря проверенным временем методикам, Вы получите результат уже после первых процедур!Гарантии - результаты и отзывы наших клиентов</div>
-			</div>
-			<div class="block3__item">
-				<div class="block3__img">
-					<img src="./img/block3/features-3.png" alt="наличие сертификатов">
+				<div class="block3__item">
+					<div class="block3__img">
+						<img src="./img/block3/features-4.png" alt="собственные аппараты">
+					</div>
+					<div class="block3__title">собственные аппараты</div>
+					<div class="block3__cnt">Мы являемся производителями аппаратов, которыми пользуемся, поэтому мы можете рассчитывать на самые низкие цены и регулярные скидки!</div>
 				</div>
-				<div class="block3__title">наличие сертификатов</div>
-				<div class="block3__cnt">Мы имеем все необходимые документы, подтверждающие безопасность наших аппаратов и эффективность процедур!</div>
-			</div>
-			<div class="block3__item">
-				<div class="block3__img">
-					<img src="./img/block3/features-4.png" alt="собственные аппараты">
-				</div>
-				<div class="block3__title">собственные аппараты</div>
-				<div class="block3__cnt">Мы являемся производителями аппаратов, которыми пользуемся, поэтому мы можете рассчитывать на самые низкие цены и регулярные скидки!</div>
 			</div>
 		</div>
 		<div class="block3__column-2">
@@ -220,10 +225,11 @@
 <div class="block7 section">
 	<div class="container">
 		<div class="block7__wrapper">
-			<div class="block7__column-1">
+			<div class="block7__column block7__column-1">
 				<div class="block7__video">
-					<img src="./img/block7/video1.jpg" alt="">
-					<svg class="playBut" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="213.7px" height="213.7px" viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve"><polygon class='triangle' id="XMLID_18_" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="73.5,62.5 148.5,105.8 73.5,149.1 "/><circle class='circle' id="XMLID_17_" fill="none"  stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"/>
+					<!-- <img src="./img/block7/video1.jpg" alt=""> -->
+					<iframe id="video1" width="100%" height="315px" src="https://www.youtube.com/embed/5pWgE5EjLLo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<svg id="playBut1" class="playBut" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="213.7px" height="213.7px" viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve"><polygon class='triangle' id="XMLID_18_" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="73.5,62.5 148.5,105.8 73.5,149.1 "/><circle class='circle' id="XMLID_17_" fill="none"  stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"/>
 					<div class="block7__video__flower block7__video__flower-1">
 						<img src="./img/block7/flower1.png" alt="Цветок">
 					</div>
@@ -231,12 +237,12 @@
 				<div class="block7__text block7-text">Прекрасная фигура <br> уже через 10 сеансов!</div>
 				<div class="block7__btn btn">Консультация</div>
 			</div>
-			<div class="block7__column-2">
-				<div class="block7__title">Отзывы</div>
+			<div class="block7__column block7__column-2">
+				<div class="block7__title block__title">Отзывы</div>
 				<div class="block7__subtext block7-subtext">Наши прекрасные девушки рассказали о процедуре LPG-массажа на аппарате Vortex</div>
 				<div class="block7__video">
-					<img src="./img/block7/video2.jpg" alt="">
-					<svg class="playBut" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="213.7px" height="213.7px" viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve"><polygon class='triangle' id="XMLID_18_" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="73.5,62.5 148.5,105.8 73.5,149.1 "/><circle class='circle' id="XMLID_17_" fill="none"  stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"/>
+					<iframe id="video2" width="100%" height="315px" src="https://www.youtube.com/embed/n45-8qut05c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<svg id="playBut2" class="playBut" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="213.7px" height="213.7px" viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve"><polygon class='triangle' id="XMLID_18_" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="73.5,62.5 148.5,105.8 73.5,149.1 "/><circle class='circle' id="XMLID_17_" fill="none"  stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"/>
 					</svg>
 					<div class="block7__video__flower block7__video__flower-2">
 						<img src="./img/block7/flower2.png" alt="Цветок">
@@ -361,6 +367,7 @@
 		<!-- /.container -->
 	</footer>
 	<!-- /.footer -->
+</div>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
