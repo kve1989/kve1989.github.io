@@ -1263,15 +1263,6 @@ ul, li {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center; } }
-    @media (max-width: 992px) {
-      .block3__wrapper {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center; } }
   .block3__column-1 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1291,7 +1282,6 @@ ul, li {
         padding: 30px 0; } }
     @media (max-width: 992px) {
       .block3__column-1 {
-        margin: 0;
         margin-bottom: 15px; } }
   .block3__row {
     display: -webkit-box;
@@ -1317,7 +1307,7 @@ ul, li {
     background-size: contain; }
     @media (max-width: 1024px) {
       .block3__column-2 {
-        width: 100%; } }
+        max-width: 100%; } }
     .block3__column-2 img {
       display: block; }
   .block3__item {
@@ -1533,7 +1523,7 @@ ul, li {
     letter-spacing: 2.08px;
     text-align: center;
     position: relative;
-    z-index: 10; }
+    z-index: 11; }
     @media (max-width: 480px) {
       .block4__text {
         font-size: 16px; } }
@@ -1579,8 +1569,10 @@ ul, li {
     left: 5%; }
 
 .water {
+  background: #fff url("../img/block5/water.png") top right/auto no-repeat;
   height: 1222px;
-  z-index: -1;
+  width: 797px;
+  z-index: -10;
   position: absolute;
   right: 0;
   top: -150px; }
@@ -1679,7 +1671,8 @@ ul, li {
     cursor: pointer; }
     @media (max-width: 1024px) {
       .block7__video {
-        margin: 0 auto; } }
+        margin: 0 auto;
+        width: 100%; } }
     .block7__video .playBut {
       top: 50%;
       left: 50%;
@@ -1786,10 +1779,16 @@ ul, li {
     padding: 0 10px;
     overflow: hidden;
     width: 650px; }
+    @media (max-width: 1024px) {
+      .block8__column {
+        width: 100%;
+        margin: 0 0 20px 0; } }
     .block8__column img {
       -webkit-transition: all .3s;
       -o-transition: all .3s;
-      transition: all .3s; }
+      transition: all .3s;
+      display: block;
+      margin: 0 auto; }
       .block8__column img:hover {
         -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
@@ -1835,7 +1834,7 @@ ul, li {
     flex-wrap: wrap;
     max-width: 1119px;
     margin: 0 auto; }
-    @media (max-width: 992px) {
+    @media (max-width: 1024px) {
       .block9__wrapper {
         -webkit-box-pack: center;
         -ms-flex-pack: center;
