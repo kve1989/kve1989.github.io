@@ -1007,7 +1007,12 @@ ul, li {
   .header__btn:hover {
     background-color: #fff;
     border: 2px solid #E0604C;
-    color: #E0604C; }
+    color: #E0604C;
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); }
 
 .header__menu {
   background-color: #FCD1C2; }
@@ -1147,7 +1152,12 @@ ul, li {
     cursor: pointer;
     border: 2px solid #FFB2A3; }
     .welcome__btn:hover {
-      background-color: #fff; }
+      background-color: #fff;
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1); }
     @media (max-width: 480px) {
       .welcome__btn {
         display: block;
@@ -1509,7 +1519,12 @@ ul, li {
     cursor: pointer;
     margin: 0 auto; }
     .block4__btn:hover {
-      background-color: #EE8A7D; }
+      background-color: #EE8A7D;
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1); }
     @media (max-width: 480px) {
       .block4__btn {
         padding: 10px 35px; } }
@@ -1912,7 +1927,13 @@ ul, li {
     background-color: #FCD1C2;
     padding: 20px 83px; }
     .block10__btn:hover {
-      border: 2px solid #fff; }
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1);
+      border: 2px solid #FCD1C2;
+      background-color: #fff; }
   .block10-btn {
     margin: 60px auto 0; }
 
