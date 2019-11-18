@@ -833,7 +833,7 @@ ul, li {
   font-size: 21px;
   font-weight: bold;
   letter-spacing: 2.31px;
-  padding: 8px 35px;
+  padding: 8px 37px;
   cursor: pointer;
   -webkit-transition: all .2s;
   -o-transition: all .2s;
@@ -1063,15 +1063,30 @@ ul, li {
 .welcome {
   position: relative; }
   .welcome__item {
-    background-position: 77%;
     height: 794px; }
+    @media (max-width: 992px) {
+      .welcome__item {
+        background-position: 77%; } }
   .welcome .container {
     position: relative; }
   .welcome__content {
     max-width: 730px;
-    margin: 200px 0 110px 0;
+    margin: 228px 0 131px 0;
     color: #1a1a18;
-    height: 100%; }
+    height: 430px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
     @media (max-width: 768px) {
       .welcome__content {
         margin: 100px 0 50px 0; } }
@@ -1094,14 +1109,18 @@ ul, li {
       width: 137px;
       bottom: -25px;
       left: 0; }
+  .welcome__subtitle {
+    font-size: 37px;
+    font-family: "Futura PT Book";
+    letter-spacing: 2.31px;
+    display: block; }
   .welcome__desctiption {
     font-family: "Futura PT Book";
     font-size: 36px;
     font-weight: bold;
     line-height: 51.32px;
     text-transform: uppercase;
-    letter-spacing: 2.31px;
-    margin-top: 53px; }
+    letter-spacing: 2.31px; }
     @media (max-width: 480px) {
       .welcome__desctiption {
         font-size: 30px; } }
@@ -1119,9 +1138,8 @@ ul, li {
     .welcome__price-color:last-child {
       font-size: 36px; }
   .welcome__btn {
-    margin-top: 80px;
     border-radius: 18px;
-    padding: 18px 60px;
+    padding: 10px 60px;
     color: #000;
     font-size: 25px;
     line-height: 36.63px;
@@ -1530,7 +1548,13 @@ ul, li {
     margin: 0 auto;
     border: 2px solid #FFB2A3; }
     .block5__btn:hover {
-      border: 2px solid #fff; }
+      border: 2px solid #FFB2A3;
+      background-color: #fff;
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1); }
     @media (max-width: 480px) {
       .block5__btn {
         padding: 18px 45px; } }
@@ -1588,7 +1612,12 @@ ul, li {
   letter-spacing: 2.27px;
   color: #000; }
   .block6__btn:hover {
-    background-color: #fff; }
+    background-color: #fff;
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1); }
 
 .block6-btn {
   padding: 5px 90px; }
