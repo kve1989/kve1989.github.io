@@ -35,6 +35,31 @@
 			</div>
 		</nav>
 		<!-- /.container -->
+		<div class="header__mobile">
+			<div class="header__mobile-logo">
+				<img src="./img/header/mobile_logo.png" alt="">
+			</div>
+			<div class="header__burger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="header__mobile-menu">
+				<div class="header__mobile-info">
+					<div class="header__phone">+7 985 535 05 20</div>
+					<div class="header__wordhours">с 10:00 до 21:00 (без выходных)</div>
+					<button class="header__btn btn">Обратный звонок</button>
+				</div>
+				<ul class="header__m_menu-wrapper">
+					<li><a class="header__mobile-link" href="#block2">О нас</a></li>
+					<li><a class="header__mobile-link" href="#block4">Услуги</a></li>
+					<li><a class="header__mobile-link" href="#block8">Результаты</a></li>
+					<li><a class="header__mobile-link" href="#block6">Акции</a></li>
+					<li><a class="header__mobile-link" href="#block7">Отзывы</a></li>
+					<li><a class="header__mobile-link" href="#block12">Салоны</a></li>
+				</ul>
+			</div>
+		</div>
 	</header>
 	<!-- /.header -->
 <div class="welcome">
@@ -89,9 +114,9 @@
 		<button class="arrow arrow-left"><img src="./img/welcome/arr-left.png" alt=""></button>
 		<button class="arrow arrow-right"><img src="./img/welcome/arr-right.png" alt=""></button>
 		<div class="welcome__social">
-			<a href="#" class="soclink"><img src="./img/welcome/instagram.png" alt=""></a>
-			<a href="#" class="soclink"><img src="./img/welcome/vk.png" alt=""></a>
-			<a href="#" class="soclink"><img src="./img/welcome/facebook.png" alt=""></a>
+			<a href="#" class="header__soclink"><img src="./img/welcome/instagram.png" alt=""></a>
+			<a href="#" class="header__soclink"><img src="./img/welcome/vk.png" alt=""></a>
+			<a href="#" class="header__soclink"><img src="./img/welcome/facebook.png" alt=""></a>
 		</div>
 </div>
 <!-- /.welcome -->
@@ -234,22 +259,25 @@
 	<div class="container">
 		<div class="block7__wrapper">
 			<div class="block7__column block7__column-1">
-				<div class="block7__video">
+				<div class="block7__video" style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
 					<!-- <img src="./img/block7/video1.jpg" alt=""> -->
-					<iframe id="video1" width="100%" height="100%" src="https://www.youtube.com/embed/5pWgE5EjLLo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe style="position:absolute; top:0; left: 0" id="video1" width="100%" height="100%" src="https://www.youtube.com/embed/5pWgE5EjLLo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<svg id="playBut1" class="playBut" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="213.7px" height="213.7px" viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve"><polygon class='triangle' id="XMLID_18_" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="73.5,62.5 148.5,105.8 73.5,149.1 "/><circle class='circle' id="XMLID_17_" fill="none"  stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"/>
 					<div class="block7__video__flower block7__video__flower-1">
 						<img src="./img/block7/flower1.png" alt="Цветок">
 					</div>
 				</div>
 				<div class="block7__text block7-text">Прекрасная фигура <br> уже через 10 сеансов!</div>
-				<div class="block7__btn btn">Консультация</div>
+				<div class="block7__b-btn">
+					<button class="block7__btn btn">Консультация</button>
+				</div>
+
 			</div>
 			<div class="block7__column block7__column-2">
 				<div class="block7__title block__title">Отзывы</div>
 				<div class="block7__subtext block7-subtext">Наши прекрасные девушки рассказали о процедуре LPG-массажа на аппарате Vortex</div>
-				<div class="block7__video">
-					<iframe id="video2" width="100%" height="100%" src="https://www.youtube.com/embed/n45-8qut05c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="block7__video" style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+					<iframe style="position:absolute; bottom:0; left: 0" id="video2" width="100%" height="100%" src="https://www.youtube.com/embed/n45-8qut05c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					<svg id="playBut2" class="playBut" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="213.7px" height="213.7px" viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve"><polygon class='triangle' id="XMLID_18_" fill="none" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="73.5,62.5 148.5,105.8 73.5,149.1 "/><circle class='circle' id="XMLID_17_" fill="none"  stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"/>
 					</svg>
 					<div class="block7__video__flower block7__video__flower-2">
@@ -357,7 +385,7 @@
 				<div class="block12__text-gray block12__namesalon block12-namesalon">Салон на Молодцова:<span class="block12__text-gray block12__workaddress">ул. Молодцова 4А (метро Медведково)</span></div>
 			</div>
 			<div class="block12__column block12__map">
-				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A195104db1ab0fbf66242c36dba88bac2052e23519e3b0aee441cd023528f8fcc&amp;source=constructor" width="100%" height="750px" frameborder="0"></iframe>
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A195104db1ab0fbf66242c36dba88bac2052e23519e3b0aee441cd023528f8fcc&amp;source=constructor" width="100%" frameborder="0"></iframe>
 			</div>
 		</div>
 	</div>
@@ -375,6 +403,15 @@
 		<!-- /.container -->
 	</footer>
 	<!-- /.footer -->
+<div class="banner">
+	<div class="banner__container-1">
+		<div class="banner__title">LPG-массаж</div>
+		<div class="banner__title">LPG-массаж</div>
+	</div>
+	<!-- /.banner__container-1 -->
+</div>
+<!-- /.banner -->
+
 </div>
 	<script type="text/javascript" src="//w133207.yclients.com/widgetJS" charset="UTF-8"></script>
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
