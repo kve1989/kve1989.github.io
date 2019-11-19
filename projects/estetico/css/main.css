@@ -2299,7 +2299,8 @@ ul, li {
   z-index: 55;
   width: 80%;
   line-height: 1.5;
-  overflow-y: auto; }
+  overflow-y: auto;
+  height: 100%; }
   @media (max-width: 992px) {
     .banner {
       width: 100%;
