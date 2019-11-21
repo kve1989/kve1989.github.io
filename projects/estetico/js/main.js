@@ -1663,7 +1663,7 @@ $(function() {
 	// Вешаем событие на открытие баннера в разделе о услугах
 	$('.block4 .block4__btn').click(function(event) {
 		onOverlay();
-		$('.ban1').show();
+		$('.ban1').show("slow");
 		$('.close').click(function(event) {
 			$('.banner').hide();
 			offOverlay();
@@ -1673,7 +1673,7 @@ $(function() {
 	// Вешаем событие на открытие баннера в разделе о услугах
 	$('.block5 .block4__btn').click(function(event) {
 		onOverlay();
-		$('.ban2').show();
+		$('.ban2').show("slow");
 		$('.close').click(function(event) {
 			$('.banner').hide();
 			offOverlay();
@@ -1683,7 +1683,7 @@ $(function() {
 	// Вешаем событие на открытие баннера с прайсом
 	$('.block6 .block6__btn').click(function(event) {
 		onOverlay();
-		$('.ban3').show();
+		$('.ban3').show("slow");
 		$('.close').click(function(event) {
 			$('.banner').hide();
 			offOverlay();
@@ -1694,7 +1694,7 @@ $(function() {
 	$('.footer__link').click(function(event) {
 		event.preventDefault();
 		onOverlay();
-		$('.ban4').show();
+		$('.ban4').show("slow");
 		$('.close').click(function (event) {
 			$('.banner').hide();
 			offOverlay();
