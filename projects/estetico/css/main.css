@@ -782,7 +782,8 @@ body {
   text-transform: uppercase;
   font-family: 'Futura PT Book';
   font-size: 16px;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  zoom: 90%; }
 
 .wrapper {
   position: relative;
@@ -1424,7 +1425,8 @@ ul, li {
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    margin: 0 auto; }
     @media (max-width: 1024px) {
       .block3__column-1 {
         width: 100%;
