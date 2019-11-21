@@ -1174,7 +1174,17 @@ ul, li {
 .welcome {
   position: relative; }
   .welcome .header__container {
-    position: relative; }
+    position: relative;
+    max-width: 1420px; }
+    @media (max-width: 1699.98px) {
+      .welcome .header__container {
+        padding: 0 100px; } }
+    @media (max-width: 1499.98px) {
+      .welcome .header__container {
+        padding: 0 130px; } }
+    @media (max-width: 992px) {
+      .welcome .header__container {
+        padding: 0 15px; } }
   .welcome__item {
     height: 794px;
     position: relative; }
@@ -1309,11 +1319,11 @@ ul, li {
     position: absolute;
     bottom: 1%;
     right: 4%; }
+    .welcome__social a {
+      margin: 0 8px; }
     @media (max-width: 768px) {
       .welcome__social {
         left: 0%; } }
-    .welcome__social a {
-      margin: 0 8px; }
   .welcome__soclink {
     width: 57px;
     height: 56px; }
@@ -1713,7 +1723,7 @@ ul, li {
     .block5 {
       padding-bottom: 35px; } }
   .block5__btn {
-    color: #000000;
+    color: #000;
     padding: 18px 60px;
     letter-spacing: 2.27px;
     font-size: 25px;
@@ -2119,7 +2129,9 @@ ul, li {
     border: 2px solid #FCD1C2;
     border-radius: 18px;
     background-color: #FCD1C2;
-    padding: 20px 83px; }
+    padding: 20px 83px;
+    display: inline-block;
+    text-decoration: none; }
     .block10__btn:hover {
       -moz-transform: scale(1.1);
       -ms-transform: scale(1.1);
@@ -2132,7 +2144,8 @@ ul, li {
       .block10__btn {
         padding: 20px 50px; } }
   .block10-btn {
-    margin: 60px auto 0; }
+    margin: 60px auto 0;
+    text-align: center; }
 
 .block11 {
   background: #f0d0c1 url("../img/block11/bg-11.png") center/cover no-repeat;
@@ -2445,6 +2458,11 @@ ul, li {
       -ms-flex-pack: justify;
       justify-content: space-between;
       font-size: 16px; }
+      @media (max-width: 380px) {
+        .banner__table-item {
+          font-size: 14px; } }
+      .banner__table-item:last-child .banner__tableprice:last-child {
+        visibility: hidden; }
   .banner__table-2 .banner__tableprice:last-child {
     margin-left: 40px; }
   .banner__table-2 .banner__gender:last-child {
@@ -2466,6 +2484,12 @@ ul, li {
       @media (max-width: 768px) {
         .banner__tableprice:after {
           font-size: 18px; } }
+      @media (max-width: 480px) {
+        .banner__tableprice:after {
+          font-size: 16px; } }
+      @media (max-width: 380px) {
+        .banner__tableprice:after {
+          font-size: 12px; } }
 
 .close {
   position: absolute;
