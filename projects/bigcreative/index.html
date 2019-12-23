@@ -69,7 +69,7 @@
 			<div class="welcome__offer-text">
 				<h1 class="welcome__title">ЛУЧШИЕ АТТРАКЦИОНЫ МОСКВЫ</h1>
 				<div class="welcome__subtitle-block">
-					<div class="welcome__subtitle-icon toggle-button"><img src="../img/2_welcome/icon-calendar.png" alt=""></div>
+					<div class="welcome__subtitle-icon"><img src="../img/2_welcome/icon-calendar.png" alt=""></div>
 					<div class="welcome__subtitle-text">Только до 31 декабря билет «Все включено» со скидкой 80%</div>
 				</div>
 				<div class="welcome__buy">
@@ -681,13 +681,13 @@
 			<form action="#" class="form">
 				<div class="form__title"><strong>Запишитесь</strong> на аттракционы</div>
 				<div class="form__group">
-					<input type="text" class="form__input" placeholder="ВВЕДИТЕ ВАШЕ ИМЯ">
+					<input type="text" class="form__input" name="name" required placeholder="ВВЕДИТЕ ВАШЕ ИМЯ">
 				</div>
 				<div class="form__group">
-					<input type="text" class="form__input" placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН">
+					<input type="text" class="form__input" name="phonenumber" id="phonenumber" required placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН">
 				</div>
 				<div class="form__group">
-					<input type="text" class="form__input" placeholder="ВВЕДИТЕ ВАШ E-MAIL">
+					<input type="text" class="form__input" name="email" placeholder="ВВЕДИТЕ ВАШ E-MAIL">
 				</div>
 				<div class="form__text"><strong>Оставьте заявку</strong> и в течение 12 минут с Вами свяжется наш менеджер</div>
 				<div class="form__group">
@@ -750,35 +750,35 @@
 					<img src="./img/popup/video.png" alt="">
 				</div>
 			</div>
-			<div class="popup__row">
+			<div class="popup__row-2">
 				<div class="popup__item"><img src="./img/popup/img-1.png" alt=""></div>
 				<div class="popup__item"><img src="./img/popup/img-2.png" alt=""></div>
 				<div class="popup__item"><img src="./img/popup/img-3.png" alt=""></div>
 			</div>
-			<div class="popup__subtitle">Купите билет на все аттракционы всего за 990 рублей</div>
-			<div class="popup__suptitle">старая цена 4 790</div>
+			<div class="popup__subtitle text-center">Купите билет на все аттракционы всего за 990 рублей</div>
+			<div class="popup__suptitle text-center">старая цена 4 790</div>
 			<div class="popup__block-btn">
-				<button class="popup__btn">Купить билет</button>
+				<button class="popup__btn btn">Купить билет</button>
 			</div>
-			<div class="popup__suptitle">Срок действия акции до 31 декабря</div>
+			<div class="popup__suptitle text-center">Срок действия акции до 31 декабря</div>
+
 			<div class="popup__block">
 				<div class="popup__block-left">
 					<div class="popup__block-line">
-
+						<div class="popup__block-cell">
+							<span>Адрес</span> Москва, ВДНХ, Проспект мира, 119, павильон 55
+						</div>
+						<div class="popup__block-cell"><span>Телефон</span>+7 (800) 600-58-08</div>
+					</div>
+					<div class="popup__block-line">
+						<div class="popup__block-inner">Как добраться: От главного входа идите прямо до Площади промышленности (Ракета-носитель Восток), справа от Вас будет здание ярко-желтого цвета с вывеской "Музей иллюзий" - Вы на месте! </div>
 					</div>
 				</div>
-				<div class="popup__block-right"></div>
+				<div class="popup__block-right">
+					<div class="popup__block-cell"><span>РЕЖИМ РАБОТЫ</span> с 10.00 до 20.00 с понедельника по четверг, с 10.00 до 21.00 с пятницы по воскресенье и в праздничные дни. В праздники: 31 Декабря до 18.00, 1 января с 13.00 </div>
+					<div class="popup__block-cell"><span>Возрастное ограничение 0+</span></div>
+				</div>
 			</div>
-
-
-
-
-
-
-
-
-
-
 
 
 		<div class="popup__footer">
@@ -791,6 +791,7 @@
 		</div>
 	</div>
 	<!-- /.container -->
+	<div class="popup__close"></div>
 </section>
 <!-- /.popup -->
 	</div>
