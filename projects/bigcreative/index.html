@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<div class="wrapper">
+	<div class="wrapper" id="panel">
 		<header class="header">
 	<div class="container">
 		<div class="header__wrapper">
@@ -29,16 +29,21 @@
 				<div class="header__place-img"><img src="./img/1_header/place.png" alt="Иконка"></div>
 				<div class="header__place-text">Москва, ВДНХ, Проспект Мира, 119, павильон 55</div>
 			</div>
-				<div class="header__social">
-					<a href=""><img src="./img/1_header/vk.png" alt=""></a>
-					<a href=""><img src="./img/1_header/instagram.png" alt=""></a>
-					<a href=""><img src="./img/1_header/fb.png" alt=""></a>
-				</div>
-				<div class="header__info">
-					<div class="header__phone">8 800 600-58-08 </div>
-					<div class="header__worktime">Ежедневно 12:00 - 22:00</div>
-				</div>
+			<div class="header__social">
+				<a href=""><img src="./img/1_header/vk.png" alt=""></a>
+				<a href=""><img src="./img/1_header/instagram.png" alt=""></a>
+				<a href=""><img src="./img/1_header/fb.png" alt=""></a>
 			</div>
+			<div class="header__info">
+				<div class="header__phone">8 800 600-58-08 </div>
+				<div class="header__worktime">Ежедневно 12:00 - 22:00</div>
+			</div>
+			<div class="header__burger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
 	</div>
 	<!-- /.container -->
 </header>
@@ -64,7 +69,7 @@
 			<div class="welcome__offer-text">
 				<h1 class="welcome__title">ЛУЧШИЕ АТТРАКЦИОНЫ МОСКВЫ</h1>
 				<div class="welcome__subtitle-block">
-					<div class="welcome__subtitle-icon"><img src="../img/2_welcome/icon-calendar.png" alt=""></div>
+					<div class="welcome__subtitle-icon toggle-button"><img src="../img/2_welcome/icon-calendar.png" alt=""></div>
 					<div class="welcome__subtitle-text">Только до 31 декабря билет «Все включено» со скидкой 80%</div>
 				</div>
 				<div class="welcome__buy">
@@ -74,7 +79,7 @@
 					<div class="btn-text"><span class="welcome__price">4 700 руб</span><span class="welcome__newprice">990 <img src="./img/2_welcome/rub.png" alt=""></span></div>
 				</div>
 			</div>
-			<div class="welcome__offer-img">
+			<div class="welcome__offer-img" id="prlx-1">
 				<img src="./img/2_welcome/welcome-img.png" alt="">
 				<p>+ <a href="#attrac">Еще 8 аттракционов</a> входят в стоимость билета</p>
 			</div>
@@ -95,30 +100,19 @@
 						<div class="block3__column-title-3">Международная сеть самых неординарных музеев, выставок и аттракционов по всему миру.</div>
 					</div>
 					<div class="block3__column-text">
-						<p>Более 100 наших семейных развлекательных музеев
-								открыты в США (Лос-Анджелес, Сан-Франциско), Испании
-								(Барселона) и России (Москва, Санкт-Петербург, Уфа,
-								Екатеринбург, Казань, Челябинск и др). Ежедневно в разных
-								частях света нас посещает более 50 000 гостей.</p>
-						<p>"Сладкий музей", "Дом Великана", "Дом Вверх Дном",
-								"Музей Иллюзий" и другие аттракционы Big Creative решают
-								вопрос, куда пойти с ребенком, где отдохнуть с семьей и
-								друзьями. Катайтесь на облаках сахарной ваты. Прыгайте по
-								крышам небоскребов. Позавтракайте на кухне, где стол парит
-								под потолком.</p>
-					</div>
-					<div class="block3__img">
-						<img src="./img/3_block3/video.png" alt="">
-					</div>
-					<div class="block3__img-2">
-						<img src="./img/3_block3/castle.png" alt="">
+						<p>Более 100 наших семейных развлекательных музеев открыты в США (Лос-Анджелес, Сан-Франциско), Испании (Барселона) и России (Москва, Санкт-Петербург, Уфа, Екатеринбург, Казань, Челябинск и др). Ежедневно в разных частях света нас посещает более 50 000 гостей.</p>
+						<p>"Сладкий музей", "Дом Великана", "Дом Вверх Дном", "Музей Иллюзий" и другие аттракционы Big Creative решают вопрос, куда пойти с ребенком, где отдохнуть с семьей и друзьями. Катайтесь на облаках сахарной ваты. Прыгайте по крышам небоскребов. Позавтракайте на кухне, где стол парит под потолком.</p>
 					</div>
 				</div>
 			</div>
-			<div class="block3__column">
-				<div class="block3__column-2">
+			<div class="block3__column-2">
+				<div class="block3__img">
+					<img src="./img/3_block3/video.png" alt="">
 				</div>
-			</div>
+				<div class="block3__img-2">
+					<img src="./img/3_block3/castle.png" alt="">
+				</div>
+				</div>
 		</div>
 		<!-- /.block3__wrapper -->
 		<div class="block3__bq">
@@ -314,8 +308,8 @@
 						<div class="card__arr"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.49 31.49"><path d="M21.205 5.007a1.112 1.112 0 00-1.587 0 1.12 1.12 0 000 1.571l8.047 8.047H1.111A1.106 1.106 0 000 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 001.587 0l9.952-9.952a1.093 1.093 0 000-1.571l-9.952-9.953z"/></svg></div></div>
 				</div>
 			</div>
-			<div class="block4__gamepad">
-				<img src="../img/4_block4/Joystick.png" alt="">
+			<div class="block4__gamepad" id="scene">
+				<img src="./img/4_block4/Joystick.png" alt="" data-depth="0.6">
 			</div>
 		</div>
 		<!-- /.block4__wrapper -->
@@ -570,7 +564,7 @@
 <!-- /.block7 -->
 		<section class="block8">
 	<div class="container">
-		<div class="block8__title section__title text-center">Наши заслуги</div>
+		<div class="block8__title section__title text-center">Наши награды</div>
 		<div class="block8__wrapper">
 			<a href="./img/8_block8/img-1.png" class="block8__item">
 				<img src="./img/8_block8/thumb-1.png" alt="">
@@ -604,15 +598,15 @@
 					<p>В аттракционы «Big Creative» в Москве приходят, чтобы необычно провести свободное время вместе с друзьями, родственниками, коллегами, любимыми, отметить день рождения или организовать корпоратив!</p>
 					<p>Аттракционы подходят для:</p>
 					<ul>
-						<li>Компании друзей
+						<li><strong>Компании друзей</strong>
 							<p>Поход на аттракционы – отличная альтернатива походу в кино, игре в боулинг, бильярд или посиделкам в баре. Вы получите невероятные фотографии для обновления своей Instagram ленты!</p></li>
-						<li>Влюбленных пар
+						<li><strong>Влюбленных пар</strong>
 							<p>Наши администраторы всегда готовы помочь Вам организовать сюрприз для любимого человека. Например, за первые 2 года работы в «Big Creative» 8 раз делали предложение руки и сердца. Мы очень этому рады, ведь каждый раз невеста говорила «да».</p></li>
-						<li>Семей</li>
-						<p>К нам в гости часто приходят семьями, потому что наши креативные аттракционы – редкое развлечение, которое интересно для людей любого возраста. Нередко молодые люди приводят своих родителей.  Не редко к нам приходят семьи с представителями четырех поколений (ребенок, мама, папа, бабушка и прабабушка)!</p>
-						<li>Праздников
+						<li><strong>Семей</strong>
+						<p>К нам в гости часто приходят семьями, потому что наши креативные аттракционы – редкое развлечение, которое интересно для людей любого возраста. Нередко молодые люди приводят своих родителей.  Не редко к нам приходят семьи с представителями четырех поколений (ребенок, мама, папа, бабушка и прабабушка)!</p></li>
+						<li><strong>Праздников</strong>
 							<p>Каждую неделю в «Big Creative» проводятся дни рождения (в том числе детские дни рождения), девичники, мальчишники и корпоративы.</p></li>
-						<li>Корпоративов
+						<li><strong>Корпоративов</strong>
 							<p>Аттракционы  помогут снять эмоциональное напряжение после трудной рабочей недели.</p></li>
 					</ul>
 				</div>
@@ -644,26 +638,26 @@
 			<div class="block10__block block">
 				<div class="block10__left">
 					<div class="block10__item">
-						<div class="block10__item-img"><img src="../img/10_block10/flash.png" alt=""></div>
+						<div class="block10__item-img"><img src="./img/10_block10/flash.png" alt=""></div>
 						<div class="block10__item-title">Заряд эмоций на целую неделю</div>
 					</div>
 					<div class="block10__item">
-						<div class="block10__item-img"><img src="../img/10_block10/camera.png" alt=""></div>
+						<div class="block10__item-img"><img src="./img/10_block10/camera.png" alt=""></div>
 						<div class="block10__item-title">Неповторимые фотографии на память</div>
 					</div>
 				</div>
 				<div class="block10__center">
 					<div class="block10__item">
-						<div class="block10__img"><img src="../img/10_block10/polaroid.png" alt=""></div>
+						<div class="block10__img"><img src="./img/10_block10/polaroid.png" alt=""></div>
 					</div>
 				</div>
 				<div class="block10__right">
 					<div class="block10__item">
-						<div class="block10__item-img"><img src="../img/10_block10/football.png" alt=""></div>
+						<div class="block10__item-img"><img src="./img/10_block10/football.png" alt=""></div>
 						<div class="block10__item-title">Приятное времяпровождение</div>
 					</div>
 					<div class="block10__item">
-						<div class="block10__item-img"><img src="../img/10_block10/rubika.png" alt=""></div>
+						<div class="block10__item-img"><img src="./img/10_block10/rubika.png" alt=""></div>
 						<div class="block10__item-title">Настоящие испытания и сложные головоломки</div>
 					</div>
 				</div>
@@ -679,7 +673,7 @@
 		<div class="block11__subtitle text-center">Бегом к нам! Обещаем, будет весело</div>
 	</div>
 	<div class="block11__content">
-		<iframe loading="lazy" src="https://yandex.ru/map-widget/v1/?um=constructor%3A681463785ffe6a4ec7ca2a76ae1043a694e13d63cbbb2817210dc2b432c8af8b&amp;source=constructor" width="100%" height="715" frameborder="0"></iframe>
+		<div class="block11__map"><iframe loading="lazy" src="https://yandex.ru/map-widget/v1/?um=constructor%3A681463785ffe6a4ec7ca2a76ae1043a694e13d63cbbb2817210dc2b432c8af8b&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe></div>
 		<div class="block11__card">
 			<img src="../img/11_block11/card.png" alt="">
 		</div>
@@ -695,7 +689,7 @@
 				<div class="form__group">
 					<input type="text" class="form__input" placeholder="ВВЕДИТЕ ВАШ E-MAIL">
 				</div>
-				<div class="form__text"><strong>Оставьте заявку</strong> и в течение 12 минут с Вами свяжется наш менеджер				</div>
+				<div class="form__text"><strong>Оставьте заявку</strong> и в течение 12 минут с Вами свяжется наш менеджер</div>
 				<div class="form__group">
 					<input type="submit" class="form__submit btn" value="Оставить заявку">
 				</div>
@@ -743,9 +737,66 @@
 <!-- /.footer -->
 		<div class="overlay"></div>
 <!-- /.overlay -->
+		<section class="popup">
+	<div class="container">
+		<div class="popup__title section__title text-center">БЕЙ ПОСУДУ!</div>
+		<div class="popup__wrapper">
+			<div class="popup__row">
+				<div class="popup__text">
+					<p>Наконец появилось место, где можно колошматить тарелки и бутылки об стену, и за это никто не поругает! Выпустите пар! Избавьтесь от напряжения и негативных эмоций! А еще можно написать на посуде заветное желание и разбить на счастье. Гарантируем, мечта сбудется!</p>
+					<p>Каждому гостю по 1 билету выдаются 1 тарелка и 2 бутылки.</p>
+				</div>
+				<div class="popup__video">
+					<img src="./img/popup/video.png" alt="">
+				</div>
+			</div>
+			<div class="popup__row">
+				<div class="popup__item"><img src="./img/popup/img-1.png" alt=""></div>
+				<div class="popup__item"><img src="./img/popup/img-2.png" alt=""></div>
+				<div class="popup__item"><img src="./img/popup/img-3.png" alt=""></div>
+			</div>
+			<div class="popup__subtitle">Купите билет на все аттракционы всего за 990 рублей</div>
+			<div class="popup__suptitle">старая цена 4 790</div>
+			<div class="popup__block-btn">
+				<button class="popup__btn">Купить билет</button>
+			</div>
+			<div class="popup__suptitle">Срок действия акции до 31 декабря</div>
+			<div class="popup__block">
+				<div class="popup__block-left">
+					<div class="popup__block-line">
+
+					</div>
+				</div>
+				<div class="popup__block-right"></div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="popup__footer">
+			<div class="popup__footer-item">Один билет действителен на одного человека</div>
+			<div class="popup__footer-item">При возрастном ограничении 18+ дети до 18 лет не допускаются даже в сопровождении взрослых.</div>
+			<div class="popup__footer-item">В каждом городе аттракционы имеют индивидуальную схему постройки. Фото и Видео отражает суть аттракционов, а не его точную интерпретацию</div>
+			<div class="popup__footer-item">Дети до 9 лет допускаются только в сопровождени взрослых</div>
+			<div class="popup__footer-item">Дети до 5 лет, при предъявлении подтверждающих документов, проходят бесплатно. С 5 лет - по стоимости билета</div>
+		</div>
+		</div>
+	</div>
+	<!-- /.container -->
+</section>
+<!-- /.popup -->
 	</div>
 	<!-- /.wrapper -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
