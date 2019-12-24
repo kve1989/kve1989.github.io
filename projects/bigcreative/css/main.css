@@ -1276,9 +1276,7 @@ body {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
-        margin: 0 0 15px 0; }
-        .block4__row:first-child {
-          display: none; } }
+        margin: 0 0 15px 0; } }
   @media (max-width: 767.98px) {
     .block4__item {
       width: 100%; } }
@@ -1905,9 +1903,6 @@ body {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
-  @media (max-width: 767.98px) {
-    .arr {
-      display: none; } }
   .arr:hover {
     background-image: -webkit-gradient(linear, left bottom, left top, from(#f8d219), to(#fec717));
     background-image: -webkit-linear-gradient(bottom, #f8d219 0%, #fec717 100%);
