@@ -126,7 +126,7 @@ $(function() {
 	}
 
 	// Отправка данных формы
-	$('.callback__form').submit(function(event) {
+	$('.form').submit(function(event) {
 		event.preventDefault();
 		var $form = $(this);
 		$.ajax({
@@ -135,11 +135,18 @@ $(function() {
 			data: $form.serialize(),
 		})
 		.done(function() {
+			$('.thnks').show();
+			var t = setTimeout(function(){
+				$('.thnks').hide("slow");
+			}, 4000);
+			var t2 = setTimeout(function() {
+				offOverlay();
+			},5000);
 			$form[0].reset();
-			console.log("Success send data in AmoCRM");
+			console.log("Success ");
 		})
 		.fail(function() {
-			console.log("Error send data in AmoCRM");
+			console.log("Error ");
 		})
 		.always(function() {
 			console.log("complete");
