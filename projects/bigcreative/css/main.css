@@ -1080,7 +1080,7 @@ body {
     max-width: 715px;
     height: 412px;
     background-image: url(../img/3_block3/shape.png);
-    padding: 25px 50px 30px 80px; }
+    padding: 15px 50px 30px 80px; }
     @media (max-width: 767.98px) {
       .block3__inner {
         padding: 25px;

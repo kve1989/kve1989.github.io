@@ -92,7 +92,8 @@ $(function() {
 	});
 
 	// Плавный скролл по секциям
-	$('.menu__link, welcome__offer-img a').mPageScroll2id({});
+	$('.menu__link, welcome__offer-img p a').mPageScroll2id({});
+	$('.welcome__offer-img p a').mPageScroll2id({});
 
 	// Слайдер с отзывами
 	$('.block7__slider').slick({
