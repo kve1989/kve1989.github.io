@@ -48,13 +48,13 @@ $(function() {
 		$(".menu__body").slideToggle("slow");
 	});
 
-
+	// Закрываем меню при нажатии на ссылку (для моб. версии)
 	$('.menu__link').click(function(event) {
 		$('.header__burger').toggleClass('.header__burger active');
 		$(".menu__body").slideToggle("slow");
 	});
 
-
+	// Круговая диаграмма
 	$('#block6__circle').circleProgress({
 		value: 0.99,
 		size: 120,
@@ -66,14 +66,13 @@ $(function() {
 		$(this).find('span:nth-child(2)').html(Math.round(99 * progress));
 	});
 
+	// Анимация для числа 50 000
 	var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(' ')
 	$('.block6__bignumber-num').animateNumber({ number: 50000, numberStep: comma_separator_number_step });
 
+	// Параллакс для геймпада
 	var scene = document.getElementById('scene');
 	var parallaxInstance = new Parallax(scene);
-
-	// var scene1 = document.getElementById('prlx-1');
-	// var parallaxInstance = new Parallax(scene1);
 
 	function ibg(){
 		$.each($('.ibg'), function(index, val) {
@@ -84,14 +83,18 @@ $(function() {
 	}
 	ibg();
 
+	// Просмотр наград
 	baguetteBox.run('.block8__wrapper');
 
+	//Аккордеон
 	$('.accor__title').click(function(event) {
 		$(this).toggleClass('active').next().slideToggle(300);
 	});
 
+	// Плавный скролл по секциям
 	$('.menu__link, welcome__offer-img a').mPageScroll2id({});
 
+	// Слайдер с отзывами
 	$('.block7__slider').slick({
 		infinite: true,
 		autoplay: true,
@@ -145,5 +148,99 @@ $(function() {
 
 	// Назначаем маску для ввода телефона
 	$('#phonenumber').inputmask("9 - (999) 999 9999");
+
+	// Открытие попапов
+	$('#card-1').click(function() {
+		onOverlay();
+		$('#popup-1').show("slow");
+		$('.popup__close').click(function(event) {
+			$('#popup-1').hide("slow");
+			offOverlay();
+		});
+	});
+	$('#card-2').click(function () {
+		onOverlay();
+		$('#popup-2').show("slow");
+		$('.popup__close').click(function (event) {
+			$('#popup-2').hide("slow");
+			offOverlay();
+		});
+	});
+	$('#card-3').click(function () {
+		onOverlay();
+		$('#popup-3').show("slow");
+		$('.popup__close').click(function (event) {
+			$('#popup-3').hide("slow");
+			offOverlay();
+		});
+	});
+	$('#card-4').click(function () {
+		onOverlay();
+		$('#popup-4').show("slow");
+		$('.popup__close').click(function (event) {
+			$('#popup-4').hide("slow");
+			offOverlay();
+		});
+	});
+	$('#card-5').click(function () {
+		onOverlay();
+		$('#popup-5').show("slow");
+		$('.popup__close').click(function (event) {
+			$('#popup-5').hide("slow");
+			offOverlay();
+		});
+	});
+	$('#card-6').click(function () {
+		onOverlay();
+		$('#popup-6').show("slow");
+		$('.popup__close').click(function (event) {
+			$('#popup-6').hide("slow");
+			offOverlay();
+		});
+	});
+	$('#card-7').click(function () {
+		onOverlay();
+		$('#popup-7').show("slow");
+		$('.popup__close').click(function (event) {
+			$('#popup-7').hide("slow");
+			offOverlay();
+		});
+	});
+	$('#card-8').click(function () {
+		onOverlay();
+		$('#popup-8').show("slow");
+		$('.popup__close').click(function (event) {
+			$('#popup-8').hide("slow");
+			offOverlay();
+		});
+	});
+	$('#card-9').click(function () {
+		onOverlay();
+		$('#popup-9').show("slow");
+		$('.popup__close').click(function (event) {
+			$('#popup-9').hide("slow");
+			offOverlay();
+		});
+	});
+	$('#card-10').click(function () {
+		onOverlay();
+		$('#popup-10').show("slow");
+		$('.popup__close').click(function (event) {
+			$('#popup-10').hide("slow");
+			offOverlay();
+		});
+	});
+	$('#card-11').click(function () {
+		onOverlay();
+		$('#popup-11').show("slow");
+		$('.popup__close').click(function (event) {
+			$('#popup-11').hide("slow");
+			offOverlay();
+		});
+	});
+
+	$('.thnks__close').click(function(event) {
+		$('.thnks').hide("slow");
+	});
 
 });
