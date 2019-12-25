@@ -998,7 +998,7 @@ body {
     opacity: 1; }
 
 .welcome {
-  background: rgba(255, 255, 255, 0.5) url(../img/2_welcome/bg_welcome.png) center/cover no-repeat;
+  background: rgba(255, 255, 255, 0.5) url(../img/2_welcome/bg_welcome.jpg) center/cover no-repeat;
   padding: 100px 0; }
   .welcome__wrapper {
     display: -webkit-box;
