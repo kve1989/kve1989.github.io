@@ -170,6 +170,7 @@ $(function() {
 		$('#popup-1').show("slow");
 		$('.popup__close').click(function(event) {
 			$('#popup-1').hide("slow");
+			$('.popup-video').removeClass('active');
 			offOverlay();
 		});
 	});
@@ -178,6 +179,7 @@ $(function() {
 		$('#popup-2').show("slow");
 		$('.popup__close').click(function (event) {
 			$('#popup-2').hide("slow");
+			$('.popup-video').removeClass('active');
 			offOverlay();
 		});
 	});
@@ -186,6 +188,7 @@ $(function() {
 		$('#popup-3').show("slow");
 		$('.popup__close').click(function (event) {
 			$('#popup-3').hide("slow");
+			$('.popup-video').removeClass('active');
 			offOverlay();
 		});
 	});
@@ -194,6 +197,7 @@ $(function() {
 		$('#popup-4').show("slow");
 		$('.popup__close').click(function (event) {
 			$('#popup-4').hide("slow");
+			$('.popup-video').removeClass('active');
 			offOverlay();
 		});
 	});
@@ -202,6 +206,7 @@ $(function() {
 		$('#popup-5').show("slow");
 		$('.popup__close').click(function (event) {
 			$('#popup-5').hide("slow");
+			$('.popup-video').removeClass('active');
 			offOverlay();
 		});
 	});
@@ -210,6 +215,7 @@ $(function() {
 		$('#popup-6').show("slow");
 		$('.popup__close').click(function (event) {
 			$('#popup-6').hide("slow");
+			$('.popup-video').removeClass('active');
 			offOverlay();
 		});
 	});
@@ -218,6 +224,7 @@ $(function() {
 		$('#popup-7').show("slow");
 		$('.popup__close').click(function (event) {
 			$('#popup-7').hide("slow");
+			$('.popup-video').removeClass('active');
 			offOverlay();
 		});
 	});
@@ -226,6 +233,7 @@ $(function() {
 		$('#popup-8').show("slow");
 		$('.popup__close').click(function (event) {
 			$('#popup-8').hide("slow");
+			$('.popup-video').removeClass('active');
 			offOverlay();
 		});
 	});
@@ -234,6 +242,7 @@ $(function() {
 		$('#popup-9').show("slow");
 		$('.popup__close').click(function (event) {
 			$('#popup-9').hide("slow");
+			$('.popup-video').removeClass('active');
 			offOverlay();
 		});
 	});
@@ -242,6 +251,7 @@ $(function() {
 		$('#popup-10').show("slow");
 		$('.popup__close').click(function (event) {
 			$('#popup-10').hide("slow");
+			$('.popup-video').removeClass('active');
 			offOverlay();
 		});
 	});
@@ -250,6 +260,7 @@ $(function() {
 		$('#popup-11').show("slow");
 		$('.popup__close').click(function (event) {
 			$('#popup-11').hide("slow");
+			$('.popup-video').removeClass('active');
 			offOverlay();
 		});
 	});
@@ -257,5 +268,73 @@ $(function() {
 	$('.thnks__close').click(function(event) {
 		$('.thnks').hide("slow");
 	});
+
+$('#video-main').click(function(event) {
+	onOverlay();
+	$('.video-main').addClass('active');
+});
+
+$('#video-1').click(function(event) {
+	onOverlay();
+	$('.video-1').addClass('active');
+});
+
+$('#video-2').click(function(event) {
+	onOverlay();
+	$('.video-2').addClass('active');
+});
+
+$('#video-3').click(function(event) {
+	onOverlay();
+	$('.video-3').addClass('active');
+});
+
+$('#video-4').click(function(event) {
+	onOverlay();
+	$('.video-4').addClass('active');
+});
+
+$('#video-5').click(function(event) {
+	onOverlay();
+	$('.video-5').addClass('active');
+});
+
+$('#video-6').click(function(event) {
+	onOverlay();
+	$('.video-6').addClass('active');
+});
+
+$('#video-7').click(function(event) {
+	onOverlay();
+	$('.video-7').addClass('active');
+});
+
+$('#video-8').click(function(event) {
+	onOverlay();
+	$('.video-8').addClass('active');
+});
+
+$('#video-9').click(function(event) {
+	onOverlay();
+	$('.video-9').addClass('active');
+});
+
+$('#video-10').click(function(event) {
+	onOverlay();
+	$('.video-10').addClass('active');
+});
+
+$('#video-11').click(function(event) {
+	onOverlay();
+	$('.video-11').addClass('active');
+});
+
+$('.popup-video__close').click(function(event) {
+	$('.popup-video').removeClass('active');
+	offOverlay();
+});
+
+
+
 
 });

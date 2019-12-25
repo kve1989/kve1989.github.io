@@ -10,7 +10,7 @@
 	<!-- Ключевые слова -->
 	<meta name="keywords" content="" />
 	<!-- Отключает принудительную ссылку у номера телефона на iOS -->
-	<meta name="format-detection" content="telephone=no">
+	<!-- <meta name="format-detection" content="telephone=no"> -->
 	<!-- Название сайта -->
 	<title>BigCreative</title>
 	<!-- Файл стилей -->
@@ -30,12 +30,12 @@
 				<div class="header__place-text">Москва, ВДНХ, Проспект Мира, 119, павильон 55</div>
 			</div>
 			<div class="header__social">
-				<a href=""><img src="./img/1_header/vk.png" alt=""></a>
-				<a href=""><img src="./img/1_header/instagram.png" alt=""></a>
-				<a href=""><img src="./img/1_header/fb.png" alt=""></a>
+				<a target="a_blank" href="https://vk.com/arbat16"><img src="./img/1_header/vk.png" alt=""></a>
+				<a target="a_blank" href="https://www.instagram.com/big_creative_company/"><img src="./img/1_header/instagram.png" alt=""></a>
+				<a target="a_blank" href="https://www.facebook.com/bigcreativemoskva"><img src="./img/1_header/fb.png" alt=""></a>
 			</div>
 			<div class="header__info">
-				<div class="header__phone">8 800 600-58-08 </div>
+				<div class="header__phone"><a href="tel:+79683636088">+7(968) 363-60-88</a></div>
 				<div class="header__worktime">Ежедневно 12:00 - 22:00</div>
 			</div>
 			<div class="header__burger">
@@ -107,7 +107,7 @@
 			</div>
 			<div class="block3__column-2">
 				<div class="block3__img">
-					<div class="play-btn">
+					<div class="play-btn" id="video-main">
 						<svg xmlns="http://www.w3.org/2000/svg" width="373.008" height="373.008" viewBox="0 0 373.008 373.008"><path d="M61.792 2.588A19.258 19.258 0 0171.444 0c3.33 0 6.663.864 9.655 2.588l230.116 167.2a19.327 19.327 0 019.656 16.719 19.293 19.293 0 01-9.656 16.713L81.099 370.427a19.336 19.336 0 01-19.302 0 19.333 19.333 0 01-9.66-16.724V19.305a19.308 19.308 0 019.655-16.717z" fill="#fff"/></svg>
 					</div>
 					<img src="./img/3_block3/video.png" alt="">
@@ -712,30 +712,30 @@
 			<div class="footer__left">
 				<div class="footer__logo"><img src="./img/12_footer/footer-logo.png" alt=""></div>
 				<div class="footer__text footer__text-gray">Лучшие развлечения твоего города</div>
-				<div class="footer__link"><a href="#">Условия предоставления услуг</a></div>
-				<div class="footer__studialogo"><img src="./img/12_footer/footer-studia.png" alt=""></div>
+				<div class="header__social">
+					<a target="a_blank" href="https://vk.com/arbat16"><img src="./img/12_footer/footer-vk.png" alt=""></a>
+					<a target="a_blank" href="https://www.instagram.com/big_creative_company/"><img src="./img/12_footer/footer-inst.png" alt=""></a>
+					<a target="a_blank" href="https://www.facebook.com/bigcreativemoskva"><img src="./img/12_footer/footer-fb.png" alt=""></a>
+				</div>
+				<div class="footer__phone"><a href="tel:+79683636088">+7 (968) 363-60-88</a></div>
+				<div class="footer__btn">
+					<button class="footer__button btn">Позвоните нам</button>
+				</div>
 			</div>
 			<div class="footer__center">
 				<div class="footer__text-1 footer__text-gray">Продажа и обслуживание электронных билетов:</div>
+				<div class="footer__link"><a href="#">Условия предоставления услуг</a></div>
+				<div class="footer__link"><a href="#">Политика конфиденциальности</a></div>
+				<div class="footer__text-3 footer__text-gray">ВОЗРАСТНОЕ ОГРАНИЧЕНИЕ 0+</div>
 				<div class="footer__text-2">
 					<p>ИП Гуревич Артём Александрович</p>
 					<p>ОГРНИП: 315290100007297</p>
 					<p>ИНН: 290138820200</p>
 				</div>
-				<div class="footer__text-3 footer__text-gray">ВОЗРАСТНОЕ ОГРАНИЧЕНИЕ 0+</div>
+				<div class="footer__line"></div>
+				<div class="footer__studialogo"><img src="./img/12_footer/footer-studia.png" alt=""></div>
 			</div>
-			<div class="footer__right">
-				<div class="footer__social">
-					<a href="#"><img src="./img/12_footer/footer-vk.png" alt=""></a>
-					<a href="#"><img src="./img/12_footer/footer-inst.png" alt=""></a>
-					<a href="#"><img src="./img/12_footer/footer-fb.png" alt=""></a>
-				</div>
-				<div class="footer__phone">8 800 600-58-08</div>
-				<div class="footer__btn">
-					<button class="footer__button btn">Перезвоните мне</button>
-				</div>
-				<div class="footer__link"><a href="#">Политика конфиденциальности</a></div>
-			</div>
+			<!-- <div class="footer__right"></div> -->
 		</div>
 	</div>
 	<!-- /.container -->
@@ -753,7 +753,7 @@
 					<p style="color: #191919">Каждому гостю по 1 билету выдаются 1 тарелка и 2 бутылки.</p>
 				</div>
 				<div class="popup__video">
-					<div class="play-btn">
+					<div class="play-btn" id="video-1">
 						<svg xmlns="http://www.w3.org/2000/svg" width="373.008" height="373.008" viewBox="0 0 373.008 373.008"><path d="M61.792 2.588A19.258 19.258 0 0171.444 0c3.33 0 6.663.864 9.655 2.588l230.116 167.2a19.327 19.327 0 019.656 16.719 19.293 19.293 0 01-9.656 16.713L81.099 370.427a19.336 19.336 0 01-19.302 0 19.333 19.333 0 01-9.66-16.724V19.305a19.308 19.308 0 019.655-16.717z" fill="#fff"/></svg>
 					</div>
 					<img src="./img/popup/pop-1/video.png" alt="">
@@ -810,7 +810,7 @@
 					<p style="color: #191919">Трогайте, исследуйте, фотографируйте! Наука может быть веселой и увлекательной!</p>
 				</div>
 				<div class="popup__video">
-					<div class="play-btn">
+					<div class="play-btn" id="video-2">
 						<svg xmlns="http://www.w3.org/2000/svg" width="373.008" height="373.008" viewBox="0 0 373.008 373.008"><path d="M61.792 2.588A19.258 19.258 0 0171.444 0c3.33 0 6.663.864 9.655 2.588l230.116 167.2a19.327 19.327 0 019.656 16.719 19.293 19.293 0 01-9.656 16.713L81.099 370.427a19.336 19.336 0 01-19.302 0 19.333 19.333 0 01-9.66-16.724V19.305a19.308 19.308 0 019.655-16.717z" fill="#fff"/></svg>
 					</div>
 					<img src="./img/popup/pop-2/video.png" alt="">
@@ -871,7 +871,7 @@
 					<p>Приходите и убедитесь в это сами!</p>
 				</div>
 				<div class="popup__video">
-					<div class="play-btn">
+					<div class="play-btn" id="video-3">
 						<svg xmlns="http://www.w3.org/2000/svg" width="373.008" height="373.008" viewBox="0 0 373.008 373.008"><path d="M61.792 2.588A19.258 19.258 0 0171.444 0c3.33 0 6.663.864 9.655 2.588l230.116 167.2a19.327 19.327 0 019.656 16.719 19.293 19.293 0 01-9.656 16.713L81.099 370.427a19.336 19.336 0 01-19.302 0 19.333 19.333 0 01-9.66-16.724V19.305a19.308 19.308 0 019.655-16.717z" fill="#fff"/></svg>
 					</div>
 					<img src="./img/popup/pop-3/video.png" alt="">
@@ -928,7 +928,7 @@
 					<p>Если вы слышите поблизости голос собеседника, это не значит, что сможете к нему прикоснуться. Странная музыка и чарующая подсветка будут ждать Вас на данном аттракционе!</p>
 				</div>
 				<div class="popup__video">
-					<div class="play-btn">
+					<div class="play-btn" id="video-4">
 						<svg xmlns="http://www.w3.org/2000/svg" width="373.008" height="373.008" viewBox="0 0 373.008 373.008"><path d="M61.792 2.588A19.258 19.258 0 0171.444 0c3.33 0 6.663.864 9.655 2.588l230.116 167.2a19.327 19.327 0 019.656 16.719 19.293 19.293 0 01-9.656 16.713L81.099 370.427a19.336 19.336 0 01-19.302 0 19.333 19.333 0 01-9.66-16.724V19.305a19.308 19.308 0 019.655-16.717z" fill="#fff"/></svg>
 					</div>
 					<img src="./img/popup/pop-4/video.png" alt="">
@@ -986,7 +986,7 @@
 					<p>Они буквально оживают! Вы не зритель, а полноправный участник событий! Множество ярких фотографий добавится в Ваш телефон после посещения аттракциона.</p>
 				</div>
 				<div class="popup__video">
-					<div class="play-btn">
+					<div class="play-btn" id="video-5">
 						<svg xmlns="http://www.w3.org/2000/svg" width="373.008" height="373.008" viewBox="0 0 373.008 373.008"><path d="M61.792 2.588A19.258 19.258 0 0171.444 0c3.33 0 6.663.864 9.655 2.588l230.116 167.2a19.327 19.327 0 019.656 16.719 19.293 19.293 0 01-9.656 16.713L81.099 370.427a19.336 19.336 0 01-19.302 0 19.333 19.333 0 01-9.66-16.724V19.305a19.308 19.308 0 019.655-16.717z" fill="#fff"/></svg>
 					</div>
 					<img src="./img/popup/pop-5/video.png" alt="">
@@ -1046,7 +1046,7 @@
 					<p>Сбежать будет очень непросто. Впереди коварные ловушки, тайные комнаты и пыточные. А еще узники, которых замуровали в стены заживо! Вас ждет настоящая проверка на смелость и отвагу!</p>
 				</div>
 				<div class="popup__video">
-					<div class="play-btn">
+					<div class="play-btn" id="video-6">
 						<svg xmlns="http://www.w3.org/2000/svg" width="373.008" height="373.008" viewBox="0 0 373.008 373.008"><path d="M61.792 2.588A19.258 19.258 0 0171.444 0c3.33 0 6.663.864 9.655 2.588l230.116 167.2a19.327 19.327 0 019.656 16.719 19.293 19.293 0 01-9.656 16.713L81.099 370.427a19.336 19.336 0 01-19.302 0 19.333 19.333 0 01-9.66-16.724V19.305a19.308 19.308 0 019.655-16.717z" fill="#fff"/></svg>
 					</div>
 					<img src="./img/popup/pop-6/video.png" alt="">
@@ -1104,7 +1104,7 @@
 					<p>Здесь нет комнат и поворотов, которые подскажут, как выбраться наружу. Зато оптические иллюзии подстерегают на каждом шагу. Доверьтесь интуиции - только она приведет Вас к выходу!</p>
 				</div>
 				<div class="popup__video">
-					<div class="play-btn">
+					<div class="play-btn" id="video-7">
 						<svg xmlns="http://www.w3.org/2000/svg" width="373.008" height="373.008" viewBox="0 0 373.008 373.008"><path d="M61.792 2.588A19.258 19.258 0 0171.444 0c3.33 0 6.663.864 9.655 2.588l230.116 167.2a19.327 19.327 0 019.656 16.719 19.293 19.293 0 01-9.656 16.713L81.099 370.427a19.336 19.336 0 01-19.302 0 19.333 19.333 0 01-9.66-16.724V19.305a19.308 19.308 0 019.655-16.717z" fill="#fff"/></svg>
 					</div>
 					<img src="./img/popup/pop-7/video.png" alt="">
@@ -1162,7 +1162,7 @@
 					<p>В сухом бассейне весело и совершенно безопасно!</p>
 				</div>
 				<div class="popup__video">
-					<div class="play-btn">
+					<div class="play-btn" id="video-8">
 						<svg xmlns="http://www.w3.org/2000/svg" width="373.008" height="373.008" viewBox="0 0 373.008 373.008"><path d="M61.792 2.588A19.258 19.258 0 0171.444 0c3.33 0 6.663.864 9.655 2.588l230.116 167.2a19.327 19.327 0 019.656 16.719 19.293 19.293 0 01-9.656 16.713L81.099 370.427a19.336 19.336 0 01-19.302 0 19.333 19.333 0 01-9.66-16.724V19.305a19.308 19.308 0 019.655-16.717z" fill="#fff"/></svg>
 					</div>
 					<img src="./img/popup/pop-8/video.png" alt="">
@@ -1218,7 +1218,7 @@
 					<p style="color: #191919">На каждом шагу Вас подстерегают жуткие ловушки.</p>
 					<p>Леденящие кровь звуки. Таинственные огни. Страшная темнота подземелий и катакомб. Это атмосфера настоящего фильма ужасов! Все, чего Вы больше всего боитесь, оживет в зловещем «Лабиринте страха».</p>
 				</div>
-				<div class="popup__video">
+				<div class="popup__video" id="video-9">
 					<div class="play-btn">
 						<svg xmlns="http://www.w3.org/2000/svg" width="373.008" height="373.008" viewBox="0 0 373.008 373.008"><path d="M61.792 2.588A19.258 19.258 0 0171.444 0c3.33 0 6.663.864 9.655 2.588l230.116 167.2a19.327 19.327 0 019.656 16.719 19.293 19.293 0 01-9.656 16.713L81.099 370.427a19.336 19.336 0 01-19.302 0 19.333 19.333 0 01-9.66-16.724V19.305a19.308 19.308 0 019.655-16.717z" fill="#fff"/></svg>
 					</div>
@@ -1277,7 +1277,7 @@
 					<p>Приключения в «Городе Наоборот» запомнятся надолго! Захватите фотоаппарат!</p>
 				</div>
 				<div class="popup__video">
-					<div class="play-btn">
+					<div class="play-btn" id="video-10">
 						<svg xmlns="http://www.w3.org/2000/svg" width="373.008" height="373.008" viewBox="0 0 373.008 373.008"><path d="M61.792 2.588A19.258 19.258 0 0171.444 0c3.33 0 6.663.864 9.655 2.588l230.116 167.2a19.327 19.327 0 019.656 16.719 19.293 19.293 0 01-9.656 16.713L81.099 370.427a19.336 19.336 0 01-19.302 0 19.333 19.333 0 01-9.66-16.724V19.305a19.308 19.308 0 019.655-16.717z" fill="#fff"/></svg>
 					</div>
 					<img src="./img/popup/pop-10/video.png" alt="">
@@ -1334,7 +1334,7 @@
 					<p>Вы видите свое отражение или иллюзию? Как думаете, за углом настоящий поворот или очередной оптический обман? Попробуйте разобраться, что здесь настоящее, и найти выход из самого большого стеклянного лабиринта в России!</p>
 				</div>
 				<div class="popup__video">
-					<div class="play-btn">
+					<div class="play-btn" id="video-11">
 						<svg xmlns="http://www.w3.org/2000/svg" width="373.008" height="373.008" viewBox="0 0 373.008 373.008"><path d="M61.792 2.588A19.258 19.258 0 0171.444 0c3.33 0 6.663.864 9.655 2.588l230.116 167.2a19.327 19.327 0 019.656 16.719 19.293 19.293 0 01-9.656 16.713L81.099 370.427a19.336 19.336 0 01-19.302 0 19.333 19.333 0 01-9.66-16.724V19.305a19.308 19.308 0 019.655-16.717z" fill="#fff"/></svg>
 					</div>
 					<img src="./img/popup/pop-11/video.png" alt="">
@@ -1386,6 +1386,82 @@
 		<div class="thnks__title">Спасибо за заявку</div>
 		<div class="thnks__text">Мы уже спешим связаться с Вами и позвоним в течение <span>12 минут</span></div>
 		<div class="thnks__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971"><path d="M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z" fill="#000"/></svg></div>
+	</div>
+</div>
+
+<div class="popup-video video-main">
+	<div class="popup-video__wrapper">
+		<iframe loading="lazy" width="100%" height="100%" src="https://www.youtube.com/embed/yuFMz13O7a0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="popup-video__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971"><path d="M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z"/></svg></div>
+	</div>
+</div>
+
+
+<div class="popup-video video-1">
+	<div class="popup-video__wrapper">
+		<iframe loading="lazy" width="100%" height="100%" src="https://www.youtube.com/embed/ajh9lre-s-Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="popup-video__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971"><path d="M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z"/></svg></div>
+	</div>
+</div>
+<div class="popup-video video-2">
+	<div class="popup-video__wrapper">
+		<iframe loading="lazy" width="100%" height="100%" src="https://www.youtube.com/embed/kcQ-Toh9AnA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="popup-video__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971"><path d="M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z"/></svg></div>
+	</div>
+</div>
+<div class="popup-video video-3">
+	<div class="popup-video__wrapper">
+		<iframe loading="lazy" width="100%" height="100%" src="https://www.youtube.com/embed/YTGPyqzdNwA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="popup-video__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971"><path d="M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z"/></svg></div>
+	</div>
+</div>
+
+<div class="popup-video video-4">
+	<div class="popup-video__wrapper">
+		<iframe loading="lazy" width="100%" height="100%" src="https://www.youtube.com/embed/7FicSzbTk8U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="popup-video__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971"><path d="M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z"/></svg></div>
+	</div>
+</div>
+<div class="popup-video video-5">
+	<div class="popup-video__wrapper">
+		<iframe loading="lazy" width="100%" height="100%" src="https://www.youtube.com/embed/CYblVNPEVOk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="popup-video__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971"><path d="M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z"/></svg></div>
+	</div>
+</div>
+<!-- <div class="popup-video video-6">
+	<div class="popup-video__wrapper">
+		<iframe loading="lazy" width="100%" height="100%" src="https://www.youtube.com/embed/CYblVNPEVOk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="popup-video__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971"><path d="M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z"/></svg></div>
+	</div> -->
+</div>
+<div class="popup-video video-7">
+	<div class="popup-video__wrapper">
+		<iframe loading="lazy" width="100%" height="100%" src="https://www.youtube.com/embed/7FicSzbTk8U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="popup-video__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971"><path d="M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z"/></svg></div>
+	</div>
+</div>
+<div class="popup-video video-8">
+	<div class="popup-video__wrapper">
+		<iframe loading="lazy" width="100%" height="100%" src="https://www.youtube.com/embed/gGfISJUOm8Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="popup-video__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971"><path d="M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z"/></svg></div>
+	</div>
+</div>
+<div class="popup-video video-9">
+	<div class="popup-video__wrapper">
+		<iframe loading="lazy" width="100%" height="100%" src="https://www.youtube.com/embed/WqzWB6hpW94" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="popup-video__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971"><path d="M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z"/></svg></div>
+	</div>
+</div>
+<div class="popup-video video-10">
+	<div class="popup-video__wrapper">
+		<iframe loading="lazy" width="100%" height="100%" src="https://www.youtube.com/embed/s6-mKd-sBsg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="popup-video__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971"><path d="M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z"/></svg></div>
+	</div>
+</div>
+<div class="popup-video video-11">
+	<div class="popup-video__wrapper">
+		<iframe loading="lazy" width="100%" height="100%" src="https://www.youtube.com/embed/IyRj_mFPdvI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="popup-video__close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.971 47.971"><path d="M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z"/></svg></div>
 	</div>
 </div>
 	</div>
