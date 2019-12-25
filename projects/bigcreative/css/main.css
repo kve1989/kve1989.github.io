@@ -2464,8 +2464,10 @@ a:focus, a:active {
   .footer__text-2 {
     font-size: 14px;
     padding-top: 10px;
-    border-top: 2px solid #919191;
     margin: 10px 0; }
+    @media (max-width: 767.98px) {
+      .footer__text-2 {
+        border-top: 2px solid #919191; } }
   .footer__text-3 {
     margin: 15px 0px; }
   .footer__line {
