@@ -1,6 +1,6 @@
 <?php
 
-$to  = "<info@estetico.ru>";
+$to  = "<info@bigcreative.moscow>";
 
 $subject = "Новая заявка";
 
@@ -12,7 +12,7 @@ $message .= '<p>Номер телефона: ' . $_POST['phonenumber'] .'</p>';
 
 
 $headers  = "Content-type: text/html; charset=utf-8 \r\n";
-$headers .= "From: Estetico.ru <info@estetico.ru>\r\n";
+$headers .= "From: bigcreative.moscow <info@bigcreative.moscow>\r\n";
 
 mail($to, $subject, $message, $headers);
 

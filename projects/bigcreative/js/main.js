@@ -334,7 +334,24 @@ $('.popup-video__close').click(function(event) {
 	offOverlay();
 });
 
+$('#offer a').click(function(event) {
+	event.preventDefault();
+	onOverlay();
+	$('#offerpopup').show();
+	$('.popup__close').click(function (event) {
+			$('#offerpopup').hide();
+			offOverlay();
+		});
+});
 
-
+$('#privacy a').click(function(event) {
+	event.preventDefault();
+	onOverlay();
+	$('#privacypopup').show();
+	$('.popup__close').click(function (event) {
+			$('#privacypopup').hide();
+			offOverlay();
+		});
+});
 
 });
