@@ -681,21 +681,25 @@
 		</div>
 		<div class="block11__form">
 			<form action="send-contact.php" class="form" method="POST">
-				<div class="form__title"><strong>Запишитесь</strong> на аттракционы</div>
-				<div class="form__group">
-					<input type="text" class="form__input" name="name" required placeholder="ВВЕДИТЕ ВАШЕ ИМЯ">
+				<div class="form__column">
+					<div class="form__group">
+						<input type="text" class="form__input" name="name" required placeholder="ВВЕДИТЕ ВАШЕ ИМЯ">
+					</div>
+					<div class="form__group">
+						<input type="text" class="form__input" name="phonenumber" id="phonenumber" required placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН">
+					</div>
+					<div class="form__group">
+						<input type="text" class="form__input" name="email" placeholder="ВВЕДИТЕ ВАШ E-MAIL">
+					</div>
 				</div>
-				<div class="form__group">
-					<input type="text" class="form__input" name="phonenumber" id="phonenumber" required placeholder="ВВЕДИТЕ ВАШ ТЕЛЕФОН">
+				<div class="form__column">
+					<div class="form__title"><strong>Запишитесь</strong> на аттракционы</div>
+					<div class="form__text"><strong>Оставьте заявку</strong> и в течение 12 минут с Вами свяжется наш менеджер</div>
+					<div class="form__group">
+						<input type="submit" class="form__submit btn" value="Оставить заявку">
+					</div>
+					<div class="form__text-2"> Нажимая на кнопку, вы принимаете условия <a href="#">передачи данных</a></div>
 				</div>
-				<div class="form__group">
-					<input type="text" class="form__input" name="email" placeholder="ВВЕДИТЕ ВАШ E-MAIL">
-				</div>
-				<div class="form__text"><strong>Оставьте заявку</strong> и в течение 12 минут с Вами свяжется наш менеджер</div>
-				<div class="form__group">
-					<input type="submit" class="form__submit btn" value="Оставить заявку">
-				</div>
-				<div class="form__text-2"> Нажимая на кнопку, вы принимаете условия <a href="#">передачи данных</a> </div>
 			</form>
 		</div>
 	</div>
