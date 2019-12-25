@@ -49,10 +49,10 @@ $(function() {
 	});
 
 	// Закрываем меню при нажатии на ссылку (для моб. версии)
-	$('.menu__link').click(function(event) {
-		$('.header__burger').toggleClass('.header__burger active');
-		$(".menu__body").slideToggle("slow");
-	});
+	// $('.menu__link').click(function(event) {
+	// 	$('.header__burger').toggleClass('.header__burger active');
+	// 	$(".menu__body").slideToggle("slow");
+	// });
 
 	// Круговая диаграмма
 	$('#block6__circle').circleProgress({
