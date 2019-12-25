@@ -104,7 +104,16 @@ $(function() {
 		slidesToScroll: 1,
 		prevArrow: $(".arr__prev"),
 		nextArrow: $(".arr__next"),
+		lazyLoad: 'progressive',
 		responsive:[{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				arrows: false
+			}
+		},
+		{
 			breakpoint: 480,
 			settings: {
 				slidesToShow: 1,
