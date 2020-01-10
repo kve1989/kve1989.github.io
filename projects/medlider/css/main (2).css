@@ -807,16 +807,14 @@ a:focus, a:active {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.header__burger.active:before, .header__burger.active:after {
-  top: 50%;
-  background-color: #fff;
-}
 .header__burger.active:before {
+  top: 50%;
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 .header__burger.active:after {
+  top: 50%;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
