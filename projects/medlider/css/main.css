@@ -88,6 +88,54 @@ a {
   }
 }
 
+.section__title {
+  font-family: "Futura PT Heavy";
+  font-size: 48px;
+  letter-spacing: 1.2px;
+  color: #1c7690;
+  text-transform: uppercase;
+  margin: 0 0 25px 0;
+}
+.section__wrapper {
+  max-width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 767.98px) {
+  .section__wrapper {
+    max-width: 100%;
+  }
+}
+
+.breadcrumbs {
+  margin: 35px 0 70px;
+}
+.breadcrumbs__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  letter-spacing: 1.2px;
+}
+.breadcrumbs a {
+  color: #8f8f8f;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.breadcrumbs li:before {
+  content: "-";
+  padding: 0 10px;
+}
+.breadcrumbs li:first-child:before {
+  content: "";
+  padding: 0;
+}
+.breadcrumbs li.current {
+  text-transform: uppercase;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -229,9 +277,9 @@ a:focus, a:active {
   font-display: swap;
 }
 @font-face {
-  font-family: "Futura PT";
+  font-family: "Futura PT Heavy";
   src: url("../fonts/FuturaPT/FuturaPT-Heavy.eot");
-  src: local("Futura PT Heavy"), local("FuturaPT-Heavy"), url("../fonts/FuturaPT/FuturaPT-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT/FuturaPT-Heavy.woff2") format("woff2"), url("../fonts/FuturaPT/FuturaPT-Heavy.woff") format("woff"), url("../fonts/FuturaPT/FuturaPT-Heavy.ttf") format("truetype");
+  src: local("Futura PT Heavy"), local("FuturaPT-Heavy"), url("../fonts/FuturaPT/FuturaPT-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT/FuturaPT-Heavy.woff") format("woff"), url("../fonts/FuturaPT/FuturaPT-Heavy.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -867,6 +915,49 @@ a:focus, a:active {
 .menu a {
   color: #ffffff;
 }
+.menu * {
+  padding: 0;
+  margin: 0;
+}
+.menu ul {
+  list-style: none;
+  background: #efeceb;
+  margin: 20px 0;
+}
+.menu > ul li {
+  position: relative;
+}
+.menu > ul li a {
+  display: block;
+  padding: 10px 10px;
+}
+.menu li ul {
+  position: absolute;
+  display: none;
+  text-align: left;
+}
+.menu li > ul li a {
+  padding: 10px 0;
+  color: #232323;
+  font-size: 16px;
+  padding: 0 10px;
+}
+.menu li > ul li {
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  padding: 10px 0;
+}
+.menu li > ul li:hover {
+  background: #d8d1cf;
+}
+.menu li > ul li ul {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.menu li:hover > ul {
+  display: block;
+}
 
 /* Навигационное меню */
 .main {
@@ -934,7 +1025,7 @@ a:focus, a:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto;
 }
 @media (max-width: 767.98px) {
@@ -964,13 +1055,16 @@ a:focus, a:active {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 40px 0;
+  padding: 40px 10px;
   align-items: center;
   -webkit-box-shadow: 13px 14px 15px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 13px 14px 15px 3px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
   background-color: #ffffff;
   margin: 10px;
+}
+.welcome__item img {
+  margin: 0 0 15px 0;
 }
 .welcome__item p {
   text-transform: uppercase;
@@ -1637,4 +1731,262 @@ a:focus, a:active {
   color: #ffffff;
 }
 /* Подвал сайта */
+/* Страница Акции */
+.page-discount__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 0 15px 0;
+}
+@media (max-width: 479.98px) {
+  .page-discount__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.page-discount__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 25px;
+  background-color: #1c7690;
+  color: #fff;
+  margin: 0 15px 0 0;
+}
+.page-discount__item:last-child {
+  margin: 0;
+}
+@media (max-width: 479.98px) {
+  .page-discount__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+}
+.page-discount__name {
+  text-transform: uppercase;
+  font-family: "Futura PT Heavy";
+  font-size: 30px;
+  letter-spacing: 2.25px;
+  margin: 110px 0 40px 0;
+}
+.page-discount__issue {
+  font-family: "Futura PT Medium";
+  font-size: 24px;
+}
+.page-discount__date {
+  font-family: "Futura PT Medium";
+}
+.page-discount__btn {
+  padding: 15px 60px;
+  margin: 70px 0 25px 0;
+}
+
+/* Страница Акции */
+/* Страница Цены */
+.page-price-title {
+  margin: 0 0 60px 0;
+}
+.page-price__title {
+  font-size: 24px;
+  font-family: "Futura PT Medium";
+  color: #1c7690;
+  max-width: 738px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+.page-price__title span {
+  font-family: "Futura PT Heavy";
+}
+.page-price__img {
+  color: #fff;
+  padding: 140px 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  border-radius: 25px;
+}
+.page-price__img p {
+  font-family: "Futura PT Heavy";
+  font-size: 30px;
+  text-align: center;
+}
+.page-price__btn {
+  padding: 15px 70px;
+  margin: 70px 0 0 0;
+}
+.page-price__payments-title {
+  font-family: "Futura PT Heavy";
+  font-size: 24px;
+  margin: 50px 0 30px;
+}
+@media (max-width: 767.98px) {
+  .page-price__payments-title {
+    text-align: center;
+  }
+}
+.page-price__payments-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.page-price__payments-cards img {
+  margin: 0 60px 0 0;
+}
+@media (max-width: 479.98px) {
+  .page-price__payments-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .page-price__payments-cards img {
+    margin: 0 0 15px 0;
+  }
+}
+.page-price__block {
+  border-radius: 25px;
+  background-color: #efeceb;
+  padding: 20px 65px;
+  font-size: 24px;
+  font-family: "Futura PT Medium";
+  margin: 40px 0 0 0;
+}
+@media (max-width: 479.98px) {
+  .page-price__block {
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+
+/* Страница Цены */
+/* Страница Лечебные направления */
+.healingway__caption {
+  font-family: "Futura PT Heavy";
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  padding: 0 0 0 25px;
+  margin: 0 0 25px 0;
+  border-radius: 27px;
+}
+.healingway__caption.active {
+  color: #fff;
+  padding: 15px 0 15px 25px;
+  background-color: #1c7690;
+}
+.healingway__suptitle {
+  font-family: "Futura PT Heavy";
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.healingway__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 100px 0 0 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 479.98px) {
+  .healingway__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.healingway__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.33%;
+          flex: 0 0 33.33%;
+}
+@media (max-width: 767.98px) {
+  .healingway__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+  }
+  .healingway__item:nth-child(2) {
+    display: none;
+  }
+}
+@media (max-width: 767.98px) and (max-width: 479.98px) {
+  .healingway__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+}
+.healingway__box {
+  margin: 0 0 40px 0;
+}
+.healingway__lists {
+  font-family: "Futura PT Medium";
+  text-transform: uppercase;
+  display: none;
+  padding: 0 0 0 25px !important;
+  -webkit-transition: hover 0.2s;
+  -o-transition: hover 0.2s;
+  transition: hover 0.2s;
+}
+.healingway__lists li:hover {
+  color: #1c7690;
+  cursor: pointer;
+}
+
+/* Страница Лечебные направления */
 /*# sourceMappingURL=main.css.map */
