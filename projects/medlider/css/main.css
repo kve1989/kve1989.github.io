@@ -73,6 +73,14 @@ a {
   letter-spacing: 2px;
   font-family: "Futura PT Medium";
   cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.btn:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .title {
@@ -105,9 +113,20 @@ a {
     max-width: 100%;
   }
 }
+.section__gray {
+  background-color: #f6f6f6;
+}
+
+.ttu {
+  text-transform: uppercase;
+}
+
+.blue-l {
+  color: #1c7690;
+}
 
 .breadcrumbs {
-  margin: 35px 0 70px;
+  padding: 35px 0 70px;
 }
 .breadcrumbs__body {
   display: -webkit-box;
@@ -906,6 +925,7 @@ a:focus, a:active {
     left: 0;
     width: 100%;
     background-color: #022539;
+    z-index: 3;
   }
 }
 
@@ -918,6 +938,9 @@ a:focus, a:active {
 .menu * {
   padding: 0;
   margin: 0;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
 .menu ul {
   list-style: none;
@@ -1437,6 +1460,11 @@ a:focus, a:active {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   padding: 10px 20px;
+}
+.staff__btn:hover {
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .staff__features {
   margin: 65px 0 30px;
@@ -1989,4 +2017,168 @@ a:focus, a:active {
 }
 
 /* Страница Лечебные направления */
+/* Страница Лечение опорно-двигательного аппарата */
+.service {
+  padding: 30px 0;
+}
+.service__title {
+  font-size: 36px;
+  font-family: "Futura PT Medium";
+  text-transform: uppercase;
+  line-height: 1.2;
+  color: #1c7690;
+}
+.service__block {
+  margin: 45px -15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 479.98px) {
+  .service__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.service__img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  padding: 0 15px;
+}
+.service__img img {
+  border-radius: 25px;
+}
+.service__desc {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  padding: 0 15px;
+  font-size: 18px;
+}
+.service__caption {
+  font-family: "Futura PT Heavy";
+  margin: 0 0 25px 0;
+}
+.service__text {
+  line-height: 1.2;
+  font-family: "Futura PT Medium";
+}
+.service__text p {
+  margin: 0 0 20px 0;
+}
+.service__about-title {
+  font-family: "Futura PT Medium";
+  font-size: 24px;
+  margin: 30px 0;
+  line-height: 1.2;
+}
+.service__about {
+  font-family: "Futura PT Medium";
+}
+.service__about p {
+  margin: 0 0 20px 0;
+}
+.service__btn {
+  display: block;
+  margin: 0 auto;
+  padding: 15px 60px;
+}
+.service__list-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Futura PT Medium";
+  margin: 0 0 30px 0;
+}
+.service__lists {
+  text-transform: uppercase;
+}
+.service__lists li:before {
+  content: "-";
+  padding: 0 5px 0 0;
+}
+.service__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 992.98px) {
+  .service__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (max-width: 479.98px) {
+  .service__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.service__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 33.33%;
+          flex: 1 0 33.33%;
+  height: 300px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  position: relative;
+  margin: 15px;
+  padding: 20px 40px;
+}
+.service__item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 25px;
+}
+.service__item > * {
+  z-index: 1;
+}
+@media (max-width: 479.98px) {
+  .service__item {
+    width: 100%;
+    margin: 0 0 15px 0;
+    height: 100%;
+  }
+}
+.service__item-title {
+  font-family: "Futura PT Heavy";
+  font-size: 30px;
+}
+.service__item-lists {
+  font-size: 18px;
+}
+.service__item-lists li:before {
+  content: "-";
+  padding: 0 5px 0 0;
+}
+
+/* Страница Лечение опорно-двигательного аппарата */
 /*# sourceMappingURL=main.css.map */
