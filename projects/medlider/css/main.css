@@ -81,26 +81,27 @@ a {
           box-shadow: 0 0 10px #fb991a;
   overflow: hidden;
 }
+.btn:after {
+  content: "";
+  -webkit-animation: move-light 2s infinite ease;
+          animation: move-light 2s infinite ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4em;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transform: translateX(-4em) skewX(-30deg);
+      -ms-transform: translateX(-4em) skewX(-30deg);
+          transform: translateX(-4em) skewX(-30deg);
+}
 .btn:hover {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
 }
-.btn:hover:after {
-  -webkit-animation: move-light 1s;
-          animation: move-light 1s;
-}
-.btn:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3em;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
-  -webkit-transform: translateX(-4em) skewX(-30deg);
-      -ms-transform: translateX(-4em) skewX(-30deg);
-          transform: translateX(-4em) skewX(-30deg);
+.btn:active {
+  top: 2px;
 }
 
 @-webkit-keyframes move-light {
@@ -124,10 +125,6 @@ a {
             transform: translateX(30em) skewX(-30deg);
   }
 }
-.btn-act:active {
-  top: 2px;
-}
-
 .title {
   color: #232323;
   font-family: "Futura PT Book";
