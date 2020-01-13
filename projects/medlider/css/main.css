@@ -832,6 +832,10 @@ a:focus, a:active {
 /* Mixins */
 /* Mixins */
 /* Шапка сайта */
+@media (max-width: 767.98px) {
+  .header {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5); } }
+
 .header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -843,6 +847,19 @@ a:focus, a:active {
   -ms-flex-align: center;
   align-items: center;
   padding: 25px 0; }
+  @media (max-width: 767.98px) {
+    .header__wrapper {
+      padding: 15px 0; } }
+
+@media (max-width: 767.98px) {
+  .header__logo {
+    display: none; } }
+
+.header__logo-m {
+  display: none; }
+  @media (max-width: 767.98px) {
+    .header__logo-m {
+      display: block; } }
 
 .header__info {
   font-size: 18px;
