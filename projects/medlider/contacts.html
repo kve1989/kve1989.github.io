@@ -17,7 +17,7 @@
 <body>
 	<div class="wrapper">
 		<!-- Шапка сайта -->
-				<header class="header">
+		<header class="header">
 			<div class="container">
 				<div class="header__wrapper">
 					<div class="header__logo">
@@ -42,15 +42,14 @@
 			</div>
 			<!-- /.container -->
 		</header>
-		<!-- /.header -->
-		<!-- Шапка сайта -->
+		<!-- /.header -->		<!-- Шапка сайта -->
 
 		<!-- Навигационное меню -->
-				<nav class="nav">
+		<nav class="nav">
 			<div class="container">
 				<div class="nav__wrapper">
 					<ul class="nav__body menu" >
-						<li><a href="index.html#about">О нас</a></li>
+						<li><a href="about.html">О нас</a></li>
 						<li><a href="#">Виды услуг</a>
 							<ul>
 								<li><a href="service-1.html">Лечение опорно-двигательного аппарата</a></li>
@@ -76,8 +75,7 @@
 			</div>
 			<!-- /.container -->
 		</nav>
-		<!-- /.nav -->
-		<!-- Навигационное меню -->
+		<!-- /.nav -->		<!-- Навигационное меню -->
 
 		<!-- Основной контент страницы -->
 		<main class="main">
@@ -169,17 +167,17 @@
 
 										<div class="content content_active" data-tab="1">
 											<form action="#" class="form frm-app">
-												<input class="form__input" type="text" id="name" placeholder="Ваше имя">
-												<input class="form__input" type="text" id="phone" placeholder="Ваше телефон">
-												<textarea class="form__input" name="msg" id="msg" cols="30" rows="5	0" placeholder="Сообщение"></textarea>
+												<input class="form__input" type="text" placeholder="Ваше имя">
+												<input class="form__input" type="phone" placeholder="Ваше телефон">
+												<textarea class="form__input" name="msg" cols="30" rows="5" placeholder="Сообщение"></textarea>
 												<input type="submit" class="form__btn btn">
 											</form>
 										</div>
 
 										<div class="content" data-tab="2">
 											<form action="#" class="form frm-feed">
-												<input class="form__input" type="text" id="name" placeholder="Ваше имя">
-												<textarea class="form__input" name="msg" id="msg" cols="30" rows="5" placeholder="Сообщение"></textarea>
+												<input class="form__input" type="text" placeholder="Ваше имя">
+												<textarea class="form__input" name="msg" cols="30" rows="5" placeholder="Сообщение"></textarea>
 												<input type="submit" class="form__btn btn">
 											</form>
 										</div>
@@ -197,7 +195,7 @@
 		<!-- Основной контент страницы -->
 
 		<!-- Подвал сайта -->
-				<footer class="footer">
+		<footer class="footer">
 			<div class="container">
 				<div class="footer__wrapper">
 					<div class="footer__logo"><a href="/"><img src="./img/Logo/footer-logo.png" alt="Логотип MedLider"></a></div>
@@ -208,11 +206,10 @@
 			</div>
 			<!-- /.container -->
 		</footer>
-		<!-- /.footer -->
-		<!-- Подвал сайта -->
+		<!-- /.footer -->		<!-- Подвал сайта -->
 
 
-		<div class="overlay"></div>
+<div class="overlay"></div>
 <!-- /.overlay -->
 <div class="modal">
 	<div class="modal__wrapper">
@@ -225,10 +222,10 @@
 			<input type="text" name="phone" id="" placeholder="ВАШ ТЕЛЕФОН" class="modal__input">
 			<input type="email" name="email" id="" placeholder="ВАШ Е-MAIL" class="modal__input">
 			<div class="modal__row">
-				<input type="datetime" name="date" id="" placeholder="ДАТА" class="modal__input">
-				<input type="time" name="time" id="" placeholder="ВРЕМЯ" class="modal__input">
+				<input type="date" name="date" id="" placeholder="ДАТА" class="modal__input text-center">
+				<input type="time" name="time" id="" placeholder="ВРЕМЯ" class="modal__input text-center">
 			</div>
-			<textarea name="comment" id="" cols="30" rows="5" class="modal__input"></textarea>
+			<textarea name="comment" id="" cols="30" rows="5" placeholder="КОММЕНТАРИЙ" class="modal__input"></textarea>
 			<input type="submit" class="modal__btn btn" value="Отправить">
 		</form>
 		<!-- /.modal__form frm -->
@@ -236,10 +233,8 @@
 	<!-- /.modal__wrapper -->
 	<div class="modal__close"><i class="fa fa-2x fa-times" aria-hidden="true"></i></div>
 </div>
-<!-- /.modal -->
-	</div>
+<!-- /.modal -->	</div>
 	<!-- /.wrapper -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="js/main.js"></script>
-</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/main.js"></script></body>
 </html>
