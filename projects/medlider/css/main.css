@@ -5655,7 +5655,7 @@ a:focus, a:active {
 /* Страница ВИДЫ УСЛУГ */
 /* Модальное окно */
 .modal {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
