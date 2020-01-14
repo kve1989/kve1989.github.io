@@ -54,7 +54,7 @@ a {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.8);
   display: none;
-  z-index: 40;
+  z-index: 9;
 }
 
 .text-center {
@@ -146,6 +146,11 @@ a {
   text-transform: uppercase;
   margin: 0 0 25px 0;
 }
+@media (max-width: 479.98px) {
+  .section__title {
+    font-size: 24px;
+  }
+}
 .section__wrapper {
   max-width: 80%;
   margin: 0 auto;
@@ -157,6 +162,9 @@ a {
 }
 .section__gray {
   background-color: #f6f6f6;
+}
+.section__p {
+  padding: 30px 0;
 }
 
 .ttu {
@@ -280,9 +288,6 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -303,7 +308,7 @@ a {
   border-radius: 50%;
   background-color: #022539;
   font-size: 18px;
-  margin: 0px 10px 0px 0px;
+  margin: 0px 10px 10px 0px;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
@@ -4159,7 +4164,7 @@ a:focus, a:active {
 }
 .menu ul {
   list-style: none;
-  background: #efeceb;
+  background: #ffffff;
   margin: 20px 0;
 }
 .menu > ul li {
@@ -4179,12 +4184,13 @@ a:focus, a:active {
   padding: 10px 0;
   color: #232323;
   font-size: 16px;
-  padding: 0 10px;
 }
 .menu li > ul li {
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  padding: 10px 0;
+  border-top: 2px solid #022539;
+  padding: 10px;
+}
+.menu li > ul li:last-child() {
+  border-bottom: 2px solid #022539;
 }
 .menu li > ul li:hover {
   background: #d8d1cf;
@@ -5222,6 +5228,161 @@ a:focus, a:active {
 }
 
 /* Страница Цены */
+/* Страница КОНТАКТЫ */
+.page-contacts__img {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page-contacts {
+  margin: 0px 0px 30px 0px;
+}
+.page-contacts__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 80%;
+  margin: 0 auto;
+  -webkit-box-shadow: 7px 67px 250px rgba(0, 0, 0, 0.06);
+          box-shadow: 7px 67px 250px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  background-color: #efeceb;
+  border: 3px solid #efeceb;
+}
+@media (max-width: 479.98px) {
+  .page-contacts__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    max-width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.page-contacts__col-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Futura PT Medium";
+  padding: 0 50px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 40%;
+          flex: 1 0 40%;
+}
+.page-contacts__col-2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 60%;
+          flex: 1 0 60%;
+  background: #fff;
+  padding: 20px 0;
+  border-radius: 8px;
+}
+@media (max-width: 479.98px) {
+  .page-contacts__col-2 {
+    margin: 0px 0px 30px 0px;
+  }
+}
+.page-contacts__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px 0px 35px 0px;
+}
+.tab {
+  cursor: pointer;
+  padding: 5px 17px;
+  background: #1c7690;
+  color: #fff;
+  border-radius: 10px;
+  font-family: "Futura PT Medium";
+}
+@media (max-width: 479.98px) {
+  .tab {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+.content {
+  display: none;
+}
+.content_active {
+  display: block;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 70%;
+  margin: 0 auto;
+}
+@media (max-width: 479.98px) {
+  .form {
+    max-width: 90%;
+  }
+}
+.form__btn {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 25px 0px 0px 0px;
+  padding: 15px 60px;
+}
+.form__input {
+  resize: none;
+  width: 100%;
+  margin: 0px 0px 5px 0px;
+  padding: 10px;
+  font-family: "Futura PT Medium";
+  border: 1px solid rgba(139, 139, 139, 0.6);
+}
+.form__input::-webkit-input-placeholder {
+  text-transform: uppercase;
+}
+.form__input::-moz-placeholder {
+  text-transform: uppercase;
+}
+.form__input:-ms-input-placeholder {
+  text-transform: uppercase;
+}
+.form__input::-ms-input-placeholder {
+  text-transform: uppercase;
+}
+.form__input::placeholder {
+  text-transform: uppercase;
+}
+
+/* Страница КОНТАКТЫ */
 /* Страница Лечебные направления */
 .healingway__caption {
   font-family: "Futura PT Heavy";
@@ -5302,6 +5463,10 @@ a:focus, a:active {
 .healingway__lists li:hover {
   color: #1c7690;
   cursor: pointer;
+}
+.healingway__btn {
+  display: inline-block;
+  padding: 5px 10px;
 }
 
 /* Страница Лечебные направления */
@@ -5482,4 +5647,201 @@ a:focus, a:active {
 }
 
 /* Страница ВИДЫ УСЛУГ */
+/* Модальное окно */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
+  -webkit-box-shadow: 2px 21px 65px rgba(0, 3, 6, 0.1);
+          box-shadow: 2px 21px 65px rgba(0, 3, 6, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  z-index: 10;
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .modal {
+    width: 100%;
+  }
+}
+.modal__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: -70px 0 0 0;
+}
+.modal__img img {
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+.modal__title {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: "Futura PT Demi";
+  margin: 30px 0;
+}
+.modal__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.modal__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.modal__input {
+  width: 100%;
+  resize: none;
+  border-radius: 8px;
+  border: 1px solid #ececec;
+  background-color: #fbfbfb;
+  padding: 10px;
+  margin: 0 0 10px 0;
+}
+.modal__input input[type=date],
+.modal__input input[type=time] {
+  text-align: center;
+}
+.modal__btn {
+  width: 100%;
+  padding: 15px 0;
+}
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.modal__close:hover {
+  color: #fb991a;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+/* Модальное окно */
+/*  */
+.page-about__bg {
+  height: 700px;
+}
+.page-about__content {
+  margin: 60px 0 0 0;
+}
+.page-about__title {
+  font-family: "Futura PT Book";
+  font-size: 36px;
+  font-weight: bold;
+}
+.page-about__desc {
+  font-size: 18px;
+  padding: 40px 0 60px;
+}
+.page-about__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 13px 14px 15px 3px rgba(0, 0, 0, 0.13);
+          box-shadow: 13px 14px 15px 3px rgba(0, 0, 0, 0.13);
+  border-radius: 25px;
+  background-color: #efeceb;
+  padding: 60px 100px;
+}
+@media (max-width: 479.98px) {
+  .page-about__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.page-about__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px;
+}
+.page-about__item p {
+  margin: 30px 0 0 0;
+  font-family: "Futura PT Medium";
+}
+.page-about__video-wrap {
+  -webkit-box-shadow: 2px 21px 65px rgba(0, 3, 6, 0.1);
+          box-shadow: 2px 21px 65px rgba(0, 3, 6, 0.1);
+  border-radius: 20px;
+  padding: 40px 80px;
+  margin: -170px 0 0 0;
+  background: #fff;
+}
+.page-about__video-title {
+  font: 18px "Futura PT Medium";
+  text-transform: uppercase;
+}
+.page-about__video-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 0;
+}
+.page-about__video-desc p {
+  margin: 0 0 15px 0;
+}
+
+/*  */
 /*# sourceMappingURL=main.css.map */
