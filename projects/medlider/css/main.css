@@ -4566,15 +4566,9 @@ a:focus, a:active {
 /* Блок Отзывы */
 /* Блок с акциями и видео */
 .discount_video {
-  margin: 30px 0 50px;
+  margin: 30px 0;
   width: 80%;
-  height: 515px;
   position: relative;
-}
-@media (max-width: 767.98px) {
-  .discount_video {
-    height: 315px;
-  }
 }
 .discount__wrapper {
   max-width: 80%;
@@ -5827,6 +5821,11 @@ a:focus, a:active {
   padding: 40px 80px;
   margin: -170px 0 0 0;
   background: #fff;
+}
+@media (max-width: 479.98px) {
+  .page-about__video-wrap {
+    padding: 40px 0;
+  }
 }
 .page-about__video-title {
   font: 18px "Futura PT Medium";
