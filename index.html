@@ -1,424 +1,73 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" prefix="og: http://ogp.me/ns#" ы>
+
 <head>
-	<!-- Кодировка сайта -->
 	<meta charset="UTF-8">
+	<title>Портфолио Кавецкого Вадима</title>
+	<meta name="description" content="Кавецкий Вадим. Создание сайтов в Ханты-Мансийске.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Задание тега Viewport для адаптивного отображения страницы -->
+	<meta name="keywords"
+		content="создание сайта, разработчик, верстальщик, создать сайт, заказ сайта, заказать разработку, программист нанять, поиск разработчика, сайт, интернет-магазин, тильда, шаблоны html, html-разработчик, css, html, javascript, developer, html+css+build, build page">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<!-- Описание сайта -->
-	<meta name="description" content="" />
-	<!-- Ключевые слова -->
-	<meta name="keywords" content="" />
-	<!-- Название сайта -->
-	<title>MedLider</title>
-	<!-- Файл стилей -->
-	<link rel="stylesheet" href="css/main.css">
+	<!-- Сообщает Internet Explorer использовать самый новый движок для рендера -->
+	<link rel="shortcut icon" href="assets/img/favicon.gif" type="image/gif"> <!-- Favicon -->
+	<link rel="canonical" href="https://kve1989.github.io/">
+	<meta property="og:title" content="Создание сайтов в Ханты-Мансийске. Кавецкий Вадим." />
+	<meta property="og:description" content="Разрабатываю сайты любой сложности. Помогу вашему проекту выйти в релиз." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://kve1989.github.io/" />
+	<link rel="stylesheet" href="assets/css/app.css"> <!-- CSS Custom -->
+	<script src="assets/js/app.js"></script> <!-- JS Custom -->
+	<link href="https://fonts.googleapis.com/css?family=Exo+2:100,200,300,400,500,600,700,800,900&amp;subset=cyrillic"
+		rel="stylesheet"> <!-- Google Font -->
+	<meta name="yandex-verification" content="a782c73a8e8f9f89" />
+	<meta name="google-site-verification" content="_wCFY5xCfspFm48D4UEVBHt2FooZXIViWVRbYoVZOOc" />
 </head>
+
 <body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="container">
-				<div class="header__wrapper">
-					<div class="header__logo">
-						<a href="/"><img src="./img/Logo/header-logo.png" alt="Логотип в шапке"></a>
-					</div>
-					<div class="header__info text-center">г. Москва, ул. Большая Серпуховская, д. 31, корп. 12, этаж 2</div>
-					<div class="header__info text-center">Мы работаем с 10:00 до 20:00 (без выходных)</div>
-					<div class="header__callback">
-						<a href="tel:84992362525" class="header__phone"><span>тел:</span> 8 (499) 236 2525</a>
-						<button class="header__btn btn">Обратная связь</button>
-					</div>
-					<div class="header__burger"><span></span></div>
+	<header class="header">
+		<div class="container">
+			<div class="header-block">
+				<div class="header-block__text">
+					<h1 class="header-title header__title text-center">Привет!</h1>
+					<p>Меня зовут Вадим и я веб-разработчик. Создаю качественные сайты для компьютеров и мобильных
+						устройств(смартфоны и планшеты) по разумным ценам. Сайт будет оптимизирован(быстро загружаться) и
+						открываться в любом браузере. Пишите, обсудим детали.</p>
 				</div>
+				<div class="header-block__foto"></div>
 			</div>
-			<!-- /.container -->
-		</header>
-		<!-- /.header -->
-		<nav class="nav">
-			<div class="container">
-				<div class="nav__wrapper">
-					<ul class="nav__body menu">
-						<li><a href="#">О нас</a></li>
-						<li><a href="#">Виды услуг</a></li>
-						<li><a href="#">Лечебные направления</a></li>
-						<li><a href="#">Врачи</a></li>
-						<li><a href="#">Цены</a></li>
-						<li><a href="#">Акции</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
-					<!-- /.nav__body menu -->
-				</div>
-				<!-- /.nav__wrapper -->
-			</div>
-			<!-- /.container -->
-		</nav>
-		<!-- /.nav -->
+		</div>
+		<!-- /.container -->
+	</header>
+	<!-- /.header -->
 
-		<main class="main">
+	<!-- Yandex.Metrika counter Start-->
+	<script type="text/javascript">
+		(function (m, e, t, r, i, k, a) {
+			m[i] = m[i] || function () {
+				(m[i].a = m[i].a || []).push(arguments)
+			};
+			m[i].l = 1 * new Date();
+			k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+		})
+		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-			<section class="welcome">
-				<div class="container">
-					<div class="welcome__wrapper">
-						<div class="welcome__text text-center">
-							<h1 class="welcome__title ">Ваше здоровье <span>в наших руках!</span></h1>
-							<div class="welcome__suptitle">ДЕЯТЕЛЬНОСТЬ МЕДИЦИНСКОГО ЦЕНТРА ОСУЩЕСТВЛЯЕТСЯ НА ОСНОВЕ СОВМЕСТНОГО ПРОЕКТА С МРОО «АССОЦИАЦИЯ ЗАСЛУЖЕННЫХ ВРАЧЕЙ РОССИЙСКОЙ ФЕДЕРАЦИИ»</div>
-							<button class="welcome__btn btn">Запись на прием</button>
-						</div>
-						<div class="welcome__block welcome-block-1">
-							<div class="welcome__item">
-								<img src="./img/welcome/spine.png" alt="">
-								<p>Лечение  </p>
-								<p>опорно-двигательного</p>
-								<p>аппарата</p>
-							</div>
-							<div class="welcome__item">
-								<img src="./img/welcome/tooth.png" alt="">
-								<p>Стоматология</p>
-								<p>и имплантация</p>
-								<p>&nbsp;</p>
-							</div>
-							<div class="welcome__item">
-								<img src="./img/welcome/dna.png" alt="">
-								<p>Сдача анализов</p>
-								<p>и аппаратная диагностика</p>
-								<p>&nbsp;</p>
-							</div>
-						</div>
-						<div class="welcome__block welcome-block-2">
-							<div class="welcome__feature">
-								<img src="./img/welcome/money.png" alt="">
-								<p>Доступные цены</p>
-								<p>&nbsp;</p>
-								<p>&nbsp;</p>
-							</div>
-							<div class="welcome__feature">
-								<img src="./img/welcome/diploma.png" alt="">
-								<p>Квалифицированные</p>
-								<p>врачи</p>
-								<p>&nbsp;</p>
-							</div>
-							<div class="welcome__feature">
-								<img src="./img/welcome/parking.png" alt="">
-								<p>Бесплатная</p>
-								<p>парковка</p>
-								<p>&nbsp;</p>
-							</div>
-							<div class="welcome__feature">
-								<img src="./img/welcome/subway.png" alt="">
-								<p>Шаговая</p>
-								<p>доступность</p>
-								<p>от метро</p>
-							</div>
-							<div class="welcome__feature">
-								<img src="./img/welcome/pharmacy.png" alt="">
-								<p>Эффективные</p>
-								<p>методы лечения</p>
-								<p>&nbsp;</p>
-							</div>
-						</div>
-						<button class="welcome__btn btn">Все направления клиники</button>
-					</div>
-				</div>
-				<!-- /.container -->
-			</section>
-			<!-- /.welcome -->
+		ym(52847674, "init", {
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true
+		});
+	</script>
+	<noscript>
+		<div><img src="https://mc.yandex.ru/watch/52847674" style="position:absolute; left:-9999px;" alt="" /></div>
+	</noscript>
+	<!-- Yandex.Metrika counter End-->
 
-			<section class="about">
-				<!-- <div class="container"> -->
-					<div class="about__wrapper">
-						<div class="about__text">
-							<div class="about__title title text-center">О нас</div>
-							<div class="about__desc text-center">В нашем медицинском центре преимущественно работают специалисты, имеющие
-								более 20-ти лет опыта работы по лечению заболеваний опорно-двигательного аппарата. Высококвалифицированные
-								мануальные терапевты, терапевты общей практики, неврологи, травматологи-ортопеды, остеопаты, рефлексотерапевты,
-								кинезиологи, физиотерапевты, дерматологи, гирудотерапевты - многие из которых имеют Высшую медицинскую категорию
-								Повседневно специалисты медицинского центра своими умелыми, имеющими многолетний опыт, руками помогают
-								и облегчают жизнь множеству людей и наш профессиональный девиз -
-								<span>«Ваше здоровье в наших руках»</span></div>
-						</div>
-						<div class="about__block about-block">
-							<div class="about__title title text-center">Медицинские направления</div>
-							<div class="about__block-wrapper">
-								<div class="about__item">
-									<img src="./img/about/spine.png" alt="">
-									<p>Лечение и профилактика</p>
-									<p>опорно-двигательного аппарата</p>
-								</div>
-								<div class="about__item">
-									<img src="./img/about/touch.png" alt="">
-									<p>Мануальная</p>
-									<p>терапия</p>
-								</div>
-								<div class="about__item">
-									<img src="./img/about/pray.png" alt="">
-									<p>Лечебный</p>
-									<p>массаж</p>
-								</div>
-								<div class="about__item">
-									<img src="./img/about/molecular.png" alt="">
-									<p>Неврология</p>
-									<p></p>
-								</div>
-								<div class="about__item">
-									<img src="./img/about/tooth.png" alt="">
-									<p>Стоматология</p>
-									<p>и имплантпция</p>
-								</div>
-								<div class="about__item">
-									<img src="./img/about/microscope.png" alt="">
-									<p>Диагностика</p>
-									<p>и анализы</p>
-								</div>
-								<div class="about__item">
-									<img src="./img/about/foot.png" alt="">
-									<p>Ортопедические</p>
-									<p>стельки</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- /.about__wrapper -->
-				<!-- </div> -->
-				<!-- /.container -->
-			</section>
-			<!-- /.about -->
+	<!-- Widget SpikMi Start-->
+	<script type="text/javascript" src="https://spikmi.com/Widget?Id=460"></script>
+	<!-- Widget SpikMi End-->
 
-			<section class="cert">
-				<div class="container">
-					<div class="cert__title title text-center">Сертификаты</div>
-					<div class="cert__wrapper">
-						<a href="./img/cert/cert-1.jpg"><img src="./img/cert/thumb-1.png" alt=""></a>
-						<a href="./img/cert/cert-2.jpg"><img src="./img/cert/thumb-2.png" alt=""></a>
-						<a href="./img/cert/cert-3.jpg"><img src="./img/cert/thumb-3.png" alt=""></a>
-					</div>
-					<!-- /.cert__wrapper -->
-				</div>
-				<!-- /.container -->
-			</section>
-			<!-- /.cert -->
+</body>
 
-			<section class="feedbacks">
-				<div class="container">
-					<div class="feedbacks__title title text-center">Отзывы наших клиентов:</div>
-					<div class="feedbacks__wrapper">
-						<div class="feedbacks__slider slider">
-							<div class="feedbacks__slide slide">
-								<p>Лечусь в центре уже 3-й год. Очень довольна курсом лечения позвоночника и плоскостопии. Очень хорошо работают ресепшн и служба обратной связи с клиентами. Буду продолжать лечение в вашем центре.</p>
-								<p class="feedbacks__author text-right">Гаврилина В. А.</p>
-								<img src="./img/left-quotes.png" alt="Левая кавычка">
-							</div>
-							<div class="feedbacks__slide slide">
-								<p>Лечусь в центре уже 3-й год. Очень довольна курсом лечения позвоночника и плоскостопии. Очень хорошо
-									работают ресепшн и служба обратной связи с клиентами. Буду продолжать лечение в вашем центре.</p>
-								<p class="feedbacks__author text-right">Кривина В. А.</p>
-								<img src="./img/left-quotes.png" alt="Левая кавычка">
-							</div>
-							<div class="feedbacks__slide slide">
-								<p>Лечусь в центре уже 3-й год. Очень довольна курсом лечения позвоночника и плоскостопии. Очень хорошо
-									работают ресепшн и служба обратной связи с клиентами. Буду продолжать лечение в вашем центре.</p>
-								<p class="feedbacks__author text-right">Жарова В. А.</p>
-								<img src="./img/left-quotes.png" alt="Левая кавычка">
-							</div>
-						</div>
-						<!-- /.feedbacks__slider -->
-						<div class="slider__arr slider__arr-prev"></div>
-						<div class="slider__arr slider__arr-next"></div>
-					</div>
-					<!-- /.feedbacks__wrapper -->
-				</div>
-				<!-- /.container -->
-			</section>
-			<!-- /.feedback -->
-
-			<section class="discount">
-				<div class="discount__wrapper text-center">
-					<div class="discount__text-1">Посмотрите минутное видео, чтобы узнать больше о деятельности нашей компании</div>
-					<div class="discount_video"><img src="./img/video.png" alt=""></div>
-					<div class="discount__title">Акция! Только до 20 января</div>
-					<div class="discount__text-2">комплексная чистка зубов</div>
-					<div class="discount__text-2">с консультацией стоматолога</div>
-					<div class="discount__text-3">Всего за 3.000 рублей!</div>
-					<button class="discount__btn btn">Учавствовать в акции</button>
-					<a href="#" class="discount__link">Посмотреть все акции</a>
-				</div>
-				<!-- /.discount__wrapper -->
-			</section>
-			<!-- /.discount -->
-
-			<section class="staff">
-				<div class="container">
-					<div class="staff__wrapper">
-						<div class="staff__inner">
-							<div class="staff__item">
-								<div class="staff__img"><img src="./img/staff/staff-1.png" alt="Человек"></div>
-								<div class="staff__name">
-									<p>Валова</p>
-									<p>Елена Михайловна</p>
-								</div>
-								<div class="staff__proff">Стоматолог-терапевт</div>
-								<div class="staff__stars">
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-								</div>
-								<div class="staff__btn btn">Записаться</div>
-							</div>
-							<!-- /.staff__item -->
-						</div>
-						<!-- /.staff__inner -->
-						<div class="staff__inner">
-							<div class="staff__item">
-								<div class="staff__img"><img src="./img/staff/staff-1.png" alt="Человек"></div>
-								<div class="staff__name">
-									<p>Валова</p>
-									<p>Елена Михайловна</p>
-								</div>
-								<div class="staff__proff">Стоматолог-терапевт</div>
-								<div class="staff__stars">
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-								</div>
-								<div class="staff__btn btn">Записаться</div>
-							</div>
-							<!-- /.staff__item -->
-						</div>
-						<!-- /.staff__inner -->
-						<div class="staff__inner">
-							<div class="staff__item">
-								<div class="staff__img"><img src="./img/staff/staff-1.png" alt="Человек"></div>
-								<div class="staff__name">
-									<p>Валова</p>
-									<p>Елена Михайловна</p>
-								</div>
-								<div class="staff__proff">Стоматолог-терапевт</div>
-								<div class="staff__stars">
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-									<i class="fa fa-star-o" aria-hidden="true"></i>
-								</div>
-								<div class="staff__btn btn">Записаться</div>
-							</div>
-							<!-- /.staff__item -->
-						</div>
-						<!-- /.staff__inner -->
-					</div>
-					<!-- /.staff__wrapper -->
-				</div>
-				<!-- /.container -->
-				<div class="staff__features">
-					<ul class="staff__features-lists text-center">
-						<li>Средний опыт работы <span>более 30 лет</span></li>
-						<li><span>Более 10.000</span> довольных клиентов</li>
-						<li>7 лет <span>безупречной работы</span></li>
-					</ul>
-				</div>
-			</section>
-			<!-- /.staff -->
-
-			<section class="way3">
-				<div class="container">
-					<div class="way3__wrapper">
-						<div class="way3__column">
-							<div class="way3__title">3 простых действия <span>чтобы попасть на прием</span></div>
-							<div class="way3__block">
-								<div class="way3__item">
-									<div class="way3__img"><img src="./img/way3/medical-record.png" alt=""></div>
-									<!-- /.way3__img -->
-									<div class="way3__text">Ознакомьтесь с медицинскими услугами, которые предоставляет наша клиника и оставьте свою заявку и наши менеджеры свяжутся с Вами, в течение 15 минут</div>
-									<!-- /.way3__text -->
-								</div>
-								<div class="way3__item">
-									<div class="way3__img"><img src="./img/way3/appointment.png" alt=""></div>
-									<!-- /.way3__img -->
-									<div class="way3__text">Выберете медицинское направление, подходящее время приема и специалиста, а также расскажите по телефону нашим специалистам, что Вас беспокоит.</div>
-									<!-- /.way3__text -->
-								</div>
-								<div class="way3__item">
-									<div class="way3__img"><img src="./img/way3/heart1.png" alt=""></div>
-									<!-- /.way3__img -->
-									<div class="way3__text">Приходите на прием в назначенный день! Решить все возникающие проблемы помогут наши
-										опытные врачи!</div>
-									<!-- /.way3__text -->
-								</div>
-							</div>
-							<div class="way3__block-btn">
-								<button class="way3__btn btn">Запись на прием</button>
-							</div>
-						</div>
-						<!-- /.way3__column -->
-						<div class="way3__column">
-							<div class="way3__slider">
-								<div class="way3_slide"><img src="./img/way3/slide-1.png" alt=""></div>
-								<div class="way3_slide"><img src="./img/way3/slide-1.png" alt=""></div>
-								<div class="way3_slide"><img src="./img/way3/slide-1.png" alt=""></div>
-							</div>
-							<div class="way3__arr way3__arr-prev"></div>
-							<div class="way3__arr way3__arr-next"></div>
-						</div>
-						<!-- /.way3__column -->
-					</div>
-				</div>
-				<!-- /.container -->
-			</section>
-			<!-- /.way3 -->
-
-
-			<section class="contacts">
-				<div class="container">
-					<div class="contacts__wrapper">
-						<div class="contacts__column">
-							<div class="contacts__text-bold">г. Москва,</div>
-							<div class="contacts__text">ул. Большая Серпуховская, д. 31, корп. 12, этаж 2</div>
-							<div class="contacts__text-bold">Ближайшее метро:</div>
-							<ul class="contacts__lists">
-								<li>Серпуховская</li>
-								<li>Добрынинская</li>
-								<li>Павелецкая</li>
-							</ul>
-							<div class="contacts__contacts">
-								<a href="tel:84992363535">8(499) 236-35-35</a>
-								<a href="mailto:medlider@inbox.ru">medlider@inbox.ru</a>
-							</div>
-							<div class="contacts__hours">Мы работаем <span class="contacts__text-bold">с 10:00 до 20:00</span> <span>(Без выходных)</span>
-							</div>
-						</div>
-						<div class="contacts__column">
-							<div class="contacts__map">
-								<iframe loading="lazy" id="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A4e92d799e4e43e9349a571a8a115a42c531d1bc28c36052c26ee45a56c8b1aad&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /.container -->
-			</section>
-			<!-- /.contacts -->
-
-
-		</main>
-
-
-		<footer class="footer">
-			<div class="container">
-				<div class="footer__wrapper">
-					<div class="footer__logo"><a href="/"><img src="./img/Logo/footer-logo.png" alt=""></a></div>
-					<div class="footer__link"><a href="#">Политика конфиденциальности</a></div>
-					<div class="footer__zimin"><img src="./img/Logo/Zimin.png" alt="Zimin Studio"></div>
-				</div>
-			</div>
-			<!-- /.container -->
-		</footer>
-		<!-- /.footer -->
-
-<div class="overlay"></div>
-<!-- /.overlay -->	</div>
-	<!-- /.wrapper -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="js/main.js"></script></body>
 </html>
