@@ -174,6 +174,7 @@ a {
 .play-btn {
   height: 80px;
   width: 80px;
+  background: #fb991a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,7 +184,6 @@ a {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: #fb991a;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -195,8 +195,8 @@ a {
   -webkit-animation: pulses 2s infinite;
   animation: pulses 2s infinite; }
   .play-btn svg {
-    width: 18px;
-    height: 23px;
+    width: 20px;
+    height: 20px;
     fill: #fff; }
 
 @-webkit-keyframes pulses {

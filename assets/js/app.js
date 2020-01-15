@@ -7,4 +7,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	scrWidth.children.textContent = w;
 	scrHeight.children.textContent = h;
+	window.ou
 });
