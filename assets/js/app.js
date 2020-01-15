@@ -1,8 +1,8 @@
 const w = window.outerWidth;
 const h = window.outerHeight;
-const scrWidth = document.querySelector('.screensize-w span');
-const scrHeight = document.querySelector('.screensize-h span');
+const scrWidth = document.querySelector('.screensize-w');
+const scrHeight = document.querySelector('.screensize-h');
 const appBrowser = document.querySelector('.browser');
 
-scrWidth.textContent = w;
-scrHeight.textContent = h;
+scrWidth.children.textContent = w;
+scrHeight.children.textContent = h;
