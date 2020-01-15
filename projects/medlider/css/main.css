@@ -4921,7 +4921,8 @@ a:focus, a:active {
   background: #fff; }
   @media (max-width: 767.98px) {
     .page-about__video-wrap {
-      padding: 40px 10px; } }
+      padding: 40px 10px;
+      margin: -650px 0 0 0; } }
 
 .page-about__video-title {
   font: 18px 'Futura PT Medium';
