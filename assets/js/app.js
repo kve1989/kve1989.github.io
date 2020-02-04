@@ -5,9 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	let scrSizeH = document.querySelector('.screensize-h span');
 	let browser = document.querySelector('.browser span');
 
+
+
 	browser.textContent = window.navigator.userAgent;
 
 	window.addEventListener('resize', function(event) {
+
 		let w = window.outerWidth;
 		let h = window.outerHeight;
 
