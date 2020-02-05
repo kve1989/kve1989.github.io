@@ -65,9 +65,12 @@ body {
 }
 
 .about__portfolio li {
-	padding: 0 10px;
+	margin: 0 10px;
 	transition: all .2s;
 	flex: 0 0 25%;
+	border: 5px solid grey;
+	border-radius: 20px;
+	overflow: hidden;
 }
 
 .about__portfolio li:hover {
@@ -75,9 +78,9 @@ body {
 }
 
 .about__portfolio li:first-child {
-	padding-left: 0;
+	margin-left: 0;
 }
 
 .about__portfolio li:last-child {
-	padding-right: 0;
+	margin-right: 0;
 }
