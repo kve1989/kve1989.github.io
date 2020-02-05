@@ -1,11 +1,33 @@
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
-
 body {
 	font-size: 16px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'PT Sans', sans-serif;
 	color: #232323;
+}
+
+.container {
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	overflow: hidden;
+}
+
+.header__logo {
+	font-size: 22px;
+	font-family: 'PT Serif', serif;
+	font-weight: bold;
+}
+
+.header__logo:after {
+	content: '_';
+	animation: header-cursor-blink 2s infinite linear;
+	opacity: 0;
+}
+
+@keyframes header-cursor-blink {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}
 }

@@ -1,21 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
-
-
-	let scrSizeW = document.querySelector('.screensize-w span');
-	let scrSizeH = document.querySelector('.screensize-h span');
+	let scrSizeW = document.querySelector('.screensize-w');
+	let scrSizeH = document.querySelector('.screensize-h');
 	let browser = document.querySelector('.browser span');
 
-
-
+	scrSizeW.textContent = window.outerWidth;
+	scrSizeH.textContent = window.outerHeight;
 	browser.textContent = window.navigator.userAgent;
 
 	window.addEventListener('resize', function(event) {
-
-		let w = window.outerWidth;
-		let h = window.outerHeight;
-
-		scrSizeW.textContent = w;
-		scrSizeH.textContent = h;
-
+		scrSizeW.textContent = window.outerWidth;
+		scrSizeH.textContent = window.outerHeight;
 	});
 });
