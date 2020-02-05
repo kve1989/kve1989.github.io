@@ -23,7 +23,7 @@ body {
 
 .header__logo:after {
 	content: '_';
-	animation: header-cursor-blink 2s infinite linear;
+	animation: 2s header-cursor-blink infinite linear;
 	opacity: 0;
 }
 
