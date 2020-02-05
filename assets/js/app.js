@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	scrSizeH.textContent = window.outerHeight;
 	browser.textContent = window.navigator.userAgent;
 
-	window.addEventListener('resize', function(event) {
+	window.addEventListener('resize', function (event) {
 		scrSizeW.textContent = window.outerWidth;
 		scrSizeH.textContent = window.outerHeight;
 	});
