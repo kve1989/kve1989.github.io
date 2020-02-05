@@ -23,12 +23,23 @@ body {
 
 .header__logo:after {
 	content: '_';
-	animation: 2s header-cursor-blink infinite linear;
+	animation: 2s header-logo-cursor-blink infinite linear;
 	opacity: 0;
 }
 
-@keyframes header-cursor-blink {
+@keyframes header-logo-cursor-blink {
 	0% {opacity: 0;}
 	50% {opacity: 1;}
 	100% {opacity: 0;}
+}
+
+.about__menu {
+	display: flex;
+}
+.about__menu li {
+	padding: 0 15px;
+}
+
+.about__menu a {
+	color: #fff;
 }
