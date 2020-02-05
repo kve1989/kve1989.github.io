@@ -39,7 +39,9 @@ body {
 .about__menu li {
 	padding: 0 15px;
 }
-
+.about__menu li:first-child {
+	padding-left: 0;
+}
 .about__menu a {
 	color: #fff;
 }
