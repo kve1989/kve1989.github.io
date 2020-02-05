@@ -17,13 +17,13 @@ body {
 
 .header__logo {
 	font-size: 22px;
-	font-family: 'PT Serif', serif;
+	font-family: monospace;
 	font-weight: bold;
 }
 
 .header__logo:after {
 	content: '_';
-	animation: 2s header-logo-cursor-blink infinite linear;
+	animation: 1.5s header-logo-cursor-blink infinite linear;
 	opacity: 0;
 }
 
@@ -40,7 +40,9 @@ body {
 		opacity: 0;
 	}
 }
-
+.about__title {
+	margin: 15px 0;
+}
 .about__menu {
 	display: flex;
 }
@@ -65,6 +67,7 @@ body {
 .about__portfolio li {
 	padding: 0 10px;
 	transition: all .2s;
+	flex: 0 0 25%;
 }
 
 .about__portfolio li:hover {
