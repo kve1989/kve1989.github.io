@@ -1,3 +1,6 @@
+:root {
+	--bp4: 480px;
+}
 body {
 	font-size: 16px;
 	font-family: 'PT Sans', sans-serif;
@@ -70,6 +73,13 @@ body {
 	justify-content: space-between;
 }
 
+@media ( max-width: 480px ) {
+	.about__portfolio {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
 .about__portfolio li {
 	margin: 0 10px;
 	transition: all .2s;
@@ -81,6 +91,13 @@ body {
 	background: #fff;
 	text-align: center;
 	font-size: 20px;
+}
+
+@media (max-width: 480px) {
+	.about__portfolio li {
+		flex: 0 0 100%;
+		margin: 0px 0px 15px 0px;
+	}
 }
 
 .about__portfolio li img {
