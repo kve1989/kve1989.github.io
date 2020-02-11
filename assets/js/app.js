@@ -1,18 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-	let scrSizeW = document.querySelector('.screensize-w');
-	let scrSizeH = document.querySelector('.screensize-h');
-	let browser = document.querySelector('.browser span');
+document.addEventListener("DOMContentLoaded", () => {
+  let scrSizeW = document.querySelector(".screensize-w");
+  let scrSizeH = document.querySelector(".screensize-h");
+  let browser = document.querySelector(".browser span");
 
-	scrSizeW.textContent = window.outerWidth;
-	scrSizeH.textContent = window.outerHeight;
-	browser.textContent = window.navigator.userAgent;
+  scrSizeW.textContent = window.outerWidth;
+  scrSizeH.textContent = window.outerHeight;
+  browser.textContent = window.navigator.userAgent;
 
-	window.addEventListener('resize', function (event) {
-		scrSizeW.textContent = window.outerWidth;
-		scrSizeH.textContent = window.outerHeight;
-	});
+  window.addEventListener("resize", function(event) {
+    scrSizeW.textContent = window.outerWidth;
+    scrSizeH.textContent = window.outerHeight;
+  });
 
-	let isMobile = {
+  let isMobile = {
     Android: function() {
       return navigator.userAgent.match(/Android/i);
     },
@@ -39,11 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-	let body = document.querySelector('body');
+  let body = document.querySelector("body");
 
-	if (isMobile.any()) {
-		body.classList.add('touch');
-	} else {
-		body.classList.add('mouse');
-	}
+  if (isMobile.any()) {
+    body.classList.add("touch");
+  } else {
+    body.classList.add("mouse");
+  }
 });
