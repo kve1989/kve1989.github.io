@@ -1,6 +1,6 @@
 :root {
-	--bp4: 480px;
 }
+
 body {
 	font-size: 16px;
 	font-family: 'PT Sans', sans-serif;
@@ -73,13 +73,14 @@ body {
 	justify-content: space-between;
 }
 
-@media ( max-width: 480px ) {
+@media (max-width: 480px) {
 	.about__portfolio {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 	}
 }
+
 .about__portfolio li {
 	margin: 0 10px;
 	transition: all .2s;
@@ -104,7 +105,7 @@ body {
 	border: 1px solid #2323;
 }
 
-.about__portfolio li:hover {
+body.mouse .about__portfolio li:hover {
 	transform: scale(1.1);
 }
 
