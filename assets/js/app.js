@@ -1,3 +1,22 @@
+function bindModal(triggerSelecor,modalSelector,closeSelector) {
+    const trigger = document.querySelector(triggerSelecor),
+        modal = document.querySelector(modalSelector),
+        close = document.querySelector(closeSelector);
+
+    trigger.addEventListener('click', function(e) {
+        if (e.target) {
+            e.eventPrevention();
+        }
+        modal.style.display = 'block';
+        body.style.overflow = 'hidden';
+    });
+
+    close.addEventListener('click', function() {
+        modal.style.display = 'none';
+        body.style.overflow = '';
+    });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   let scrSizeW = document.querySelector(".screensize-w");
   let scrSizeH = document.querySelector(".screensize-h");
