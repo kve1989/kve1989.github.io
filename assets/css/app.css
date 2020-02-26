@@ -3,6 +3,10 @@
     --fontName: 'Open Sans';
 }
 
+::selection {
+    background: #fbb034;
+}
+
 body {
   font-size: 16px;
   font-family: "PT Sans", sans-serif;
