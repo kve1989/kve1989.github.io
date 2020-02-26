@@ -7,28 +7,28 @@ document.addEventListener("DOMContentLoaded", () => {
   scrSizeH.textContent = window.outerHeight;
   browser.textContent = window.navigator.userAgent;
 
-  window.addEventListener("resize", function(event) {
+  window.addEventListener("resize", function (event) {
     scrSizeW.textContent = window.outerWidth;
     scrSizeH.textContent = window.outerHeight;
   });
 
   let isMobile = {
-    Android: function() {
+    Android: function () {
       return navigator.userAgent.match(/Android/i);
     },
-    BlackBerry: function() {
+    BlackBerry: function () {
       return navigator.userAgent.match(/BlackBerry/i);
     },
-    iOS: function() {
+    iOS: function () {
       return navigator.userAgent.match(/iPhone|iPad|iPod/i);
     },
-    Opera: function() {
+    Opera: function () {
       return navigator.userAgent.match(/Opera Mini/i);
     },
-    Windows: function() {
+    Windows: function () {
       return navigator.userAgent.match(/IEMobile/i);
     },
-    any: function() {
+    any: function () {
       return (
         isMobile.Android() ||
         isMobile.BlackBerry() ||

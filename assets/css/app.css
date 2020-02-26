@@ -1,4 +1,6 @@
 :root {
+    --fontSize: 20px;
+    --fontName: 'Open Sans';
 }
 
 body {
