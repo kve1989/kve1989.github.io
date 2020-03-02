@@ -23,11 +23,13 @@ function bindModal(triggerSelector,modalSelector,closeSelector) {
   target - zayavka
 */
 function customYaMetrika(selectorYa, counter, target) {
- const Ya = document.querySelector(selectorYa);
+ const Ya = document.querySelectorAll(selectorYa);
 
- Ya.addEventListener('click', function() {
-   ym(counter, 'reachGoal', target);
-   return true;
+ Ya.forEach(item => {
+   item.addEventListener('click', function () {
+     ym(counter, 'reachGoal', target);
+     return true;
+   });
  });
 }
 
@@ -79,4 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     body.classList.add("mouse");
   }
+
+  customYaMetrika('.about__portfolio li a', 52847674, 'tets');
 });
