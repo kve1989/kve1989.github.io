@@ -1,5 +1,5 @@
-function bindModal(triggerSelecor,modalSelector,closeSelector) {
-    const trigger = document.querySelector(triggerSelecor),
+function bindModal(triggerSelector,modalSelector,closeSelector) {
+    const trigger = document.querySelector(triggerSelector),
         modal = document.querySelector(modalSelector),
         close = document.querySelector(closeSelector);
 
@@ -15,6 +15,20 @@ function bindModal(triggerSelecor,modalSelector,closeSelector) {
         modal.style.display = 'none';
         body.style.overflow = '';
     });
+}
+
+/*
+  EXAMPLE:
+  counter - 51106481,
+  target - zayavka
+*/
+function customYaMetrika(selectorYa, counter, target) {
+ const Ya = document.querySelector(selectorYa);
+
+ Ya.addEventListener('click', function() {
+   ym(counter, 'reachGoal', target);
+   return true;
+ });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
