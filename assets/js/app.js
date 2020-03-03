@@ -27,6 +27,7 @@ function customYaMetrika(selectorYa, counter, target) {
 
  Ya.forEach(item => {
    item.addEventListener('click', function () {
+     console.log('Ok');
      ym(counter, 'reachGoal', target);
      return true;
    });
