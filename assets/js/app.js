@@ -84,5 +84,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   customYaMetrika('.about__portfolio li a', 52847674, 'tets');
-  customYaMetrika('.about__portfolio li a', 52847674, 'tets');
 });
