@@ -17771,8 +17771,8 @@ var changeModalState = function changeModalState(state) {
       windowHeight = document.querySelectorAll('#height'),
       windowType = document.querySelectorAll('#view_type'),
       windowProfile = document.querySelectorAll('.checkbox');
-  Object(_checkNumInputs__WEBPACK_IMPORTED_MODULE_2__["default"])('#width');
-  Object(_checkNumInputs__WEBPACK_IMPORTED_MODULE_2__["default"])('#height');
+  Object(_checkNumInputs__WEBPACK_IMPORTED_MODULE_2__["default"])(windowWidth);
+  Object(_checkNumInputs__WEBPACK_IMPORTED_MODULE_2__["default"])(windowHeight);
 
   function bindActionToElems(event, elem, prop) {
     elem.forEach(function (item, i) {
