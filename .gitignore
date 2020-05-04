@@ -11,6 +11,6 @@ Thumbs.db
 *.log*
 node_modules/
 reports/
-
+_in_process/
 # Папка с собранными файлами проекта
 # build/
