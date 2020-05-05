@@ -1,0 +1,10 @@
+@import 'mixins';
+
+@include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
+@include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+
+@include font-face("Montserrat", "../fonts/MontserratRegular/MontserratRegular");
+@include font-face("Montserrat", "../fonts/MontserratLight/MontserratLight", 300);
+@include font-face("Montserrat", "../fonts/MontserratMedium/MontserratMedium", 500);
+@include font-face("Montserrat", "../fonts/MontserratSemi-bold/MontserratSemi-bold", 600);
+@include font-face("Montserrat", "../fonts/MontserratBold/MontserratBold", 700);
