@@ -25,7 +25,7 @@
 			</div>
 			<aside class="aside" id="menu">
 				<div class="aside__logo">
-					<img src="./images/Logo/Logo.png" alt="Логотип">
+					<a href="/"><img src="../images/Logo/Logo.png" alt="Логотип"></a>
 				</div>
 				<div class="aside__menu">
 					<ul class="aside__lists">
@@ -37,7 +37,7 @@
 					</ul>
 				</div>
 				<div class="aside__button">
-					<button class="aside__btn btn">Связаться с нами</button>
+					<button class="aside__btn btn popup-active">Связаться с нами</button>
 				</div>
 				<div class="aside__contacts">
 					<p>
@@ -48,15 +48,15 @@
 					</p>
 				</div>
 				<div class="aside__social">
-					<a href="#"><img src="./images/social/vk.svg" alt="VKontakte"></a>
-					<a href="#"><img src="./images/social/insta.svg" alt="Instagram"></a>
-					<a href="#"><img src="./images/social/fb.svg" alt="Facebook"></a>
+					<a href="#" class="aside__social-link "></a>
+					<a href="#" class="aside__social-link "></a>
+					<a href="#" class="aside__social-link "></a>
 				</div>
 			</aside>
 			<!-- /.aside -->
 			<main class="main" id="panel">
 				<section class="welcome ibg">
-					<img src="./images/background/Welcome.jpg" alt="">
+					<img src="/images/background/Welcome.jpg" alt="">
 					<div class="welcome__content">
 						<div class="welcome__toptitle ttu">Полиграфическое производство</div>
 						<div class="welcome__maintitle ttu cyan">ПЕЧАТАЕМ ВАШИ ИДЕИ.</div>
@@ -206,7 +206,7 @@
 				</section>
 				<!-- /.section products -->
 				<section class="section about ibg">
-					<img src="./images/background/About.jpg" alt="">
+					<img src="../images/background/About.jpg" alt="">
 					<div class="about__content">
 						<div class="about__toptitle ttu cyan">за 10 лет работы</div>
 						<div class="about__title white">Мы напечатали более <span>10 000 000</span></div>
@@ -386,6 +386,7 @@
 							<div class="partners__slide"><img src="./images/slider/8.png" alt=""></div>
 							<div class="partners__slide"><img src="./images/slider/9.png" alt=""></div>
 							<div class="partners__slide"><img src="./images/slider/10.png" alt=""></div>
+							<div class="partners__slide"><img src="./images/slider/11.png" alt=""></div>
 						</div>
 					</div>
 					<!-- /.partners__content -->
@@ -434,8 +435,33 @@
 
 	</div>
 		<!-- /.wrapper -->
-	<div class="popup"></div>
-<!-- /.popup -->
+	<div class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__title title tac">Связаться с нами</div>
+				<form action="#" class="popup__form" method="POST" enctype="multipart/form-data">
+					<input type="text" name="name" class="popup__input" placeholder="Имя" required>
+					<input type="text" name="phone" class="popup__input" placeholder="+7(___)___-__-__" required>
+					<input type="text" name="email" class="popup__input" placeholder="E-mail" required>
+					<textarea name="msg" id="" cols="30" rows="5" class="popup__textarea" placeholder="Сообщение"></textarea>
+					<div class="popup__file">
+						<input type="file" name="upload">
+						<button class="popup__upload"></button>
+						<div>Прикрепить файл
+							<span>Максимальный размер файла 40 МБ</span></div>
+					</div>
+					<button type="submit" class="btn popup__btn">Отправить</button>
+					<div class="popup__policy tac">
+						Нажимая на кнопку «Отправить», вы соглашаетесь с <a href="#">политикой конфиденциальности</a> сайта
+					</div>
+				</form>
+				<!-- /.popup__form -->
+			</div>
+			<button class="popup__close"><img src="./images/elems/close.svg" alt=""></button>
+			<!-- /.popup__content -->
+		</div>
+	</div>
+	<!-- /.popup -->
 
 	<script src="js/main.js"></script>
 	<script src="js/slideout.min.js"></script>
