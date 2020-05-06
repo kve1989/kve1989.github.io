@@ -58,6 +58,7 @@ body {
 	&.mobile {
 		padding: 0px 0px 0px 15px;
 		width: 250px;
+		height: 100%;
 		left: 0;
 		background-color: #fff;
 	}
@@ -237,7 +238,7 @@ body.touch .aside__social-link:active {
 	.burger {
 		position: fixed;
 		top: 5%;
-		left: 5%;
+		right: 5%;
 		display: block;
 		z-index: 5;
 	}
@@ -743,6 +744,7 @@ body.touch .aside__social-link:active {
 	// .popup__title
 	&__title {
 		margin: 0px 0px 20px 0px;
+		text-align: center;
 	}
 
 	// .popup__form
