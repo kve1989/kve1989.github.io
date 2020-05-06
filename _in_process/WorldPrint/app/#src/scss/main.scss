@@ -33,9 +33,9 @@ body {
 }
 
 .container {
-	max-width: 1440px;
+	max-width: 1200px;
 	margin: 0 auto;
-	padding: 0 120px;
+	padding: 0 20px;
 	display: flex;
 	@media (max-width: $bp2+px){
 		flex-direction: column;
@@ -159,7 +159,7 @@ body.touch .aside__social-link:active {
 }
 
 .main {
-	margin: 0 0 0 300px;
+	margin: 0 0 0 250px;
 	min-width: 0;
 	@media (max-width: $bp2+px){
 		margin: 0;
