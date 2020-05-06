@@ -3,6 +3,7 @@
 @import 'vars';
 @import 'mixins';
 @import 'slick';
+@import 'fonts';
 
 :root {
 	--fontSize: 20px;
@@ -85,20 +86,20 @@ body {
 			content: "";
 			position: absolute;
 			height: 10px;
-			width: calc(100% + 20px);
+			width: 0;
 			z-index: -1;
-			left: 100%;
+			left: 0;
 			bottom: 0;
 			transition: all .2s;
 			background: transparent;
 		}
 		&:hover:after {
-			left: 0;
+			width: calc(100% + 20px);
 			background: var(--blue-l);
 		}
 
 		&.active:after {
-			left: 0;
+			width: calc(100% + 20px);
 			background: var(--blue-l);
 		}
 	}
@@ -172,7 +173,7 @@ body.touch .aside__social-link:active {
 		height: 500px;
 	}
 	&__content {
-		padding: 138px 202px 142px 26px;
+		padding: 138px 25px 142px;
 		@media (max-width: $bp4+px){
 			padding: 135px 15px 74px;
 		}
@@ -227,30 +228,71 @@ body.touch .aside__social-link:active {
 }
 
 .section {margin: 85px 0;}
-
-.burger {display: none;}
+.more {display: none;}
+.mobile-h {display: none;}
 
 @media (max-width: $bp2+px){
 	.ph {
 		padding: 0 15px;
 	}
-	.burger {
+	// .burger {
+	// 	position: fixed;
+	// 	top: 5%;
+	// 	right: 5%;
+	// 	display: block;
+	// 	z-index: 1;
+	// }
+	.mobile-h {
 		position: fixed;
-		top: 5%;
-		right: 5%;
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 15px;
+		height: 50px;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: rgba(#fff,.9);
+		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
 		z-index: 1;
+		// .mobile-h__logo
+		&__logo {}
+
+		// .mobile-h__burger
+		&__burger {}
 	}
-
 }
-.about {
 
+
+@media (max-width: $bp4+px){
+	.hidden {
+		display: none !important;
+	}
+	.more {
+		display: block;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 17px;
+		text-decoration-line: underline;
+		cursor: pointer;
+		border: none;
+		background-color: transparent;
+	}
+}
+
+.about {
+	height: 500px;
+	@media (max-width: $bp2+px){
+		height: 600px;
+	}
+	@media (max-width: $bp4+px){
+		height: 290px;
+	}
 	// .about__content
 	&__content {
 		padding: 144px 0 144px 25px;
-		@media (max-width: $bp3+px){
+		@media (max-width: $bp4+px){
 			padding: 79px 0 79px 25px;
-
 		}
 	}
 
@@ -260,7 +302,7 @@ body.touch .aside__social-link:active {
 		font-size: 28.8px;
 		line-height: 35px;
 		margin: 0px 0px 15px 0px;
-		@media (max-width: $bp3+px){
+		@media (max-width: $bp4+px){
 			font-size: 18px;
 			line-height: 22px;
 		}
@@ -272,7 +314,7 @@ body.touch .aside__social-link:active {
 		font-size: 48px;
 		line-height: 55px;
 		max-width: 497px;
-		@media (max-width: $bp3+px){
+		@media (max-width: $bp4+px){
 			font-size: 30px;
 			line-height: 35px;
 		}
@@ -340,6 +382,7 @@ body.touch .aside__social-link:active {
 	width: 292px;
 	position: relative;
 	overflow: hidden;
+	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
 	@media (max-width: $bp2+px){
 		margin: 0px 0px 15px 0px;
 	}

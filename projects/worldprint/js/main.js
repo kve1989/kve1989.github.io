@@ -108,7 +108,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_scrolling__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/scrolling */ "./app/#src/js/modules/scrolling.js");
 /* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/modals */ "./app/#src/js/modules/modals.js");
 /* harmony import */ var _modules_mask__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/mask */ "./app/#src/js/modules/mask.js");
-/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./slider */ "./app/#src/js/slider.js");
+/* harmony import */ var _modules_showMore__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/showMore */ "./app/#src/js/modules/showMore.js");
+/* harmony import */ var _modules_typeText__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/typeText */ "./app/#src/js/modules/typeText.js");
+/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./slider */ "./app/#src/js/slider.js");
+
+
 
 
 
@@ -127,6 +131,14 @@ document.addEventListener('DOMContentLoaded', function () {
   Object(_modules_scrolling__WEBPACK_IMPORTED_MODULE_6__["default"])();
   Object(_modules_modals__WEBPACK_IMPORTED_MODULE_7__["default"])();
   Object(_modules_mask__WEBPACK_IMPORTED_MODULE_8__["default"])('[name="phone"]');
+  Object(_modules_showMore__WEBPACK_IMPORTED_MODULE_9__["default"])('.products__row .more', '.products__row');
+  Object(_modules_showMore__WEBPACK_IMPORTED_MODULE_9__["default"])('.portfolio__row .more', '.portfolio__row');
+  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_10__["default"])(["ПЕЧАТАЕМ ВАШИ ИДЕИ."], '.welcome__maintitle.ttu.cyan');
+  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_10__["default"])(["ЯРКО. НЕОБЫЧНО"], '.welcome__maintitle.ttu.white.type-one');
+  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_10__["default"])(["И СО ВКУСОМ."], '.welcome__maintitle.ttu.white.type-two');
+  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_10__["default"])(["Мы предлагаем услуги по изготовлению и дизайну полиграфической продукции всех видов, качественно и в кротчайшие сроки"], '.welcome__suptitle.welcome-suptitle');
+  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_10__["default"])(["за 10 лет работы"], '.about__toptitle');
+  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_10__["default"])(["Мы напечатали более 10 000 000 страниц"], '.about__title');
   var isMobile = {
     Android: function Android() {
       return navigator.userAgent.match(/Android/i);
@@ -150,19 +162,13 @@ document.addEventListener('DOMContentLoaded', function () {
   var body = document.querySelector('body');
 
   if (isMobile.any()) {
-    body.classList.add('touch'); // let arrow = document.querySelector(".arrow");
-    // let subMenu = arrow.nextElementSibling;
-    // let thisArrow = arrow;
-    // arrow.addEventListener('click', function () {
-    // 	subMenu.classList.toggle('open');
-    // 	thisArrow.classList.toggle('active');
-    // });
+    body.classList.add('touch');
   } else {
     body.classList.add('mouse');
   }
 
   var links = document.querySelectorAll('.aside__link'),
-      burger = document.querySelector('.burger'),
+      burger = document.querySelector('.mobile-h__burger'),
       aside = document.querySelector('.aside');
 
   function deleteClass() {
@@ -513,6 +519,40 @@ var scrolling = function scrolling() {
 
 /***/ }),
 
+/***/ "./app/#src/js/modules/showMore.js":
+/*!*****************************************!*\
+  !*** ./app/#src/js/modules/showMore.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.for-each */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var showMore = function showMore(trigger, wrapper) {
+  var btn = document.querySelector(trigger),
+      wrappers = document.querySelectorAll(wrapper);
+  ;
+  btn.addEventListener('click', function () {
+    wrappers.forEach(function (wrap) {
+      if (wrap.classList.contains('hidden')) {
+        wrap.classList.remove('hidden');
+      }
+    });
+    btn.remove();
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (showMore);
+
+/***/ }),
+
 /***/ "./app/#src/js/modules/tabs.js":
 /*!*************************************!*\
   !*** ./app/#src/js/modules/tabs.js ***!
@@ -583,6 +623,66 @@ var tabs = function tabs(headerSelector, tabSelector, contentSelector, activeCla
 
 /***/ }),
 
+/***/ "./app/#src/js/modules/typeText.js":
+/*!*****************************************!*\
+  !*** ./app/#src/js/modules/typeText.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// document.addEventListener('DOMContentLoaded', function (event) {
+var typeText = function typeText() {
+  var ownText = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var selectorTrigger = arguments.length > 1 ? arguments[1] : undefined;
+  // array with texts to type in typewriter
+  var dataText = ownText,
+      selector = document.querySelector(selectorTrigger); // type one text in the typwriter
+  // keeps calling itself until the text is finished
+
+  function typeWriter(text, i, fnCallback) {
+    // chekc if text isn't finished yet
+    if (i < text.length) {
+      // add next character to selector
+      selector.innerHTML = text.substring(0, i + 1); // wait for a while and call this function again for next character
+
+      setTimeout(function () {
+        typeWriter(text, i + 1, fnCallback);
+      }, 100);
+    } // text finished, call callback if there is a callback function
+    else if (typeof fnCallback == 'function') {
+        // call callback after timeout
+        setTimeout(fnCallback, 700);
+      }
+  } // start a typewriter animation for a text in the dataText array
+
+
+  function StartTextAnimation(i) {
+    if (typeof dataText[i] == 'undefined') {
+      setTimeout(function () {
+        StartTextAnimation(0);
+      }, 20000);
+    } // check if dataText[i] exists
+
+
+    if (i < dataText.length) {
+      // text exists! start typewriter animation
+      typeWriter(dataText[i], 0, function () {
+        // after callback (and whole text has been animated), start next text
+        StartTextAnimation(i + 1);
+      });
+    }
+  } // start the text animation
+
+
+  StartTextAnimation(0);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (typeText);
+
+/***/ }),
+
 /***/ "./app/#src/js/slider.js":
 /*!*******************************!*\
   !*** ./app/#src/js/slider.js ***!
@@ -607,6 +707,7 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     slidesToScroll: 1,
     arrows: false,
     adaptiveHeight: true,
+    lazyLoad: "",
     responsive: [{
       breakpoint: 769,
       settings: {
@@ -2702,7 +2803,7 @@ for (var COLLECTION_NAME in DOMIterables) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * jQuery JavaScript Library v3.5.1
+ * jQuery JavaScript Library v3.5.0
  * https://jquery.com/
  *
  * Includes Sizzle.js
@@ -2712,7 +2813,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * Released under the MIT license
  * https://jquery.org/license
  *
- * Date: 2020-05-04T22:49Z
+ * Date: 2020-04-10T15:07Z
  */
 ( function( global, factory ) {
 
@@ -2850,7 +2951,7 @@ function toType( obj ) {
 
 
 var
-	version = "3.5.1",
+	version = "3.5.0",
 
 	// Define a local copy of jQuery
 	jQuery = function( selector, context ) {
@@ -6947,7 +7048,7 @@ Data.prototype = {
 
 		// If not, create one
 		if ( !value ) {
-			value = {};
+			value = Object.create( null );
 
 			// We can accept data for non-element nodes in modern browsers,
 			// but we should not, see #8335.

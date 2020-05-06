@@ -19,9 +19,15 @@
 <body>
 	<div class="wrapper">
 		<div class="container">
-			<div class="burger">
-				<img src="./images/elems/Union.svg" alt="">
+			<div class="mobile-h">
+				<div class="mobile-h__logo">
+					<a href="/"><img src="./images/Logo/Logo-m.svg" alt=""></a>
+				</div>
+				<div class="mobile-h__burger">
+					<img src="./images/elems/Union.svg" alt="">
+				</div>
 			</div>
+			<!-- /.mobile-h -->
 			<aside class="aside" id="menu">
 				<div class="aside__logo">
 					<a href="/"><img src="./images/Logo/Logo.png" alt="Логотип"></a>
@@ -59,8 +65,8 @@
 					<div class="welcome__content">
 						<div class="welcome__toptitle ttu">Полиграфическое производство</div>
 						<div class="welcome__maintitle ttu cyan">ПЕЧАТАЕМ ВАШИ ИДЕИ.</div>
-						<div class="welcome__maintitle ttu white">ЯРКО. НЕОБЫЧНО</div>
-						<div class="welcome__maintitle ttu white">И СО ВКУСОМ.</div>
+						<div class="welcome__maintitle ttu white type-one">ЯРКО. НЕОБЫЧНО</div>
+						<div class="welcome__maintitle ttu white type-two">И СО ВКУСОМ.</div>
 						<div class="welcome__suptitle welcome-suptitle">Мы предлагаем услуги по изготовлению и дизайну полиграфической
 							продукции всех видов, качественно и в кротчайшие сроки</div>
 					</div>
@@ -121,6 +127,9 @@
 							</div>
 						</div>
 						<div class="products__row row">
+							<button class="more ttu">Еще...</button>
+						</div>
+						<div class="products__row row hidden">
 							<div class="products__item item">
 								<div class="item__img ibg">
 									<img src="./images/products/3.jpg" alt="">
@@ -160,7 +169,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="products__row row">
+						<div class="products__row row hidden">
 							<div class="products__item item">
 								<div class="item__img ibg">
 									<img src="./images/products/6.jpg" alt="">
@@ -208,8 +217,8 @@
 					<img src="./images/background/About.jpg" alt="">
 					<div class="about__content">
 						<div class="about__toptitle ttu cyan">за 10 лет работы</div>
-						<div class="about__title white">Мы напечатали более <span>10 000 000</span></div>
-						<div class="about__title white"><span>страниц</span></div>
+						<div class="about__title white">Мы напечатали более <span>10 000 000</span>страниц</div>
+						<!-- <div class="about__title white"><span></span></div> -->
 					</div>
 				</section>
 				<!-- /.section about -->
@@ -278,6 +287,9 @@
 							</div>
 						</div>
 						<div class="portfolio__row row">
+							<button class="more ttu">Еще...</button>
+						</div>
+						<div class="portfolio__row row hidden">
 							<div class="portfolio__item item">
 								<div class="item__img ibg">
 									<img src="./images/portfolio/4.jpg" alt="King Koil">

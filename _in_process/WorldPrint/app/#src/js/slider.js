@@ -10,6 +10,7 @@ $(function() {
 		slidesToScroll: 1,
 		arrows: false,
 		adaptiveHeight: true,
+		lazyLoad: "",
 		responsive: [{
 			breakpoint: 769,
 			settings: {
