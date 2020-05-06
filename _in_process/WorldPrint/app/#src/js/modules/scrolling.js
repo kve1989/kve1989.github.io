@@ -13,13 +13,17 @@ const scrolling = () => {
 	// Scrolling with raf
 
 	let links = document.querySelectorAll('[href^="#"]'),
-			speed = 0.3;
+			speed = 0.3,
+			aside = document.querySelector('.aside');
 
 	links.forEach(link => {
 		link.addEventListener('click', function(event) {
 			event.preventDefault();
 
-			slideout.close();
+			// slideout.close();
+			if (aside.classList.contains('mobile')) {
+				aside.classList.remove('mobile');
+			}
 
 			let widthTop = document.documentElement.scrollTop,
 					hash = this.hash,

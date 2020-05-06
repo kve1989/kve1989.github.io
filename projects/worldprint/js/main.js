@@ -426,11 +426,16 @@ var scrolling = function scrolling() {
   // });
   // Scrolling with raf
   var links = document.querySelectorAll('[href^="#"]'),
-      speed = 0.3;
+      speed = 0.3,
+      aside = document.querySelector('.aside');
   links.forEach(function (link) {
     link.addEventListener('click', function (event) {
-      event.preventDefault();
-      slideout.close();
+      event.preventDefault(); // slideout.close();
+
+      if (aside.classList.contains('mobile')) {
+        aside.classList.remove('mobile');
+      }
+
       var widthTop = document.documentElement.scrollTop,
           hash = this.hash,
           toBlock = document.querySelector(hash).getBoundingClientRect().top,
