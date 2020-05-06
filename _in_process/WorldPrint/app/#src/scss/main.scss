@@ -3,8 +3,8 @@
 @import 'vars';
 @import 'mixins';
 @import 'slideout';
-@import '../../../node_modules/slick-carousel/slick/slick.scss';
-// @import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
+@import 'slick';
+
 :root {
 	--fontSize: 20px;
 	--cyan: #3CDBC0;
