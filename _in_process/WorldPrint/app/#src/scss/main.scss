@@ -2,7 +2,6 @@
 @import 'general';
 @import 'vars';
 @import 'mixins';
-@import 'slideout';
 @import 'slick';
 
 :root {
@@ -240,7 +239,7 @@ body.touch .aside__social-link:active {
 		top: 5%;
 		right: 5%;
 		display: block;
-		z-index: 5;
+		z-index: 1;
 	}
 
 }
@@ -292,7 +291,11 @@ body.touch .aside__social-link:active {
 		&:first-child {
 			.products__item:first-child {
 				width: 595px;
-				@media (max-width: $bp3+px){
+
+				@media (max-width: $bp2+px) {
+					width: 482px;
+				}
+				@media (max-width: $bp4+px){
 					width: 100%;
 				}
 			}
@@ -327,24 +330,21 @@ body.touch .aside__social-link:active {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	@media (max-width: $bp3+px){
+	@media (max-width: $bp4+px){
 		align-items: center;
 		flex-direction: column;
 	}
 }
 
-// body.touch .item:active .item__info,
-// body.touch .item:active .item__text {top: 0;}
-
-// body.mouse .item:hover .item__info,
-// body.mouse .item:hover .item__text  {top: 0;}
-
 .item {
 	width: 292px;
 	position: relative;
 	overflow: hidden;
-	@media (max-width: $bp3+px){
+	@media (max-width: $bp2+px){
 		margin: 0px 0px 15px 0px;
+	}
+	@media (max-width: $bp3+px){
+		width: 236px;
 	}
 	@media (max-width: $bp4+px){
 		width: 100%;
@@ -529,7 +529,9 @@ body.touch .aside__social-link:active {
 		display: flex;
 		justify-content: space-between;
 		margin: 0px 0px 30px 0px;
-
+		@media (max-width: $bp3+px){
+			justify-content: space-around;
+		}
 	}
 
 	// .paydel__tab
@@ -619,7 +621,7 @@ body.touch .aside__social-link:active {
 				flex: 1 1 100%;
 			}
 		}
-		@media (max-width: $bp3+px){
+		@media (max-width: $bp4+px){
 			flex-direction: column;
 			align-items: center;
 		}
@@ -722,15 +724,19 @@ body.touch .aside__social-link:active {
 	// .popup__wrapper
 	&__wrapper {
 		position: absolute;
-		max-width: 595px;
+		width: 595px;
 		background: #fff;
 		top: 50%;
 		left: 50%;
 		box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.25);
 		transform: translate(-50%, -50%);
 		opacity: 1;
+		@media (max-width: $bp3+px){
+			width: 650px;
+		}
 		@media (max-width: $bp4+px){
 			width: 100%;
+			height: 100%;
 		}
 	}
 	// .popup__content

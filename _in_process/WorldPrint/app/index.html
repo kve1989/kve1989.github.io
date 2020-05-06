@@ -415,7 +415,7 @@
 								<p>Владимирская область, г. Ковров, улица Блинова, 68с1</p>
 							</div>
 							<div class="contacts__button">
-								<button class="contacts__btn btn">Связаться с нами</button>
+								<button class="contacts__btn btn popup-active">Связаться с нами</button>
 							</div>
 						</div>
 						<div class="contacts__map">
@@ -455,7 +455,7 @@
 						<div>Прикрепить файл
 							<span>Максимальный размер файла 40 МБ</span></div>
 					</div>
-					<button type="submit" class="btn popup__btn">Отправить</button>
+					<button type="submit" class="btn popup__btn ">Отправить</button>
 					<div class="popup__policy tac">
 						Нажимая на кнопку «Отправить», вы соглашаетесь с <a href="#">политикой конфиденциальности</a> сайта
 					</div>
@@ -469,22 +469,6 @@
 	<!-- /.popup -->
 
 	<script src="js/main.js"></script>
-	<script src="js/slideout.min.js"></script>
-	<script>
-		// var slideout = new Slideout({
-		// 	'panel': document.getElementById('panel'),
-		// 	'menu': document.getElementById('menu'),
-		// 	'padding': 256,
-		// 	'tolerance': 70
-		// });
-
-		document.querySelector('.burger').addEventListener('click', function() {
-			// slideout.toggle();
-			document.querySelector('.aside').classList.toggle('mobile');
-			// document.querySelector('.aside').style.left = '0px';
-		});
-
-	</script>
 </body>
 
 </html>

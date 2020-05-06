@@ -39,18 +39,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (isMobile.any()) {
 		body.classList.add('touch');
-		let arrow = document.querySelector(".arrow");
-		let subMenu = arrow.nextElementSibling;
-		let thisArrow = arrow;
-		arrow.addEventListener('click', function () {
-			subMenu.classList.toggle('open');
-			thisArrow.classList.toggle('active');
-		});
+		// let arrow = document.querySelector(".arrow");
+		// let subMenu = arrow.nextElementSibling;
+		// let thisArrow = arrow;
+		// arrow.addEventListener('click', function () {
+		// 	subMenu.classList.toggle('open');
+		// 	thisArrow.classList.toggle('active');
+		// });
 	} else {
 		body.classList.add('mouse');
 	}
 
-	const links = document.querySelectorAll('.aside__link');
+	const links = document.querySelectorAll('.aside__link'),
+			burger = document.querySelector('.burger'),
+			aside = document.querySelector('.aside');
 
 	function deleteClass() {
 		links.forEach(link => {
@@ -66,7 +68,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			deleteClass();
 			addClass(i);
 		});
-	})
+	});
 
+
+	burger.addEventListener('click', () => {
+		aside.classList.toggle('mobile');
+	});
 	//Custom JS
 });

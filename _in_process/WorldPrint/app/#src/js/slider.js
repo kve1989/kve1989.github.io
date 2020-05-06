@@ -11,12 +11,18 @@ $(function() {
 		arrows: false,
 		adaptiveHeight: true,
 		responsive: [{
-			breakpoint: 530,
+			breakpoint: 769,
 			settings: {
-				slidesToShow: 2,
+				slidesToShow: 4,
 				slidesToScroll: 2,
-				// centerMode: true,
 			}
-		}]
+		},
+	{
+		breakpoint: 480,
+		settings: {
+			slidesToShow: 2,
+			slidesToScroll: 2,
+		}
+	}]
 	});
 });

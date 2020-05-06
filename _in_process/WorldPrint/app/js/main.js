@@ -150,19 +150,20 @@ document.addEventListener('DOMContentLoaded', function () {
   var body = document.querySelector('body');
 
   if (isMobile.any()) {
-    body.classList.add('touch');
-    var arrow = document.querySelector(".arrow");
-    var subMenu = arrow.nextElementSibling;
-    var thisArrow = arrow;
-    arrow.addEventListener('click', function () {
-      subMenu.classList.toggle('open');
-      thisArrow.classList.toggle('active');
-    });
+    body.classList.add('touch'); // let arrow = document.querySelector(".arrow");
+    // let subMenu = arrow.nextElementSibling;
+    // let thisArrow = arrow;
+    // arrow.addEventListener('click', function () {
+    // 	subMenu.classList.toggle('open');
+    // 	thisArrow.classList.toggle('active');
+    // });
   } else {
     body.classList.add('mouse');
   }
 
-  var links = document.querySelectorAll('.aside__link');
+  var links = document.querySelectorAll('.aside__link'),
+      burger = document.querySelector('.burger'),
+      aside = document.querySelector('.aside');
 
   function deleteClass() {
     links.forEach(function (link) {
@@ -180,6 +181,9 @@ document.addEventListener('DOMContentLoaded', function () {
       deleteClass();
       addClass(i);
     });
+  });
+  burger.addEventListener('click', function () {
+    aside.classList.toggle('mobile');
   }); //Custom JS
 });
 
@@ -430,7 +434,7 @@ var scrolling = function scrolling() {
       aside = document.querySelector('.aside');
   links.forEach(function (link) {
     link.addEventListener('click', function (event) {
-      event.preventDefault(); // slideout.close();
+      event.preventDefault();
 
       if (aside.classList.contains('mobile')) {
         aside.classList.remove('mobile');
@@ -604,11 +608,16 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(function () {
     arrows: false,
     adaptiveHeight: true,
     responsive: [{
-      breakpoint: 530,
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 2
+      }
+    }, {
+      breakpoint: 480,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2 // centerMode: true,
-
+        slidesToScroll: 2
       }
     }]
   });

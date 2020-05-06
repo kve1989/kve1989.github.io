@@ -20,7 +20,6 @@ const scrolling = () => {
 		link.addEventListener('click', function(event) {
 			event.preventDefault();
 
-			// slideout.close();
 			if (aside.classList.contains('mobile')) {
 				aside.classList.remove('mobile');
 			}
