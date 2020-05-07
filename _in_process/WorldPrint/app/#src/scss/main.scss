@@ -339,7 +339,8 @@ body.touch .aside__social-link:active {
 		margin: 0px 0px 10px 0px;
 		&:first-child {
 			.products__item:first-child {
-				width: 595px;
+				// width: 595px;
+				flex: 0 1 66%;
 
 				@media (max-width: $bp2+px) {
 					width: 482px;
@@ -377,7 +378,7 @@ body.touch .aside__social-link:active {
 
 .row {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	@media (max-width: $bp4+px){
 		align-items: center;
@@ -395,7 +396,8 @@ body.touch .item.active .item__info {top: 0;}
 body.touch .item.active .item__caption {display: none;}
 
 .item {
-	width: 292px;
+	// width: 292px;
+	flex: 0 1 32%;
 	position: relative;
 	overflow: hidden;
 	box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
@@ -574,7 +576,8 @@ body.touch .item.active .item__caption {display: none;}
 
 	// .paydel__img
 	&__img {
-		flex-shrink: 0;
+		// flex-shrink: 0;
+		flex: 1 0 40%;
 		margin: 0px 20px 0px 0px;
 		@media (max-width: $bp3+px){
 			display: none;
