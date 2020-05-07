@@ -50,12 +50,12 @@ function styles() {
 function scripts() {
 	return src(paths.src + 'js/main.js')
 	.pipe(webpack({
-		mode: 'development',
+		mode: 'production',
 		output: {
 				filename: 'main.js'
 		},
-		watch: false,
-		devtool: "source-map",
+		// watch: false,
+		// devtool: "source-map",
 		module: {
 				rules: [
 					{
@@ -65,7 +65,7 @@ function scripts() {
 							loader: 'babel-loader',
 							options: {
 								presets: [['@babel/preset-env', {
-										debug: true,
+										// debug: true,
 										corejs: 3,
 										useBuiltIns: "usage"
 								}]]
