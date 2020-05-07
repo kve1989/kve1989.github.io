@@ -95,24 +95,16 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.for-each */ "./node_modules/core-js/modules/es.array.for-each.js");
-/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.exec */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_match__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.match */ "./node_modules/core-js/modules/es.string.match.js");
-/* harmony import */ var core_js_modules_es_string_match__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_match__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _modules_ibg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/ibg */ "./app/#src/js/modules/ibg.js");
-/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/tabs */ "./app/#src/js/modules/tabs.js");
-/* harmony import */ var _modules_scrolling__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/scrolling */ "./app/#src/js/modules/scrolling.js");
-/* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/modals */ "./app/#src/js/modules/modals.js");
-/* harmony import */ var _modules_mask__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/mask */ "./app/#src/js/modules/mask.js");
-/* harmony import */ var _modules_showMore__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/showMore */ "./app/#src/js/modules/showMore.js");
-/* harmony import */ var _modules_typeText__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/typeText */ "./app/#src/js/modules/typeText.js");
-/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./slider */ "./app/#src/js/slider.js");
-
-
+/* harmony import */ var _modules_ibg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/ibg */ "./app/#src/js/modules/ibg.js");
+/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/tabs */ "./app/#src/js/modules/tabs.js");
+/* harmony import */ var _modules_scrolling__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/scrolling */ "./app/#src/js/modules/scrolling.js");
+/* harmony import */ var _modules_modals__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/modals */ "./app/#src/js/modules/modals.js");
+/* harmony import */ var _modules_mask__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/mask */ "./app/#src/js/modules/mask.js");
+/* harmony import */ var _modules_showMore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/showMore */ "./app/#src/js/modules/showMore.js");
+/* harmony import */ var _modules_typeText__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/typeText */ "./app/#src/js/modules/typeText.js");
+/* harmony import */ var _modules_mobile__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/mobile */ "./app/#src/js/modules/mobile.js");
+/* harmony import */ var _modules_activeClass__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/activeClass */ "./app/#src/js/modules/activeClass.js");
+/* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./slider */ "./app/#src/js/slider.js");
 
 
 
@@ -126,72 +118,86 @@ __webpack_require__.r(__webpack_exports__);
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  Object(_modules_ibg__WEBPACK_IMPORTED_MODULE_4__["default"])();
-  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_5__["default"])('.paydel__tabs', '.paydel__tab', '.paydel__tabs-content__item', 'active');
-  Object(_modules_scrolling__WEBPACK_IMPORTED_MODULE_6__["default"])();
-  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_7__["default"])();
-  Object(_modules_mask__WEBPACK_IMPORTED_MODULE_8__["default"])('[name="phone"]');
-  Object(_modules_showMore__WEBPACK_IMPORTED_MODULE_9__["default"])('.products__row .more', '.products__row');
-  Object(_modules_showMore__WEBPACK_IMPORTED_MODULE_9__["default"])('.portfolio__row .more', '.portfolio__row');
-  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_10__["default"])(["ПЕЧАТАЕМ ВАШИ ИДЕИ."], '.welcome__maintitle.ttu.cyan');
-  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_10__["default"])(["ЯРКО. НЕОБЫЧНО"], '.welcome__maintitle.ttu.white.type-one');
-  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_10__["default"])(["И СО ВКУСОМ."], '.welcome__maintitle.ttu.white.type-two');
-  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_10__["default"])(["Мы предлагаем услуги по изготовлению и дизайну полиграфической продукции всех видов, качественно и в кротчайшие сроки"], '.welcome__suptitle.welcome-suptitle');
-  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_10__["default"])(["за 10 лет работы"], '.about__toptitle');
-  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_10__["default"])(["Мы напечатали более 10 000 000 страниц"], '.about__title');
-  var isMobile = {
-    Android: function Android() {
-      return navigator.userAgent.match(/Android/i);
-    },
-    BlackBerry: function BlackBerry() {
-      return navigator.userAgent.match(/BlackBerry/i);
-    },
-    iOS: function iOS() {
-      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-    },
-    Opera: function Opera() {
-      return navigator.userAgent.match(/Opera Mini/i);
-    },
-    Windows: function Windows() {
-      return navigator.userAgent.match(/IEMobile/i);
-    },
-    any: function any() {
-      return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
-    }
-  };
-  var body = document.querySelector('body');
+  Object(_modules_ibg__WEBPACK_IMPORTED_MODULE_0__["default"])();
+  Object(_modules_tabs__WEBPACK_IMPORTED_MODULE_1__["default"])('.paydel__tabs', '.paydel__tab', '.paydel__tabs-content__item', 'active');
+  Object(_modules_scrolling__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  Object(_modules_modals__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  Object(_modules_mobile__WEBPACK_IMPORTED_MODULE_7__["default"])();
+  Object(_modules_mask__WEBPACK_IMPORTED_MODULE_4__["default"])('[name="phone"]');
+  Object(_modules_showMore__WEBPACK_IMPORTED_MODULE_5__["default"])('.products__row .more', '.products__row');
+  Object(_modules_showMore__WEBPACK_IMPORTED_MODULE_5__["default"])('.portfolio__row .more', '.portfolio__row');
+  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_6__["default"])(["ПЕЧАТАЕМ ВАШИ ИДЕИ."], '.welcome__maintitle.ttu.cyan');
+  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_6__["default"])(["ЯРКО. НЕОБЫЧНО"], '.welcome__maintitle.ttu.white.type-one');
+  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_6__["default"])(["И СО ВКУСОМ."], '.welcome__maintitle.ttu.white.type-two');
+  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_6__["default"])(["Мы предлагаем услуги по изготовлению и дизайну полиграфической продукции всех видов, качественно и в кротчайшие сроки"], '.welcome__suptitle.welcome-suptitle');
+  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_6__["default"])(["за 10 лет работы"], '.about__toptitle');
+  Object(_modules_typeText__WEBPACK_IMPORTED_MODULE_6__["default"])(["Мы напечатали более 10 000 000 страниц"], '.about__title');
+  Object(_modules_activeClass__WEBPACK_IMPORTED_MODULE_8__["default"])('.aside__link');
+  Object(_modules_activeClass__WEBPACK_IMPORTED_MODULE_8__["default"])('.item', true); // const links = document.querySelectorAll('.aside__link');
+  // function deleteClass() {
+  // 	links.forEach(link => {
+  // 		link.classList.remove('active');
+  // 	})
+  // }
+  // function addClass(i = 0) {
+  // 	links[i].classList.add('active');
+  // }
+  // links.forEach((link, i) => {
+  // 	link.addEventListener('click', (e) => {
+  // 		deleteClass();
+  // 		addClass(i);
+  // 	});
+  // });
+  //Custom JS
+});
 
-  if (isMobile.any()) {
-    body.classList.add('touch');
-  } else {
-    body.classList.add('mouse');
-  }
+/***/ }),
 
-  var links = document.querySelectorAll('.aside__link'),
-      burger = document.querySelector('.mobile-h__burger'),
-      aside = document.querySelector('.aside');
+/***/ "./app/#src/js/modules/activeClass.js":
+/*!********************************************!*\
+  !*** ./app/#src/js/modules/activeClass.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.for-each */ "./node_modules/core-js/modules/es.array.for-each.js");
+/* harmony import */ var core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_for_each__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var activeClass = function activeClass(selector) {
+  var toggle = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+  var items = document.querySelectorAll(selector);
 
   function deleteClass() {
-    links.forEach(function (link) {
-      link.classList.remove('active');
+    items.forEach(function (item) {
+      item.classList.remove('active');
     });
   }
 
   function addClass() {
     var i = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-    links[i].classList.add('active');
+
+    if (toggle = true) {
+      items[i].classList.toggle('active');
+    }
+
+    items[i].classList.add('active');
   }
 
-  links.forEach(function (link, i) {
-    link.addEventListener('click', function (e) {
+  items.forEach(function (item, i) {
+    item.addEventListener('click', function (e) {
       deleteClass();
       addClass(i);
     });
   });
-  burger.addEventListener('click', function () {
-    aside.classList.toggle('mobile');
-  }); //Custom JS
-});
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (activeClass);
 
 /***/ }),
 
@@ -290,6 +296,62 @@ var mask = function mask(selector) {
 
 /***/ }),
 
+/***/ "./app/#src/js/modules/mobile.js":
+/*!***************************************!*\
+  !*** ./app/#src/js/modules/mobile.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.regexp.exec */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_string_match__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.string.match */ "./node_modules/core-js/modules/es.string.match.js");
+/* harmony import */ var core_js_modules_es_string_match__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_match__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var mobile = function mobile() {
+  var isMobile = {
+    Android: function Android() {
+      return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function BlackBerry() {
+      return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function iOS() {
+      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function Opera() {
+      return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function Windows() {
+      return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function any() {
+      return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+    }
+  },
+      body = document.querySelector('body'),
+      burger = document.querySelector('.mobile-h__burger'),
+      aside = document.querySelector('.aside');
+
+  if (isMobile.any()) {
+    body.classList.add('touch');
+  } else {
+    body.classList.add('mouse');
+  }
+
+  burger.addEventListener('click', function () {
+    aside.classList.toggle('mobile');
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (mobile);
+
+/***/ }),
+
 /***/ "./app/#src/js/modules/modals.js":
 /*!***************************************!*\
   !*** ./app/#src/js/modules/modals.js ***!
@@ -332,6 +394,7 @@ var modals = function modals() {
           item.style.display = 'none';
           item.classList.add('animated', 'fadeIn');
         });
+        modal.classList.add('animated', 'fadeIn');
         modal.style.display = "block";
         document.body.style.overflow = "hidden";
         document.body.style.marginRight = "".concat(scroll, "px");
@@ -2803,7 +2866,7 @@ for (var COLLECTION_NAME in DOMIterables) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * jQuery JavaScript Library v3.5.0
+ * jQuery JavaScript Library v3.5.1
  * https://jquery.com/
  *
  * Includes Sizzle.js
@@ -2813,7 +2876,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * Released under the MIT license
  * https://jquery.org/license
  *
- * Date: 2020-04-10T15:07Z
+ * Date: 2020-05-04T22:49Z
  */
 ( function( global, factory ) {
 
@@ -2951,7 +3014,7 @@ function toType( obj ) {
 
 
 var
-	version = "3.5.0",
+	version = "3.5.1",
 
 	// Define a local copy of jQuery
 	jQuery = function( selector, context ) {
@@ -7048,7 +7111,7 @@ Data.prototype = {
 
 		// If not, create one
 		if ( !value ) {
-			value = Object.create( null );
+			value = {};
 
 			// We can accept data for non-element nodes in modern browsers,
 			// but we should not, see #8335.

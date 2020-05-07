@@ -24,7 +24,7 @@ const modals = () => {
                     item.style.display = 'none';
                     item.classList.add('animated', 'fadeIn');
                 });
-
+                modal.classList.add('animated', 'fadeIn');
                 modal.style.display = "block";
                 document.body.style.overflow = "hidden";
                 document.body.style.marginRight = `${scroll}px`;
