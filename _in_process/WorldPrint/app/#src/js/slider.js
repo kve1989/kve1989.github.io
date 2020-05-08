@@ -3,9 +3,9 @@ import 'slick-carousel';
 
 $(function() {
 	$('.partners__slider').slick({
-		autoplay: true,
+		// autoplay: true,
 		infinite: true,
-		autoplaySpeed: 4000,
+		autoplaySpeed: 3000,
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		arrows: false,
@@ -62,5 +62,11 @@ $(function() {
 	  	}, 500);
 
 	  	return false;
+	  });
+
+	  $(window).on('scroll', function () {
+	  	if ($(window).scrollTop() >= $('.about').offset().top) {
+	  		$('.partners__slider').slick('slickPlay');
+	  	}
 	  });
 });
