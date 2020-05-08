@@ -30,24 +30,4 @@ document.addEventListener('DOMContentLoaded', () => {
 	activeClass('.item', true);
 
 
-	// const links = document.querySelectorAll('.aside__link');
-
-	// function deleteClass() {
-	// 	links.forEach(link => {
-	// 		link.classList.remove('active');
-	// 	})
-	// }
-	// function addClass(i = 0) {
-	// 	links[i].classList.add('active');
-	// }
-
-	// links.forEach((link, i) => {
-	// 	link.addEventListener('click', (e) => {
-	// 		deleteClass();
-	// 		addClass(i);
-	// 	});
-	// });
-
-
-	//Custom JS
 });
