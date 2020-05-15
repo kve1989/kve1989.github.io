@@ -1,0 +1,81 @@
+@import 'reset'
+@import 'general'
+@import 'vars'
+@import 'fonts'
+@import 'mixins'
+
+\:root
+	--mainFontSize: 16px
+	--background-primary: #0085c3
+
+body
+	font-size: var(--mainFontSize)
+	font-family: "PT Sans", sans-serif
+	color: #fff
+	background: var(--background-primary)
+
+.header
+	// .header__wrapper
+	&__wrapper
+		padding: 10px 0
+	// .header__logo
+	&__logo
+		font-size: 24px
+		font-family: monospace
+		font-weight: bold
+		&::after
+			content: "_"
+			animation: 1.5s header-logo-cursor-blink infinite linear
+			opacity: 0
+
+@keyframes header-logo-cursor-blink
+	0%
+		opacity: 0
+	50%
+		opacity: 1
+	100%
+		opacity: 0
+
+.about
+	// .about__title
+	&__title
+		margin: 15px 0
+	// .about__menu
+	&__menu
+		display: flex
+	li
+		&:nth-child(2)
+			margin: 0 10px
+	a
+		color: #fff
+
+.portfolio
+		// .portfolio__title
+		&__title
+		// .portfolio__block
+		&__block
+		// .portfolio__block--title
+		&__block--title
+			margin: 10px 0
+			font-size: 20px
+			font-weight: bold
+		// .portfolio__block--body
+		&__block--body
+		// .portfolio__block--list
+		&__block--list
+			display: flex
+			li
+				flex: 0 0 25%
+				border: 15px solid #fff
+				background: #fff
+				transition: all 0.2s
+				color: #232323
+				margin: 0px 10px 0px 0px
+				box-shadow: 0 0 10px #232323
+				overflow: hidden
+				text-align: center
+				font-size: 20px
+
+
+body.mouse .portfolio__block--list li:hover
+	transform: scale(1.1)
