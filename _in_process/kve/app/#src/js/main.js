@@ -16,18 +16,10 @@ function customYaMetrika(selectorYa, counter, target) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-	let scrSizeW = document.querySelector(".screensize-w");
-	let scrSizeH = document.querySelector(".screensize-h");
-	let browser = document.querySelector(".browser span");
-
-	scrSizeW.textContent = window.outerWidth;
-	scrSizeH.textContent = window.outerHeight;
-	browser.textContent = window.navigator.userAgent;
-
-	window.addEventListener("resize", function (event) {
-		scrSizeW.textContent = window.outerWidth;
-		scrSizeH.textContent = window.outerHeight;
-	});
+	let scrSizeW = document.querySelector(".screensize-w"),
+		 scrSizeH = document.querySelector(".screensize-h"),
+		 browser = document.querySelector(".browser span"),
+		 body = document.querySelector("body");
 
 	let isMobile = {
 		Android: function () {
@@ -56,11 +48,19 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	};
 
-	let body = document.querySelector("body");
-
 	if (isMobile.any()) {
 		body.classList.add("touch");
 	} else {
 		body.classList.add("mouse");
 	}
+
+	scrSizeW.textContent = window.outerWidth;
+	scrSizeH.textContent = window.outerHeight;
+	browser.textContent = window.navigator.userAgent;
+
+	window.addEventListener("resize", function (event) {
+		scrSizeW.textContent = window.outerWidth;
+		scrSizeH.textContent = window.outerHeight;
+	});
+
 });
