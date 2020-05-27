@@ -1,5 +1,6 @@
 const leftMenu = document.querySelector('.left-menu'),
-		hamburger = document.querySelector('.hamburger');
+		hamburger = document.querySelector('.hamburger'),
+		cards = document.querySelectorAll('.tv-card');
 
 hamburger.addEventListener('click', () => {
 	leftMenu.classList.toggle('openMenu');
@@ -23,4 +24,17 @@ leftMenu.addEventListener('click', e => {
 		hamburger.classList.add('open');
 	}
 
+});
+
+cards.forEach(card => {
+	const image = card.querySelector('img'),
+			src = image.getAttribute('src');
+
+	card.addEventListener('mouseover', () => {
+		image.setAttribute('src', image.dataset.backdrop);
+	});
+
+	card.addEventListener('mouseout', () => {
+		image.setAttribute('src', src);
+	});
 });
