@@ -1,3 +1,3 @@
 User-agent: Yandex
-Sitemap: http://https://worldprint33.ru//sitemap.xml
+Sitemap: https://worldprint33.ru//sitemap.xml
 User-agent: Googlebot
