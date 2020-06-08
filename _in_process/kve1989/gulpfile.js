@@ -1,21 +1,22 @@
 let localhost = 'localhost:3030',
-		preprocessor = 'sass', // Preprocessor (sass, scss)
-		fileswatch = 'html,htm,php,txt,yaml,twig,json,md',
-		baseDir = 'app';
+	preprocessor = 'sass', // Preprocessor (sass, scss)
+	fileswatch = 'html,htm,txt,json,md,woff2',
+	baseDir = 'app';
 
 let paths = {
 
-		scripts: {
-			src: [
-				baseDir + '/#src/js/app.js'
-			],
-			dest: baseDir + '/js',
-		},
+	scripts: {
+		src: [
+			// 'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
+			baseDir + '/#src/js/app.js' // app.js. Always at the end
+		],
+		dest: baseDir + '/js',
+	},
 
-		styles: {
-			src: baseDir + '/#src/' + preprocessor + '/main.*',
-			dest: baseDir + '/css',
-		},
+	styles: {
+		src: baseDir + '/#src/' + preprocessor + '/main.*',
+		dest: baseDir + '/css',
+	},
 
 		cssOutputName: 'app.css',
 		jsOutputName: 'app.js'
@@ -43,55 +44,62 @@ function browsersync() {
 
 function styles() {
 	return src(paths.styles.src)
-		.pipe(eval(preprocessor)())
-		.pipe(concat(paths.cssOutputName))
-		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-		.pipe(cleancss( {level: { 1: { specialComments: 0 } } }))
-		.pipe(dest(paths.styles.dest))
-		.pipe(browserSync.stream())
-};
+	.pipe(eval(preprocessor)())
+	.pipe(concat(paths.cssOutputName))
+	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
+	.pipe(cleancss( {level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
+	.pipe(dest(paths.styles.dest))
+	.pipe(browserSync.stream())
+}
 
 function scripts() {
 	return src(paths.scripts.src)
-	.pipe(webpack({
-		mode: 'development',
-		output: {
+		.pipe(webpack({
+			mode: 'production',
+			output: {
 				filename: paths.jsOutputName
-		},
-		watch: false,
-		devtool: "source-map",
-		module: {
-				rules: [
-					{
-						test: /\.m?js$/,
-						exclude: /(node_modules|bower_components)/,
-						use: {
-							loader: 'babel-loader',
-							options: {
-								presets: [['@babel/preset-env', {
-										debug: true,
-										corejs: 3,
-										useBuiltIns: "usage"
-								}]]
-							}
+			},
+			watch: false,
+			devtool: "source-map",
+			module: {
+				rules: [{
+					test: /\.m?js$/,
+					exclude: /(node_modules|bower_components)/,
+					use: {
+						loader: 'babel-loader',
+						options: {
+							presets: [
+								['@babel/preset-env', {
+									debug: true,
+									corejs: 3,
+									useBuiltIns: "usage"
+								}]
+							]
 						}
 					}
-				]
+				}]
 			}
-	}))
-	// .pipe(uglify())
-	.pipe(dest(paths.scripts.dest))
-	.pipe(browserSync.stream())
+		}))
+		// .pipe(uglify())
+		.pipe(dest(paths.scripts.dest))
+		.pipe(browserSync.stream())
 };
+// function scripts() {
+// 	return src(paths.scripts.src)
+// 	.pipe(concat(paths.jsOutputName))
+// 	.pipe(uglify())
+// 	.pipe(dest(paths.scripts.dest))
+// 	.pipe(browserSync.stream())
+// }
 
 function startwatch() {
 	watch(baseDir + '/**/' + preprocessor + '/**/*', styles);
-	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.js'], scripts);
 	watch(baseDir + '/**/*.{' + fileswatch + '}').on('change', browserSync.reload);
-};
+	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.js'], scripts);
+}
 
 exports.browsersync = browsersync;
-exports.assets = parallel(styles, scripts);
+exports.assets = series(styles, scripts);
 exports.styles = styles;
 exports.scripts = scripts;
 exports.default = parallel(styles, scripts, browsersync, startwatch);

@@ -1,3 +1,7 @@
+::selection
+	color: #fff
+	background-color: #000
+
 body
   font-size: 16px
   font-family: "PT Sans", sans-serif
@@ -37,7 +41,7 @@ body
 		margin: 15px 0
 	&__menu
 		display: flex
-		&:nth-child(2)
+		li:nth-child(2)
 			margin: 0 15px
 		a
 			color: #fff
@@ -50,7 +54,7 @@ body
 		&--title
 			font-size: 20px
 			margin: 0px 0px 10px 0px
-		&--lists
+		&--list
 			display: flex
 			flex-wrap: wrap
 			@media (max-width: 768px)
@@ -76,3 +80,5 @@ body
 					color: #232323
 				a img
 					object-fit: cover
+				&:hover
+					transform: scale(1.1)
