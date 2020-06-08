@@ -7,7 +7,7 @@ let paths = {
 
 		scripts: {
 			src: [
-				baseDir + '/#src/js/main.js'
+				baseDir + '/#src/js/app.js'
 			],
 			dest: baseDir + '/js',
 		},
@@ -17,9 +17,8 @@ let paths = {
 			dest: baseDir + '/css',
 		},
 
-
-		cssOutputName: 'main.min.css',
-		jsOutputName: 'main.min.js',
+		cssOutputName: 'app.css',
+		jsOutputName: 'app.js'
 };
 
 
@@ -87,8 +86,7 @@ function scripts() {
 
 function startwatch() {
 	watch(baseDir + '/**/' + preprocessor + '/**/*', styles);
-	// watch(['themes/' + theme + '/assets/js/**/*.js', '!themes/' + theme + '/assets/js/*.min.js', 'themes/' + theme + '/assets/vendor/**/*.js'], scripts);
-	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.min.js'], scripts);
+	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.js'], scripts);
 	watch(baseDir + '/**/*.{' + fileswatch + '}').on('change', browserSync.reload);
 };
 
@@ -96,5 +94,4 @@ exports.browsersync = browsersync;
 exports.assets = parallel(styles, scripts);
 exports.styles = styles;
 exports.scripts = scripts;
-// exports.includehtml = includehtml;
 exports.default = parallel(styles, scripts, browsersync, startwatch);

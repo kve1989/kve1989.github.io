@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./app/#src/js/main.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./app/#src/js/app.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./app/#src/js/main.js":
-/*!*****************************!*\
-  !*** ./app/#src/js/main.js ***!
-  \*****************************/
+/***/ "./app/#src/js/app.js":
+/*!****************************!*\
+  !*** ./app/#src/js/app.js ***!
+  \****************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -108,11 +108,30 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+function bindModal(triggerSelector, modalSelector, closeSelector) {
+  var trigger = document.querySelector(triggerSelector),
+      modal = document.querySelector(modalSelector),
+      close = document.querySelector(closeSelector);
+  trigger.addEventListener('click', function (e) {
+    if (e.target) {
+      e.eventPrevention();
+    }
+
+    modal.style.display = 'block';
+    body.style.overflow = 'hidden';
+  });
+  close.addEventListener('click', function () {
+    modal.style.display = 'none';
+    body.style.overflow = '';
+  });
+}
 /*
   EXAMPLE:
   counter - 51106481,
   target - zayavka
 */
+
+
 function customYaMetrika(selectorYa, counter, target) {
   var Ya = document.querySelectorAll(selectorYa);
   Ya.forEach(function (item) {
@@ -125,10 +144,16 @@ function customYaMetrika(selectorYa, counter, target) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  var scrSizeW = document.querySelector(".screensize-w"),
-      scrSizeH = document.querySelector(".screensize-h"),
-      browser = document.querySelector(".browser span"),
-      body = document.querySelector("body");
+  var scrSizeW = document.querySelector(".screensize-w");
+  var scrSizeH = document.querySelector(".screensize-h");
+  var browser = document.querySelector(".browser span");
+  scrSizeW.textContent = window.outerWidth;
+  scrSizeH.textContent = window.outerHeight;
+  browser.textContent = window.navigator.userAgent;
+  window.addEventListener("resize", function (event) {
+    scrSizeW.textContent = window.outerWidth;
+    scrSizeH.textContent = window.outerHeight;
+  });
   var isMobile = {
     Android: function Android() {
       return navigator.userAgent.match(/Android/i);
@@ -149,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
     }
   };
+  var body = document.querySelector("body");
 
   if (isMobile.any()) {
     body.classList.add("touch");
@@ -156,13 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
     body.classList.add("mouse");
   }
 
-  scrSizeW.textContent = window.outerWidth;
-  scrSizeH.textContent = window.outerHeight;
-  browser.textContent = window.navigator.userAgent;
-  window.addEventListener("resize", function (event) {
-    scrSizeW.textContent = window.outerWidth;
-    scrSizeH.textContent = window.outerHeight;
-  });
+  customYaMetrika('.about__portfolio li a', 52847674, 'tets');
 });
 
 /***/ }),
@@ -2121,4 +2141,4 @@ module.exports = g;
 /***/ })
 
 /******/ });
-//# sourceMappingURL=main.min.js.map
+//# sourceMappingURL=app.js.map

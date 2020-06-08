@@ -70,19 +70,6 @@ body {
     justify-content: space-evenly;
   }
 }
-@media (max-width: 480px) {
-  .portfolio__block--list {
-    justify-content: space-evenly;
-  }
-}
-
-@media (max-width: 480px) {
-  .about__portfolio {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
 
 .portfolio__block--list li {
   margin: 0px 10px 0px 0px;
@@ -116,19 +103,4 @@ body {
 .portfolio__block--list li a {
   text-decoration: none;
   color: #232323;
-}
-
-@media (max-width: 480px) {
-  .about__portfolio li {
-    flex: 0 0 100%;
-    margin: 0px 0px 15px 0px;
-  }
-}
-
-.about__portfolio li img {
-  border: 1px solid #2323;
-}
-
-body.mouse .about__portfolio li:hover {
-  transform: scale(1.1);
 }
