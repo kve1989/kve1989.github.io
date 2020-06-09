@@ -99,7 +99,7 @@ function startwatch() {
 }
 
 exports.browsersync = browsersync;
-exports.assets = series(styles, scripts);
+exports.assets = parallel(styles, scripts);
 exports.styles = styles;
 exports.scripts = scripts;
 exports.default = parallel(styles, scripts, browsersync, startwatch);

@@ -1,5 +1,5 @@
 {
-  "name": "gulpfaststart",
+  "name": "kve1989",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "jquery": "^3.5.1",
+    "node-sass": "^4.14.1",
     "slick-carousel": "^1.8.1"
   }
 }
