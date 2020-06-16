@@ -1,39 +1,3 @@
-function bindModal(triggerSelector,modalSelector,closeSelector) {
-    const trigger = document.querySelector(triggerSelector),
-        modal = document.querySelector(modalSelector),
-        close = document.querySelector(closeSelector);
-
-    trigger.addEventListener('click', function(e) {
-        if (e.target) {
-            e.eventPrevention();
-        }
-        modal.style.display = 'block';
-        body.style.overflow = 'hidden';
-    });
-
-    close.addEventListener('click', function() {
-        modal.style.display = 'none';
-        body.style.overflow = '';
-    });
-}
-
-/*
-  EXAMPLE:
-  counter - 51106481,
-  target - zayavka
-*/
-function customYaMetrika(selectorYa, counter, target) {
- const Ya = document.querySelectorAll(selectorYa);
-
- Ya.forEach(item => {
-   item.addEventListener('click', function () {
-     console.log('Ok');
-     ym(counter, 'reachGoal', target);
-     return true;
-   });
- });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   let scrSizeW = document.querySelector(".screensize-w");
   let scrSizeH = document.querySelector(".screensize-h");
