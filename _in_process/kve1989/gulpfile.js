@@ -1,105 +1,134 @@
-let localhost = 'localhost:3030',
-	preprocessor = 'sass', // Preprocessor (sass, scss)
-	fileswatch = 'html,htm,txt,json,md,woff2',
-	baseDir = 'app';
+import gulp from 'gulp';
+import sass from 'gulp-sass';
+import scss from 'gulp-sass';
+import browserSync from 'browser-sync';
+import htmlmin from "gulp-htmlmin";
+import rename from 'gulp-rename';
+import concat from 'gulp-concat';
+import cleancss from 'gulp-clean-css';
+import autoprefixer from 'gulp-autoprefixer';
+import webpack from 'webpack-stream';
+
+let localhost = "localhost:3030",
+	preprocessor = "sass", // Preprocessor (sass, scss)
+	fileswatch = "html,htm,php,txt,yaml,twig,json,md",
+	src = "src",
+	dist = "dist";
 
 let paths = {
-
 	scripts: {
-		src: [
-			// 'node_modules/jquery/dist/jquery.min.js', // npm vendor example (npm i --save-dev jquery)
-			baseDir + '/#src/js/app.js' // app.js. Always at the end
-		],
-		dest: baseDir + '/js',
+		src: src + "/js/main.js",
+		dest: dist + "/js",
 	},
 
 	styles: {
-		src: baseDir + '/#src/' + preprocessor + '/main.*',
-		dest: baseDir + '/css',
+		src: src + "/" + preprocessor + "/main.*",
+		dest: dist + "/css",
 	},
 
-		cssOutputName: 'app.css',
-		jsOutputName: 'app.js'
+	fonts: {
+		src: src + "/" + "fonts/**/*",
+	},
+
+	images: {
+		src: src + "/" + "images/**/*",
+	},
+
+	cssOutputName: "main.css",
+	jsOutputName: "main.js",
 };
 
-
-const { src, dest, parallel, series, watch } = require('gulp'),
-			sass = require('gulp-sass'),
-			scss = require('gulp-sass'),
-			browserSync = require('browser-sync').create(),
-			rename = require('gulp-rename'),
-			uglify = require('gulp-uglify'),
-			concat = require('gulp-concat'),
-			cleancss = require('gulp-clean-css'),
-			autoprefixer = require('gulp-autoprefixer'),
-			webpack = require("webpack-stream");
-
-function browsersync() {
+/* browsersync */
+export const browsersync = () => {
 	browserSync.init({
-		server: { baseDir: baseDir + '/' },
+		server: { baseDir: dist + "/" },
 		// proxy: localhost, // for PHP
-		notify: false
+		notify: false,
+		ui: false,
 	});
 };
 
-function styles() {
-	return src(paths.styles.src)
-	.pipe(eval(preprocessor)())
-	.pipe(concat(paths.cssOutputName))
-	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
-	.pipe(dest(paths.styles.dest))
-	.pipe(browserSync.stream())
-}
+/* html */
+export const html = () => {
+	return gulp.src(src + "/*.html")
+		.pipe(
+			htmlmin({
+				removeComments: true,
+				collapseWhitespace: true,
+			})
+		)
+		.pipe(gulp.dest(dist))
+		.pipe(browserSync.stream());
+};
 
-function scripts() {
-	return src(paths.scripts.src)
-		.pipe(webpack({
-			mode: 'production',
-			output: {
-				filename: paths.jsOutputName
-			},
-			watch: false,
-			devtool: "source-map",
-			module: {
-				rules: [{
-					test: /\.m?js$/,
-					exclude: /(node_modules|bower_components)/,
-					use: {
-						loader: 'babel-loader',
-						options: {
-							presets: [
-								['@babel/preset-env', {
-									debug: true,
-									corejs: 3,
-									useBuiltIns: "usage"
-								}]
-							]
-						}
-					}
-				}]
-			}
-		}))
-		// .pipe(uglify())
-		.pipe(dest(paths.scripts.dest))
+/* copy */
+export const copy = () => {
+    return gulp.src([
+			paths.fonts.src,
+			paths.images.src,
+        ], {
+            base: src
+        })
+        .pipe(gulp.dest(dist))
+        .pipe(browserSync.stream({
+            once: true
+        }));
+};
+
+/* styles */
+export const styles = () => {
+	return gulp.src(paths.styles.src)
+		.pipe(eval(preprocessor)())
+		.pipe(concat(paths.cssOutputName))
+		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
+		.pipe(cleancss( {level: { 1: { specialComments: 0 } } }))
+		.pipe(gulp.dest(paths.styles.dest))
 		.pipe(browserSync.stream())
 };
-// function scripts() {
-// 	return src(paths.scripts.src)
-// 	.pipe(concat(paths.jsOutputName))
-// 	.pipe(uglify())
-// 	.pipe(dest(paths.scripts.dest))
-// 	.pipe(browserSync.stream())
-// }
 
-function startwatch() {
-	watch(baseDir + '/**/' + preprocessor + '/**/*', styles);
-	watch(baseDir + '/**/*.{' + fileswatch + '}').on('change', browserSync.reload);
-	watch([baseDir + '/**/*.js', '!' + paths.scripts.dest + '/*.js'], scripts);
-}
+/* scripts */
+export const scripts = () => {
+	return gulp.src(paths.scripts.src)
+	.pipe(webpack({
+		mode: 'development',
+		output: {
+				filename: paths.jsOutputName
+		},
+		watch: false,
+		devtool: "source-map",
+		module: {
+				rules: [
+					{
+						test: /\.m?js$/,
+						exclude: /(node_modules|bower_components)/,
+						use: {
+							loader: 'babel-loader',
+							options: {
+								presets: [['@babel/preset-env', {
+										debug: true,
+										corejs: 3,
+										useBuiltIns: "usage"
+								}]]
+							}
+						}
+					}
+				]
+			}
+	}))
+	.pipe(gulp.dest(paths.scripts.dest))
+	.pipe(browserSync.stream())
+};
 
-exports.browsersync = browsersync;
-exports.assets = parallel(styles, scripts);
-exports.styles = styles;
-exports.scripts = scripts;
-exports.default = parallel(styles, scripts, browsersync, startwatch);
+/* watch */
+export const watch = () => {
+	gulp.watch(src + '/*.html' , html);
+	gulp.watch(src + '/' + preprocessor + '/**/*', styles);
+	gulp.watch(src + '/**/*.js', scripts);
+	gulp.watch([paths.fonts.src, paths.images.src], gulp.series(copy));
+	// gulp.watch([src + "/fonts/**/*", src + "/images/**/*"], gulp.series(copy));
+};
+
+export default gulp.series(
+	gulp.parallel(html, styles, scripts, copy),
+	gulp.parallel(watch, browsersync)
+);

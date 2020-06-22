@@ -46,6 +46,4 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     body.classList.add("mouse");
   }
-
-  customYaMetrika('.about__portfolio li a', 52847674, 'tets');
 });
