@@ -1,0 +1,28 @@
+.about {}
+
+.about__title {margin: 15px 0}
+
+.about__block {
+	display: flex;
+	max-width: 1000px;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@media screen and ( max-width: 768px ) {
+	.about__block {
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.about__txt {margin: 0px 0px 0px 40px}
+
+@media screen and ( max-width: 768px ) {
+	.about__txt {
+		margin: 0;
+		text-align: center;
+	}
+}

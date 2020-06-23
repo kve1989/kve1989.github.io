@@ -1,0 +1,11 @@
+@import 'reset.css';
+@import 'global.css';
+@import 'header.css';
+@import 'header.css';
+@import 'about.css';
+@import 'portfolio.css';
+
+:root {
+	--bgColor: #0085c3;
+	--black: #232323;
+}

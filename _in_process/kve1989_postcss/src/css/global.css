@@ -1,0 +1,17 @@
+body {
+	font-size: 16px;
+	font-family: "PT Sans", sans-serif;
+	color: #fff;
+	background: var(--bgColor);
+	position: relative;
+}
+
+.container {
+	max-width: 1200px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.wrapper {overflow: hidden}
+
+section {padding: 20px 0}
