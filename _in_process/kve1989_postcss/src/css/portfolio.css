@@ -1,7 +1,10 @@
 /* Portfolio */
 .portfolio {}
+
 .portfolio__title {font-size: 24px;}
+
 .portfolio__block {margin: 0px 0px 20px 0px;}
+
 .portfolio__title {
 	font-size: 20px;
 	margin: 0px 0px 10px 0px;
