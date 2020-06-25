@@ -1,9 +1,16 @@
-.about {}
+.about {
+	min-height: calc(100vh - 80px);
+}
 
 .about__title {margin: 15px 0}
 
 .about__img {
 	position: relative;
+}
+@media (max-width: 768px) {
+	.about__img img{
+		height: 250px;
+	}
 }
 
 .about__img::before,
@@ -47,7 +54,7 @@
 
 @media screen and ( max-width: 768px ) {
 	.about__txt {
-		margin: 0;
+		margin: 25px 0px 0px 0px;
 		text-align: center;
 	}
 }

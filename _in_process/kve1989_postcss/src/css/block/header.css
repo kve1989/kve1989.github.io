@@ -1,5 +1,7 @@
 /* Header */
-.header {}
+.header {
+	height: 80px;
+}
 
 .header__wrapper {
 	padding: 20px 0;
