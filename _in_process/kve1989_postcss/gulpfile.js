@@ -8,6 +8,7 @@ import pimport from 'postcss-import';
 import minmax from 'postcss-media-minmax';
 import autoprefixer from 'autoprefixer';
 import csso from 'postcss-csso';
+import mqpacker from 'css-mqpacker';
 
 let src = 'src',
 	dist = 'dist';
@@ -40,7 +41,8 @@ export const browsersync = () => {
 	browserSync.init({
 		server: { baseDir: dist + '/' },
 		notify: false,
-		ui: false
+		ui: false,
+		browser: 'firefox'
 	});
 };
 
@@ -63,8 +65,8 @@ export const copy = () => {
 export const styles = () => {
     return gulp
 		.src(paths.styles.src)
-		.pipe(postcss([pimport, minmax, autoprefixer, csso]))
-		.pipe(replace(/\.\.\//g, ''))
+		.pipe(postcss([pimport, minmax, autoprefixer, csso, mqpacker]))
+		.pipe(replace(/\.\.\//g, ""))
 		.pipe(rename(paths.cssOutputName))
 		.pipe(gulp.dest(paths.styles.dest))
 		.pipe(browserSync.stream());

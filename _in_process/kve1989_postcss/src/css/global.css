@@ -3,10 +3,11 @@
 	background-color: #000;
 }
 body {
+	--bgColor: #0085c3;
 	font-size: 16px;
 	font-family: "PT Sans", sans-serif;
 	color: #fff;
-	background: var(--bgColor);
+	background-color: var(--bgColor, #0085c3);
 	position: relative;
 }
 
