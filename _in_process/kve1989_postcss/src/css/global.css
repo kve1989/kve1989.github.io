@@ -1,14 +1,17 @@
+:root {
+	--bgColor: #0085c3;
+
+}
 ::selection {
 	color: #ffa;
 	background-color: #000;
 }
 body {
-	--bgColor: #0085c3;
 	font-size: 16px;
-	font-family: "PT Sans", sans-serif;
-	color: #fff;
-	background-color: var(--bgColor, #0085c3);
+	font-family: "Roboto", sans-serif;
+	color: #232323;
 	position: relative;
+	background-color: whitesmoke;
 }
 
 .container {

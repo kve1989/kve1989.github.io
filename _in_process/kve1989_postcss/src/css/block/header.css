@@ -1,22 +1,30 @@
 /* Header */
 .header {
-	height: 80px;
+	border-bottom: 2px solid rgb(0 0 0 / 0.1);
 }
 
 .header__wrapper {
-	padding: 20px 0;
+	height: 80px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
+}
+
+@media (width <= 440px) {
+	.header__wrapper {
+		justify-content: center;
+	}
 }
 
 .header__logo {
 	font-size: 24px;
-	font-family: monospace;
+	font-family: 'Roboto Mono';
 	font-weight: bold;
 	text-decoration: none;
-	color: #ffffff;
+	color: #232323;
 	transition: all .2s;
+	position: relative;
 }
 
 .header__logo::after {
@@ -25,8 +33,43 @@
 	opacity: 0;
 }
 
+.header__line {
+	width: 2px;
+	height: 100%;
+	background-color: rgb(0 0 0 / .1);
+	display: block;
+}
+
+@media (width <= 768px) {
+	.header__line {
+		display: none;
+	}
+}
+
 .header__social {}
 .header__social-item {}
+.header__social-item {
+	--vk: #45668e;
+	--instagram: #833ab4;
+	--telegram: #0088cc;
+	--viber: #59267c;
+	--whatsup: #075e54;
+}
+.header__social-item--vk:hover { box-shadow: 0 0 10px var(--vk); }
+.header__social-item--vk:hover svg { fill: var(--vk); }
+
+.header__social-item--instagram:hover { box-shadow: 0 0 10px var(--instagram); }
+.header__social-item--instagram:hover svg { fill: var(--instagram); }
+
+.header__social-item--telegram:hover { box-shadow: 0 0 10px var(--telegram); }
+.header__social-item--telegram:hover svg { fill: var(--telegram); }
+
+.header__social-item--viber:hover { box-shadow: 0 0 10px var(--viber); }
+.header__social-item--viber:hover svg { fill: var(--viber); }
+
+
+.header__social-item--whatsup:hover { box-shadow: 0 0 10px var(--whatsup); }
+.header__social-item--whatsup:hover svg { fill: var(--whatsup); }
 
 .social {
 	display: flex;
@@ -48,10 +91,9 @@
 .social__item:last-child {margin-right: 0}
 
 .social__item svg {
-	fill: #ffffff;
+	fill: #000;
 	width: 25px;
 }
-.social__item:hover {box-shadow: 0 0 10px #fff}
 
 @keyframes header-logo-cursor-blink {
   0% {opacity: 0;}
