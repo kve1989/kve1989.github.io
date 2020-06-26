@@ -1,22 +1,19 @@
-:root {
-	--bgColor: #0085c3;
-
-}
 ::selection {
 	color: #ffa;
 	background-color: #000;
 }
+
 body {
 	font-size: 16px;
 	font-family: "Roboto", sans-serif;
-	color: #232323;
+	color: var(--black);
 	position: relative;
-	background-color: whitesmoke;
+	background-color: var(--bg);
 }
 
 .container {
 	max-width: 1200px;
-	padding: 0 15px;
+	padding: 0 20px;
 	margin: 0 auto;
 }
 
