@@ -5,7 +5,10 @@
 
 .header__wrapper {
 	height: 80px;
-	display: flex;
+	/* display: flex; */
+	display: grid;
+	column-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
@@ -18,13 +21,14 @@
 }
 
 .header__logo {
-	font-size: 24px;
-	font-family: 'Roboto Mono';
-	font-weight: bold;
+	font-size: 30px;
+	font-family: monospace;
+	font-weight: bolder;
 	text-decoration: none;
-	color: #232323;
+	color: var(--black);
 	transition: all .2s;
 	position: relative;
+	letter-spacing: -1px;
 }
 
 .header__logo::after {
@@ -40,6 +44,9 @@
 	display: block;
 }
 
+.header__switch {
+	justify-self: end;
+}
 .switch__input {
 	position: absolute;
 	-webkit-appearance: none;
@@ -72,12 +79,12 @@
 
 .switch__input:checked + .switch__checkbox {
 	background: #fff;
-	box-shadow: inset hoff voff blur #000;
+	box-shadow: inset 0 0 5px #000;
 }
 
 .switch__input:checked + .switch__checkbox::before {
 	left: calc(100% - 27px);
-	background: tomato;
+	background: #FF79C6;
 }
 
 @media (width <= 768px) {
@@ -86,7 +93,9 @@
 	}
 }
 
-.header__social {}
+.header__social {
+	justify-self: center;
+}
 .header__social-item {}
 .header__social-item {
 	--vk: #45668e;
@@ -131,7 +140,7 @@
 .social__item:last-child {margin-right: 0}
 
 .social__item svg {
-	fill: #000;
+	fill: var(--black);
 	width: 25px;
 }
 
