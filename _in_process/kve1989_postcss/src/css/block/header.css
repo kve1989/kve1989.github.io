@@ -97,6 +97,7 @@
 	justify-self: center;
 }
 .header__social-item {}
+
 .header__social-item {
 	--vk: #45668e;
 	--instagram: #833ab4;
@@ -104,6 +105,7 @@
 	--viber: #59267c;
 	--whatsup: #075e54;
 }
+
 .header__social-item--vk:hover { box-shadow: 0 0 10px var(--vk); }
 .header__social-item--vk:hover svg { fill: var(--vk); }
 

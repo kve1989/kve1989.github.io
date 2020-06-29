@@ -1,10 +1,12 @@
 import isMobile from './modules/isMobile';
 import typeText from './modules/typeText';
+import scrolling from './modules/scrolling';
 
 document.addEventListener("DOMContentLoaded", () => {
 
   isMobile();
   typeText(["VKavetskiy"], '.header__logo');
+  scrolling();
 
   let scrSizeW = document.querySelector(".screensize-w");
   let scrSizeH = document.querySelector(".screensize-h");

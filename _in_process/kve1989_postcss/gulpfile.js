@@ -81,7 +81,7 @@ export const scripts = () => {
 			filename: paths.jsOutputName
 		},
 		watch: false,
-		devtool: 'source-map',
+		// devtool: 'source-map',
 		module: {
 			rules: [
 				{
