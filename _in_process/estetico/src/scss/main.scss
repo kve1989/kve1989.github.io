@@ -3,86 +3,14 @@
 @import 'slick';
 @import 'baguetteBox';
 @import 'vars';
+@import 'mixins';
 @import 'general';
 
 :root {
 	--pinkHard: #f17172;
 }
 
-/* Mixins */
-@mixin anim($time, $delay) {
-	-webkit-transition: all $time ease $delay;
-	-moz-transition: all $time ease $delay;
-	-ms-transition: all $time ease $delay;
-	-o-transition: all $time ease $delay;
-	transition: all $time ease $delay;
-}
 
-@mixin anim_cubic($time, $delay) {
-	-webkit-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
-	-moz-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
-	-ms-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
-	-o-transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
-	transition: all $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
-}
-
-@mixin rotate($deg) {
-	-moz-transform: rotate($deg);
-	-ms-transform: rotate($deg);
-	-webkit-transform: rotate($deg);
-	-o-transform: rotate($deg);
-	transform: rotate($deg);
-}
-
-@mixin scale($num) {
-	-moz-transform: scale($num);
-	-ms-transform: scale($num);
-	-webkit-transform: scale($num);
-	-o-transform: scale($num);
-	transform: scale($num);
-}
-
-@mixin skew($num) {
-	-webkit-transform: skewX($num);
-	-moz-transform: skewX($num);
-	-ms-transform: skewX($num);
-	-o-transform: skewX($num);
-	transform: skewX($num);
-}
-
-@mixin cnt($h) {
-	display: flex;
-	flex-direction: column;
-	height: $h;
-	text-align: center;
-	align-items: stretch;
-	justify-content: center;
-}
-
-@mixin tr($x, $y, $z) {
-	transform: translate3d($x, $y, $z);
-}
-
-;
-
-@mixin flexbox() {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	font-size: 0;
-}
-
-@mixin flexorder($val) {
-	-webkit-box-ordinal-group: $val;
-	-moz-box-ordinal-group: $val;
-	-ms-flex-order: $val;
-	-webkit-order: $val;
-	order: $val;
-}
-
-/* Mixins */
 
 // Шапка сайта(лого, телефон, меню навигации)
 // .header
@@ -104,18 +32,18 @@
 		left: 0;
 	}
 	// .header__container
-	&__container {
-		max-width: 1424px;
-		margin: 0 auto;
-		width: 100%;
-		padding: 0 15px;
+	// &__container {
+	// 	max-width: 1424px;
+	// 	margin: 0 auto;
+	// 	// width: 100%;
+	// 	padding: 0 15px;
 
-		@media (max-width:$bp3+px) {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-	}
+	// 	@media (max-width:$bp3+px) {
+	// 		display: flex;
+	// 		justify-content: space-between;
+	// 		align-items: center;
+	// 	}
+	// }
 
 	// .header__content
 	&__content {
@@ -199,7 +127,7 @@
 	&__btn {
 		border: 2px solid #FFB2A3;
 		background-color: #FFB2A3;
-		padding: 8px 37px;
+		padding: 8px 20px;
 		&:hover {
 			background-color: #fff;
 			border: 2px solid $accent;
@@ -282,29 +210,12 @@
 .welcome {
 	position: relative;
 
-	.header__container {
-		position: relative;
-		max-width: 1420px;
-
-		@media (max-width:1699.98px) {
-			padding: 0 100px;
-		}
-
-		@media (max-width:1499.98px) {
-			padding: 0 130px;
-		}
-
-		@media (max-width:$bp2+px) {
-			padding: 0 15px;
-		}
-	}
-
 	// .welcome__slider
 	&__slider {}
 
 	// .welcome__item
 	&__item {
-		height: 794px;
+		// height: 794px;
 		position: relative;
 
 		@media (max-width:$bp3+px) {
@@ -334,7 +245,7 @@
 	// .welcome__content
 	&__content {
 		max-width: 790px;
-		margin: 230px 0 130px 0;
+		margin: 100px 0;
 		color: #1a1a18;
 		height: 430px;
 		display: flex;
@@ -378,9 +289,9 @@
 		&:after {
 			content: "";
 			position: absolute;
-			height: 5px;
+			height: 3px;
 			background-color: $accent-m;
-			width: 137px;
+			width: 130px;
 			bottom: -40px;
 			left: 0;
 			margin-bottom: 15px;
@@ -438,7 +349,7 @@
 	&__price-color {
 		color: #f17172;
 		font-family: "Futura PT Demi";
-		font-size: 46px;
+		font-size: 40px;
 		font-weight: 400;
 		letter-spacing: 2.67px;
 
@@ -451,10 +362,9 @@
 	// .welcome__btn
 	&__btn {
 		border-radius: 18px;
-		padding: 10px 60px;
+		padding: 10px 30px;
 		color: #000;
-		font-size: 25px;
-		line-height: 36.63px;
+		font-size: 21px;
 		letter-spacing: 2.31px;
 		cursor: pointer;
 		border: 2px solid $accent-l;
@@ -566,9 +476,9 @@
 		font-weight: 300;
 		letter-spacing: 2.08px;
 		max-width: 731px;
-		margin-top: 77px;
-		line-height: 33.33px;
-		font-size: 21px;
+		margin-top: 40px;
+		line-height: 1.5;
+		font-size: 16px;
 		font-family: "Futura PT Light";
 
 		@media (max-width:$bp4+px) {
@@ -591,9 +501,12 @@
 
 	// .block3__wrapper
 	&__wrapper {
-		display: flex;
-		flex-wrap: nowrap;
-		justify-content: space-between;
+		// display: flex;
+		display: grid;
+		grid-template-columns: max-content min-content;
+		// flex-wrap: nowrap;
+		// justify-content: space-between;
+		// justify-content: space-between;
 
 		@media (max-width: 1024px) {
 			flex-direction: column;
@@ -604,7 +517,7 @@
 	// .block3__column-1
 	&__column-1 {
 		display: flex;
-		max-width: 1049px;
+		// max-width: 1049px;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
@@ -638,7 +551,7 @@
 
 	// .block3__column-2
 	&__column-2 {
-		width: 875px;
+		width: 685px;
 		background-size: contain;
 
 		@media (max-width:1024px) {
@@ -671,7 +584,7 @@
 
 	// .block3__title
 	&__title {
-		font-size: 17px;
+		font-size: 16px;
 		font-weight: bold;
 		font-family: "Futura PT";
 		font-weight: bold;
@@ -687,7 +600,7 @@
 	&__cnt {
 		color: #767676;
 		font-family: "Futura PT Book";
-		font-size: 15px;
+		font-size: 12px;
 		letter-spacing: 1.67px;
 		line-height: 1.5;
 
@@ -734,8 +647,7 @@
 		font-family: "Futura PT";
 		font-size: 38px;
 		letter-spacing: 6.75px;
-		margin: 90px 0 40px;
-		margin-bottom: 40px;
+		margin: 50px 0 40px;
 
 		@media (max-width:$bp2+px) {
 			margin: 40px 0 20px;
@@ -756,11 +668,13 @@
 
 	// .block4__wrapper
 	&__wrapper {
-		display: flex;
-		justify-content: space-between;
+		// display: flex;
+		// justify-content: space-between;
 		margin-right: -20px;
 		margin-bottom: 50px;
-		height: 573px;
+		display: grid;
+		grid-template-columns: 70% 30%;
+		// height: 573px;
 		width: 100%;
 
 		@media (max-width:1250px) {
@@ -778,7 +692,7 @@
 
 	// .block4__slider
 	&__slider {
-		width: 973px;
+		// width: 973px;
 		position: relative;
 
 		@media (max-width:1250px) {
@@ -850,7 +764,7 @@
 
 	// .block4__container
 	&__container {
-		width: 570px;
+		// width: 570px;
 		background-color: #f6f6f6;
 		padding: 20px;
 
