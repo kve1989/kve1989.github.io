@@ -6,7 +6,6 @@ import scss from 'gulp-sass';
 import browserSync from 'browser-sync';
 import rename from 'gulp-rename';
 import concat from 'gulp-concat';
-import uglify from 'gulp-uglify-es';
 import cleancss from 'gulp-clean-css';
 import autoprefixer from 'gulp-autoprefixer';
 
