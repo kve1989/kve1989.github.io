@@ -1,0 +1,54 @@
+/* Подвал сайта */
+// .footer
+.footer {
+	background: #FFB2A3;
+
+	// .footer__wrapper
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+		img {
+			max-width: 100%;
+			display: block;
+		}
+	}
+
+	// .footer__social
+	&__social {
+		width: 150px;
+		margin: 15px auto 0;
+	}
+
+	// .footer__link
+	&__link {
+		margin: 20px 0;
+		text-align: center;
+
+		a {
+			color: $accent;
+			text-decoration: none;
+		}
+
+		@media (max-width:$bp4+px) {
+			font-size: 14px;
+		}
+	}
+
+	// .footer__mobile
+	&__mobile {
+		display: none;
+
+		@media (max-width:$bp3+px) {
+			display: block;
+		}
+	}
+
+	// .footer__logo
+	&__logo {
+		@media (max-width:$bp3+px) {
+			display: none;
+		}
+	}
+}

@@ -1,4 +1,4 @@
-const scrolling = () => {
+wconst scrolling = () => {
 	// const upElem = document.querySelector(upSelector);
 
 	// window.addEventListener('scroll', () => {

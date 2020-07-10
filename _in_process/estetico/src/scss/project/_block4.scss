@@ -1,0 +1,295 @@
+/* Блок Наши услуги */
+// .block4
+.block4 {
+	background: #fff url("../img/block4/water.png") top left / auto no-repeat;
+	padding: 65px 0 110px 0;
+	z-index: 3;
+
+	@media (max-width:$bp3+px) {
+		padding: 35px 0 50px 0;
+	}
+
+	// .block4__title
+	&__title {
+
+		// .block4__title_2
+		&_2 {
+			position: relative;
+			padding-left: 64px;
+
+			&:before {
+				content: "";
+				position: absolute;
+				width: 52px;
+				height: 5px;
+				background-color: $accent-m;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	// .block4__subtitle
+	&__subtitle {
+		font-family: "Futura PT";
+		font-size: 38px;
+		letter-spacing: 6.75px;
+		margin: 90px 0 40px;
+		margin-bottom: 40px;
+
+		@media (max-width:$bp2+px) {
+			margin: 40px 0 20px;
+		}
+
+		@media (max-width:$bp3+px) {
+			font-size: 32px;
+		}
+
+		@media (max-width:$bp4+px) {
+			font-size: 24px;
+		}
+
+		&:last-child {
+			text-align: right;
+		}
+	}
+
+	// .block4__wrapper
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-right: -20px;
+		margin-bottom: 50px;
+		height: 573px;
+		width: 100%;
+
+		@media (max-width:1250px) {
+			height: 100%;
+			flex-direction: column;
+			margin: 0;
+			margin-bottom: 30px;
+		}
+
+		&:last-child {
+			margin-right: 0;
+			margin-left: -20px;
+		}
+	}
+
+	// .block4__slider
+	&__slider {
+		width: 973px;
+		position: relative;
+
+		@media (max-width:1250px) {
+			width: 100%;
+			padding: 0;
+		}
+	}
+
+	// .block4__slides
+	&__slides {
+		img {
+			max-width: 100%;
+			display: block !important;
+		}
+	}
+
+	// .block4__dots
+	&__dots {
+		position: absolute;
+		bottom: 2%;
+		right: 2%;
+		z-index: 11;
+
+		ul {}
+
+		li {
+			width: 35px;
+			height: 35px;
+			border: 5px solid #FFB2A3;
+			border-radius: 50%;
+			margin: 5px;
+			cursor: pointer;
+
+			@media (max-width:$bp4+px) {
+				width: 15px;
+				height: 15px;
+			}
+
+			&.slick-active {
+				background-color: #EE8A7D;
+				border: 5px solid #EE8A7D
+			}
+
+			button {
+				display: none;
+			}
+		}
+	}
+
+	// .block4__dot
+	&__dot {
+		display: block;
+		width: 36px;
+		height: 37px;
+		border: 5px solid #FFB2A3;
+		border-radius: 50%;
+		margin-bottom: 15px;
+		cursor: pointer;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		// .block4__dot-active
+		&-active {
+			background-color: #FFB2A3;
+		}
+	}
+
+	// .block4__container
+	&__container {
+		width: 570px;
+		background-color: #f6f6f6;
+		padding: 20px;
+
+		@media (max-width:1366px) {
+			padding: 10px;
+		}
+
+		@media (max-width:1250px) {
+			width: 100%;
+		}
+	}
+
+	// .block4__cnt
+	&__cnt {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+		font-size: 23px;
+		line-height: 36px;
+		letter-spacing: 2.53px;
+		font-weight: bold;
+
+		@media (max-width:1366px) {
+			font-size: 16px;
+			line-height: 1.5;
+
+			>* {
+				margin: 10px 0;
+			}
+		}
+
+		@media (max-width:$bp2+px) {
+			>* {
+				margin: 20px 0;
+			}
+		}
+	}
+
+	// .block4__cnt-title
+	&__cnt-title {
+		color: #767676;
+		letter-spacing: 2.07px;
+
+		@media (max-width:$bp3+px) {
+			font-size: 21px;
+		}
+	}
+
+	// .block4__cnt__title
+	&__cnt__title {
+		@media (max-width:$bp4+px) {
+			font-size: 20px;
+			line-height: 1.5;
+		}
+	}
+
+	// .block4__cnt-lists
+	&__cnt-lists {}
+
+	// .block4__cnt-list
+	&__cnt-list {
+		letter-spacing: 2.08px;
+		position: relative;
+		width: auto;
+
+		&:after,
+		&:before {
+			content: "•";
+			color: $accent-m;
+		}
+
+		@media (max-width:1140px) {
+			font-size: 18px;
+		}
+
+		@media (max-width:$bp4+px) {
+			font-size: 14px;
+		}
+	}
+
+	&__cnt-text {
+		@media (max-width:$bp3+px) {
+			font-size: 18px;
+		}
+
+		@media (max-width:$bp4+px) {
+			font-size: 14px;
+			line-height: 1.2;
+		}
+	}
+
+	// .block4__btn
+	&__btn {
+		border-radius: 18px;
+		border: 2px solid $accent-l;
+		background-color: transparent;
+		color: #000;
+		padding: 10px 40px;
+		font-family: "Futura PT";
+		font-size: 21px;
+		letter-spacing: 2.31px;
+		cursor: pointer;
+		margin: 0 auto;
+
+		&:hover {
+			background-color: $accent-l;
+			@include scale(1.1);
+		}
+
+		@media (max-width:1366px) {
+			padding: 10px 30px;
+		}
+
+		@media (max-width:$bp4+px) {
+			padding: 10px 25px;
+			font-size: 18px;
+		}
+	}
+
+	// .block4__text
+	&__text {
+		font-size: 21px;
+		letter-spacing: 2.08px;
+		text-align: center;
+		position: relative;
+		font-weight: 600;
+		z-index: 11;
+		line-height: 1.5;
+
+		@media (max-width:$bp4+px) {
+			font-size: 14px;
+		}
+	}
+
+	.slick-next {
+		display: none;
+	}
+}

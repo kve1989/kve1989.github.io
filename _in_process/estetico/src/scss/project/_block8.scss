@@ -1,0 +1,69 @@
+/* Блок Результаты в фотографиях */
+// .block8
+.block8 {
+	background: #fff url("../img/block8/bg-8.jpg") center / cover no-repeat;
+	padding: 80px 0;
+
+	@media (max-width:$bp3+px) {
+		padding: 40px 0;
+	}
+
+	// .block8__title
+	&__title {
+		position: relative;
+		margin-left: 200px;
+
+		@media (max-width:$bp3+px) {
+			margin-left: 0;
+		}
+
+		&:first-child {
+			&:after {
+				content: "";
+				position: absolute;
+				width: 67px;
+				height: 5px;
+				background-color: $accent-m;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			;
+		}
+	}
+
+	// .block8__wrapper
+	&__wrapper {
+		display: flex;
+		justify-content: space-around;
+		margin: 55px -10px 0;
+		flex-wrap: wrap;
+
+		@media (max-width:$bp4+px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	// .block8__column
+	&__column {
+		padding: 0 10px;
+		overflow: hidden;
+		width: 620px;
+
+		@media (max-width:1024px) {
+			width: 100%;
+			margin: 0 0 20px 0;
+		}
+
+		img {
+			transition: all .3s;
+			display: block;
+			margin: 0 auto;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+}

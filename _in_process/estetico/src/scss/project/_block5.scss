@@ -1,0 +1,46 @@
+.block5 {
+	position: relative;
+	z-index: 10;
+	padding-bottom: 75px;
+
+	@media (max-width:1250px) {
+		.block4__wrapper {
+			flex-direction: column-reverse;
+		}
+	}
+
+	@media (max-width:$bp3+px) {
+		padding-bottom: 35px;
+	}
+
+	// .block5__btn
+	&__btn {
+		color: #000;
+		padding: 18px 60px;
+		letter-spacing: 2.27px;
+		font-size: 25px;
+		display: block;
+		margin: 0 auto;
+		border: 2px solid $accent-l;
+
+		&:hover {
+			border: 2px solid $accent-l;
+			background-color: #fff;
+			@include scale(1.1);
+		}
+
+		@media (max-width:$bp4+px) {
+			padding: 18px 35px;
+			font-size: 21px;
+		}
+	}
+
+	// .block5-btn
+	&-btn {
+		margin-top: 80px;
+	}
+
+	.block4__dots {
+		left: 2%;
+	}
+}

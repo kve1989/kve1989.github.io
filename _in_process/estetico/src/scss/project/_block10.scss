@@ -1,0 +1,65 @@
+/* Блок Наши сертификаты */
+// .block10
+.block10 {
+	background: #f6f6f6 url("../img/block10/bg-10.png") center / cover no-repeat;
+	padding: 80px 0 35px;
+
+	@media (max-width:$bp3+px) {
+		padding: 40px 0 15px;
+	}
+
+	// .block10__title
+	&__title {
+		position: relative;
+	}
+
+	// .block10__wrapper
+	&__wrapper {
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		margin-top: 80px;
+	}
+
+	// .block10__item
+	&__item {
+		margin: 10px;
+		max-width: 20%;
+		transition: all 0.2s ease;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+
+		@media (max-width:$bp4+px) {
+			max-width: 40%;
+		}
+	}
+
+	// .block10__btn
+	&__btn {
+		color: #000;
+		border: 2px solid $accent-l;
+		border-radius: 18px;
+		background-color: $accent-l;
+		padding: 20px 83px;
+		display: inline-block;
+		text-decoration: none;
+
+		&:hover {
+			@include scale(1.1);
+			border: 2px solid $accent-l;
+			background-color: #fff;
+		}
+
+		@media (max-width:$bp4+px) {
+			padding: 20px 50px;
+		}
+	}
+
+	// .block10-btn
+	&-btn {
+		margin: 60px auto 0;
+		text-align: center;
+	}
+}

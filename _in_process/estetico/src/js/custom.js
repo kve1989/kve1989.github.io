@@ -57,20 +57,6 @@ $(function() {
 		// $(".header__mobile-menu").slideToggle("slow");
 	});
 
-	// Кнопка плей на проигрывателе (при нажатии кнопка исчезает и запускает видео)
-	$('#playBut1').on('click', function(e) {
-		e.preventDefault();
-		$("#video1")[0].src += "?autoplay=1";
-		$('#playBut1').hide();
-	});
-
-	// Кнопка плей на проигрывателе (при нажатии кнопка исчезает и запускает видео)
-	$('#playBut2').on('click', function(e) {
-		e.preventDefault();
-		$("#video2")[0].src += "?autoplay=1";
-		$('#playBut2').hide();
-	});
-
 	// Функция включения затемненного фона
 	function onOverlay() {
 		$('.overlay').fadeIn();
@@ -91,8 +77,8 @@ $(function() {
 			if (showModalByTimer) {
 				setTimeout(function() {
 					$('.free_first_procedur').show();
-					$('.free_first_procedur .close').click(function () {
-						$('.free_first_procedur').hide();
+					$(".free_first_procedur .banner__close").click(function () {
+						$(".free_first_procedur").hide();
 					});
 				}, 5000);
 
@@ -107,21 +93,21 @@ $(function() {
 	}
 
 	// Модалка на кнопки "Обратная связь" и "Консультация"
-	bindModal('.header__btn', '.callback', '.callback .close', false);
-	bindModal('.block7__btn', '.callback', '.callback .close', false);
-	bindModal('.cbbtn', '.callback', '.callback .close', false);
+	bindModal(".header__btn", ".callback", ".callback .banner__close", false);
+	bindModal(".block7__btn", ".callback", ".callback .banner__close", false);
+	bindModal(".cbbtn", ".callback", ".callback .banner__close", false);
 
 	// Модалка ПРАЙС
-	bindModal('.block6 .block6__btn', '.ban3', '.ban3 .close');
+	bindModal('.block6 .block6__btn', '.ban3', '.ban3 .banner__close');
 
 	// Модалка ЛАЗЕРНАЯ ЭПИЛЯЦИЯ
-	bindModal('.block5 .block4__btn', '.ban2', '.ban2 .close', false);
+	bindModal('.block5 .block4__btn', '.ban2', '.ban2 .banner__close', false);
 
 	// Модалка LPG - МАССАЖ
-	bindModal('.block4 .block4__btn', '.ban1', '.ban1 .close', false);
+	bindModal('.block4 .block4__btn', '.ban1', '.ban1 .banner__close', false);
 
 	// Модалка в подвале сайта "Политика конфиден."
-	bindModal(".footer__link-policy", ".ban4", ".ban4 .close", false);
+	bindModal(".footer__link-policy", ".ban4", ".ban4 .banner__close", false);
 
 
 	// Отправка данных формы в AmoCRM
@@ -166,6 +152,21 @@ $(function() {
 
 	$('.ms_booking').click(function() {
 		fbq('track', 'Schedule');
+	});
+
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+	const playButtons = document.querySelectorAll(".playBut");
+
+	playButtons.forEach(item => {
+		item.addEventListener('click', function () {
+			const iframe = this.previousElementSibling;
+			const pathVideo = iframe.getAttribute("src") + "?autoplay=1";
+			iframe.setAttribute('src', pathVideo);
+			this.remove();
+		})
 	});
 
 });
