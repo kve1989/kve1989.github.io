@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	typeText(["ПЕЧАТАЕМ ВАШИ ИДЕИ."], '.welcome__maintitle.ttu.cyan');
 	typeText(["ЯРКО. НЕОБЫЧНО"], '.welcome__maintitle.ttu.white.type-one');
 	typeText(["И СО ВКУСОМ."], '.welcome__maintitle.ttu.white.type-two');
-	typeText(["Мы предлагаем услуги по изготовлению и дизайну полиграфической продукции всех видов, качественно и в кротчайшие сроки"], '.welcome__suptitle.welcome-suptitle');
+	typeText(["Мы предлагаем услуги по изготовлению и дизайну полиграфической продукции всех видов, качественно и в кратчайшие сроки"], '.welcome__suptitle.welcome-suptitle');
 	typeText(["за 10 лет работы"], '.about__toptitle');
 	typeText(["Мы напечатали более 10 000 000 страниц"], '.about__title');
 	activeClass('.aside__link');

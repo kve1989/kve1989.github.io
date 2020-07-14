@@ -1,5 +1,5 @@
 .about {
-	min-height: calc(100vh - 80px);
+	height: calc(100vh - 80px);
 }
 
 .about__title {margin: 15px 0}
@@ -38,7 +38,11 @@
 	top: 40%;
 	transform: translateX(-50%);
 }
-
+@media (width <= 768px) {
+	.about__mouse {
+		display: none;
+	}
+}
 .mouse__body::before {
 	position: absolute;
 	content: '';
