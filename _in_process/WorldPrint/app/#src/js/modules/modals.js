@@ -99,6 +99,7 @@ const modals = () => {
     }
 
     bindModal('.popup-active', '.popup', '.popup .popup__close');
+    bindModal(".popup-policy__active", ".popup-policy", ".popup-policy .popup-policy__close");
     // bindModal('.button-consultation', '.popup-consultation', '.popup-consultation .popup-close');
     // bindModal('.fixed-gift', '.popup-gift', '.popup-gift .popup-close', true);
     // openByScroll('.fixed-gift');
