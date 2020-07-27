@@ -12,26 +12,21 @@
 	align-items: center;
 	flex-wrap: wrap;
 }
-@media (width <= 768px) {
-	.header__wrapper {
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-	}
 
-}
 @media (width <= 480px) {
 	.header__wrapper {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr;
 		justify-content: center;
 	}
 
 	.header__logo {
 		font-size: 24px;
+		text-align: center;
 	}
 
 	.header__switch {
-		grid-column: span 2;
-		width: 100%;
-		text-align: center;
+		display: none;
 	}
 }
 
@@ -159,6 +154,7 @@
 .social__item svg {
 	fill: var(--black);
 	width: 25px;
+	height: 25px;
 }
 
 @keyframes header-logo-cursor-blink {
