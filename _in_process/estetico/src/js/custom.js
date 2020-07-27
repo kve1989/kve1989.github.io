@@ -106,11 +106,11 @@ $(function() {
 	// Модалка LPG - МАССАЖ
 	bindModal('.block4 .block4__btn', '.ban1', '.ban1 .banner__close', false);
 
-	// Модалка в подвале сайта "Политика конфиден."
+	// Модалка в подвале сайта "Политика конф-ти"
 	bindModal(".footer__link-policy", ".ban4", ".ban4 .banner__close", false);
 
 
-	// Отправка данных формы в AmoCRM
+	// Отправка данных формы
 	$('.callback__form').submit(function(event) {
 		event.preventDefault();
 		var $form = $(this);
