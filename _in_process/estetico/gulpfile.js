@@ -60,6 +60,7 @@ export const copy = () => {
 			paths.fonts.src,
 			paths.images.src,
 			src + '/vendor/**/*',
+			src + '/*.php',
 			src + '/*.html'
         ], {
             base: src
