@@ -15,15 +15,16 @@
 	--bg: #272935;
 	--black: #F8F8F2;
 }
+
 .container {
 	max-width: 1200px;
 	padding: 0 20px;
 	margin: 0 auto;
 }
 
-.wrapper {overflow: hidden}
+.wrapper { overflow: hidden; }
 
-section {padding: 20px 0}
+section { padding: 20px 0; }
 
 .title {
 	font-weight: 800;

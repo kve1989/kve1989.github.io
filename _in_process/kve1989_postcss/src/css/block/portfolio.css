@@ -40,14 +40,10 @@
 }
 
 @media (max-width: 480px) {
-	.portfolio__item {
-		flex: 0 0 100%;
-	}
+	.portfolio__item { flex: 0 0 100%; }
 }
 
 .portfolio__link {
 	text-decoration: none;
 	color: #232323;
 }
-
-/* .portfolio__link img {object-fit: fill;} */
