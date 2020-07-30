@@ -1,8 +1,9 @@
-@import 'reset.css';
-@import 'global.css';
+@import 'core/reset.css';
+@import 'core/global.css';
 @import 'block/header.css';
 @import 'block/about.css';
 @import 'block/portfolio.css';
+
 
 :root {
 	--black: #232323;
