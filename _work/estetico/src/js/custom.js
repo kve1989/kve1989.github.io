@@ -17,15 +17,14 @@ $(function() {
 		nextArrow: $(".arrow-right")
 	});
 
-	// Слайдер для блока с услугами
-	$(".block4__slides").slick({
+	$(".service-item__slides").slick({
 		infinite: true,
 		autoplay: true,
 		autoplaySpeed: 2500,
 		fade: true,
 		dots: true,
 		arrows: false,
-		dotsClass: 'block4__dots'
+		dotsClass: "service-item__dots",
 	});
 
 	function ibg(){
@@ -100,11 +99,11 @@ $(function() {
 	// Модалка ПРАЙС
 	bindModal('.block6 .block6__btn', '.ban3', '.ban3 .banner__close');
 
-	// Модалка ЛАЗЕРНАЯ ЭПИЛЯЦИЯ
-	bindModal('.block5 .block4__btn', '.ban2', '.ban2 .banner__close', false);
-
 	// Модалка LPG - МАССАЖ
-	bindModal('.block4 .block4__btn', '.ban1', '.ban1 .banner__close', false);
+	bindModal("#btn-ban-1", ".ban1", ".ban1 .banner__close", false);
+
+	// Модалка ЛАЗЕРНАЯ ЭПИЛЯЦИЯ
+	bindModal("#btn-mod-2", ".ban2", ".ban2 .banner__close", false);
 
 	// Модалка в подвале сайта "Политика конф-ти"
 	bindModal(".footer__link-policy", ".ban4", ".ban4 .banner__close", false);
