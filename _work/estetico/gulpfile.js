@@ -9,7 +9,7 @@ import concat from 'gulp-concat';
 import cleancss from 'gulp-clean-css';
 import autoprefixer from 'gulp-autoprefixer';
 
-let localhost = "localhost:3030",
+let localhost = "localhost:3000",
 	preprocessor = "scss", // Preprocessor (sass, scss)
 	fileswatch = "html,htm,php,txt,yaml,twig,json,md",
 	src = "src",
