@@ -9,3 +9,17 @@
 	--black: #232323;
 	--bg: whitesmoke;
 }
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    --black: #232323;
+		--bg: whitesmoke;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+		--bg: #272935;
+		--black: #F8F8F2;
+  }
+} */
