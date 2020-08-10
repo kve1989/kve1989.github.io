@@ -99,11 +99,26 @@ $(function() {
 	// Модалка ПРАЙС
 	bindModal('.block6 .block6__btn', '.ban3', '.ban3 .banner__close');
 
-	// Модалка LPG - МАССАЖ
+	// Модалка LPG - МАССАЖ НА АППАРАТЕ VORTEX
 	bindModal("#btn-ban-1", ".ban1", ".ban1 .banner__close", false);
 
 	// Модалка ЛАЗЕРНАЯ ЭПИЛЯЦИЯ
 	bindModal("#btn-mod-2", ".ban2", ".ban2 .banner__close", false);
+
+	// Модалка LPG-МАССАЖ ДЛЯ ЛИЦА
+	bindModal("#btn-mod-3", ".ban7", ".ban7 .banner__close", false);
+
+	// Модалка КАВИТАЦИЯ
+	bindModal("#btn-mod-4", ".ban6", ".ban6 .banner__close", false);
+
+	// Модалка КАВИТАЦИЯ
+	bindModal("#btn-mod-5", ".ban5", ".ban5 .banner__close", false);
+
+	// Модалка БАНДАЖНОЕ ОБЕРТЫВАНИЯ
+	bindModal("#btn-mod-6", ".ban9", ".ban9 .banner__close", false);
+
+	// Модалка БАНДАЖНОЕ ОБЕРТЫВАНИЯ
+	bindModal("#btn-mod-7", ".ban8", ".ban8 .banner__close", false);
 
 	// Модалка в подвале сайта "Политика конф-ти"
 	bindModal(".footer__link-policy", ".ban4", ".ban4 .banner__close", false);
