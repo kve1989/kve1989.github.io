@@ -43,11 +43,6 @@ $(function() {
 	$('.burger').click(function() {
 		$('.header').toggleClass('mobile');
 	});
-	// $(".header__burger").click(function () {
-	// 	$(this).toggleClass('.header__burger active');
-	// 	$(".header__mobile-menu").slideToggle("slow");
-	// });
-
 
 	$('.header__link').click(function (event) {
 		if ($('.header').hasClass('mobile')) {
