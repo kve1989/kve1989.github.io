@@ -15,25 +15,25 @@ let src = 'src',
 
 let paths = {
 	scripts: {
-		src: src + '/js/index.js',
-		dest: dist + '/js',
+		src: src + "/js/index.js",
+		dest: dist + "/assets/js",
 	},
 
 	styles: {
-		src: src + '/css/index.css',
-		dest: dist + '/css',
+		src: src + "/css/index.css",
+		dest: dist + "/assets/css",
 	},
 
 	fonts: {
-		src: src + '/' + 'fonts/**/*',
+		src: src + "/" + "fonts/**/*",
 	},
 
 	images: {
-		src: src + '/' + 'images/**/*',
+		src: src + "/" + "images/**/*",
 	},
 
-	cssOutputName: 'main.css',
-	jsOutputName: 'main.js',
+	cssOutputName: "main.css",
+	jsOutputName: "main.js",
 };
 
 /* browsersync */
@@ -41,8 +41,7 @@ export const browsersync = () => {
 	browserSync.init({
 		server: { baseDir: dist + '/' },
 		notify: false,
-		ui: false,
-		browser: 'firefox'
+		ui: false
 	});
 };
 

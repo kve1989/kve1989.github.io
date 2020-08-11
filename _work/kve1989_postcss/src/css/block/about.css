@@ -28,6 +28,12 @@
 
 .about__txt { margin: 0px 0px 0px 40px; }
 
+.about__txt h1 {
+	font-size: 26px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
 .about__mouse {
 	position: absolute;
 	left: 50%;
