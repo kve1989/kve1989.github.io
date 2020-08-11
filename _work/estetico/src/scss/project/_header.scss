@@ -152,6 +152,9 @@
 		@media (max-width:$bp3+px) {
 			flex-direction: column;
 			padding: 0;
+			li {
+				padding: 10px 0;
+			}
 		}
 	}
 
