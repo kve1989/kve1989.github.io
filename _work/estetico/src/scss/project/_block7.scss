@@ -53,8 +53,8 @@
 		// Кнопка проигрывателя
 		// .playBut
 		.playBut {
-			width: 210px;
-			height: 210px;
+			// width: 210px;
+			// height: 210px;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
@@ -198,8 +198,8 @@
     left: 50%;
     z-index: 1;
     padding: 0;
-    width: 68px;
-    height: 48px;
+    width: 150px;
+    // height: 48px;
     border: none;
     background-color: transparent;
     transform: translate(-50%, -50%);
