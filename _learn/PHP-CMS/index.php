@@ -7,8 +7,8 @@ $conn->close();
 
 <?php if (isset($_COOKIE['login'])): ?>
 	<div class="container">
-		<a href="./digsign/add.php" class="btn btn-primary mt-2 mb-2">Добавить</a>
-		<a href="./digsign/search.php" class="btn btn-secondary mt-2 mb-2">Найти</a>
+		<a href="./add.php" class="btn btn-primary mt-2 mb-2">Добавить</a>
+		<a href="./search.php" class="btn btn-secondary mt-2 mb-2">Найти</a>
 		<table class="table table-hover">
 			<thead class="thead-dark">
 				<tr>

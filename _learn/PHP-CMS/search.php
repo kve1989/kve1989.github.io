@@ -4,8 +4,8 @@ require_once "core/db.php";
 ?>
 
 <div class="container">
-	<div class="jumbotron">
-		<h1>Поиск</h1>
+	<div class="jumbotron mt-5">
+		<h1 class="mb-2">Поиск</h1>
 		<form action="<?php $_SERVER['script_name']; ?>" method="post" class="form">
 			<div class="input-group mb-3">
 				<input type="text" class="form-control" placeholder="Фамилия, Имя" name="search_query" aria-label="ФИО" aria-describedby="button-addon2">
