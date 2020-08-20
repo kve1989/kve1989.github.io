@@ -1,6 +1,5 @@
-'use strict';
-
 document.addEventListener('DOMContentLoaded', () => {
+	'use strict';
 
 	const startDate = document.querySelector('input[name="start"]'),
 		endDate = document.querySelector('input[name="end"]'),
@@ -26,11 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			const formData = new FormData(item);
 
 			postData(item.getAttribute('action'), formData)
-				.then((res) => {
+				.then(res => {
 					console.log(res);
 				})
 				.catch(() => (console.log('Fail')))
-				.finally((data) => {
+				.finally(data => {
 					console.log(data);
 				});
 		});

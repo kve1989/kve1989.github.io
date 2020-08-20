@@ -11,13 +11,12 @@ $start = $_REQUEST['start'];
 $end = $_REQUEST['end'];
 $servicefield = trim($_REQUEST['servicefield']);
 $handon = $_REQUEST['handon'];
-$msg = '';
+
 ?>
 
 <div class="container">
 	<div class="jumbotron mt-5">
 		<a href="/" class="btn btn-danger mb-2 mt-2">Назад</a>
-		<?php echo $msg; ?>
 		<form action="<?php $_SERVER['script_name']; ?>" class="form" method="post">
 			<div class="form-row">
 				<div class="col">
