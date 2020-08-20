@@ -90,14 +90,14 @@ if (isset($_REQUEST['edit'])) {
 	if ( $conn->query($record) ) {
 		$msg = "<div class='alert alert-success alert-dismissible fade show' role='alert'>Запись успешно добавлена!<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
 		echo json_encode([
-			"status" => "true",
+			"status" => true,
 			"text" => "Success"
 		]);
 		// header('Location: /edit.php');
 	} else {
 		$msg = "<div class='alert alert-danger alert-dismissible fade show' role='alert'>Запись не добавлена!<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
 		echo json_encode([
-			"status" => "false",
+			"status" => false,
 			"text" => "Failed"
 		]);
 	}

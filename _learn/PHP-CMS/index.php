@@ -3,6 +3,7 @@ require_once "template/header.php";
 require_once "core/db.php";
 $records = $conn->query("SELECT * FROM `DigSign`");
 $conn->close();
+var_dump($_SESSION);
 ?>
 
 <?php if (isset($_COOKIE['login'])): ?>

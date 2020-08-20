@@ -9,29 +9,29 @@ document.addEventListener('DOMContentLoaded', () => {
 		endDate.value = this.value;
 	});
 
-	const postData = async (url, data) => {
-		let res = await fetch(url, {
-			method: "POST",
-			body: data,
-		});
+	// const postData = async (url, data) => {
+	// 	let res = await fetch(url, {
+	// 		method: "POST",
+	// 		body: data,
+	// 	});
 
-		return await res.json;
-	};
+	// 	return await res.json;
+	// };
 
-	form.forEach((item) => {
-		item.addEventListener("submit", (e) => {
-			e.preventDefault();
+	// form.forEach((item) => {
+	// 	item.addEventListener("submit", (e) => {
+	// 		e.preventDefault();
 
-			const formData = new FormData(item);
+	// 		const formData = new FormData(item);
 
-			postData(item.getAttribute('action'), formData)
-				.then(res => {
-					console.log(res);
-				})
-				.catch(() => (console.log('Fail')))
-				.finally(data => {
-					console.log(data);
-				});
-		});
-	});
+	// 		postData(item.getAttribute('action'), formData)
+	// 			.then(res => {
+	// 				console.log(res);
+	// 			})
+	// 			.catch(() => (console.log('Fail')))
+	// 			.finally(data => {
+	// 				console.log(data);
+	// 			});
+	// 	});
+	// });
 });
