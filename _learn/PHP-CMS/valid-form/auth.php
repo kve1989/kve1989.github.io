@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 require_once "../core/db.php";
 
 $login = trim($_REQUEST['login']);
@@ -15,7 +14,7 @@ if ($record['login'] === $login AND $record['password'] === $pass ):
 	$_SESSION['user'] = [
 		"id" => $record['id'],
 		"login" => $record['login'],
-		"admin" => $record['id_admin']
+		"admin" => $record['is_admin']
 	];
 
 	if ($record['is_admin']) {
@@ -29,6 +28,8 @@ if ($record['login'] === $login AND $record['password'] === $pass ):
 
 elseif ( isset($_COOKIE['login']) ):
 	setcookie('login', '', time() - 3600, "/");
+
+	unset($_SESSION['user']);
 
 	if ( isset($_COOKIE['admin']) )
 		setcookie('admin', '', time() - 3600, "/");
