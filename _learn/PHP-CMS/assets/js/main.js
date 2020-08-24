@@ -1,37 +1,43 @@
-document.addEventListener('DOMContentLoaded', () => {
-	'use strict';
+$(function() {
 
-	const startDate = document.querySelector('input[name="start"]'),
-		endDate = document.querySelector('input[name="end"]'),
-		form = document.querySelectorAll("form");
+    let start_date = $("input[name='start']");
+    let end_date = $("input[name='end']");
 
-	startDate.addEventListener('input', function () {
-		endDate.value = this.value;
-	});
+    start_date.change(function (e) {
+        end_date.val(start_date.val());
+    });
 
-	// const postData = async (url, data) => {
-	// 	let res = await fetch(url, {
-	// 		method: "POST",
-	// 		body: data,
-	// 	});
+    $('.btn--del').click(function (event) {
+        event.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: 'del.php',
+            dataType: 'json',
+            data: {
+                id: $(this).attr('data-id')
+            },
+            success (data) {
+                if (data.status) {
+                    document.location.href = "/";
+                }
+            }
+        });
+    });
 
-	// 	return await res.json;
-	// };
-
-	// form.forEach((item) => {
-	// 	item.addEventListener("submit", (e) => {
-	// 		e.preventDefault();
-
-	// 		const formData = new FormData(item);
-
-	// 		postData(item.getAttribute('action'), formData)
-	// 			.then(res => {
-	// 				console.log(res);
-	// 			})
-	// 			.catch(() => (console.log('Fail')))
-	// 			.finally(data => {
-	// 				console.log(data);
-	// 			});
-	// 	});
-	// });
+    $(".btn--clone").click(function (event) {
+        event.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "clone.php",
+            dataType: "json",
+            data: {
+                id: $(this).attr("data-id")
+            },
+            success (data) {
+                if (data.status) {
+                    document.location.href = "/";
+                }
+            },
+        });
+    });
 });
