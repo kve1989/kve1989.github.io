@@ -24,7 +24,7 @@ require_once "core/db.php";
 	$search_query = trim($_REQUEST['search_query']);
 	if (isset($_REQUEST['search_btn'])) {
 		if (!empty($search_query)) {
-			$sql = "SELECT * FROM DigSign WHERE lastname LIKE " . "'%" . $search_query . "%'" . "OR firstname LIKE " . "'%" . $search_query . "%'";
+			$sql = "SELECT * FROM `DigSign` WHERE `lastname` LIKE " . "'%" . $search_query . "%'" . "OR `firstname` LIKE " . "'%" . $search_query . "%'";
 			if (!empty($records = $conn->query($sql))) {
 				echo "<table class='table table-hover'>";
 				while ($record = $records->fetch_assoc()) {

@@ -3,7 +3,7 @@
 require_once "template/header.php";
 require_once "core/db.php";
 
-$records = $conn->query("SELECT * FROM DigSign WHERE id=" . $_REQUEST['id']);
+$records = $conn->query("SELECT * FROM `DigSign` WHERE `id`=" . $_REQUEST['id']);
 $record = $records->fetch_assoc();
 $msg = '';
 ?>
@@ -85,7 +85,7 @@ $servicefield = trim($_REQUEST['servicefield']);
 $handon = $_REQUEST['handon'];
 
 if (isset($_REQUEST['edit'])) {
-	$record = "UPDATE DigSign SET lastname='".$lastname."', firstname='".$name."', secondname='".$secondname."', department='".$department."', post='".$post."', start_date='".$start."', end_date='".$end."', servicefield='".$servicefield."', handon='".$handon."' WHERE id='".$_REQUEST['id']."'";
+	$record = "UPDATE `DigSign` SET `lastname`='".$lastname."', `firstname`='".$name."', `secondname`='".$secondname."', `department`='".$department."', `post`='".$post."', `start_date`='".$start."', `end_date`='".$end."', `servicefield`='".$servicefield."', `handon`='".$handon."' WHERE `id`='".$_REQUEST['id']."'";
 
 	if ( $conn->query($record) ) {
 		$msg = "<div class='alert alert-success alert-dismissible fade show' role='alert'>Запись успешно добавлена!<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
@@ -93,7 +93,6 @@ if (isset($_REQUEST['edit'])) {
 			"status" => true,
 			"text" => "Success"
 		]);
-		// header('Location: /edit.php');
 	} else {
 		$msg = "<div class='alert alert-danger alert-dismissible fade show' role='alert'>Запись не добавлена!<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
 		echo json_encode([
