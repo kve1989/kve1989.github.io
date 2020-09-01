@@ -1,3 +1,5 @@
 <?php
-$conn = new mysqli('localhost', 'root', 'root', 'okbhmao');
+
+	$conn = new mysqli('localhost', 'root', 'root', 'okbhmao');
+
 ?>

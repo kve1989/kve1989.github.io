@@ -16,8 +16,8 @@ $end = date('Y-m-d', $record['end']);
 $servicefield = $record['servicefield'];
 $handon = $record['handon'];
 
-$record = "INSERT INTO `DigSign` (`lastname`, `firstname`, `secondname`, `department`, `post`, `start_date`, `end_date`, `servicefield`, `handon`) VALUES ('".$lastname."', '".$name."', '".$secondname."', '".$department."', '".$post."', '".$start."', '".$end."', '".$servicefield."', '".$handon."')";
-
+$record = "INSERT INTO `DigSign` (`lastname`, `firstname`, `secondname`, `department`, `post`, `start_date`, `end_date`, `servicefield`, `handon`) 
+		VALUES ('".$lastname."', '".$name."', '".$secondname."', '".$department."', '".$post."', '".$start."', '".$end."', '".$servicefield."', '".$handon."')";
 
 if ( $conn->query($record ) ) {
     echo json_encode([
@@ -32,4 +32,3 @@ if ( $conn->query($record ) ) {
 }
 
 $conn->close();
-?>
