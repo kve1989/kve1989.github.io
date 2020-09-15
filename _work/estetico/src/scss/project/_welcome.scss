@@ -46,6 +46,14 @@
 		@media (max-width:$bp2+px) {
 			background-position: 77%;
 		}
+
+		&:nth-child(1) {
+			@media (max-width:$bp2+px) {
+				background-position: 60%;
+			}
+
+		}
+
 	}
 
 	// .welcome__content
