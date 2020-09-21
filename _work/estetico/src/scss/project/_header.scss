@@ -115,13 +115,13 @@
 
 	// .header__btn
 	&__btn {
-		border: 2px solid #FFB2A3;
-		background-color: #FFB2A3;
+		border: 2px solid var(--peach-pearl);
+		background-color: var(--peach-pearl);
 		padding: 8px 37px;
 		&:hover {
 			background-color: #fff;
-			border: 2px solid $accent;
-			color: $accent;
+			border: 2px solid var(--flamingo);
+			color: var(--flamingo);
 			@include scale(1.1);
 		}
 		@media (max-width: $bp3+px){
@@ -134,7 +134,7 @@
 
 	// .header__menu
 	&__menu {
-		background-color: $accent-l;
+		background-color: var(--doll-house);
 		@media (max-width: $bp3+px){
 			background-color: #ffffff;
 		}

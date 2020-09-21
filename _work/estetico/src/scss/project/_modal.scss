@@ -5,7 +5,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) /* scale(1.2) */;
-	background-color: #F6F6F6;
+	background-color: var(--cascading-white);
 	font-size: 18px;
 	padding: 15px 40px;
 	font-family: 'Futura PT Light';
@@ -38,7 +38,7 @@
 			position: absolute;
 			width: 137px;
 			height: 5px;
-			background-color: #EF8A7D;
+			background-color: var(--salmon-carpaccio);
 			bottom: -30%;
 			left: 50%;
 			transform: translateX(-50%);
@@ -81,7 +81,7 @@
 		&:before {
 			content: "•";
 			position: absolute;
-			color: $accent-m;
+			color: var(--salmon-carpaccio);
 			left: 0;
 		}
 	}
@@ -110,7 +110,7 @@
 		color: #000;
 		border-radius: 15px;
 		font-family: 'Futura PT Book';
-		border: 2px solid $accent-l;
+		border: 2px solid var(--doll-house);
 		padding: 5px 15px;
 
 		&:hover {
@@ -219,7 +219,7 @@
 
 	// .banner__dots
 	&__dots {
-		border-bottom: 2px dotted $accent-l;
+		border-bottom: 2px dotted var(--doll-house);
 		flex-grow: 1;
 	}
 
@@ -301,7 +301,7 @@
 	// .callback__suptitle
 	&__suptitle {
 		font-size: 15px;
-		color: #767676;
+		color: var(--sonic-silver);
 	}
 
 	// .callback__form
@@ -344,7 +344,7 @@
 		transition: all .2s;
 		font-size: 14px;
 		position: absolute;
-		color: #767676;
+		color: var(--sonic-silver);
 		left: 0;
 		top: 50%;
 		transform: translatey(-50%);
@@ -355,7 +355,7 @@
 	&__submit {
 		color: #000;
 		border: none;
-		background-color: $accent-l;
+		background-color: var(--doll-house);
 		text-transform: uppercase;
 		letter-spacing: 2.31px;
 		font-family: "Futura PT Book";
@@ -365,7 +365,7 @@
 		border-radius: 18px;
 		padding: 13px 68px;
 		transition: all .2s;
-		border: 2px solid $accent-l;
+		border: 2px solid var(--doll-house);
 
 		&:hover {
 			background-color: #fff;
@@ -401,7 +401,7 @@
 
 	// .thnks__text
 	&__text {
-		color: #767676;
+		color: var(--sonic-silver);
 		font-size: 14px;
 		font-weight: bold;
 		letter-spacing: 2.08px;

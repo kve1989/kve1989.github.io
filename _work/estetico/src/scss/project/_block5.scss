@@ -21,10 +21,10 @@
 		font-size: 25px;
 		display: block;
 		margin: 0 auto;
-		border: 2px solid $accent-l;
+		border: 2px solid var(--doll-house);
 
 		&:hover {
-			border: 2px solid $accent-l;
+			border: 2px solid var(--doll-house);
 			background-color: #fff;
 			@include scale(1.1);
 		}

@@ -10,7 +10,7 @@
 		z-index: 11;
 
 		span {
-			background-color: $accent;
+			background-color: var(--flamingo);
 			position: absolute;
 			left: 0;
 			width: 100%;
@@ -56,7 +56,7 @@
 	display: inline-block;
 	-webkit-transition: all 0.5s ease;
 	position: absolute;
-	background-color: #f0d0c1;
+	background-color: var(--indian-clay);
 	border-radius: 50%;
 	@media (max-width:$bp4+px){
 		width: 50%;
@@ -131,7 +131,7 @@
 .line {
 	height: 11px;
 	width: 100%;
-	background-color: $accent-m;
+	background-color: var(--salmon-carpaccio);
 	z-index: 10;
 	position: relative;
 }

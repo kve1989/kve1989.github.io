@@ -1,7 +1,7 @@
 /* Блок Наши сертификаты */
 // .block10
 .block10 {
-	background: #f6f6f6 url("../img/block10/bg-10.png") center / cover no-repeat;
+	background: var(--cascading-white) url("../img/block10/bg-10.png") center / cover no-repeat;
 	padding: 80px 0 35px;
 
 	@media (max-width:$bp3+px) {
@@ -39,16 +39,16 @@
 	// .block10__btn
 	&__btn {
 		color: #000;
-		border: 2px solid $accent-l;
+		border: 2px solid var(--doll-house);
 		border-radius: 18px;
-		background-color: $accent-l;
+		background-color: var(--doll-house);
 		padding: 20px 83px;
 		display: inline-block;
 		text-decoration: none;
 
 		&:hover {
 			@include scale(1.1);
-			border: 2px solid $accent-l;
+			border: 2px solid var(--doll-house);
 			background-color: #fff;
 		}
 

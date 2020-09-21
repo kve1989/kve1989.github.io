@@ -22,7 +22,7 @@
 				position: absolute;
 				width: 52px;
 				height: 5px;
-				background-color: $accent-m;
+				background-color: var(--salmon-carpaccio);
 				left: 0;
 				top: 50%;
 				transform: translateY(-50%);
@@ -108,7 +108,7 @@
 		li {
 			width: 35px;
 			height: 35px;
-			border: 5px solid #FFB2A3;
+			border: 5px solid var(--peach-pearl);
 			border-radius: 50%;
 			margin: 5px;
 			cursor: pointer;
@@ -119,8 +119,8 @@
 			}
 
 			&.slick-active {
-				background-color: #EE8A7D;
-				border: 5px solid #EE8A7D
+				background-color: var(--salmon-carpaccio);
+				border: 5px solid var(--salmon-carpaccio)
 			}
 
 			button {
@@ -134,7 +134,7 @@
 		display: block;
 		width: 36px;
 		height: 37px;
-		border: 5px solid #FFB2A3;
+		border: 5px solid var(--peach-pearl);
 		border-radius: 50%;
 		margin-bottom: 15px;
 		cursor: pointer;
@@ -145,14 +145,14 @@
 
 		// .block4__dot-active
 		&-active {
-			background-color: #FFB2A3;
+			background-color: var(--peach-pearl);
 		}
 	}
 
 	// .block4__container
 	&__container {
 		width: 570px;
-		background-color: #f6f6f6;
+		background-color: var(--cascading-white);
 		padding: 20px;
 
 		@media (max-width:1366px) {
@@ -195,7 +195,7 @@
 
 	// .block4__cnt-title
 	&__cnt-title {
-		color: #767676;
+		color: var(--sonic-silver);
 		letter-spacing: 2.07px;
 
 		@media (max-width:$bp3+px) {
@@ -223,7 +223,7 @@
 		&:after,
 		&:before {
 			content: "•";
-			color: $accent-m;
+			color: var(--salmon-carpaccio);
 		}
 
 		@media (max-width:1140px) {
@@ -249,7 +249,7 @@
 	// .block4__btn
 	&__btn {
 		border-radius: 18px;
-		border: 2px solid $accent-l;
+		border: 2px solid var(--doll-house);
 		background-color: transparent;
 		color: #000;
 		padding: 10px 40px;
@@ -260,7 +260,7 @@
 		margin: 0 auto;
 
 		&:hover {
-			background-color: $accent-l;
+			background-color: var(--doll-house);
 			@include scale(1.1);
 		}
 
@@ -361,7 +361,7 @@
 			li {
 				width: 35px;
 				height: 35px;
-				border: 5px solid #FFB2A3;
+				border: 5px solid var(--peach-pearl);
 				border-radius: 50%;
 				margin: 5px;
 				cursor: pointer;
@@ -372,8 +372,8 @@
 				}
 
 				&.slick-active {
-					background-color: #EE8A7D;
-					border: 5px solid #EE8A7D
+					background-color: var(--salmon-carpaccio);
+					border: 5px solid var(--salmon-carpaccio)
 				}
 
 				button {
@@ -393,7 +393,7 @@
 		&__desc {
 			width: 570px;
 			padding: 20px;
-			background-color: #f6f6f6;
+			background-color: var(--cascading-white);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -425,7 +425,7 @@
 		}
 		/* .service-item__desc--title */
 		&__desc--title {
-			color: #767676;
+			color: var(--sonic-silver);
 			letter-spacing: 2.07px;
 
 			@media (max-width:$bp3+px) {
@@ -446,7 +446,7 @@
 				&:after,
 				&:before {
 					content: "•";
-					color: $accent-m;
+					color: var(--salmon-carpaccio);
 				}
 
 				@media (max-width:1140px) {

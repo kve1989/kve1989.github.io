@@ -54,7 +54,7 @@
 			position: absolute;
 			height: 100%;
 			width: 100%;
-			border: 7px solid $accent-l;
+			border: 7px solid var(--doll-house);
 			left: 5%;
 			top: 5%;
 			z-index: -1;
@@ -106,13 +106,13 @@
 			left: 0;
 			width: 90px;
 			height: 4px;
-			background-color: $accent-m;
+			background-color: var(--salmon-carpaccio);
 		}
 	}
 
 	// .block12__text-gray
 	&__text-gray {
-		color: #767676;
+		color: var(--sonic-silver);
 		font-size: 21px;
 		line-height: 33.33px;
 

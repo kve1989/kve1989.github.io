@@ -23,7 +23,7 @@
 		font-size: 21px;
 		font-weight: bold;
 		line-height: 33.33px;
-		color: #767676;
+		color: var(--sonic-silver);
 		letter-spacing: 2.08px;
 		text-align: center;
 	}
@@ -53,7 +53,7 @@
 		width: 320px;
 		height: 320px;
 		box-shadow: 11px 4px 10px 3px rgba(0, 0, 0, 0.21);
-		background-color: #f6f6f6;
+		background-color: var(--cascading-white);
 		margin: 0 auto;
 		background-size: contain;
 	}
@@ -79,7 +79,7 @@
 
 	// .block9__lists-item
 	&__lists-item {
-		color: #767676;
+		color: var(--sonic-silver);
 		font-family: "Futura PT Book";
 		font-size: 17px;
 		font-weight: bold;

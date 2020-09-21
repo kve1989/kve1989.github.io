@@ -15,7 +15,7 @@
 
 	// .block6__title
 	&__title {
-		color: $accent;
+		color: var(--flamingo);
 		font-family: "Futura PT Demi";
 		font-size: 79px;
 		font-weight: bold;
@@ -55,7 +55,7 @@
 
 	// .block6__discount
 	&__discount {
-		color: $accent;
+		color: var(--flamingo);
 		font-family: "Futura PT Demi";
 		font-size: 46px;
 		font-weight: 600;
@@ -78,8 +78,8 @@
 	&__btn,
 	&__btn2 {
 		border-radius: 18px;
-		border: 5px solid #ffffff;
-		background-color: $accent-l;
+		border: 5px solid #fff;
+		background-color: var(--doll-house);
 		font-family: "Futura PT Book";
 		font-size: 25px;
 		font-weight: bold;

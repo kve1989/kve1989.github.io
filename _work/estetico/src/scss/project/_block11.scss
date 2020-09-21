@@ -1,7 +1,7 @@
 // Блок со скидкой и записью
 // .block11
 .block11 {
-	background: #f0d0c1 url("../img/block11/bg-11.png") center / cover no-repeat;
+	background: var(--indian-clay) url("../img/block11/bg-11.png") center / cover no-repeat;
 	padding: 100px 0 50px;
 
 	@media (max-width:$bp3+px) {
@@ -16,7 +16,7 @@
 
 	// .block11__title
 	&__title {
-		color: $accent;
+		color: var(--flamingo);
 		font-family: "Futura PT Demi";
 		font-size: 46px;
 		font-weight: bold;

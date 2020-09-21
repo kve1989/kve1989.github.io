@@ -63,13 +63,12 @@ ul, li {
 .btn {
 	border: none;
 	text-transform: uppercase;
-	color: #ffffff;
-	background-color: $accent-l;
+	color: #fff;
+	background-color: var(--doll-house);
 	border-radius: 25px;
 	font-size: 21px;
 	font-weight: bold;
 	letter-spacing: 2.31px;
-	// padding: 8px 37px;
 	cursor: pointer;
 	transition: all .2s;
 	display: block;
@@ -83,7 +82,7 @@ ul, li {
 	height: 85px;
 	width: 85px;
 	border-radius: 50%;
-	background-color: $accent-l;
+	background-color: var(--doll-house);
 	cursor: pointer;
 	display: flex;
 	justify-content: center;
@@ -91,7 +90,7 @@ ul, li {
 	transition: all .2s;
 	top: 50%;
 	&:hover {
-		background-color: $accent;
+		background-color: var(--flamingo);
 	}
 	@media (max-width:$bp2+px){
 		display: none !important;
@@ -131,7 +130,7 @@ ul, li {
 		content: "";
 		width: 90px;
 		height: 4px;
-		background-color: #EF8A7D;
+		background-color: var(--salmon-carpaccio);
 		bottom: -15px;
 		left: 50%;
 		-webkit-transform: translateX(-50%);

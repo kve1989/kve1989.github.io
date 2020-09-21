@@ -1,7 +1,7 @@
 /* Блок О плюсах салона */
 // .block3
 .block3 {
-	background-color: #f6f6f6;
+	background-color: var(--cascading-white);
 
 	// .block3__wrapper
 	&__wrapper {
@@ -99,7 +99,7 @@
 
 	// .block3__cnt
 	&__cnt {
-		color: #767676;
+		color: var(--sonic-silver);
 		font-family: "Futura PT Book";
 		font-size: 15px;
 		letter-spacing: 1.67px;

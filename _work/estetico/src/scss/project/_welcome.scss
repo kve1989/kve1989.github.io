@@ -104,7 +104,7 @@
 			content: "";
 			position: absolute;
 			height: 5px;
-			background-color: $accent-m;
+			background-color: var(--salmon-carpaccio);
 			width: 137px;
 			bottom: -40px;
 			left: 0;
@@ -161,7 +161,7 @@
 
 	// .welcome__price-color
 	&__price-color {
-		color: #f17172;
+		color: var(--sugar-coral);
 		font-family: "Futura PT Demi";
 		font-size: calc(46px - 20%);
 		font-weight: 400;
@@ -182,7 +182,7 @@
 		line-height: 36.63px;
 		letter-spacing: 2.31px;
 		cursor: pointer;
-		border: 2px solid $accent-l;
+		border: 2px solid var(--doll-house);
 
 		&:hover {
 			background-color: #fff;
