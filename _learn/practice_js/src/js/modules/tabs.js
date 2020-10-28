@@ -1,5 +1,5 @@
-const tabs = (headerSelectot, tabSelector, contentSelector,activeClass, display = 'block') => {
-	const header = document.querySelector(headerSelectot),
+const tabs = (headerSelector, tabSelector, contentSelector,activeClass, display = 'block') => {
+	const header = document.querySelector(headerSelector),
 				tab = document.querySelectorAll(tabSelector),
 				content = document.querySelectorAll(contentSelector);
 
