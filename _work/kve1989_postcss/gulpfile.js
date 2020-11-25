@@ -1,17 +1,17 @@
-import gulp from 'gulp';
-import browserSync from 'browser-sync';
-import webpack from 'webpack-stream';
-import postcss from 'gulp-postcss';
-import replace from 'gulp-replace';
-import rename from 'gulp-rename';
-import pimport from 'postcss-import';
-import minmax from 'postcss-media-minmax';
-import autoprefixer from 'autoprefixer';
-import csso from 'postcss-csso';
-import mqpacker from 'css-mqpacker';
+import gulp from "gulp";
+import browserSync from "browser-sync";
+import webpack from "webpack-stream";
+import postcss from "gulp-postcss";
+import replace from "gulp-replace";
+import rename from "gulp-rename";
+import pimport from "postcss-import";
+import minmax from "postcss-media-minmax";
+import autoprefixer from "autoprefixer";
+import csso from "postcss-csso";
+import mqpacker from "css-mqpacker";
 
-let src = 'src',
-	dist = 'dist';
+let src = "src",
+	dist = "dist";
 
 let paths = {
 	scripts: {
@@ -39,32 +39,42 @@ let paths = {
 /* browsersync */
 export const browsersync = () => {
 	browserSync.init({
-		server: { baseDir: dist + '/' },
+		server: { baseDir: dist + "/" },
 		notify: false,
-		ui: false
+		ui: false,
 	});
 };
 
 /* copy */
 export const copy = () => {
-    return gulp.src([
-			paths.fonts.src,
-			paths.images.src,
-			src + '/*.html'
-        ], {
-            base: src
-        })
-        .pipe(gulp.dest(dist))
-        .pipe(browserSync.stream({
-            once: true
-        }));
+	return gulp
+		.src([paths.fonts.src, paths.images.src, src + "/*.html"], {
+			base: src,
+		})
+		.pipe(gulp.dest(dist))
+		.pipe(
+			browserSync.stream({
+				once: true,
+			})
+		);
 };
 
 /* styles */
 export const styles = () => {
-    return gulp
+	return gulp
 		.src(paths.styles.src)
-		.pipe(postcss([pimport, minmax, autoprefixer, csso, mqpacker]))
+		.pipe(
+			postcss([
+				pimport,
+				minmax,
+				autoprefixer({
+					overrideBrowserslist: ["last 10 versions"],
+					grid: true,
+				}),
+				csso,
+				mqpacker,
+			])
+		)
 		.pipe(replace(/\.\.\//g, ""))
 		.pipe(rename(paths.cssOutputName))
 		.pipe(gulp.dest(paths.styles.dest))
@@ -73,42 +83,53 @@ export const styles = () => {
 
 /* scripts */
 export const scripts = () => {
-	return gulp.src(paths.scripts.src)
-	.pipe(webpack({
-		mode: 'production',
-		output: {
-			filename: paths.jsOutputName
-		},
-		watch: false,
-		// devtool: 'source-map',
-		module: {
-			rules: [
-				{
-					test: /\.m?js$/,
-					exclude: /(node_modules|bower_components)/,
-					use: {
-						loader: 'babel-loader',
-						options: {
-							presets: [['@babel/preset-env', {
-								debug: true,
-								corejs: 3,
-								useBuiltIns: 'usage'
-							}]]
-						}
-					}
-				}
-			]
-		}
-	}))
-	.pipe(gulp.dest(paths.scripts.dest))
-	.pipe(browserSync.stream())
+	return gulp
+		.src(paths.scripts.src)
+		.pipe(
+			webpack({
+				mode: "production",
+				output: {
+					filename: paths.jsOutputName,
+				},
+				watch: false,
+				// devtool: 'source-map',
+				module: {
+					rules: [
+						{
+							test: /\.m?js$/,
+							exclude: /(node_modules|bower_components)/,
+							use: {
+								loader: "babel-loader",
+								options: {
+									presets: [
+										[
+											"@babel/preset-env",
+											{
+												debug: true,
+												corejs: 3,
+												useBuiltIns: "usage",
+											},
+										],
+									],
+								},
+							},
+						},
+					],
+				},
+			})
+		)
+		.pipe(gulp.dest(paths.scripts.dest))
+		.pipe(browserSync.stream());
 };
 
 /* watch */
 export const watch = () => {
-	gulp.watch(src + '/**/*', styles);
-	gulp.watch(src + '/**/*.js', scripts);
-	gulp.watch([paths.fonts.src, paths.images.src, src + '/*.html'], gulp.series(copy));
+	gulp.watch(src + "/**/*", styles);
+	gulp.watch(src + "/**/*.js", scripts);
+	gulp.watch(
+		[paths.fonts.src, paths.images.src, src + "/*.html"],
+		gulp.series(copy)
+	);
 };
 
 export default gulp.series(
