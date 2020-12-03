@@ -1,4 +1,0 @@
-Host: https://worldprint33.ru/
-Sitemap: https://worldprint33.ru/sitemap.xml
-User-agent: Yandex
-User-agent: Googlebot
