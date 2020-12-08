@@ -1,27 +1,27 @@
 import gulp from "gulp";
+import sass from "gulp-sass";
+import scss from "gulp-sass";
 import browserSync from "browser-sync";
-import webpack from "webpack-stream";
-import postcss from "gulp-postcss";
-import replace from "gulp-replace";
 import rename from "gulp-rename";
-import pimport from "postcss-import";
-import minmax from "postcss-media-minmax";
-import autoprefixer from "autoprefixer";
-import csso from "postcss-csso";
-import mqpacker from "css-mqpacker";
+import concat from "gulp-concat";
+import autoprefixer from "gulp-autoprefixer";
+import webpack from "webpack-stream";
 
-let src = "src",
+let localhost = "localhost:3000",
+	preprocessor = "sass", // Preprocessor (sass, scss)
+	fileswatch = "html,htm,php,txt,yaml,twig,json,md",
+	src = "src",
 	dist = "dist";
 
 let paths = {
 	scripts: {
-		src: src + "/js/index.js",
-		dest: dist + "/assets/js",
+		src: src + "/js/main.js",
+		dest: dist + "/js",
 	},
 
 	styles: {
-		src: src + "/css/index.css",
-		dest: dist + "/assets/css",
+		src: src + "/" + preprocessor + "/main.*",
+		dest: dist + "/css",
 	},
 
 	fonts: {
@@ -32,14 +32,15 @@ let paths = {
 		src: src + "/" + "images/**/*",
 	},
 
-	cssOutputName: "main.css",
-	jsOutputName: "main.js",
+	cssOutputName: "main.min.css",
+	jsOutputName: "main.min.js",
 };
 
 /* browsersync */
 export const browsersync = () => {
 	browserSync.init({
 		server: { baseDir: dist + "/" },
+		// proxy: localhost, // for PHP
 		notify: false,
 		ui: false,
 	});
@@ -63,20 +64,15 @@ export const copy = () => {
 export const styles = () => {
 	return gulp
 		.src(paths.styles.src)
+		.pipe(eval(preprocessor)())
+		.pipe(sass({ outputStyle: "compressed" }))
+		.pipe(concat(paths.cssOutputName))
 		.pipe(
-			postcss([
-				pimport,
-				minmax,
-				autoprefixer({
-					overrideBrowserslist: ["last 10 versions"],
-					grid: true,
-				}),
-				csso,
-				mqpacker,
-			])
+			autoprefixer({
+				overrideBrowserslist: ["last 10 versions"],
+				grid: true,
+			})
 		)
-		.pipe(replace(/\.\.\//g, ""))
-		.pipe(rename(paths.cssOutputName))
 		.pipe(gulp.dest(paths.styles.dest))
 		.pipe(browserSync.stream());
 };
@@ -88,11 +84,6 @@ export const scripts = () => {
 		.pipe(
 			webpack({
 				mode: "production",
-				output: {
-					filename: paths.jsOutputName,
-				},
-				watch: false,
-				// devtool: 'source-map',
 				module: {
 					rules: [
 						{
@@ -118,16 +109,22 @@ export const scripts = () => {
 				},
 			})
 		)
+		.pipe(rename(paths.jsOutputName))
 		.pipe(gulp.dest(paths.scripts.dest))
 		.pipe(browserSync.stream());
 };
 
 /* watch */
 export const watch = () => {
-	gulp.watch(src + "/**/*", styles);
-	gulp.watch(src + "/**/*.js", scripts);
 	gulp.watch(
-		[paths.fonts.src, paths.images.src, src + "/*.html"],
+		src + "/" + preprocessor + "/**/*",
+		{ usePolling: true },
+		styles
+	);
+	gulp.watch(src + "/**/*.js", { usePolling: true }, scripts);
+	gulp.watch(
+		[paths.fonts.src, paths.images.src, src + `**/*.{${fileswatch}}`],
+		{ usePolling: true },
 		gulp.series(copy)
 	);
 };

@@ -1,0 +1,114 @@
+/* Header */
+.header
+	border-bottom: 2px solid rgba(#000, .1)
+	&__wrapper
+		height: 80px
+		display: grid
+		column-gap: 20px
+		grid-template-columns: repeat(3, 1fr)
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+	&__logo
+		font-size: 30px
+		font-family: monospace
+		font-weight: bolder
+		text-decoration: none
+		color: var(--black)
+		transition: all .2s
+		position: relative
+		letter-spacing: -1px
+		&::after
+			content: "_"
+			animation: 1.5s header-logo-cursor-blink infinite linear
+			opacity: 0
+	&__line
+		width: 2px
+		height: 100%
+		background-color: rgba(#000, .1)
+		display: block
+		+media-tablet
+			display: none
+	&__switch
+		justify-self: end
+	&__social
+		justify-self: center
+
+		&-item
+			--vk: #45668e
+			--instagram: #833ab4
+			--telegram: #0088cc
+			--viber: #59267c
+			--whatsup: #075e54
+			&--vk:hover
+				box-shadow: 0 0 10px var(--vk)
+			&--vk:hover
+				svg
+					fill: var(--vk)
+
+			&--instagram:hover
+				box-shadow: 0 0 10px var(--instagram)
+			&--instagram:hover
+				svg
+					fill: var(--instagram)
+
+			&--telegram:hover
+				box-shadow: 0 0 10px var(--telegram)
+			&--telegram:hover
+				svg
+					fill: var(--telegram)
+
+			&--viber:hover
+				box-shadow: 0 0 10px var(--viber)
+			&--viber:hover
+				svg
+					fill: var(--viber)
+
+			&--whatsup:hover
+				box-shadow: 0 0 10px var(--whatsup)
+			&--whatsup:hover
+				svg
+					fill: var(--whatsup)
+	+media-phone
+		&__wrapper
+			grid-template-columns: 1fr
+			grid-template-rows: 1fr
+			justify-content: center
+		&__logo
+			font-size: 24px
+			text-align: center
+		&__switch
+			display: none
+
+
+.social
+	display: flex
+	justify-content: space-between
+
+	&__item
+		margin: 0 5px
+		position: relative
+		transition: all .2s
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		display: flex
+		align-items: center
+		justify-content: center
+		&:first-child
+			margin-left: 0
+		&:last-child
+			margin-right: 0
+		svg
+			fill: var(--black)
+			width: 25px
+			height: 25px
+
+
+@keyframes header-logo-cursor-blink
+	0%
+		opacity: 0
+	50%
+		opacity: 1
+	100%
+		opacity: 0
