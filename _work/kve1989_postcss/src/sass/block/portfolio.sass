@@ -22,6 +22,7 @@
 		background: #fff
 		text-align: center
 		font-size: 20px
+		position: relative
 		&:last-child
 			margin: 0
 		@media (max-width: 768px)
@@ -29,6 +30,17 @@
 			margin: 0px 0px 10px 0px
 		@media (max-width: 480px)
 			flex: 0 0 100%
+		&-desc
+			position: absolute
+			left: 0
+			top: 100%
+			text-align: left
+			height: 100%
+			width: 100%
+			background: gray
+			color: #ffffff
+		&:hover &-desc
+			top: 0
 
 	&__link
 		text-decoration: none
