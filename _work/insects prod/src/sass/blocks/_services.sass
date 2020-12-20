@@ -1,0 +1,52 @@
+.services
+	padding: 60px 90px
+	&__wrapper
+		padding-top: 30px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&__item
+		position: relative
+		width: 540px
+		height: 260px
+		padding: 60px 30px 30px
+		margin: 15px
+		a
+			text-decoration: none
+			color: #ffffff
+	&__img
+		width: 540px
+		height: 260px
+		position: absolute
+		left: 0
+		top: 0
+		z-index: 1
+		img
+			width: 100%
+			height: 100%
+		&:after 
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			z-index: 2
+			left: 0
+			top: 0
+			background-color: rgba(#000, .6)
+	&__title
+		position: relative
+		z-index: 2
+		font-size: 28px
+		color: #ffffff
+	&__subtitle
+		position: relative
+		z-index: 2
+		font-size: 16px
+		font-weight: 300
+		color: #ffffff
+		margin-top: 10px
+		margin-bottom: 10px
+	.button
+		transform: translateX(0)
+
