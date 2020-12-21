@@ -15,16 +15,19 @@ gulp.task("server", function () {
 	gulp.watch("src/*.html").on("change", browserSync.reload);
 });
 
-gulp.task("buildHTML", function () {
-	gulp.src("src/html/**/*.html")
+gulp.task("html", function () {
+	panini.refresh();
+	return gulp
+		.src("src/html/*.html")
 		.pipe(
 			panini({
-				root: "src/html",
+				root: "src/",
 				layouts: "src/html/layouts",
 				partials: "src/html/partials",
 			})
 		)
-		.pipe(gulp.dest("src/"));
+		.pipe(gulp.dest("src/"))
+		.pipe(browserSync.reload({ stream: true }));
 });
 
 gulp.task("styles", function () {
@@ -40,7 +43,7 @@ gulp.task("styles", function () {
 
 gulp.task("watch", function () {
 	gulp.watch("src/sass/**/*.+(scss|sass)", gulp.parallel("styles"));
-	// gulp.watch("src/html/{layouts,partials}/*.html", gulp.parallel("buildHTML"));
+	gulp.watch("src/html/**/*.html", gulp.parallel("html"));
 });
 
-gulp.task("default", gulp.parallel("watch", "server", "styles"));
+gulp.task("default", gulp.parallel("watch", "server", "html", "styles"));
