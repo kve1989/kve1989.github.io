@@ -83,6 +83,7 @@
 				/></div
 		></noscript>
 		<!-- /Yandex.Metrika counter -->
+		<script src="//st.yagla.ru/js/y.c.js?h=5e4764d397ff13b5aeefb3f66059d0c0"></script>
 	</head>
 	<body>
 		<header class="header">
@@ -1239,5 +1240,92 @@
 		<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<script src="js/mgp.js"></script>
 		<script src="js/script.js"></script>
+
+		<!-- Begin LeadBack code {literal} -->
+		<script>
+			var _emv = _emv || [];
+
+			_emv["campaign"] = "5bf73f0ab50f7167fd590c0c";
+
+			(function () {
+				var em = document.createElement("script");
+				em.type = "text/javascript";
+				em.async = true;
+
+				em.src =
+					("https:" == document.location.protocol
+						? "https://"
+						: "http://") + "leadback.ru/js/leadback.js";
+
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(em, s);
+			})();
+		</script>
+		<!-- End LeadBack code {/literal} -->
+		<script>
+			(function (w, d, u, i, o, s, p) {
+				if (d.getElementById(i)) {
+					return;
+				}
+				w["MangoObject"] = o;
+
+				w[o] =
+					w[o] ||
+					function () {
+						(w[o].q = w[o].q || []).push(arguments);
+					};
+				w[o].u = u;
+				w[o].t = 1 * new Date();
+
+				s = d.createElement("script");
+				s.async = 1;
+				s.id = i;
+				s.src = u;
+
+				p = d.getElementsByTagName("script")[0];
+				p.parentNode.insertBefore(s, p);
+			})(
+				window,
+				document,
+				"//widgets.mango-office.ru/widgets/mango.js",
+				"mango-js",
+				"mgo"
+			);
+
+			mgo({
+				calltracking: {
+					id: 23588,
+					elements: [{ numberText: "74993221815" }],
+				},
+			});
+		</script>
+		<script>
+			(function (w, d, s, h, id) {
+				w.roistatProjectId = id;
+				w.roistatHost = h;
+
+				var p = d.location.protocol == "https:" ? "https://" : "http://";
+
+				var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie)
+					? "/dist/module.js"
+					: "/api/site/1.0/" +
+					  id +
+					  "/init?referrer=" +
+					  encodeURIComponent(d.location.href);
+
+				var js = d.createElement(s);
+				js.charset = "UTF-8";
+				js.async = 1;
+				js.src = p + h + u;
+				var js2 = d.getElementsByTagName(s)[0];
+				js2.parentNode.insertBefore(js, js2);
+			})(
+				window,
+				document,
+				"script",
+				"cloud.roistat.com",
+				"3324b5decec62a93a0d96298135e57d5"
+			);
+		</script>
 	</body>
 </html>
