@@ -807,16 +807,13 @@
 			(function (w, d, s, h, id) {
 				w.roistatProjectId = id;
 				w.roistatHost = h;
-
 				var p = d.location.protocol == "https:" ? "https://" : "http://";
-
 				var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie)
 					? "/dist/module.js"
 					: "/api/site/1.0/" +
 					  id +
 					  "/init?referrer=" +
 					  encodeURIComponent(d.location.href);
-
 				var js = d.createElement(s);
 				js.charset = "UTF-8";
 				js.async = 1;
@@ -828,7 +825,7 @@
 				document,
 				"script",
 				"cloud.roistat.com",
-				"597f1f75e3f1973006278e766f55b766"
+				"c365c9b2e85437adb96fe413e4383f20"
 			);
 		</script>
 		<!-- Begin LeadBack code {literal} -->

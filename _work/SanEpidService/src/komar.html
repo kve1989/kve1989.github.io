@@ -1311,7 +1311,7 @@
 				w.roistatProjectId = id;
 				w.roistatHost = h;
 				var p = d.location.protocol == "https:" ? "https://" : "http://";
-				var u = /^.roistat_visit=[^;]+(.)?$/.test(d.cookie)
+				var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie)
 					? "/dist/module.js"
 					: "/api/site/1.0/" +
 					  id +
@@ -1328,7 +1328,7 @@
 				document,
 				"script",
 				"cloud.roistat.com",
-				"5170c4154bca59c4d814f47c1084b22e"
+				"c365c9b2e85437adb96fe413e4383f20"
 			);
 		</script>
 	</body>
