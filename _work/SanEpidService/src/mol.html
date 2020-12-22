@@ -1307,20 +1307,18 @@
 				},
 			});
 		</script>
+
 		<script>
 			(function (w, d, s, h, id) {
 				w.roistatProjectId = id;
 				w.roistatHost = h;
-
 				var p = d.location.protocol == "https:" ? "https://" : "http://";
-
-				var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie)
+				var u = /^.roistat_visit=[^;]+(.)?$/.test(d.cookie)
 					? "/dist/module.js"
 					: "/api/site/1.0/" +
 					  id +
 					  "/init?referrer=" +
 					  encodeURIComponent(d.location.href);
-
 				var js = d.createElement(s);
 				js.charset = "UTF-8";
 				js.async = 1;
@@ -1332,7 +1330,7 @@
 				document,
 				"script",
 				"cloud.roistat.com",
-				"3324b5decec62a93a0d96298135e57d5"
+				"5170c4154bca59c4d814f47c1084b22e"
 			);
 		</script>
 	</body>
