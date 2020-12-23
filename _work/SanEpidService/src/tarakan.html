@@ -1279,7 +1279,6 @@
 					return;
 				}
 				w["MangoObject"] = o;
-
 				w[o] =
 					w[o] ||
 					function () {
@@ -1287,12 +1286,10 @@
 					};
 				w[o].u = u;
 				w[o].t = 1 * new Date();
-
 				s = d.createElement("script");
 				s.async = 1;
 				s.id = i;
 				s.src = u;
-
 				p = d.getElementsByTagName("script")[0];
 				p.parentNode.insertBefore(s, p);
 			})(
@@ -1302,7 +1299,6 @@
 				"mango-js",
 				"mgo"
 			);
-
 			mgo({
 				calltracking: {
 					id: 23588,
