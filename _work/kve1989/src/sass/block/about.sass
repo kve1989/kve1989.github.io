@@ -28,39 +28,3 @@
 			font-size: 26px
 			font-weight: bold
 			margin-bottom: 15px
-
-	&__mouse
-		position: absolute
-		left: 50%
-		top: 40%
-		transform: translateX(-50%)
-		+media-tablet
-			display: none
-
-.mouse__body
-	position: relative
-	content: ''
-	height: 50px
-	width: 30px
-	border: 1px solid var(--black)
-	border-radius: 30px
-	&::before
-		position: absolute
-		content: ''
-		border-radius: 10px
-		background-color: var(--black)
-		width: 10px
-		height: 15px
-		left: 50%
-		top: 0
-		transform: translateX(-50%)
-		animation: mouse-wheel 1.5s infinite
-
-
-@keyframes mouse-wheel
-	from
-		opacity: 1
-		top: 0%
-	to
-		opacity: 0
-		top: 40%
