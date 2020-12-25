@@ -51,7 +51,7 @@ export const browsersync = () => {
 /* copy */
 export const copy = () => {
 	return gulp
-		.src([paths.fonts.src, paths.images.src, src + "/*.html"], {
+		.src([paths.fonts.src, src + "/*.html"], {
 			base: src,
 		})
 		.pipe(gulp.dest(dist))
@@ -124,7 +124,7 @@ export const images = () => {
 		.src(paths.images.src)
 		.pipe(
 			imagemin([
-				imagemin.gifsicle({ interlaced: true }),
+				// imagemin.gifsicle({ interlaced: true }),
 				imagemin.mozjpeg({ quality: 95, progressive: true }),
 				imagemin.optipng({ optimizationLevel: 5 }),
 				imagemin.svgo({
