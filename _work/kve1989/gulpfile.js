@@ -1,13 +1,13 @@
-import gulp from "gulp";
-import sass from "gulp-sass";
-import scss from "gulp-sass";
-import browserSync from "browser-sync";
-import rename from "gulp-rename";
-import concat from "gulp-concat";
-import imagemin from "gulp-imagemin";
-import autoprefixer from "gulp-autoprefixer";
-import webpack from "webpack-stream";
-import del from "del";
+const gulp = require("gulp");
+const sass = require("gulp-sass");
+const scss = require("gulp-sass");
+const browserSync = require("browser-sync");
+const rename = require("gulp-rename");
+const concat = require("gulp-concat");
+const imagemin = require("gulp-imagemin");
+const autoprefixer = require("gulp-autoprefixer");
+const webpack = require("webpack-stream");
+const del = require("del");
 
 let localhost = "localhost:3000",
 	fileswatch = "html,htm,php,txt,yaml,twig,json,md",
@@ -39,17 +39,17 @@ let paths = {
 };
 
 /* browsersync */
-export const browsersync = () => {
+function browsersync() {
 	browserSync.init({
 		server: { baseDir: dist + "/" },
 		// proxy: localhost, // for PHP
 		notify: false,
 		ui: false,
 	});
-};
+}
 
 /* copy */
-export const copy = () => {
+function copy() {
 	return gulp
 		.src([paths.fonts.src, src + "/*.html"], {
 			base: src,
@@ -60,10 +60,10 @@ export const copy = () => {
 				once: true,
 			})
 		);
-};
+}
 
 /* styles */
-export const styles = () => {
+function styles() {
 	return (
 		gulp
 			.src(paths.styles.src)
@@ -79,10 +79,10 @@ export const styles = () => {
 			.pipe(gulp.dest(paths.styles.dest))
 			.pipe(browserSync.stream())
 	);
-};
+}
 
 /* scripts */
-export const scripts = () => {
+function scripts() {
 	return gulp
 		.src(paths.scripts.src)
 		.pipe(
@@ -116,10 +116,10 @@ export const scripts = () => {
 		.pipe(rename(paths.jsOutputName))
 		.pipe(gulp.dest(paths.scripts.dest))
 		.pipe(browserSync.stream());
-};
+}
 
 /* images */
-export const images = () => {
+function images() {
 	return gulp
 		.src(paths.images.src)
 		.pipe(
@@ -134,14 +134,14 @@ export const images = () => {
 		)
 		.pipe(gulp.dest(paths.images.dist))
 		.pipe(browserSync.reload({ stream: true }));
-};
+}
 
 /* del folder dist */
-export const clean = () => {
+function clean() {
 	return del(dist);
-};
+}
 /* watch */
-export const watch = () => {
+function watchFiles() {
 	gulp.watch(src + "/sass/**/*", { usePolling: true }, styles);
 	gulp.watch(src + "/**/*.js", { usePolling: true }, scripts);
 	gulp.watch(
@@ -149,10 +149,21 @@ export const watch = () => {
 		{ usePolling: true },
 		gulp.series(copy)
 	);
-};
+}
+const build = gulp.series(clean, gulp.parallel(styles, scripts, images, copy));
+const watch = gulp.parallel(build, watchFiles, browsersync);
 
-export const build = () => {
-	gulp.series(clean, gulp.parallel(styles, scripts, images, copy));
-};
+/* Exports Tasks */
+exports.styles = styles;
+exports.scripts = scripts;
+exports.images = images;
+exports.copy = copy;
+exports.clean = clean;
+exports.build = build;
+exports.watch = watch;
+exports.default = watch;
 
-export default gulp.series(build, gulp.parallel(watch, browsersync));
+// export default gulp.series(
+// 	gulp.series(clean, gulp.parallel(styles, scripts, images, copy)),
+// 	gulp.parallel(watch, browsersync)
+// );
