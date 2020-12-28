@@ -1,6 +1,5 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
-const scss = require("gulp-sass");
 const browserSync = require("browser-sync");
 const rename = require("gulp-rename");
 const concat = require("gulp-concat");
@@ -39,17 +38,17 @@ let paths = {
 };
 
 /* browsersync */
-function browsersync() {
+const browsersync = () => {
 	browserSync.init({
 		server: { baseDir: dist + "/" },
 		// proxy: localhost, // for PHP
 		notify: false,
 		ui: false,
 	});
-}
+};
 
 /* copy */
-function copy() {
+const copy = () => {
 	return gulp
 		.src([paths.fonts.src, src + "/*.html"], {
 			base: src,
@@ -60,10 +59,10 @@ function copy() {
 				once: true,
 			})
 		);
-}
+};
 
 /* styles */
-function styles() {
+const styles = () => {
 	return (
 		gulp
 			.src(paths.styles.src)
@@ -79,10 +78,10 @@ function styles() {
 			.pipe(gulp.dest(paths.styles.dest))
 			.pipe(browserSync.stream())
 	);
-}
+};
 
 /* scripts */
-function scripts() {
+const scripts = () => {
 	return gulp
 		.src(paths.scripts.src)
 		.pipe(
@@ -116,10 +115,10 @@ function scripts() {
 		.pipe(rename(paths.jsOutputName))
 		.pipe(gulp.dest(paths.scripts.dest))
 		.pipe(browserSync.stream());
-}
+};
 
 /* images */
-function images() {
+const images = () => {
 	return gulp
 		.src(paths.images.src)
 		.pipe(
@@ -134,14 +133,14 @@ function images() {
 		)
 		.pipe(gulp.dest(paths.images.dist))
 		.pipe(browserSync.reload({ stream: true }));
-}
+};
 
-/* del folder dist */
-function clean() {
+/* clean dist folder */
+const clean = () => {
 	return del(dist);
-}
+};
 /* watch */
-function watchFiles() {
+const watchFiles = () => {
 	gulp.watch(src + "/sass/**/*", { usePolling: true }, styles);
 	gulp.watch(src + "/**/*.js", { usePolling: true }, scripts);
 	gulp.watch(
@@ -149,9 +148,10 @@ function watchFiles() {
 		{ usePolling: true },
 		gulp.series(copy)
 	);
-}
+};
+
 const build = gulp.series(clean, gulp.parallel(styles, scripts, images, copy));
-const watch = gulp.parallel(build, watchFiles, browsersync);
+const watch = gulp.series(build, gulp.parallel(watchFiles, browsersync));
 
 /* Exports Tasks */
 exports.styles = styles;
@@ -162,8 +162,3 @@ exports.clean = clean;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
-
-// export default gulp.series(
-// 	gulp.series(clean, gulp.parallel(styles, scripts, images, copy)),
-// 	gulp.parallel(watch, browsersync)
-// );
