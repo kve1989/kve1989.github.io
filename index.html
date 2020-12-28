@@ -6,14 +6,10 @@
 	<title>Страница HTML-верстальщика</title>
 	<meta name="description" content="Я, Кавецкий Вадим, HTML-верстальщик, верстаю сайты из PSD, XD, FIGMA.">
 	<meta name="keywords" content="Верстка, недорого, валидно, качественно.">
-	<!-- Задание тега Viewport для адаптивного отображения страницы -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Сообщает Internet Explorer использовать самый новый движок для рендера -->
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<!-- Favicon -->
-	<link rel="shortcut icon" href="./images/favicon.gif" type="image/gif">
-	<!-- CSS Custom -->
-	<link rel="stylesheet" href="./assets/css/main.css">
+	<link rel="shortcut icon" href="./assets/images/favicon.gif" type="image/gif">
+	<link rel="stylesheet" href="./assets/css/main.min.css">
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript" >
 		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -36,41 +32,38 @@
 			<div class="container">
 				<div class="header__wrapper">
 					<a href="/" rel="noopener noreferrer" class="header__logo">VKavetskiy</a>
-					<!-- <div class="header__line line"></div> -->
 					<div class="header__social social">
 						<a href="https://vk.com/kve1989" rel="noopener noreferrer"  class="header__social-item header__social-item--vk social__item ">
-							<i class="fab fa-vk"></i>
 							<svg>
-								<use href="./images/sprite.svg#vk">
+								<use href="./assets/images/sprite.svg#vk">
 							</svg>
 						</a>
 						<a href="https://instagram.com/kve1989" rel="noopener noreferrer" class="header__social-item header__social-item--instagram social__item">
 							<svg>
-								<use href="./images/sprite.svg#instagram">
+								<use href="./assets/images/sprite.svg#instagram">
 							</svg>
 						</a>
 						<a href="https://teleg.run/kve1989" rel="noopener noreferrer" class="header__social-item header__social-item--telegram social__item">
 							<svg>
-								<use href="./images/sprite.svg#telegram">
+								<use href="./assets/images/sprite.svg#telegram">
 							</svg>
 						</a>
 						<a href="viber://chat?number=+79821354530" rel="noopener noreferrer" class="header__social-item header__social-item--viber social__item">
 							<svg>
-								<use href="./images/sprite.svg#viber">
+								<use href="./assets/images/sprite.svg#viber">
 							</svg>
 						</a>
 						<a href="https://wa.me/79821354530?text=Здравствуйте!" rel="noopener noreferrer" class="header__social-item header__social-item--whatsup social__item">
 							<svg>
-								<use href="./images/sprite.svg#whatsup">
+								<use href="./assets/images/sprite.svg#whatsup">
 							</svg>
 						</a>
 					</div>
-					<!-- <div class="header__line line"></div> -->
 					<div class="header__switch switch">
 						<label class="switch__label" >
 							<input type="checkbox" class="switch__input">
 							<span class="switch__checkbox"></span>
-							Темный режим
+							🌗
 						</label>
 					</div>
 				</div>
@@ -78,37 +71,32 @@
 				<!-- /.header__wrapper -->
 			</div>
 			<!-- /.container -->
+			<div class="header__line"></div>
 		</header>
 		<!-- /.header -->
 
 		<main class="main">
 			<div class="container">
 				<section class="about">
-					<h2 class="section__title title">Обо мне</h2>
+					<h2 class="section__title title">🧒Обо мне</h2>
 					<article class="about__block">
 						<div class="about__img">
-							<img src="./images/hero/foto.jpg" alt="Я">
+							<img src="./assets/images/hero/foto.jpg" alt="Я">
 						</div>
 						<div class="about__txt">
 							<h1>Меня зовут Вадим и я HTML-верстальщик</h1>
-							<p>В области Web технологий работаю уже 2 года паралелльно занимаюсь системным администрированием
+							<!-- <p>В области Web технологий работаю уже 2 года паралелльно занимаюсь системным администрированием
 								серверов под управлением Microsoft Windows и Linux.</p>
 							<p>Верстаю по методологии БЭМ, из различных форматов (Photoshop, XD, Sketch, Figma),
-								используя современные инструменты.</p>
+								используя современные инструменты.</p> -->
+							<p>Верстаю сайты по готовым макетам из любых форматов, используя современные технологии и инструменты.</p>
+							<p>Также могу поправить готовую верстку на уже работающем сайте без ущерба вашему бизнесу.</p>
 						</div>
-						<!-- <div class="about__mouse">
-							<a href="#portfolio">
-								<div class="mouse">
-									<div class="mouse__body"></div>
-								</div>
-							</a>
-						</div> -->
-						<!-- /.about__mouse -->
 					</article>
 				</section>
 				<!-- /.about -->
 				<section class="portfolio" id="portfolio">
-					<h2 class="portfolio__title section__title title">Портфолио</h2>
+					<h2 class="portfolio__title section__title title">💼Портфолио</h2>
 					<div class="portfolio__block">
 						<h3 class="portfolio__block--title">2018</h3>
 						<div class="portfolio__block--body">
@@ -116,9 +104,10 @@
 								<li class="portfolio__item">
 									<a class="portfolio__link" target="a_blank" rel="noopener noreferrer" href="https://kve1989.github.io/projects/lprobot/">
 										<figure>
-											<img src="./images/portfolio/portfolio-4.jpg" alt="Практический интенсив">
+											<img src="./assets/images/portfolio/portfolio-4.jpg" alt="Практический интенсив">
 											<figcaption>Практический интенсив</figcaption>
 										</figure>
+										<!-- <div class="portfolio__item-desc">Это был первый заказ взятый на фриланс-бирже <a href="https://freelance.ru/">freelance.ru</a> по завершении был получен положительный отзыв.</div> -->
 									</a>
 								</li>
 							</ul>
@@ -131,7 +120,7 @@
 								<li class="portfolio__item">
 									<a class="portfolio__link" target="a_blank" rel="noopener noreferrer" href="https://estetico.ru/">
 										<figure>
-											<img src="./images/portfolio/portfolio-2.jpg" alt="Estetico">
+											<img src="./assets/images/portfolio/portfolio-2.jpg" alt="Estetico">
 											<figcaption>Estetico</figcaption>
 										</figure>
 									</a>
@@ -139,7 +128,7 @@
 								<li class="portfolio__item">
 									<a class="portfolio__link" target="a_blank" rel="noopener noreferrer" href="https://kve1989.github.io/projects/bigcreative/">
 										<figure>
-											<img src="./images/portfolio/portfolio-1.jpg" alt="BigCreative">
+											<img src="./assets/images/portfolio/portfolio-1.jpg" alt="BigCreative">
 											<figcaption>BigCreative</figcaption>
 										</figure>
 									</a>
@@ -154,7 +143,7 @@
 								<li class="portfolio__item">
 									<a class="portfolio__link" target="a_blank" rel="noopener noreferrer" href="https://kve1989.github.io/projects/medlider/">
 										<figure>
-											<img src="./images/portfolio/portfolio-3.jpg" alt="Medlider">
+											<img src="./assets/images/portfolio/portfolio-3.jpg" alt="Medlider">
 											<figcaption>Medlider</figcaption>
 										</figure>
 									</a>
@@ -162,7 +151,7 @@
 								<li class="portfolio__item">
 									<a class="portfolio__link" target="a_blank" rel="noopener noreferrer" href="https://worldprint33.ru">
 										<figure>
-											<img src="./images/portfolio/portfolio-5.jpg" alt="Мир печати">
+											<img src="./assets/images/portfolio/portfolio-5.jpg" alt="Мир печати">
 											<figcaption>Мир печати</figcaption>
 										</figure>
 									</a>
@@ -174,9 +163,9 @@
 				<!-- /.portfolio -->
 
 				<section class="techinfo">
-					<h2 class="techinfo__title title">Техническая информация</h2>
-					<p>Разрешение экрана: <span class="screensize-w"></span> на <span class="screensize-h"></span></p>
-					<p class="browser">Используемый браузер: <span></span></p>
+					<h2 class="techinfo__title title">⚙Техническая информация</h2>
+					<p>Разрешение: <span class="screensize-w"></span> на <span class="screensize-h"></span></p>
+					<p class="browser">Браузер: <span></span></p>
 				</section>
 				<!-- ./techinfo -->
 
@@ -193,8 +182,7 @@
 	</div>
 	<!-- /.wrapper -->
 
-	<!-- JS Custom -->
-	<script src="./assets/js/main.js"></script>
+	<script src="./assets/js/main.min.js"></script>
 </body>
 
 </html>
