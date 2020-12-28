@@ -151,7 +151,8 @@ export const watch = () => {
 	);
 };
 
-export default gulp.series(
-	gulp.series(clean, gulp.parallel(styles, scripts, images, copy)),
-	gulp.parallel(watch, browsersync)
-);
+export const build = () => {
+	gulp.series(clean, gulp.parallel(styles, scripts, images, copy));
+};
+
+export default gulp.series(build, gulp.parallel(watch, browsersync));
