@@ -15,3 +15,6 @@
 @mixin media-custom($width)
 	@media (max-width: $width+px)
 		@content
+
+@function rem($size)
+	@return $size / $main-font-size * 1rem;
