@@ -14,16 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
 	let browser = document.querySelector(".browser span");
 	const switchTheme = document.querySelector(".switch__input");
 
-	if (sessionStorage.getItem("DarkThemeActive")) {
+	if (sessionStorage.getItem("DarkThemeActive") != 0) {
 		switchTheme.checked = true;
 		document.querySelector(".page").classList.add("page--night");
 	}
 
 	switchTheme.addEventListener("change", (e) => {
 		if (e.target.checked) {
-			sessionStorage.setItem("DarkThemeActive", true);
+			sessionStorage.setItem("DarkThemeActive", 1);
 		} else {
-			sessionStorage.setItem("DarkThemeActive", false);
+			sessionStorage.setItem("DarkThemeActive", 0);
 		}
 	});
 
