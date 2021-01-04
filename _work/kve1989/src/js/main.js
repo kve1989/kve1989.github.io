@@ -14,7 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	let browser = document.querySelector(".browser span");
 	const switchTheme = document.querySelector(".switch__input");
 
-	if (sessionStorage.getItem("DarkThemeActive") != 0) {
+	if (
+		sessionStorage.getItem("DarkThemeActive") &&
+		sessionStorage.getItem("DarkThemeActive") != 0
+	) {
 		switchTheme.checked = true;
 		document.querySelector(".page").classList.add("page--night");
 	}
