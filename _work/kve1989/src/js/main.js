@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		scrSizeH.textContent = window.outerHeight;
 	});
 
-	document.querySelector(".switch__input").addEventListener("change", () => {
+	switchTheme.addEventListener("change", () => {
 		document.querySelector(".page").classList.toggle("page--night");
 	});
 });
