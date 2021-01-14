@@ -4,11 +4,11 @@
     "not dead"
   ],
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/preset-env": "^7.12.7",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "babel-loader": "^8.2.2",
     "browser-sync": "^2.26.13",
-    "core-js": "^3.8.1",
+    "core-js": "^3.8.2",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
