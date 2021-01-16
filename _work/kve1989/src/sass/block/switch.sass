@@ -30,10 +30,22 @@
 		transition: inherit
 
 	&__input:checked + &__checkbox
-		background: #fff
+		background: rgba(#fff, .2)
 		box-shadow: inset 0 0 5px #000
 
 	&__input:checked + &__checkbox::before
 		left: calc(100% - 27px)
 		background: $switch-color-on
 		box-shadow: 0 0 15px $switch-color-on
+
+	&__img
+		&::before,&::after
+			position: absolute
+			z-index: -1
+			top: 1px
+		&::before
+			content: '🌕'
+			left: 2px
+		&::after
+			content: '🌑'
+			right: 2px
