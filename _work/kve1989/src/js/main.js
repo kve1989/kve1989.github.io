@@ -1,6 +1,7 @@
 import isMobile from "./modules/isMobile";
 import typeText from "./modules/typeText";
 import scrolling from "./modules/scrolling";
+import modal from "./modules/modals";
 import ibg from "./modules/ibg";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -8,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	typeText(["VKavetskiy"], ".header__logo");
 	scrolling();
 	ibg();
+	modal();
 
 	let scrSizeW = document.querySelector(".screensize-w");
 	let scrSizeH = document.querySelector(".screensize-h");

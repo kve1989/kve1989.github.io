@@ -115,10 +115,10 @@
 						</div>
 						<div class="header__switch switch">
 							<label class="switch__label">
-								🌕
 								<input type="checkbox" class="switch__input" />
-								<span class="switch__checkbox"></span>
-								🌑
+								<span class="switch__checkbox"
+									><span class="switch__img"></span
+								></span>
 							</label>
 						</div>
 					</div>
@@ -160,23 +160,17 @@
 							<h3 class="portfolio__block--title">2018</h3>
 							<div class="portfolio__block--body">
 								<ul class="portfolio__block--list">
-									<li class="portfolio__item">
-										<a
-											class="portfolio__link"
-											target="a_blank"
-											rel="noopener noreferrer"
-											href="https://kve1989.github.io/projects/lprobot/"
-										>
-											<figure>
-												<img
-													src="./assets/images/portfolio/portfolio-4.jpg"
-													alt="Практический интенсив"
-												/>
-												<figcaption>
-													Практический интенсив
-												</figcaption>
-											</figure>
-										</a>
+									<li
+										class="portfolio__item"
+										data-triggerModal="intensive"
+									>
+										<figure>
+											<img
+												src="./assets/images/portfolio/portfolio-4.jpg"
+												alt="Практический интенсив"
+											/>
+											<figcaption>Практический интенсив</figcaption>
+										</figure>
 									</li>
 								</ul>
 							</div>
@@ -185,37 +179,29 @@
 							<h3 class="portfolio__block--title">2019</h3>
 							<div class="portfolio__block--body">
 								<ul class="portfolio__block--list">
-									<li class="portfolio__item">
-										<a
-											class="portfolio__link"
-											target="a_blank"
-											rel="noopener noreferrer"
-											href="https://estetico.ru/"
-										>
-											<figure>
-												<img
-													src="./assets/images/portfolio/portfolio-2.jpg"
-													alt="Estetico"
-												/>
-												<figcaption>Estetico</figcaption>
-											</figure>
-										</a>
+									<li
+										class="portfolio__item"
+										data-triggerModal="estetico"
+									>
+										<figure>
+											<img
+												src="./assets/images/portfolio/portfolio-2.jpg"
+												alt="Estetico"
+											/>
+											<figcaption>Estetico</figcaption>
+										</figure>
 									</li>
-									<li class="portfolio__item">
-										<a
-											class="portfolio__link"
-											target="a_blank"
-											rel="noopener noreferrer"
-											href="https://kve1989.github.io/projects/bigcreative/"
-										>
-											<figure>
-												<img
-													src="./assets/images/portfolio/portfolio-1.jpg"
-													alt="BigCreative"
-												/>
-												<figcaption>BigCreative</figcaption>
-											</figure>
-										</a>
+									<li
+										class="portfolio__item"
+										data-triggerModal="bigcreative"
+									>
+										<figure>
+											<img
+												src="./assets/images/portfolio/portfolio-1.jpg"
+												alt="BigCreative"
+											/>
+											<figcaption>BigCreative</figcaption>
+										</figure>
 									</li>
 								</ul>
 							</div>
@@ -225,36 +211,22 @@
 							<div class="portfolio__block--body">
 								<ul class="portfolio__block--list">
 									<li class="portfolio__item">
-										<a
-											class="portfolio__link"
-											target="a_blank"
-											rel="noopener noreferrer"
-											href="https://kve1989.github.io/projects/medlider/"
-										>
-											<figure>
-												<img
-													src="./assets/images/portfolio/portfolio-3.jpg"
-													alt="Medlider"
-												/>
-												<figcaption>Medlider</figcaption>
-											</figure>
-										</a>
+										<figure>
+											<img
+												src="./assets/images/portfolio/portfolio-3.jpg"
+												alt="Medlider"
+											/>
+											<figcaption>Medlider</figcaption>
+										</figure>
 									</li>
 									<li class="portfolio__item">
-										<a
-											class="portfolio__link"
-											target="a_blank"
-											rel="noopener noreferrer"
-											href="https://worldprint33.ru"
-										>
-											<figure>
-												<img
-													src="./assets/images/portfolio/portfolio-5.jpg"
-													alt="Мир печати"
-												/>
-												<figcaption>Мир печати</figcaption>
-											</figure>
-										</a>
+										<figure>
+											<img
+												src="./assets/images/portfolio/portfolio-5.jpg"
+												alt="Мир печати"
+											/>
+											<figcaption>Мир печати</figcaption>
+										</figure>
 									</li>
 								</ul>
 							</div>
@@ -283,6 +255,130 @@
 			<!-- /.footer -->
 		</div>
 		<!-- /.wrapper -->
+
+		<!-- Modal Intensive -->
+		<div class="modal" data-modal="intensive">
+			<div class="modal__content">
+				<div class="modal__image">
+					<img
+						src="./assets/images/portfolio/intensive__full.jpg"
+						alt="Estetico"
+					/>
+				</div>
+				<div class="modal__wrapper">
+					<h3 class="modal__title">Практический интенсив</h3>
+					<div class="modal__text">
+						<div class="modal__text">
+							<strong>Срок выполнения:</strong> 4-5 дней
+						</div>
+						<div class="modal__text">
+							<strong>Ссылка:</strong>
+							<a
+								target="_blank"
+								href="https://kve1989.github.io/projects/lprobot/"
+								>https://kve1989.github.io/projects/lprobot/</a
+							>
+						</div>
+						<div class="modal__text">
+							<strong>Описание:</strong> проект был взят на
+							фриланс-площадке
+							<a href="https://freelance.ru/">freelance.ru/</a>. Это был
+							первый опыт работы на площадках такого плана, т.к. не было
+							никакого опыта и рейтинга, заказ был выполнен за отзыв.
+							Дальнейшая судьба этого проекта неизвестна, по завершению
+							работы, верстка была запакова в архив и отдана заказчику,
+							после чего был оставлен отзыв.
+						</div>
+						<a href="./assets/images/portfolio/intensive__review.jpg">
+							<img
+								class="modal__review"
+								src="./assets/images/portfolio/intensive__review.jpg"
+								alt="Отзыв за Intensive"
+						/></a>
+					</div>
+				</div>
+				<button class="modal__close">❌</button>
+			</div>
+		</div>
+		<!-- Modal Intensive -->
+		<!-- Modal bigcreative -->
+		<div class="modal" data-modal="bigcreative">
+			<div class="modal__content">
+				<div class="modal__image">
+					<img
+						src="./assets/images/portfolio/bigcreative__full.jpg"
+						alt="BigCreative"
+					/>
+				</div>
+				<div class="modal__wrapper">
+					<h3 class="modal__title">BigCreative</h3>
+					<div class="modal__text">
+						<div class="modal__text">
+							<strong>Срок выполнения:</strong> 3-4 дня
+						</div>
+						<div class="modal__text">
+							<strong>Ссылка:</strong>
+							<a
+								target="_blank"
+								href="https://kve1989.github.io/projects/bigcreative/"
+								>https://kve1989.github.io/projects/bigcreative/</a
+							>
+						</div>
+						<div class="modal__text">
+							<strong>Описание:</strong> необходима была верстка сайта по
+							готовому макету выполненому в Photoshop. Также была
+							реализована мобильная верстка совместно с дизайнером. По
+							завершению работы, заказчик отказался от работы по
+							неизвестной причины.
+						</div>
+					</div>
+				</div>
+				<button class="modal__close">❌</button>
+			</div>
+		</div>
+		<!-- Modal bigcreative -->
+		<!-- Modal Estetico -->
+		<div class="modal" data-modal="estetico">
+			<div class="modal__content">
+				<div class="modal__image">
+					<img
+						src="./assets/images/portfolio/estetico__full.jpg"
+						alt="Estetico"
+					/>
+				</div>
+				<div class="modal__wrapper">
+					<h3 class="modal__title">Сеть салонов красоты Estetico</h3>
+					<div class="modal__text">
+						<div class="modal__text">
+							<strong>Срок выполнения:</strong> 3 дня
+						</div>
+						<div class="modal__text">
+							<strong>Исправление ошибок:</strong> 1 день
+						</div>
+						<div class="modal__text">
+							<strong>Ссылка:</strong>
+							<a target="_blank" href="https://estetico.ru/"
+								>https://estetico.ru/</a
+							>
+						</div>
+						<div class="modal__text">
+							<strong>Описание:</strong> нужно было сверстать сайт в
+							кратчайшие сроки, макет был сделан в Adobe Photoshop. Также
+							нужно было сделать мобильную версию сайта, осложнялось тем,
+							что макета для мобильной версии не было. На сайте было
+							реализовано несколько слайдеров, модальных окон,
+							всплывающее окно, а также реализовать отправку данных из
+							форм(заявок) на электронный адрес без перезагрузки
+							страницы. После завершения работы сайт сопровождался мной
+							продолжительное время.
+						</div>
+						<div class="modal__review"></div>
+					</div>
+				</div>
+				<button class="modal__close">❌</button>
+			</div>
+		</div>
+		<!-- Modal Estetico -->
 
 		<script src="./assets/js/main.min.js"></script>
 	</body>
