@@ -11,7 +11,7 @@
 		top: 50%
 		left: 50%
 		transform: translate(-50%,-50%)
-		background: #fff
+		background: var(--bg)
 		display: flex
 		justify-content: space-between
 		height: 90%
@@ -43,7 +43,21 @@
 		&:focus
 			border: 2px solid red
 		&:hover
-			background: #000
+			background: var(--black)
 			transform: rotate(720deg)
-		&:active
-			transform: scale(.8)
+			animation: .7s myPulse infinite linear
+
+
+@keyframes myPulse
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(1.2)
+	100%
+		transform: scale(1)
+
+@keyframes mySpinner
+	0%
+		transform: rotate(0)
+	100%
+		transform: rotate(720deg)
