@@ -125,6 +125,16 @@ const modals = () => {
 		"[data-modal='estetico']",
 		".modal__close"
 	);
+	bindModal(
+		"[data-triggerModal='medlider']",
+		"[data-modal='medlider']",
+		".modal__close"
+	);
+	bindModal(
+		"[data-triggerModal='worldprint33']",
+		"[data-modal='worldprint33']",
+		".modal__close"
+	);
 	// bindModal(".fixed-gift", ".popup-gift", ".popup-gift .popup-close", true);
 	// openByScroll('.fixed-gift');
 	// showModalByTime('.popup-consultation', 5000);
