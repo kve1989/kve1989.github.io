@@ -7,7 +7,7 @@
 	left: 0
 	background: rgba(#000, .8)
 	&__content
-		position: absolute
+		position: relative
 		top: 50%
 		left: 50%
 		transform: translate(-50%,-50%)
@@ -16,14 +16,23 @@
 		justify-content: space-between
 		height: 90%
 		width: 90%
+		+media-phone
+			flex-direction: column
 	&__wrapper
 		padding: 20px
 		flex: 0 0 30%
+		overflow: hidden
+		+media-phone
+			flex: 0 0 100%
+			order: -1
 	&__image
 		overflow-y: auto
 		flex: 0 0 70%
+		+media-phone
+			flex: 0 0 100%
 	&__text
 		padding: 10px 0px 0px 0px;
+		word-wrap: break-word
 		> *
 			padding-bottom: 10px
 	&__close
