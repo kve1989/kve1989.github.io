@@ -11,7 +11,7 @@
 		top: 50%
 		left: 50%
 		transform: translate(-50%,-50%)
-		background: var(--bg)
+		background: var(--bg-color)
 		display: flex
 		justify-content: space-between
 		height: 90%
@@ -31,7 +31,7 @@
 		+media-phone
 			flex: 0 0 100%
 	&__text
-		padding: 10px 0px 0px 0px;
+		padding: 10px 0px 0px 0px
 		word-wrap: break-word
 		> *
 			padding-bottom: 10px
@@ -52,10 +52,8 @@
 		&:focus
 			border: 2px solid red
 		&:hover
-			background: var(--black)
 			transform: rotate(720deg)
 			animation: .7s myPulse infinite linear
-
 
 @keyframes myPulse
 	0%
