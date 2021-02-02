@@ -10,6 +10,7 @@ const del = require("del");
 
 let localhost = "localhost:3000",
 	fileswatch = "html,htm,php,txt,yaml,twig,json,md",
+	imgFiles = "jpg,jpeg,png,svg,gif,webp,avif",
 	src = "src",
 	dist = "dist";
 
@@ -29,7 +30,7 @@ let paths = {
 	},
 
 	images: {
-		src: src + "/images/**/*",
+		src: src + `/images/**/*.{${imgFiles}}`,
 		dist: dist + "/assets/images/",
 	},
 
@@ -124,7 +125,7 @@ const images = () => {
 		.pipe(
 			imagemin([
 				// imagemin.gifsicle({ interlaced: true }),
-				imagemin.mozjpeg({ quality: 95, progressive: true }),
+				imagemin.mozjpeg({ quality: 75, progressive: true }),
 				imagemin.optipng({ optimizationLevel: 5 }),
 				imagemin.svgo({
 					plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
@@ -144,10 +145,11 @@ const watchFiles = () => {
 	gulp.watch(src + "/sass/**/*", { usePolling: true }, styles);
 	gulp.watch(src + "/**/*.js", { usePolling: true }, scripts);
 	gulp.watch(
-		[paths.fonts.src, paths.images.src, src + `**/*.{${fileswatch}}`],
+		[paths.fonts.src, src + `**/*.{${fileswatch}}`],
 		{ usePolling: true },
-		gulp.series(copy)
+		copy
 	);
+	gulp.watch(paths.images.src, { usePolling: true }, images);
 };
 
 const build = gulp.series(clean, gulp.parallel(styles, scripts, images, copy));
