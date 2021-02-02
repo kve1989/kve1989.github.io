@@ -134,7 +134,13 @@
 						<h2 class="section__title title">🧒Обо мне</h2>
 						<article class="about__block">
 							<div class="about__img">
-								<img src="./assets/images/hero/foto.jpg" alt="Я" />
+								<picture>
+									<source
+										srcset="./assets/images/hero/foto.webp"
+										type="image/webp"
+									/>
+									<img src="./assets/images/hero/foto.jpg" alt="Я" />
+								</picture>
 							</div>
 							<div class="about__txt">
 								<h1>Меня зовут Вадим и я HTML-верстальщик</h1>
@@ -164,10 +170,18 @@
 										data-triggerModal="intensive"
 									>
 										<figure>
-											<img
-												src="./assets/images/portfolio/portfolio-4.jpg"
-												alt="Практический интенсив"
-											/>
+											<picture>
+												<source
+													srcset="
+														./assets/images/portfolio/portfolio-4.webp
+													"
+													type="image/webp"
+												/>
+												<img
+													src="./assets/images/portfolio/portfolio-4.jpg"
+													alt="Практический интенсив"
+												/>
+											</picture>
 											<figcaption>Практический интенсив</figcaption>
 										</figure>
 									</li>
@@ -183,10 +197,18 @@
 										data-triggerModal="estetico"
 									>
 										<figure>
-											<img
-												src="./assets/images/portfolio/portfolio-2.jpg"
-												alt="Estetico"
-											/>
+											<picture>
+												<source
+													srcset="
+														./assets/images/portfolio/portfolio-2.webp
+													"
+													type="image/webp"
+												/>
+												<img
+													src="./assets/images/portfolio/portfolio-2.jpg"
+													alt="Estetico"
+												/>
+											</picture>
 											<figcaption>Estetico</figcaption>
 										</figure>
 									</li>
@@ -195,10 +217,18 @@
 										data-triggerModal="bigcreative"
 									>
 										<figure>
-											<img
-												src="./assets/images/portfolio/portfolio-1.jpg"
-												alt="BigCreative"
-											/>
+											<picture>
+												<source
+													srcset="
+														./assets/images/portfolio/portfolio-1.webp
+													"
+													type="image/webp"
+												/>
+												<img
+													src="./assets/images/portfolio/portfolio-1.jpg"
+													alt="BigCreative"
+												/>
+											</picture>
 											<figcaption>BigCreative</figcaption>
 										</figure>
 									</li>
@@ -214,10 +244,18 @@
 										data-triggerModal="medlider"
 									>
 										<figure>
-											<img
-												src="./assets/images/portfolio/portfolio-3.jpg"
-												alt="Medlider"
-											/>
+											<picture>
+												<source
+													srcset="
+														./assets/images/portfolio/portfolio-3.webp
+													"
+													type="image/webp"
+												/>
+												<img
+													src="./assets/images/portfolio/portfolio-3.jpg"
+													alt="Medlider"
+												/>
+											</picture>
 											<figcaption>Medlider</figcaption>
 										</figure>
 									</li>
@@ -226,10 +264,18 @@
 										data-triggerModal="worldprint33"
 									>
 										<figure>
-											<img
-												src="./assets/images/portfolio/portfolio-5.jpg"
-												alt="Мир печати"
-											/>
+											<picture>
+												<source
+													srcset="
+														./assets/images/portfolio/portfolio-5.webp
+													"
+													type="image/webp"
+												/>
+												<img
+													src="./assets/images/portfolio/portfolio-5.jpg"
+													alt="Мир печати"
+												/>
+											</picture>
 											<figcaption>Мир печати</figcaption>
 										</figure>
 									</li>
@@ -252,12 +298,6 @@
 				<!-- /.container -->
 			</main>
 			<!-- /.main -->
-
-			<footer class="footer">
-				<div class="container"></div>
-				<!-- /.container -->
-			</footer>
-			<!-- /.footer -->
 		</div>
 		<!-- /.wrapper -->
 
@@ -265,10 +305,16 @@
 		<div class="modal" data-modal="intensive">
 			<div class="modal__content">
 				<div class="modal__image">
-					<img
-						src="./assets/images/portfolio/intensive__full.jpg"
-						alt="Estetico"
-					/>
+					<picture>
+						<source
+							srcset="./assets/images/portfolio/intensive__full.webp"
+							type="image/webp"
+						/>
+						<img
+							src="./assets/images/portfolio/intensive__full.jpg"
+							alt="Estetico"
+						/>
+					</picture>
 				</div>
 				<div class="modal__wrapper">
 					<h3 class="modal__title">Практический интенсив</h3>
@@ -305,16 +351,21 @@
 				<button class="modal__close">❌</button>
 			</div>
 		</div>
-		<!-- Modal Intensive -->
 
 		<!-- Modal bigcreative -->
 		<div class="modal" data-modal="bigcreative">
 			<div class="modal__content">
 				<div class="modal__image">
-					<img
-						src="./assets/images/portfolio/bigcreative__full.jpg"
-						alt="BigCreative"
-					/>
+					<picture>
+						<source
+							srcset="./assets/images/portfolio/bigcreative__full.webp"
+							type="image/webp"
+						/>
+						<img
+							src="./assets/images/portfolio/bigcreative__full.jpg"
+							alt="BigCreative"
+						/>
+					</picture>
 				</div>
 				<div class="modal__wrapper">
 					<h3 class="modal__title">BigCreative</h3>
@@ -342,16 +393,21 @@
 				<button class="modal__close">❌</button>
 			</div>
 		</div>
-		<!-- Modal bigcreative -->
 
 		<!-- Modal Estetico -->
 		<div class="modal" data-modal="estetico">
 			<div class="modal__content">
 				<div class="modal__image">
-					<img
-						src="./assets/images/portfolio/estetico__full.jpg"
-						alt="Estetico"
-					/>
+					<picture>
+						<source
+							srcset="./assets/images/portfolio/estetico__full.webp"
+							type="image/webp"
+						/>
+						<img
+							src="./assets/images/portfolio/estetico__full.jpg"
+							alt="Estetico"
+						/>
+					</picture>
 				</div>
 				<div class="modal__wrapper">
 					<h3 class="modal__title">Сеть салонов красоты Estetico</h3>
@@ -387,16 +443,21 @@
 				<button class="modal__close">❌</button>
 			</div>
 		</div>
-		<!-- Modal Estetico -->
 
 		<!-- Modal Medlider -->
 		<div class="modal" data-modal="medlider">
 			<div class="modal__content">
 				<div class="modal__image">
-					<img
-						src="./assets/images/portfolio/medlider__full.jpg"
-						alt="medlider"
-					/>
+					<picture>
+						<source
+							srcset="./assets/images/portfolio/medlider__full.webp"
+							type="image/webp"
+						/>
+						<img
+							src="./assets/images/portfolio/medlider__full.jpg"
+							alt="medlider"
+						/>
+					</picture>
 				</div>
 				<div class="modal__wrapper">
 					<h3 class="modal__title">Медицинский центр Medlider</h3>
@@ -429,16 +490,21 @@
 				<button class="modal__close">❌</button>
 			</div>
 		</div>
-		<!-- Modal Medlider -->
 
 		<!-- Modal WorldPrint33 -->
 		<div class="modal" data-modal="worldprint33">
 			<div class="modal__content">
 				<div class="modal__image">
-					<img
-						src="./assets/images/portfolio/worldprint33__full.jpg"
-						alt="WorldPrint33"
-					/>
+					<picture>
+						<source
+							srcset="./assets/images/portfolio/worldprint33__full.webp"
+							type="image/webp"
+						/>
+						<img
+							src="./assets/images/portfolio/worldprint33__full.jpg"
+							alt="WorldPrint33"
+						/>
+					</picture>
 				</div>
 				<div class="modal__wrapper">
 					<h3 class="modal__title">Полиграфическое агенство Мир Печати</h3>
@@ -467,7 +533,6 @@
 				<button class="modal__close">❌</button>
 			</div>
 		</div>
-		<!-- Modal WorldPrint33 -->
 
 		<script src="./assets/js/main.min.js"></script>
 	</body>
