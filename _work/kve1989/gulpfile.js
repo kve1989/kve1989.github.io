@@ -8,13 +8,13 @@ const autoprefixer = require("gulp-autoprefixer");
 const webpack = require("webpack-stream");
 const del = require("del");
 
-let localhost = "localhost:3000",
+const localhost = "localhost:3000",
 	fileswatch = "html,htm,php,txt,yaml,twig,json,md",
 	imgFiles = "jpg,jpeg,png,svg,gif,webp,avif",
 	src = "src",
 	dist = "dist";
 
-let paths = {
+const paths = {
 	scripts: {
 		src: src + "/js/main.js",
 		dest: dist + "/assets/js",
@@ -140,6 +140,7 @@ const images = () => {
 const clean = () => {
 	return del(dist);
 };
+
 /* watch */
 const watchFiles = () => {
 	gulp.watch(src + "/sass/**/*", { usePolling: true }, styles);
