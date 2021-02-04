@@ -14,7 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	const scrSizeW = document.querySelector(".screensize-w"),
 		scrSizeH = document.querySelector(".screensize-h"),
 		browser = document.querySelector(".browser span"),
-		switchTheme = document.querySelector(".switch__input");
+		switchTheme = document.querySelector(".switch__input"),
+		customSwitch = document.querySelector(".customize__head"),
+		inputBg = document.getElementById("colorBg"),
+		inputFont = document.getElementById("colorFont");
 
 	if (
 		sessionStorage.getItem("DarkThemeActive") &&
@@ -43,5 +46,49 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	switchTheme.addEventListener("change", () => {
 		document.querySelector(".page").classList.toggle("page--night");
+		if (document.querySelector(".page").closest("page--night")) {
+			inputBg.value = getComputedStyle(
+				document.querySelector(".page--night")
+			)
+				.getPropertyValue("--bg-color")
+				.trim();
+
+			inputFont.value = getComputedStyle(
+				document.querySelector(".page--night")
+			)
+				.getPropertyValue("--font-color")
+				.trim();
+		}
+		inputBg.value = getComputedStyle(document.querySelector(".page"))
+			.getPropertyValue("--bg-color")
+			.trim();
+
+		inputFont.value = getComputedStyle(document.querySelector(".page"))
+			.getPropertyValue("--font-color")
+			.trim();
+	});
+
+	customSwitch.addEventListener("click", (e) => {
+		e.target.parentNode.classList.toggle("active");
+		e.target.classList.toggle("active");
+	});
+
+	inputBg.value = getComputedStyle(document.querySelector(".page"))
+		.getPropertyValue("--bg-color")
+		.trim();
+
+	inputFont.value = getComputedStyle(document.querySelector(".page"))
+		.getPropertyValue("--font-color")
+		.trim();
+
+	inputBg.addEventListener("input", (e) => {
+		document
+			.querySelector(".page")
+			.style.setProperty("--bg-color", e.target.value);
+	});
+	inputFont.addEventListener("input", (e) => {
+		document
+			.querySelector(".page")
+			.style.setProperty("--font-color", e.target.value);
 	});
 });
