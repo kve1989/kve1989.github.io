@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		switchTheme = document.querySelector(".switch__input"),
 		customSwitch = document.querySelector(".customize__head"),
 		inputBg = document.getElementById("colorBg"),
+		inputAccent = document.getElementById("colorAccent"),
 		inputFont = document.getElementById("colorFont");
 
 	if (
@@ -58,6 +59,12 @@ document.addEventListener("DOMContentLoaded", () => {
 			)
 				.getPropertyValue("--font-color")
 				.trim();
+
+			inputAccent.value = getComputedStyle(
+				document.querySelector(".page")
+			)
+				.getPropertyValue("--accent-color")
+				.trim();
 		}
 		inputBg.value = getComputedStyle(document.querySelector(".page"))
 			.getPropertyValue("--bg-color")
@@ -65,6 +72,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		inputFont.value = getComputedStyle(document.querySelector(".page"))
 			.getPropertyValue("--font-color")
+			.trim();
+
+		inputAccent.value = getComputedStyle(document.querySelector(".page"))
+			.getPropertyValue("--accent-color")
 			.trim();
 	});
 
@@ -81,14 +92,25 @@ document.addEventListener("DOMContentLoaded", () => {
 		.getPropertyValue("--font-color")
 		.trim();
 
+	inputAccent.value = getComputedStyle(document.querySelector(".page"))
+		.getPropertyValue("--accent-color")
+		.trim();
+
 	inputBg.addEventListener("input", (e) => {
 		document
 			.querySelector(".page")
 			.style.setProperty("--bg-color", e.target.value);
 	});
+
 	inputFont.addEventListener("input", (e) => {
 		document
 			.querySelector(".page")
 			.style.setProperty("--font-color", e.target.value);
+	});
+
+	inputAccent.addEventListener("input", (e) => {
+		document
+			.querySelector(".page")
+			.style.setProperty("--accent-color", e.target.value);
 	});
 });

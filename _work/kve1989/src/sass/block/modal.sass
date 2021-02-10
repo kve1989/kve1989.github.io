@@ -35,6 +35,14 @@
 		word-wrap: break-word
 		> *
 			padding-bottom: 10px
+		a
+			transition: all .2s;
+			&:hover
+				background-color: var(--accent-color)
+				&:visited
+					color: $main-font-color-b
+			&:visited
+				color: var(--font-color)
 	&__close
 		position: absolute
 		right: -1.2rem
