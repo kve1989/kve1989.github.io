@@ -1,0 +1,7 @@
+a.column .card {
+  transition: background-color 0.2s ease-in-out;
+}
+
+a.column:hover .card {
+  background-color: red;
+}
