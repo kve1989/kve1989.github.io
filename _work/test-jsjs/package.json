@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "parcel src/index.html --open"
+    "serve": "parcel src/index.html --open",
+    "build": "parcel build ./src/index.html --no-source-maps"
   },
   "keywords": [],
   "author": "",
