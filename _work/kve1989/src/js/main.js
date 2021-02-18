@@ -4,6 +4,7 @@ import scrolling from "./modules/scrolling";
 import modal from "./modules/modals";
 import ibg from "./modules/ibg";
 import switcher from "./modules/switcher";
+import customize from "./modules/customize";
 
 document.addEventListener("DOMContentLoaded", () => {
 	isMobile();
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	ibg();
 	modal();
 	switcher();
+	customize();
 
 	const scrSizeW = document.querySelector(".screensize-w"),
 		scrSizeH = document.querySelector(".screensize-h"),
