@@ -114,3 +114,30 @@ document.addEventListener("DOMContentLoaded", () => {
 			.style.setProperty("--accent-color", e.target.value);
 	});
 });
+
+const portfolio = [
+	{
+		title: "Title 1",
+		text: "Text 1",
+		year: 2018,
+	},
+	{
+		title: "Title 2",
+		text: "Text 2",
+		year: 2018,
+	},
+	{
+		title: "Title 3",
+		text: "Text 3",
+		year: 2019,
+	},
+];
+
+const App = {
+	data() {
+		return {
+			portfolio: portfolio,
+		};
+	},
+};
+Vue.createApp(App).mount("#app");
