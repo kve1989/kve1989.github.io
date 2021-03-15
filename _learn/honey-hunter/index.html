@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>HoneyHunters</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header bg-dark">
+        <div class="container">
+          <div class="row pt-3 pb-3">
+            <div class="col-md-3">
+              <div class="header__logo">
+                <a href="/" class="header__link"
+                  ><img src="./img/logo.png" alt="Логотип HoneyHunters"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="welcome bg-dark">
+          <div class="container">
+            <div class="welcome__body pb-5 pt-5">
+              <div class="welcome__img">
+                <div class="row">
+                  <div class="offset-md-4 col-md-3 mb-2">
+                    <img src="./img/mail.png" alt="Конверт" />
+                  </div>
+                </div>
+              </div>
+              <form class="welcome__form mt-5 form" action="/" method="POST">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="form__group mb-5">
+                      <label class="form__label" for=""
+                        >Имя <span>*</span>
+                        <input
+                          class="form__input form-input"
+                          type="text"
+                          id="name"
+                          name="name"
+                        />
+                      </label>
+                    </div>
+                    <div class="form__group mb-5">
+                      <label class="form__label" for=""
+                        >E-Mail <span>*</span>
+                        <input
+                          class="form__input form-input"
+                          type="email"
+                          id="email"
+                          name="email"
+                        />
+                      </label>
+                    </div>
+                  </div>
+                  <div class="offset-md-1"></div>
+                  <div class="col-md-6">
+                    <label class="form__label" for="msg"
+                      >Комментарий <span>*</span>
+                      <textarea
+                        class="form__input form__input-ta form-input"
+                        name="msg"
+                        id="msg"
+                      ></textarea>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form__group d-flex justify-content-end">
+                      <button class="btn" type="button">Записать</button>
+                    </div>
+                  </div>
+                  <div class="offset-md-10 col-md-2"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="cards">
+          <div class="container">
+            <div class="cards__body pt-5 pb-5">
+              <h2 class="section__title text-center">Выводим комментарии</h2>
+              <div class="col-md-4">
+                <article class="card">
+                  <div class="card__head text-center">Вася</div>
+                  <div class="card__body text-center">
+                    <a href="#" class="card__body--link">vasya@mail.ru</a>
+                    <div class="card__body--msg">
+                      Сообщение от Василия Пупкина.
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

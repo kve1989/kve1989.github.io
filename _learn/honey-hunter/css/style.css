@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+:root {
+    --blood-red: #be393b;
+}
+* {
+    outline: none;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.bg-dark {
+    background-color: #2d3136;
+}
+
+.form__label {
+    color: #d7d7d7;
+    font-size: 33px;
+    font-weight: 500;
+}
+
+.form__label span {
+    color: var(--blood-red);
+}
+
+.form__input {
+    opacity: 0.28;
+    color: #d7d7d7;
+    border-radius: 10px;
+    border: solid 1px #ffffff85;
+    background-color: #2f3338;
+    display: block;
+    font-size: 30px;
+    width: 100%;
+    resize: none;
+}
+.form__input-ta {
+    height: 213px;
+}
+.form-input {
+    margin-top: 15px;
+    padding: 10px 20px;
+    transition: border-color 0.2s;
+}
+.form__input:focus {
+    border: solid 1px #be393b7d;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 20px 40px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: var(--blood-red);
+}
+
+.btn:focus {
+    box-shadow: 0 0 5px var(--blood-red);
+}
+
+.btn:active {
+    box-shadow: inset 0 0 2px rgb(0 0 0 / 0.5);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.card {
+    border-radius: 5px;
+}
+
+.card__head {
+    background-color: #4b596c;
+    padding: 15px 0;
+    color: #fff;
+    font-size: 34px;
+}
+
+.card__body {
+}
