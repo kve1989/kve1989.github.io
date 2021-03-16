@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css" />
     <link rel="stylesheet" href="css/style.css" />
 
@@ -69,7 +70,7 @@
                     </div>
                   </div>
                   <div class="offset-md-1"></div>
-                  <div class="col-md-6">
+                  <div class="col-md-6 mb-5">
                     <label class="form__label" for="msg"
                       >Комментарий <span>*</span>
                       <textarea
@@ -92,25 +93,64 @@
             </div>
           </div>
         </section>
-        <section class="cards">
+        <section class="cards pb-5 pt-5">
           <div class="container">
+            <h2 class="section__title text-center pb-lg-5">
+              Выводим комментарии
+            </h2>
             <div class="cards__body pt-5 pb-5">
-              <h2 class="section__title text-center">Выводим комментарии</h2>
-              <div class="col-md-4">
-                <article class="card">
-                  <div class="card__head text-center">Вася</div>
-                  <div class="card__body text-center">
-                    <a href="#" class="card__body--link">vasya@mail.ru</a>
-                    <div class="card__body--msg">
-                      Сообщение от Василия Пупкина.
+              <div class="row">
+                <div class="col-md-4 mt-4">
+                  <article class="card">
+                    <div class="card__head text-center">Вася</div>
+                    <div
+                      class="card__body text-center d-flex flex-column align-content-center p-5"
+                    >
+                      <a href="#" class="card__body--link">vasya@mail.ru</a>
+                      <div class="card__body--msg pt-5">
+                        Сообщение от Василия Пупкина.
+                      </div>
                     </div>
-                  </div>
-                </article>
+                  </article>
+                </div>
+                <div class="col-md-4 mt-4">
+                  <article class="card card--green">
+                    <div class="card__head text-center">Маруся</div>
+                    <div
+                      class="card__body text-center d-flex flex-column align-content-center p-5"
+                    >
+                      <a href="#" class="card__body--link">marysia@mail.ru</a>
+                      <div class="card__body--msg pt-5">
+                        Всем привет, я Маруся
+                      </div>
+                    </div>
+                  </article>
+                </div>
               </div>
             </div>
           </div>
         </section>
       </main>
+      <footer class="footer pb-4 pt-4">
+        <div class="container">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-3">
+              <a href="/" class="footer__logo">
+                <img
+                  src="./img/footer__logo.png"
+                  alt="Логотип в подвале сайта"
+                />
+              </a>
+            </div>
+            <div class="offset-md-7 col-md-2">
+              <div class="footer__social social d-flex align-items-center justify-content-end">
+                <a href="#" class="social__link fab fa-vk"></a>
+                <a href="#" class="social__link fab fa-facebook-f"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

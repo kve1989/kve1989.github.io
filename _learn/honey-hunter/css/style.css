@@ -5,6 +5,7 @@ body {
 }
 :root {
     --blood-red: #be393b;
+    --green-salat: #58ad52;
 }
 * {
     outline: none;
@@ -29,7 +30,6 @@ img {
 }
 
 .form__input {
-    opacity: 0.28;
     color: #d7d7d7;
     border-radius: 10px;
     border: solid 1px #ffffff85;
@@ -74,7 +74,9 @@ img {
 .text-center {
     text-align: center;
 }
-
+.cards {
+    background-color: #f6f6f7;
+}
 .card {
     border-radius: 5px;
 }
@@ -87,4 +89,65 @@ img {
 }
 
 .card__body {
+    background-color: #e9eef3;
+    height: 290px;
+}
+
+.card__body--link {
+    color: #6d737b;
+    font-weight: bold;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.card__body--msg {
+    color: #767582;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.section__title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #37414e;
+}
+
+.footer {
+    background-color: #2a2d33;
+}
+
+.card--green .card__head {
+    background-color: var(--green-salat);
+}
+.card--green .card__body--link {
+    color: var(--green-salat);
+}
+.card--green .card__body--msg {
+    color: #768275;
+}
+.card--green .card__body {
+    background-color: #dfebe0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.social__link {
+    margin: 0 15px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #454648;
+    border-radius: 50%;
+    color: #656566;
+    transition: all .2s;
+}
+
+.social__link:hover {
+    color: #d7d7d7;
+    border-color: #d7d7d7;
+
 }
