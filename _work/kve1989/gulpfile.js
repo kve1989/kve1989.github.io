@@ -68,7 +68,7 @@ const styles = () => {
 	return (
 		gulp
 			.src(paths.styles.src)
-      .pipe(sassglob())
+			.pipe(sassglob())
 			.pipe(sass({ outputStyle: "compressed" }))
 			.pipe(concat(paths.cssOutputName))
 			.pipe(
