@@ -1,5 +1,6 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
+const sassglob = require("gulp-sass-glob");
 const browserSync = require("browser-sync");
 const rename = require("gulp-rename");
 const concat = require("gulp-concat");
@@ -67,7 +68,7 @@ const styles = () => {
 	return (
 		gulp
 			.src(paths.styles.src)
-			// .pipe(eval(preprocessor)())
+      .pipe(sassglob())
 			.pipe(sass({ outputStyle: "compressed" }))
 			.pipe(concat(paths.cssOutputName))
 			.pipe(
