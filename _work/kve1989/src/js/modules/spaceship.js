@@ -2,15 +2,26 @@ export default function spaceship(selector) {
   const spaceship = document.querySelector(selector);
 
   spaceship.style.display = 'block';
-  spaceship.style.left = 1+'px';
-  spaceship.style.top = 1+'px';
-  spaceship.style.transform = 'rotate(45deg)';
-  console.log(document.documentElement.clientWidth);
-  console.log(document.documentElement.offsetWidth);
+  spaceship.style.left = genCoords() +'px';
+  spaceship.style.top = genCoords() +'px';
 
-  document.addEventListener('mousemove', event => {
-    spaceship.style.left = event.clientX + 'px';
-    spaceship.style.top = event.clientY + 'px';
-  });
+  function genCoords() {
+    return Math.floor(Math.random() * document.documentElement.clientHeight);
+  }
+
+  let start = Date.now();
+  setInterval(() => {
+
+    let left = (parseInt(spaceship.style.left) + 1) + 'px';
+
+    spaceship.style.left = left;
+
+    if (
+      parseInt(spaceship.style.left) + spaceship.offsetWidth >=
+      document.documentElement.clientWidth
+    ) {
+      spaceship.style.left = '0px';
+    }
+  }, 1000);
 
 }
