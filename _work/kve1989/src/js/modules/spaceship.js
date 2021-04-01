@@ -9,19 +9,17 @@ export default function spaceship(selector) {
     return Math.floor(Math.random() * document.documentElement.clientHeight);
   }
 
-  let start = Date.now();
   setInterval(() => {
-
-    let left = (parseInt(spaceship.style.left) + 1) + 'px';
-
+    let left = (parseInt(spaceship.style.left) + 5) + 'px';
     spaceship.style.left = left;
-
     if (
       parseInt(spaceship.style.left) + spaceship.offsetWidth >=
       document.documentElement.clientWidth
     ) {
       spaceship.style.left = '0px';
+      spaceship.style.top = genCoords() + "px";
     }
-  }, 1000);
+  }, 25);
+
 
 }
