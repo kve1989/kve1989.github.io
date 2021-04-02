@@ -4,7 +4,7 @@ import scrolling from "./modules/scrolling";
 import modal from "./modules/modals";
 import ibg from "./modules/ibg";
 import switcher from "./modules/switcher";
-import spaceship from './modules/spaceship';
+import Spaceship from './modules/spaceship';
 
 document.addEventListener("DOMContentLoaded", () => {
 	isMobile();
@@ -13,7 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	ibg();
 	modal();
 	switcher();
-  spaceship('.spaceship');
+
+  const ship1 = new Spaceship("./assets/images/ship.png", 8);
+  const ship3 = new Spaceship("./assets/images/ship.png", 5);
+  const ship5 = new Spaceship("./assets/images/ship.png", 2);
+  const ship2 = new Spaceship("./assets/images/ship2.png", 7);
+  const ship4 = new Spaceship("./assets/images/ship2.png", 4);
+  const ship6 = new Spaceship("./assets/images/ship2.png", 10);
 
 	const scrSizeW = document.querySelector(".screensize-w"),
 		scrSizeH = document.querySelector(".screensize-h"),
