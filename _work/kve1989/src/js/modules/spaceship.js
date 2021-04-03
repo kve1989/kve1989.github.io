@@ -1,20 +1,29 @@
 export default class Spaceship {
-  constructor(img, speed) {
+  constructor(img, speed, direction = "horizontal") {
     this.img = img;
     this.speed = speed;
-    this.draw()
-    this.move()
+    this.direction = direction;
+    this.draw();
+    if (this.direction === "vertical") {
+      this.moveVertical();
+    }
+    if (this.direction === "horizontal") {
+      this.move();
+    }
   }
 
   draw() {
-    const elem = document.createElement('div')
-    this.elem = elem
-    elem.classList.add('spaceship')
-    elem.innerHTML = `<img src="${this.img}" alt="spaceship" />`
-    elem.style.display = 'block';
-    elem.style.left = this.genCoords() +'px';
-    elem.style.top = this.genCoords() +'px';
-    document.body.appendChild(elem)
+    const elem = document.createElement("div");
+    this.elem = elem;
+    elem.classList.add("spaceship");
+    elem.innerHTML = `<img src="${this.img}" alt="spaceship" />`;
+    elem.style.display = "block";
+    elem.style.left = this.genCoords() + "px";
+    elem.style.top = this.genCoords() + "px";
+    if (this.direction === "vertical") {
+      elem.style.transform = 'rotate(90deg)'
+    }
+    document.body.appendChild(elem);
   }
   move() {
     setInterval(() => {
@@ -29,12 +38,24 @@ export default class Spaceship {
       }
     }, 25);
   }
-
+  moveVertical() {
+    setInterval(() => {
+      let top = parseInt(this.elem.style.top) + this.speed + "px";
+      this.elem.style.top = top;
+      if (
+        parseInt(this.elem.style.top) + this.elem.offsetHeight >=
+        document.documentElement.clientHeight
+      ) {
+        this.elem.style.top = "0px";
+        this.elem.style.left = this.genCoords() + "px";
+      }
+    }, 25);
+  }
   genCoords() {
     return Math.floor(
       Math.random() * document.documentElement.clientHeight -
         this.elem.offsetHeight
     );
   }
-
+  checkCollision() {}
 }
