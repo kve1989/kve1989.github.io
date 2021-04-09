@@ -6,7 +6,6 @@
 		-moz-appearance: none
 		appearance: none
 		opacity: 0
-
 	&__checkbox
 		width: 60px
 		height: 30px
@@ -18,7 +17,6 @@
 		cursor: pointer
 		box-shadow: inset 0 0 5px #000
 		transition: all .2s
-
 	&__checkbox::before
 		position: absolute
 		height: 25px
@@ -29,16 +27,13 @@
 		top: 2px
 		left: 2px
 		transition: inherit
-
 	&__input:checked + &__checkbox
 		background: rgba(#fff, .2)
 		box-shadow: inset 0 0 5px #000
-
 	&__input:checked + &__checkbox::before
 		left: calc(100% - 27px)
 		background: var(--accent-color)
 		box-shadow: 0 0 20px var(--accent-color)
-
 	&__img
 		&::before,&::after
 			position: absolute
