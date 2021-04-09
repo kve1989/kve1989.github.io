@@ -15,7 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	switcher();
 
   const ship1 = new Spaceship("./assets/images/ship.png", 5);
+  const ship3 = new Spaceship("./assets/images/ship.png", 8);
   const ship2 = new Spaceship("./assets/images/ship2.png", 2, 'vertical');
+  const ship4 = new Spaceship("./assets/images/ship2.png", 10, 'vertical');
 
 	const scrSizeW = document.querySelector(".screensize-w"),
 		scrSizeH = document.querySelector(".screensize-h"),

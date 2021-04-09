@@ -4,12 +4,7 @@ export default class Spaceship {
     this.speed = speed;
     this.direction = direction;
     this.draw();
-    if (this.direction === "vertical") {
-      this.moveVertical();
-    }
-    if (this.direction === "horizontal") {
-      this.move();
-    }
+    this.direction === "vertical" ? this.moveVertical() : this.move()
   }
 
   draw() {
