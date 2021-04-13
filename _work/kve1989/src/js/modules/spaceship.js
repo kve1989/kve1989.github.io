@@ -26,30 +26,34 @@ export default class Spaceship {
     document.body.appendChild(elem);
   }
   move() {
-    setInterval(() => {
-      let left = parseInt(this.elem.style.left) + this.speed + "px";
-      this.elem.style.left = left;
-      if (
-        parseInt(this.elem.style.left) + this.elem.offsetWidth >=
-        document.documentElement.clientWidth
-      ) {
-        this.elem.style.left = "0px";
-        this.elem.style.top = this.genCoords() + "px";
-      }
-    }, 25);
+    this.elem.addEventListener('click', () => {
+      setInterval(() => {
+        let left = parseInt(this.elem.style.left) + this.speed + "px";
+        this.elem.style.left = left;
+        if (
+          parseInt(this.elem.style.left) + this.elem.offsetWidth >=
+          document.documentElement.clientWidth
+        ) {
+          this.elem.style.left = "0px";
+          this.elem.style.top = this.genCoords() + "px";
+        }
+      }, 25);
+    }, { once: true });
   }
   moveVertical() {
-    setInterval(() => {
-      let top = parseInt(this.elem.style.top) + this.speed + "px";
-      this.elem.style.top = top;
-      if (
-        parseInt(this.elem.style.top) + this.elem.offsetHeight >=
-        document.documentElement.clientHeight
-      ) {
-        this.elem.style.top = "0px";
-        this.elem.style.left = this.genCoords() + "px";
-      }
-    }, 25);
+    this.elem.addEventListener('click', () => {
+      setInterval(() => {
+        let top = parseInt(this.elem.style.top) + this.speed + "px";
+        this.elem.style.top = top;
+        if (
+          parseInt(this.elem.style.top) + this.elem.offsetHeight >=
+          document.documentElement.clientHeight
+        ) {
+          this.elem.style.top = "0px";
+          this.elem.style.left = this.genCoords() + "px";
+        }
+      }, 25);
+    }, { once: true })
   }
   genCoords() {
     return Math.floor(
