@@ -111,7 +111,12 @@
 								</svg>
 							</a>
 						</div>
-						<div class="header__switch switch">
+						<div
+							class="header__switch switch"
+							role="checkbox"
+							aria-checked="false"
+							tabindex="0"
+						>
 							<label class="switch__label">
 								<input type="checkbox" class="switch__input" />
 								<span class="switch__checkbox"
@@ -164,10 +169,11 @@
 						<div class="portfolio__block">
 							<h3 class="portfolio__block--title">2018</h3>
 							<div class="portfolio__block--body">
-								<ul class="portfolio__block--list">
+								<ul class="portfolio__block--list" role="list">
 									<li
 										class="portfolio__item"
 										data-triggerModal="intensive"
+										role="listitem"
 									>
 										<figure>
 											<picture>
@@ -191,10 +197,11 @@
 						<div class="portfolio__block">
 							<h3 class="portfolio__block--title">2019</h3>
 							<div class="portfolio__block--body">
-								<ul class="portfolio__block--list">
+								<ul class="portfolio__block--list" role="list">
 									<li
 										class="portfolio__item"
 										data-triggerModal="estetico"
+										role="listitem"
 									>
 										<figure>
 											<picture>
@@ -215,6 +222,7 @@
 									<li
 										class="portfolio__item"
 										data-triggerModal="bigcreative"
+										role="listitem"
 									>
 										<figure>
 											<picture>
@@ -238,10 +246,11 @@
 						<div class="portfolio__block">
 							<h3 class="portfolio__block--title">2020</h3>
 							<div class="portfolio__block--body">
-								<ul class="portfolio__block--list">
+								<ul class="portfolio__block--list" role="list">
 									<li
 										class="portfolio__item"
 										data-triggerModal="medlider"
+										role="listitem"
 									>
 										<figure>
 											<picture>
@@ -262,6 +271,7 @@
 									<li
 										class="portfolio__item"
 										data-triggerModal="worldprint33"
+										role="listitem"
 									>
 										<figure>
 											<picture>
@@ -348,7 +358,7 @@
 						/></a>
 					</div>
 				</div>
-				<button class="modal__close">❌</button>
+				<button class="modal__close" aria-label="Close modal">❌</button>
 			</div>
 		</div>
 
@@ -390,12 +400,12 @@
 						</div>
 					</div>
 				</div>
-				<button class="modal__close">❌</button>
+				<button class="modal__close" aria-label="Close modal">❌</button>
 			</div>
 		</div>
 
 		<!-- Modal Estetico -->
-		<div class="modal" data-modal="estetico">
+		<div class="modal" aria-hidden="true" data-modal="estetico">
 			<div class="modal__content">
 				<div class="modal__image">
 					<picture>
@@ -440,7 +450,7 @@
 						<div class="modal__review"></div>
 					</div>
 				</div>
-				<button class="modal__close">❌</button>
+				<button class="modal__close" aria-label="Close modal">❌</button>
 			</div>
 		</div>
 
@@ -487,7 +497,7 @@
 						<div class="modal__review"></div>
 					</div>
 				</div>
-				<button class="modal__close">❌</button>
+				<button class="modal__close" aria-label="Close modal">❌</button>
 			</div>
 		</div>
 
@@ -530,7 +540,7 @@
 						<div class="modal__review"></div>
 					</div>
 				</div>
-				<button class="modal__close">❌</button>
+				<button class="modal__close" aria-label="Close modal">❌</button>
 			</div>
 		</div>
 
