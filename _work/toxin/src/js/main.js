@@ -10,9 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	ibg();
 	// modal();
 	const picker = new Litepicker({
-		element: document.getElementById('offer__startDate'),
-		elementEnd: document.getElementById('offer__endDate'),
+    element: document.getElementById('input__startDate'),
+    elementEnd: document.getElementById('input__endDate'),
 		singleMode: false,
-		lang: 'ru-RU'
+		lang: 'ru-RU',
+    format: "DD.MM.YYYY"
 	});
 });

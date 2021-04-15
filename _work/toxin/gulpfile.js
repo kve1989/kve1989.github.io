@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const pug = require("gulp-pug");
+const pugbem = require("gulp-pugbem");
 const sassglob = require("gulp-sass-glob");
 const browserSync = require("browser-sync");
 const rename = require("gulp-rename");
@@ -68,7 +69,9 @@ const html = () => {
 	return (
 		gulp
 			.src(src + "/*.pug")
-			.pipe(pug())
+			.pipe(pug({
+				plugins: [pugbem]
+			}))
 			.pipe(gulp.dest(dist))
 			.pipe(browserSync.stream())
 	)
