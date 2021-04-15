@@ -1,0 +1,25 @@
+@mixin media-laptop
+	@media (max-width: $bp2+px)
+		@content
+
+@mixin media-tablet
+	@media (max-width: $bp3+px)
+		@content
+
+@mixin media-phone
+	@media (max-width: $bp4+px)
+		@content
+
+@mixin media-custom($width)
+	@media (max-width: $width+px)
+		@content
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@function rem($size)
+	@return $size / $main-font-size * 1rem

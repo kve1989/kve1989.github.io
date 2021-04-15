@@ -1,0 +1,29 @@
+extends ./layouts/default.pug
+
+block variables
+	- var title = 'Главная страница'
+
+block content
+	include ./parts/header.pug
+	main
+		section.welcome.ibg
+			img(src="./assets/images/welcome/welcome.jpg", alt="Главный экран")
+			.container
+				.welcome__body
+					.welcome__booking.booking
+						.booking__body
+							h1.welcome__title Найдём номера под ваши пожелания
+							form.booking-form.form(action="#")
+								.booking-form__group
+									.booking-form__group-item
+										label.booking-form__label.form__label(for="input__startDate") Прибытие
+										input.booking-form__input.form__input#input__startDate(type="text")
+									.booking-form__group-item
+										label.booking-form__label.form__label(for="input__endDate") Выезд
+										input.booking-form__input.form__input#input__endDate(type="text")
+
+
+					p.welcome__body-text Лучшие номера для вашей работы, отдыха и просто вдохновения
+
+
+	include ./parts/footer.pug
