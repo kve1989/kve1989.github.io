@@ -4,11 +4,31 @@
 		&__input
 		&__label
 			padding-bottom: 5px
+		&__btn
+			height: 44px
+			width: 100%
+			position: relative
+			span
+				position: absolute
+				content: ''
+				height: 24px
+				width: 24px
+				top: 50%
+				right: 10px
+				transform: translateY(-50%)
+				background: url(../images/arrow_forward.svg) center / cover no-repeat
+				svg
+					fill: #fff
 	&-form__group
 		display: flex
 		justify-content: space-between
 		padding-bottom: 20px
-		&:nth-child(2)
+		&:nth-child(2),
+		&:nth-child(3)
 			width: 100%
-			&-item
+			.booking-form__group-item,
+			.booking-form__group-item select
 				width: 100%
+		&:nth-child(3)
+			margin-top: 10px
+			padding-bottom: 0

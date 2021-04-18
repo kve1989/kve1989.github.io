@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     element: document.getElementById('input__startDate'),
     elementEnd: document.getElementById('input__endDate'),
 		singleMode: false,
+    showTooltip: false,
 		lang: 'ru-RU',
     format: "DD.MM.YYYY"
 	});
