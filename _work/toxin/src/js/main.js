@@ -6,7 +6,7 @@ import Litepicker from "litepicker";
 
 document.addEventListener("DOMContentLoaded", () => {
 	isMobile();
-	scrolling();
+	// scrolling();
 	ibg();
 	// modal();
 	const picker = new Litepicker({
@@ -29,4 +29,27 @@ document.addEventListener("DOMContentLoaded", () => {
       return btn;
     },
 	});
+  const triggerDropdowns = document.querySelectorAll('.form__input-dropdown')
+  const headerLinks = document.querySelectorAll('.header__link')
+
+  triggerDropdowns.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      if (e.target.nodeName === "SPAN") {
+        e.target.previousElementSibling.click()
+      }
+    })
+  });
+
+  const deleteClass = () => {
+    headerLinks.forEach(link => {
+      link.classList.remove('active')
+    })
+  }
+
+  headerLinks.forEach((link, i) => {
+    link.addEventListener('click', (e) => {
+      deleteClass()
+      headerLinks[i].classList.add('active')
+    })
+  })
 });

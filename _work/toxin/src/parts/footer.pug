@@ -41,10 +41,13 @@ footer.footer
 					p.footer__desc Получайте специальные предложения и новости сервиса
 					.footer__form-wrap
 						form.footer__form(action="#")
-							.footer__input-wrap
-								input.footer__input(type="text")
-								button.footer__btn(type="submit")
-									<svg height="24px" viewBox="0 0 24 24" width="24px" fill="var(--purple)"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/></svg>
+							.form__subscription
+								input.form__input(type="text" placeholder="Email" name="Email")
+								button(type="submit") <svg height="24px" viewBox="0 0 24 24" width="24px" fill="var(--purple)"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/></svg>
+							//- .footer__input-wrap
+							//- 	input.footer__input.form__input(type="text")
+							//- 	button.footer__btn(type="submit")
+							//- 		<svg height="24px" viewBox="0 0 24 24" width="24px" fill="var(--purple)"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8-8-8z"/></svg>
 	.footer__bottom
 		.container
 			.footer__body
