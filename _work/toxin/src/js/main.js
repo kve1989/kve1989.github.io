@@ -12,9 +12,21 @@ document.addEventListener("DOMContentLoaded", () => {
 	const picker = new Litepicker({
     element: document.getElementById('input__startDate'),
     elementEnd: document.getElementById('input__endDate'),
+    allowRepick: true,
 		singleMode: false,
     showTooltip: false,
 		lang: 'ru-RU',
-    format: "DD.MM.YYYY"
+    format: "DD.MM.YYYY",
+    resetButton: () => {
+      let btn = document.createElement('button');
+      btn.innerText = 'Clear';
+      btn.addEventListener('click', (evt) => {
+        evt.preventDefault();
+
+        // some custom action
+      });
+
+      return btn;
+    },
 	});
 });
