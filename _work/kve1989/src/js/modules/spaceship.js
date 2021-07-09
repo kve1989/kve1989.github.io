@@ -13,8 +13,8 @@ export default class Spaceship {
     elem.classList.add("spaceship");
     elem.innerHTML = `<img src="${this.img}" alt="spaceship" />`;
     elem.style.display = "block";
-    elem.style.left = this.genCoords() + "px";
-    elem.style.top = this.genCoords() + "px";
+    elem.style.left = this.generateCoordinats() + "px";
+    elem.style.top = this.generateCoordinats() + "px";
     if (this.direction === "vertical") {
       elem.style.transform = 'rotate(90deg)'
     }
@@ -30,7 +30,7 @@ export default class Spaceship {
           document.documentElement.clientWidth
         ) {
           this.elem.style.left = "0px";
-          this.elem.style.top = this.genCoords() + "px";
+          this.elem.style.top = this.generateCoordinats() + "px";
         }
       }, 25);
     }, { once: true });
@@ -45,12 +45,12 @@ export default class Spaceship {
           document.documentElement.clientHeight
         ) {
           this.elem.style.top = "0px";
-          this.elem.style.left = this.genCoords() + "px";
+          this.elem.style.left = this.generateCoordinats() + "px";
         }
       }, 25);
     }, { once: true })
   }
-  genCoords() {
+  generateCoordinats() {
     return Math.floor(
       Math.random() * document.documentElement.clientHeight -
         this.elem.offsetHeight
