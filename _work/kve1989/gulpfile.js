@@ -1,13 +1,16 @@
-const gulp = require("gulp");
-const sass = require('gulp-sass')(require('sass'));
-const sassglob = require("gulp-sass-glob");
-const browserSync = require("browser-sync");
-const rename = require("gulp-rename");
-const concat = require("gulp-concat");
-const imagemin = require("gulp-imagemin");
-const autoprefixer = require("gulp-autoprefixer");
-const webpack = require("webpack-stream");
-const del = require("del");
+import gulp from 'gulp';
+import gulpSass from 'gulp-sass';
+import dartSass from "sass";
+import sassglob from 'gulp-sass-glob';
+import browserSync from 'browser-sync';
+import rename from 'gulp-rename';
+import concat from 'gulp-concat';
+import imagemin from 'gulp-imagemin';
+import autoprefixer from 'gulp-autoprefixer';
+import webpack from 'webpack-stream';
+import { deleteAsync } from "del";
+
+const sass = gulpSass(dartSass);
 
 const localhost = "localhost:3000",
 	fileswatch = "html,htm,php,txt,yaml,twig,json,md",
@@ -40,7 +43,7 @@ const paths = {
 };
 
 /* browsersync */
-const browsersync = () => {
+export const browsersync = () => {
 	browserSync.init({
 		server: { baseDir: dist + "/" },
 		// proxy: localhost, // for PHP
@@ -50,7 +53,7 @@ const browsersync = () => {
 };
 
 /* copy */
-const copy = () => {
+export const copy = () => {
 	return gulp
 		.src([paths.fonts.src, src + "/*.html"], {
 			base: src,
@@ -64,7 +67,7 @@ const copy = () => {
 };
 
 /* styles */
-const styles = () => {
+export const styles = () => {
 	return (
 		gulp
 			.src(paths.styles.src)
@@ -83,67 +86,75 @@ const styles = () => {
 };
 
 /* scripts */
-const scripts = () => {
+export const scripts = () => {
 	return gulp
-		.src(paths.scripts.src)
-		.pipe(
-			webpack({
-				mode: "production",
-				module: {
-					rules: [
-						{
-							test: /\.m?js$/,
-							exclude: /(node_modules|bower_components)/,
-							use: {
-								loader: "babel-loader",
-								options: {
-									presets: [
-										[
-											"@babel/preset-env",
-											{
-												debug: true,
-												corejs: 3,
-												useBuiltIns: "usage",
-											},
-										],
-									],
-								},
-							},
-						},
-					],
-				},
-			})
-		)
-		.pipe(rename(paths.jsOutputName))
-		.pipe(gulp.dest(paths.scripts.dest))
-		.pipe(browserSync.stream());
+    .src(paths.scripts.src)
+    .pipe(
+      webpack({
+        mode: "production",
+        module: {
+          rules: [
+            {
+              test: /\.m?js$/,
+              type: "javascript/auto",
+              exclude: /(node_modules|bower_components)/,
+              use: {
+                loader: "babel-loader",
+                options: {
+                  presets: [
+                    [
+                      "@babel/preset-env",
+                      {
+                        debug: true,
+                        corejs: 3,
+                        useBuiltIns: "usage",
+                      },
+                    ],
+                  ],
+                },
+              },
+            },
+            {
+              test: /\.m?js/,
+              resolve: {
+                fullySpecified: false,
+              },
+            },
+          ],
+        },
+      })
+    )
+    .pipe(rename(paths.jsOutputName))
+    .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(browserSync.stream());
 };
 
 /* images */
-const images = () => {
+export const images = () => {
 	return gulp
 		.src(paths.images.src)
 		.pipe(
-			imagemin([
-				// imagemin.gifsicle({ interlaced: true }),
-				imagemin.mozjpeg({ quality: 75, progressive: true }),
-				imagemin.optipng({ optimizationLevel: 5 }),
-				imagemin.svgo({
-					plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
-				}),
-			])
+      imagemin()
+			// imagemin([
+			// 	// imagemin.gifsicle({ interlaced: true }),
+			// 	imagemin.mozjpeg({ quality: 75, progressive: true }),
+			// 	imagemin.optipng({ optimizationLevel: 5 }),
+			// 	imagemin.svgo({
+			// 		plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+			// 	}),
+			// ])
 		)
 		.pipe(gulp.dest(paths.images.dist))
 		.pipe(browserSync.reload({ stream: true }));
 };
 
 /* clean dist folder */
-const clean = () => {
-	return del(dist);
+export const clean = () => {
+	return deleteAsync(dist);
 };
 
 /* watch */
-const watchFiles = () => {
+export const watchFiles = () => {
 	gulp.watch(src + "/sass/**/*", { usePolling: true }, styles);
 	gulp.watch(src + "/**/*.js", { usePolling: true }, scripts);
 	gulp.watch(
@@ -152,17 +163,9 @@ const watchFiles = () => {
 		copy
 	);
 	gulp.watch(paths.images.src, { usePolling: true }, images);
-};
+}
 
-const build = gulp.series(clean, gulp.parallel(styles, scripts, images, copy));
-const watch = gulp.series(build, gulp.parallel(watchFiles, browsersync));
-
-/* Exports Tasks */
-exports.styles = styles;
-exports.scripts = scripts;
-exports.images = images;
-exports.copy = copy;
-exports.clean = clean;
-exports.build = build;
-exports.watch = watch;
-exports.default = watch;
+export default gulp.series(
+  gulp.series(clean, gulp.parallel(styles, scripts, images, copy)),
+  gulp.parallel(watchFiles, browsersync)
+);
