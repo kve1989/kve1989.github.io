@@ -25,7 +25,7 @@ const paths = {
 	},
 
 	styles: {
-		src: src + "/sass/main.+(scss|sass)",
+		src: src + "/scss/main.+(scss|sass)",
 		dest: dist + "/assets/css",
 	},
 
@@ -68,21 +68,24 @@ export const copy = () => {
 
 /* styles */
 export const styles = () => {
-	return (
-		gulp
-			.src(paths.styles.src)
-			.pipe(sassglob())
-			.pipe(sass({ outputStyle: "compressed" }))
-			.pipe(concat(paths.cssOutputName))
-			.pipe(
-				autoprefixer({
-					overrideBrowserslist: ["last 10 versions"],
-					grid: true,
-				})
-			)
-			.pipe(gulp.dest(paths.styles.dest))
-			.pipe(browserSync.stream())
-	);
+	return gulp
+    .src(paths.styles.src)
+    .pipe(sassglob())
+    .pipe(
+      sass({
+        outputStyle: "compressed",
+        includePaths: "./node_modules/",
+      })
+    )
+    .pipe(concat(paths.cssOutputName))
+    .pipe(
+      autoprefixer({
+        overrideBrowserslist: ["last 10 versions"],
+        grid: true,
+      })
+    )
+    .pipe(gulp.dest(paths.styles.dest))
+    .pipe(browserSync.stream());
 };
 
 /* scripts */
@@ -155,7 +158,7 @@ export const clean = () => {
 
 /* watch */
 export const watchFiles = () => {
-	gulp.watch(src + "/sass/**/*", { usePolling: true }, styles);
+	gulp.watch(src + "/scss/**/*", { usePolling: true }, styles);
 	gulp.watch(src + "/**/*.js", { usePolling: true }, scripts);
 	gulp.watch(
 		[paths.fonts.src, src + `**/*.{${fileswatch}}`],

@@ -1,0 +1,23 @@
+@import "utils/**/*";
+@import "core/**/*";
+@import "blocks/**/*";
+@import "plugins/**/*";
+
+// Required
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+// Optional
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/grid";
+
+:root {
+	--bg-color: #{$main-font-color-w};
+	--font-color: #{$main-font-color-b};
+	--accent-color: #{$switch-color-on};
+}
+
+img {
+    max-width: 100%;
+	display: block;
+}

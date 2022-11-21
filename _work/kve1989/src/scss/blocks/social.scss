@@ -1,0 +1,26 @@
+.social {
+	display: flex;
+	/** .social__item **/
+	&__item {
+		margin: 0 5px;
+		position: relative;
+		transition: all .2s;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:first-child {
+			margin-left: 0;
+        }
+		&:last-child {
+			margin-right: 0;
+        }
+		svg {
+			fill: var(--font-color);
+			width: 25px;
+			height: 25px;
+        }
+    }
+}

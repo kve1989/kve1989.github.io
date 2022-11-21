@@ -1,0 +1,96 @@
+.about {
+    /* .about__title */
+	&__title {
+		margin: 15px 0;
+	}
+    /* .about__img */
+	&__img {
+		position: relative;
+		@mixin media-tablet {
+			img {
+				height: 250px;
+			}
+        }
+	}
+    /* .about__block */
+	&__block {
+		display: flex;
+		max-width: 1000px;
+		margin: 20px auto 0;
+		align-items: center;
+		justify-content: space-between;
+		@mixin media-tablet {
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+        }
+    }
+    /* .about__txt */
+	&__txt {
+		margin: 0px 0px 0px 40px;
+		@mixin media-tablet {
+			margin: 25px 0px 0px 0px;
+			text-align: center;
+        }
+		h1 {
+			font-size: rem(26px);
+			font-weight: bold;
+			margin-bottom: 15px;
+        }
+    }
+	/** .about__social **/
+	&__social {
+		justify-self: center;
+		@mixin media-phone {
+			justify-content: center;
+        }
+		/** .about__social-item **/
+		&-item {
+			--vk: #45668e;
+			--instagram: #833ab4;
+			--telegram: #0088cc;
+			--viber: #59267c;
+			--whatsup: #075e54;
+			&--vk:hover {
+				box-shadow: 0 0 10px var(--vk);
+            }
+			&--vk:hover{
+				svg {
+					fill: var(--vk);
+                }
+            }
+			&--instagram:hover {
+				box-shadow: 0 0 10px var(--instagram);
+            }
+			&--instagram:hover {
+				svg {
+					fill: var(--instagram);
+                }
+            }
+			&--telegram:hover {
+				box-shadow: 0 0 10px var(--telegram);
+            }
+			&--telegram:hover {
+				svg {
+					fill: var(--telegram);
+                }
+            }
+			&--viber:hover {
+				box-shadow: 0 0 10px var(--viber);
+            }
+			&--viber:hover {
+				svg {
+					fill: var(--viber);
+                }
+            }
+			&--whatsup:hover {
+				box-shadow: 0 0 10px var(--whatsup);
+            }
+			&--whatsup:hover {
+				svg {
+					fill: var(--whatsup);
+                }
+            }
+        }
+    }
+}

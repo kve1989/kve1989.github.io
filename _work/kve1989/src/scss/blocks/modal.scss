@@ -1,0 +1,117 @@
+.modal {
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(#000, .8);
+	&__content {
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		background: var(--bg-color);
+		display: flex;
+		justify-content: space-between;
+		height: 90%;
+		width: 90%;
+		@mixin media-phone {
+			flex-direction: column;
+		}
+	}
+	&__wrapper {
+		padding: 20px;
+		flex: 0 0 30%;
+		overflow: hidden;
+		@mixin media-phone {
+			flex: 0 0 100%;
+			order: -1;
+		}
+	}
+	&__image {
+		overflow-y: auto;
+		flex: 0 0 70%;
+		@mixin media-phone {
+			flex: 0 0 100%;
+		}
+	}
+	&__text {
+		padding: 10px 0px 0px 0px;
+		word-wrap: break-word;
+		> div {
+			padding-bottom: 10px;
+			a {
+				position: relative;
+				padding: 5pxl;
+				font-weight: 500l;
+				font-size: rem(16px);
+				&::before {
+					position: absolute;
+					content: '';
+					width: 100%;
+					background-color: var(--accent-color);
+					left: 0;
+					bottom: 0;
+					height: 0;
+					z-index: -1;
+					transition: height .5s ease-in, opacity .3s ease-in;
+					opacity: 0;
+				}
+				&:hover:before {
+					height: 100%;
+					opacity: 1;
+				}
+				&, &:visited {
+					color: $main-font-color-b;
+				}
+				&, &:visited {
+					color: var(--font-color);
+					text-decoration: none;
+					box-shadow: inset 0 -4px 0 var(--accent-color);
+				}
+			}
+		}
+	}
+	&__close {
+		position: absolute;
+		right: -1.2rem;
+		top: -1.2rem;
+		cursor: pointer;
+		font-size: rem(20px);
+		border-radius: 50%;
+		border: none;
+		width: 3rem;
+		height: 3rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all .4s ease-in-out;
+		&:focus {
+			// border: 2px solid red;
+        }
+		&:hover {
+			transform: rotate(720deg);
+			animation: .7s myPulse infinite linear;
+		}
+	}
+}
+
+.page--night {
+	a {
+		transition-delay: .1s;
+		&:hover { color: $main-font-color-b; }
+	}
+}
+
+
+@keyframes myPulse {
+	0% { transform: scale(1); }
+	50% { transform: scale(1.2); }
+	100% { transform: scale(1); }
+}
+
+@keyframes mySpinner {
+	0% { transform: rotate(0); }
+	100% { transform: rotate(720deg); }
+}

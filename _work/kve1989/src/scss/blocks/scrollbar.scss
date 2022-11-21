@@ -1,0 +1,14 @@
+/* Ширина */
+::-webkit-scrollbar { width: 10px; }
+/* Полоса */
+::-webkit-scrollbar-track { background: #f1f1f1; }
+/* Курсор */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  transition: all .2s;
+}
+/* Наводка на курсор */
+::-webkit-scrollbar-thumb:hover { background: #555;
+}
+
+.page--night::-webkit-scrollbar-thumb { background: var(--accent-color); }
